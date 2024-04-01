@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Select component renders 1`] = `
+<div>
+  <div
+    class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary  emotion-0"
+  >
+    <div
+      aria-expanded="false"
+      aria-haspopup="listbox"
+      class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input emotion-1"
+      role="button"
+      tabindex="0"
+    >
+      <span
+        class="notranslate"
+      >
+        ​
+      </span>
+    </div>
+    <input
+      aria-hidden="true"
+      aria-invalid="false"
+      class="MuiSelect-nativeInput emotion-2"
+      tabindex="-1"
+      value=""
+    />
+    <svg
+      aria-hidden="true"
+      class="MuiSvgIcon-root MuiSvgIcon-fontSizeInherit MuiSelect-icon MuiSelect-iconOutlined emotion-3"
+      focusable="false"
+      viewBox="0 0 24 24"
+    >
+      <svg
+        fill="none"
+        viewBox="0 0 12 16"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g
+          id="caret-down"
+        >
+          <path
+            d="M11.001 5.5L6.00098 10.5L1.00098 5.5"
+            id="stroke"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.5"
+          />
+        </g>
+      </svg>
+    </svg>
+    <fieldset
+      aria-hidden="true"
+      class="MuiOutlinedInput-notchedOutline emotion-4"
+    >
+      <legend
+        class="emotion-5"
+      >
+        <span
+          class="notranslate"
+        >
+          ​
+        </span>
+      </legend>
+    </fieldset>
+  </div>
+</div>
+`;

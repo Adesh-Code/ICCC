@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tabs component renders tabs 1`] = `
+<div>
+  <div
+    class="MuiTabs-root DhigTabs--styleVariant--default emotion-0"
+  >
+    <div
+      class="MuiTabs-scrollableX MuiTabs-hideScrollbar emotion-1"
+      style="width: 99px; height: 99px; position: absolute; top: -9999px; overflow: scroll;"
+    />
+    <div
+      class="MuiTabs-scroller MuiTabs-hideScrollbar MuiTabs-scrollableX emotion-2"
+      style="margin-bottom: 0px;"
+    >
+      <div
+        class="MuiTabs-flexContainer emotion-3"
+        role="tablist"
+      >
+        <button
+          aria-selected="true"
+          class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary MuiTab-wrapped Mui-selected emotion-4"
+          role="tab"
+          tabindex="0"
+          type="button"
+        >
+          label
+        </button>
+      </div>
+      <span
+        class="MuiTabs-indicator emotion-5"
+        style="left: 0px; width: 0px;"
+      />
+    </div>
+  </div>
+</div>
+`;

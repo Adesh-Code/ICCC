@@ -1,0 +1,248 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import "../../lib/build/css/dhig-global.css";
+
+export const Spacer = ({ height = "4px" }) => <div style={{ height }} />;
+
+<Meta
+  title="Digital HIG/CSS and SASS/MUI component CSS/Tabs"
+  parameters={{
+    disableThemeMui: true,
+    renderHTML: true
+  }}
+/>
+
+# Tabs
+
+HTML snippets to generate Digital HIG tabs. Note: the tabs in this example are static, so the selected tab cannot be changed.
+
+<Canvas>
+  <Story name="Light theme">
+    <div className="dhig-theme--light">
+      <div className="MuiTabs-root default">
+        <div className="MuiTabs-scroller MuiTabs-scrollable">
+          <div
+            aria-label="DHIG tabs"
+            className="MuiTabs-flexContainer"
+            role="tablist"
+          >
+            <button
+              className="MuiButtonBase-root MuiTab-root default MuiTab-textColorInherit Mui-selected MuiTab-wrapped"
+              tabIndex="0"
+              type="button"
+              role="tab"
+              aria-selected="true"
+              id="tab-0"
+              aria-controls="tabpanel-0"
+            >
+              <span className="MuiTab-wrapper">Default tab 1</span>
+            </button>
+            <button
+              className="MuiButtonBase-root MuiTab-root default MuiTab-textColorInherit MuiTab-wrapped"
+              tabIndex="-1"
+              type="button"
+              role="tab"
+              aria-selected="false"
+              id="tab-1"
+              aria-controls="tabpanel-1"
+            >
+              <span className="MuiTab-wrapper">Default tab 2</span>
+            </button>
+            <button
+              className="MuiButtonBase-root MuiTab-root default MuiTab-textColorInherit MuiTab-wrapped"
+              tabIndex="-1"
+              type="button"
+              role="tab"
+              aria-selected="false"
+              id="tab-2"
+              aria-controls="tabpanel-2"
+            >
+              <span className="MuiTab-wrapper">Default tab 3</span>
+            </button>
+            <button
+              className="MuiButtonBase-root MuiTab-root default MuiTab-textColorInherit MuiTab-wrapped Mui-disabled"
+              disabled
+              tabIndex="-1"
+              type="button"
+              role="tab"
+              aria-selected="false"
+              id="tab-3"
+              aria-controls="tabpanel-3"
+            >
+              <span className="MuiTab-wrapper">Default tab 4 (disabled)</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <Spacer height="24px" />
+      <div className="MuiTabs-scroller MuiTabs-scrollable">
+        <div
+          aria-label="DHIG tabs"
+          className="MuiTabs-flexContainer"
+          role="tablist"
+        >
+          <button
+            className="MuiButtonBase-root MuiTab-root quiet MuiTab-textColorInherit Mui-selected MuiTab-wrapped"
+            tabIndex="0"
+            type="button"
+            role="tab"
+            aria-selected="true"
+            id="tab-0"
+            aria-controls="tabpanel-0"
+          >
+            <span className="MuiTab-wrapper">Quiet tab 1</span>
+          </button>
+          <button
+            className="MuiButtonBase-root MuiTab-root quiet MuiTab-textColorInherit MuiTab-wrapped"
+            tabIndex="-1"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            id="tab-1"
+            aria-controls="tabpanel-1"
+          >
+            <span className="MuiTab-wrapper">Quiet tab 2</span>
+          </button>
+          <button
+            className="MuiButtonBase-root MuiTab-root quiet MuiTab-textColorInherit MuiTab-wrapped"
+            tabIndex="-1"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            id="tab-2"
+            aria-controls="tabpanel-2"
+          >
+            <span className="MuiTab-wrapper">Quiet tab 3</span>
+          </button>
+          <button
+            className="MuiButtonBase-root MuiTab-root quiet MuiTab-textColorInherit MuiTab-wrapped Mui-disabled"
+            disabled
+            tabIndex="-1"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            id="tab-3"
+            aria-controls="tabpanel-3"
+          >
+            <span className="MuiTab-wrapper">Quiet tab 4 (disabled)</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="Dark theme" parameters={{ theme: "dark" }}>
+    <div className="dhig-theme--dark">
+      <div className="MuiTabs-root default">
+        <div className="MuiTabs-scroller MuiTabs-scrollable">
+          <div
+            aria-label="DHIG tabs"
+            className="MuiTabs-flexContainer"
+            role="tablist"
+          >
+            <button
+              className="MuiButtonBase-root MuiTab-root default MuiTab-textColorInherit Mui-selected MuiTab-wrapped"
+              tabIndex="0"
+              type="button"
+              role="tab"
+              aria-selected="true"
+              id="tab-0"
+              aria-controls="tabpanel-0"
+            >
+              <span className="MuiTab-wrapper">Default tab 1</span>
+            </button>
+            <button
+              className="MuiButtonBase-root MuiTab-root default MuiTab-textColorInherit MuiTab-wrapped"
+              tabIndex="-1"
+              type="button"
+              role="tab"
+              aria-selected="false"
+              id="tab-1"
+              aria-controls="tabpanel-1"
+            >
+              <span className="MuiTab-wrapper">Default tab 2</span>
+            </button>
+            <button
+              className="MuiButtonBase-root MuiTab-root default MuiTab-textColorInherit MuiTab-wrapped"
+              tabIndex="-1"
+              type="button"
+              role="tab"
+              aria-selected="false"
+              id="tab-2"
+              aria-controls="tabpanel-2"
+            >
+              <span className="MuiTab-wrapper">Default tab 3</span>
+            </button>
+            <button
+              className="MuiButtonBase-root MuiTab-root default MuiTab-textColorInherit MuiTab-wrapped Mui-disabled"
+              disabled
+              tabIndex="-1"
+              type="button"
+              role="tab"
+              aria-selected="false"
+              id="tab-3"
+              aria-controls="tabpanel-3"
+            >
+              <span className="MuiTab-wrapper">Default tab 4 (disabled)</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <Spacer height="24px" />
+      <div className="MuiTabs-scroller MuiTabs-scrollable">
+        <div
+          aria-label="DHIG tabs"
+          className="MuiTabs-flexContainer"
+          role="tablist"
+        >
+          <button
+            className="MuiButtonBase-root MuiTab-root quiet MuiTab-textColorInherit Mui-selected MuiTab-wrapped"
+            tabIndex="0"
+            type="button"
+            role="tab"
+            aria-selected="true"
+            id="tab-0"
+            aria-controls="tabpanel-0"
+          >
+            <span className="MuiTab-wrapper">Quiet tab 1</span>
+          </button>
+          <button
+            className="MuiButtonBase-root MuiTab-root quiet MuiTab-textColorInherit MuiTab-wrapped"
+            tabIndex="-1"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            id="tab-1"
+            aria-controls="tabpanel-1"
+          >
+            <span className="MuiTab-wrapper">Quiet tab 2</span>
+          </button>
+          <button
+            className="MuiButtonBase-root MuiTab-root quiet MuiTab-textColorInherit MuiTab-wrapped"
+            tabIndex="-1"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            id="tab-2"
+            aria-controls="tabpanel-2"
+          >
+            <span className="MuiTab-wrapper">Quiet tab 3</span>
+          </button>
+          <button
+            className="MuiButtonBase-root MuiTab-root quiet MuiTab-textColorInherit MuiTab-wrapped Mui-disabled"
+            disabled
+            tabIndex="-1"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            id="tab-3"
+            aria-controls="tabpanel-3"
+          >
+            <span className="MuiTab-wrapper">Quiet tab 4 (disabled)</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </Story>
+</Canvas>

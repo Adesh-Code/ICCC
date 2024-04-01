@@ -1,0 +1,1479 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { componentArgs } from "../constants";
+import {
+  ComponentTitle,
+  InstallationInstructions,
+  VariantRangeNotice,
+  VersionNotice
+} from "../../../docs/src/partials";
+import { name, peerDependencies, version } from "../../package.json";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Card, { CardDivider } from "../card";
+import CardActionArea from "@mui/material/CardActionArea";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import { CtaArrowRight, CtaArrowRightSolid } from "@iccc/icon";
+import Grid from "@mui/material/Unstable_Grid2";
+import SvgIcon from "@mui/material/SvgIcon";
+import Typography from "@iccc/typography";
+
+<Meta
+  args={{
+    ...Card.defaultProps
+  }}
+  component={Card}
+  id="components/card"
+  title="Digital HIG/Components/Card"
+/>
+
+<ComponentTitle name="Card" status="Stable" />
+
+<code>
+  <VersionNotice packageName="card" version={version} />
+</code>
+
+The Card component is a thin wrapper around MUI [`<Card>`](https://mui.com/material-ui/api/card/), with Digital HIG defaults. Included with Card are the nested wrapped components `<CardActions />`, `<CardContent />`, `<CardDivider />`, and `<CardMedia />`.
+
+For related design documentation, please see the [Digital HIG Figma Toolkit](https://www.figma.com/file/Eks986gkqncHjkLnwQjO7g/iccc-sticker-sheets?node-id=4203%3A250690&t=pTfzpGDpokVB8t0o-1).
+
+## Installation
+
+<InstallationInstructions
+  componentImport="Card"
+  name={name}
+  peerDependencies={peerDependencies}
+/>
+
+## API
+
+- For all supported MUI `<Card />` props, see [Card API](https://mui.com/material-ui/api/card/)
+- For all supported MUI `<CardMedia />` props, see [CardMedia API](https://mui.com/material-ui/api/card-media/)
+- For all supported MUI `<CardContent />` props, see [CardContent API](https://mui.com/material-ui/api/card-content/)
+- For all supported MUI `<CardActions />` props, see [CardActions API](https://mui.com/material-ui/api/card-actions/)
+
+### Additional component APIs
+
+Included with Card is component `<CardDivider/>` API. It is a special variation of the `<Divider />` component which provides vertical spacing to separate content from actions. See [Divider docs](/docs/components-divider--api) for more info, and see all examples on this page for utilization.
+
+```jsx
+import { CardDivider } from "@iccc/card";
+```
+
+## Card variants
+
+<VariantRangeNotice />
+
+### Default (cover and body)
+
+A typical card including media and content.
+
+<Canvas>
+  <Story argTypes={componentArgs} name="Cover and body">
+    {(args) => (
+      <Grid container spacing={4} py={2}>
+        <Grid xs={12} md={6} lg={4}>
+          <Card {...args}>
+            <CardMedia
+              image="https://swc.autodesk.com/pharmacopeia/img/placeholders/960x640.png"
+              alt="Alt text"
+              component="img"
+            />
+            <CardContent>
+              <Typography
+                sx={{ mb: 3 }}
+                variant="eyebrow"
+                color="ink-on-background-60"
+              >
+                Eyebrow
+              </Typography>
+              <Typography sx={{ mb: 3 }} variant="headline-medium">
+                Headline ut risus sed risus pellentesque at.
+              </Typography>
+              <Typography>
+                Sit nulla leo eu vestibulum fermentum aliquam suspendisse
+                tortor. Egestas amet aliquam euismod lobortis ac eget placerat.
+              </Typography>
+            </CardContent>
+          </Card>
+        </Grid>
+      </Grid>
+    )}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Cover and body" />
+
+### Actions
+
+Use the `<CardActions>` component in combination with the `<Button variant="link-button">` to pass in actions. If your card only has a single action, turn the entire card into a link by wrapping the card in `<CardActionArea>` and use the `href` prop to pass in a URL.
+
+<Canvas>
+  <Story name="Actions">
+    <Grid container spacing={4} py={2}>
+      <Grid xs={12} md={6} lg={4}>
+        <CardActionArea href="#">
+          <Card>
+            <CardContent>
+              <Typography
+                sx={{ mb: 3 }}
+                variant="eyebrow"
+                color="ink-on-background-60"
+              >
+                Eyebrow
+              </Typography>
+              <Typography sx={{ mb: 3 }} variant="headline-medium">
+                Headline ut risus sed risus pellentesque at.
+              </Typography>
+              <Typography>
+                Sit nulla leo eu vestibulum fermentum aliquam suspendisse
+                tortor. Egestas amet aliquam euismod lobortis ac eget placerat.
+              </Typography>
+            </CardContent>
+          </Card>
+        </CardActionArea>
+      </Grid>
+      <Grid xs={12} md={6} lg={4}>
+        <CardActionArea href="#">
+          <Card>
+            <CardContent>
+              <Typography
+                sx={{ mb: 3 }}
+                variant="eyebrow"
+                color="ink-on-background-60"
+              >
+                Eyebrow
+              </Typography>
+              <Typography sx={{ mb: 3 }} variant="headline-medium">
+                Headline ut risus sed risus pellentesque at.
+              </Typography>
+              <Typography>
+                Sit nulla leo eu vestibulum fermentum aliquam suspendisse
+                tortor. Egestas amet aliquam euismod lobortis ac eget placerat.
+              </Typography>
+            </CardContent>
+            <CardDivider />
+            <CardActions>
+              <Button
+                variant="link-button"
+                href="#"
+                sx={{
+                  '& [class*="MuiSvgIcon-root"]:nth-of-type(2), &:hover [class*="MuiSvgIcon-root"]:nth-of-type(1), &:focus-visible [class*="MuiSvgIcon-root"]:nth-of-type(1), &:active [class*="MuiSvgIcon-root"]:nth-of-type(1)':
+                    {
+                      display: "none"
+                    },
+                  '&:hover [class*="MuiSvgIcon-root"]:nth-of-type(2), &:focus-visible [class*="MuiSvgIcon-root"]:nth-of-type(2), &:active [class*="MuiSvgIcon-root"]:nth-of-type(2)':
+                    {
+                      display: "block"
+                    }
+                }}
+                startIcon={
+                  <>
+                    <SvgIcon fontSize="medium">
+                      <CtaArrowRight />
+                    </SvgIcon>
+                    <SvgIcon fontSize="medium">
+                      <CtaArrowRightSolid />
+                    </SvgIcon>
+                  </>
+                }
+              >
+                Single action
+              </Button>
+            </CardActions>
+          </Card>
+        </CardActionArea>
+      </Grid>
+      <Grid xs={12} md={6} lg={4}>
+        <Card>
+          <CardMedia
+            image="https://swc.autodesk.com/pharmacopeia/img/placeholders/960x640.png"
+            alt="Alt text"
+            component="img"
+          />
+          <CardContent>
+            <Typography
+              sx={{ mb: 3 }}
+              variant="eyebrow"
+              color="ink-on-background-60"
+            >
+              Eyebrow
+            </Typography>
+            <Typography sx={{ mb: 3 }} variant="headline-medium">
+              Headline ut risus sed risus pellentesque at.
+            </Typography>
+            <Typography>
+              Sit nulla leo eu vestibulum fermentum aliquam suspendisse tortor.
+              Egestas amet aliquam euismod lobortis ac eget placerat.
+            </Typography>
+          </CardContent>
+          <CardDivider />
+          <CardActions>
+            <Button
+              variant="link-button"
+              href="#"
+              sx={{
+                '& [class*="MuiSvgIcon-root"]:nth-of-type(2), &:hover [class*="MuiSvgIcon-root"]:nth-of-type(1), &:focus-visible [class*="MuiSvgIcon-root"]:nth-of-type(1), &:active [class*="MuiSvgIcon-root"]:nth-of-type(1)':
+                  {
+                    display: "none"
+                  },
+                '&:hover [class*="MuiSvgIcon-root"]:nth-of-type(2), &:focus-visible [class*="MuiSvgIcon-root"]:nth-of-type(2), &:active [class*="MuiSvgIcon-root"]:nth-of-type(2)':
+                  {
+                    display: "block"
+                  }
+              }}
+              startIcon={
+                <>
+                  <SvgIcon fontSize="medium">
+                    <CtaArrowRight />
+                  </SvgIcon>
+                  <SvgIcon fontSize="medium">
+                    <CtaArrowRightSolid />
+                  </SvgIcon>
+                </>
+              }
+            >
+              Multiple actions
+            </Button>
+            <Button
+              variant="link-button"
+              size="small"
+              href="#"
+              sx={{
+                '& [class*="MuiSvgIcon-root"]:nth-of-type(2), &:hover [class*="MuiSvgIcon-root"]:nth-of-type(1), &:focus-visible [class*="MuiSvgIcon-root"]:nth-of-type(1), &:active [class*="MuiSvgIcon-root"]:nth-of-type(1)':
+                  {
+                    display: "none"
+                  },
+                '&:hover [class*="MuiSvgIcon-root"]:nth-of-type(2), &:focus-visible [class*="MuiSvgIcon-root"]:nth-of-type(2), &:active [class*="MuiSvgIcon-root"]:nth-of-type(2)':
+                  {
+                    display: "block"
+                  }
+              }}
+              startIcon={
+                <>
+                  <SvgIcon fontSize="medium">
+                    <CtaArrowRight />
+                  </SvgIcon>
+                  <SvgIcon fontSize="medium">
+                    <CtaArrowRightSolid />
+                  </SvgIcon>
+                </>
+              }
+            >
+              Small action button
+            </Button>
+          </CardActions>
+        </Card>
+      </Grid>
+    </Grid>
+  </Story>
+</Canvas>
+
+#### Disabled
+
+Pass the `disabled` prop to CardActionArea to show the link card in disabled state.
+
+<Canvas>
+  <Story name="Disabled action">
+    <Grid container spacing={4} py={2}>
+      <Grid xs={12} md={6} lg={4}>
+        <CardActionArea href="#" disabled>
+          <Card>
+            <CardContent>
+              <Typography
+                sx={{ mb: 3 }}
+                variant="eyebrow"
+                color="ink-on-background-60"
+              >
+                Eyebrow
+              </Typography>
+              <Typography sx={{ mb: 3 }} variant="headline-medium">
+                Headline ut risus sed risus pellentesque at.
+              </Typography>
+              <Typography>
+                Sit nulla leo eu vestibulum fermentum aliquam suspendisse
+                tortor. Egestas amet aliquam euismod lobortis ac eget placerat.
+              </Typography>
+            </CardContent>
+            <CardDivider />
+            <CardActions sx={{ mt: 6 }}>
+              <Button
+                variant="link-button"
+                href="#"
+                disabled
+                sx={{
+                  '& [class*="MuiSvgIcon-root"]:nth-of-type(2), &:hover [class*="MuiSvgIcon-root"]:nth-of-type(1), &:focus-visible [class*="MuiSvgIcon-root"]:nth-of-type(1), &:active [class*="MuiSvgIcon-root"]:nth-of-type(1)':
+                    {
+                      display: "none"
+                    },
+                  '&:hover [class*="MuiSvgIcon-root"]:nth-of-type(2), &:focus-visible [class*="MuiSvgIcon-root"]:nth-of-type(2), &:active [class*="MuiSvgIcon-root"]:nth-of-type(2)':
+                    {
+                      display: "block"
+                    }
+                }}
+                startIcon={
+                  <>
+                    <SvgIcon fontSize="medium">
+                      <CtaArrowRight />
+                    </SvgIcon>
+                    <SvgIcon fontSize="medium">
+                      <CtaArrowRightSolid />
+                    </SvgIcon>
+                  </>
+                }
+              >
+                Single action, disabled
+              </Button>
+            </CardActions>
+          </Card>
+        </CardActionArea>
+      </Grid>
+    </Grid>
+  </Story>
+</Canvas>
+
+#### Without divider
+
+Cards with actions can also be displayed without a divider.
+
+<Canvas>
+  <Story name="Action without divider">
+    <Grid container spacing={4} py={2}>
+      <Grid xs={12} md={6} lg={4}>
+        <CardActionArea href="#">
+          <Card>
+            <CardMedia
+              image="https://swc.autodesk.com/pharmacopeia/img/placeholders/960x640.png"
+              alt="Alt text"
+              component="img"
+            />
+            <CardContent>
+              <Typography
+                sx={{ mb: 3 }}
+                variant="eyebrow"
+                color="ink-on-background-60"
+              >
+                Eyebrow
+              </Typography>
+              <Typography sx={{ mb: 3 }} variant="headline-medium">
+                Headline ut risus sed risus pellentesque at.
+              </Typography>
+              <Typography>
+                Sit nulla leo eu vestibulum fermentum aliquam suspendisse
+                tortor. Egestas amet aliquam euismod lobortis ac eget placerat.
+              </Typography>
+            </CardContent>
+            <CardActions sx={{ mt: 6 }}>
+              <Button
+                variant="link-button"
+                href="#"
+                sx={{
+                  '& [class*="MuiSvgIcon-root"]:nth-of-type(2), &:hover [class*="MuiSvgIcon-root"]:nth-of-type(1), &:focus-visible [class*="MuiSvgIcon-root"]:nth-of-type(1), &:active [class*="MuiSvgIcon-root"]:nth-of-type(1)':
+                    {
+                      display: "none"
+                    },
+                  '&:hover [class*="MuiSvgIcon-root"]:nth-of-type(2), &:focus-visible [class*="MuiSvgIcon-root"]:nth-of-type(2), &:active [class*="MuiSvgIcon-root"]:nth-of-type(2)':
+                    {
+                      display: "block"
+                    }
+                }}
+                startIcon={
+                  <>
+                    <SvgIcon fontSize="medium">
+                      <CtaArrowRight />
+                    </SvgIcon>
+                    <SvgIcon fontSize="medium">
+                      <CtaArrowRightSolid />
+                    </SvgIcon>
+                  </>
+                }
+              >
+                Action
+              </Button>
+            </CardActions>
+          </Card>
+        </CardActionArea>
+      </Grid>
+      <Grid xs={12} md={6} lg={4}>
+        <Card>
+          <CardMedia
+            image="https://swc.autodesk.com/pharmacopeia/img/placeholders/960x640.png"
+            alt="Alt text"
+            component="img"
+          />
+          <CardContent>
+            <Typography
+              sx={{ mb: 3 }}
+              variant="eyebrow"
+              color="ink-on-background-60"
+            >
+              Eyebrow
+            </Typography>
+            <Typography sx={{ mb: 3 }} variant="headline-medium">
+              Headline ut risus sed risus pellentesque at.
+            </Typography>
+            <Typography>
+              Sit nulla leo eu vestibulum fermentum aliquam suspendisse tortor.
+              Egestas amet aliquam euismod lobortis ac eget placerat.
+            </Typography>
+          </CardContent>
+          <CardActions sx={{ mt: 6 }}>
+            <Button
+              variant="link-button"
+              href="#"
+              sx={{
+                '& [class*="MuiSvgIcon-root"]:nth-of-type(2), &:hover [class*="MuiSvgIcon-root"]:nth-of-type(1), &:focus-visible [class*="MuiSvgIcon-root"]:nth-of-type(1), &:active [class*="MuiSvgIcon-root"]:nth-of-type(1)':
+                  {
+                    display: "none"
+                  },
+                '&:hover [class*="MuiSvgIcon-root"]:nth-of-type(2), &:focus-visible [class*="MuiSvgIcon-root"]:nth-of-type(2), &:active [class*="MuiSvgIcon-root"]:nth-of-type(2)':
+                  {
+                    display: "block"
+                  }
+              }}
+              startIcon={
+                <>
+                  <SvgIcon fontSize="medium">
+                    <CtaArrowRight />
+                  </SvgIcon>
+                  <SvgIcon fontSize="medium">
+                    <CtaArrowRightSolid />
+                  </SvgIcon>
+                </>
+              }
+            >
+              Multiple actions
+            </Button>
+            <Button
+              variant="link-button"
+              size="small"
+              href="#"
+              sx={{
+                '& [class*="MuiSvgIcon-root"]:nth-of-type(2), &:hover [class*="MuiSvgIcon-root"]:nth-of-type(1), &:focus-visible [class*="MuiSvgIcon-root"]:nth-of-type(1), &:active [class*="MuiSvgIcon-root"]:nth-of-type(1)':
+                  {
+                    display: "none"
+                  },
+                '&:hover [class*="MuiSvgIcon-root"]:nth-of-type(2), &:focus-visible [class*="MuiSvgIcon-root"]:nth-of-type(2), &:active [class*="MuiSvgIcon-root"]:nth-of-type(2)':
+                  {
+                    display: "block"
+                  }
+              }}
+              startIcon={
+                <>
+                  <SvgIcon fontSize="medium">
+                    <CtaArrowRight />
+                  </SvgIcon>
+                  <SvgIcon fontSize="medium">
+                    <CtaArrowRightSolid />
+                  </SvgIcon>
+                </>
+              }
+            >
+              Small action button
+            </Button>
+          </CardActions>
+        </Card>
+      </Grid>
+    </Grid>
+  </Story>
+</Canvas>
+
+### Layout
+
+#### Body only
+
+Here are a few examples of a card that only has a body.
+
+<Canvas>
+  <Story name="Body only">
+    <Grid container spacing={4} py={2}>
+      <Grid xs={12} md={6} lg={4}>
+        <CardActionArea href="#">
+          <Card>
+            <CardContent>
+              <Typography
+                sx={{ mb: 3 }}
+                variant="eyebrow"
+                color="ink-on-background-60"
+              >
+                Eyebrow
+              </Typography>
+              <Typography sx={{ mb: 3 }} variant="headline-medium">
+                Headline ut risus sed risus pellentesque at.
+              </Typography>
+              <Typography>
+                Sit nulla leo eu vestibulum fermentum aliquam suspendisse
+                tortor. Egestas amet aliquam euismod lobortis ac eget placerat.
+              </Typography>
+            </CardContent>
+            <CardDivider />
+            <CardActions sx={{ mt: 6 }}>
+              <Button
+                variant="link-button"
+                href="#"
+                sx={{
+                  '& [class*="MuiSvgIcon-root"]:nth-of-type(2), &:hover [class*="MuiSvgIcon-root"]:nth-of-type(1), &:focus-visible [class*="MuiSvgIcon-root"]:nth-of-type(1), &:active [class*="MuiSvgIcon-root"]:nth-of-type(1)':
+                    {
+                      display: "none"
+                    },
+                  '&:hover [class*="MuiSvgIcon-root"]:nth-of-type(2), &:focus-visible [class*="MuiSvgIcon-root"]:nth-of-type(2), &:active [class*="MuiSvgIcon-root"]:nth-of-type(2)':
+                    {
+                      display: "block"
+                    }
+                }}
+                startIcon={
+                  <>
+                    <SvgIcon fontSize="medium">
+                      <CtaArrowRight />
+                    </SvgIcon>
+                    <SvgIcon fontSize="medium">
+                      <CtaArrowRightSolid />
+                    </SvgIcon>
+                  </>
+                }
+              >
+                Action
+              </Button>
+            </CardActions>
+          </Card>
+        </CardActionArea>
+      </Grid>
+      <Grid xs={12} md={6} lg={4}>
+        <Card>
+          <CardContent>
+            <Typography sx={{ mb: 3 }} variant="headline-large">
+              Headline ut risus sed risus pellentesque at.
+            </Typography>
+            <Typography>
+              Sit nulla leo eu vestibulum fermentum aliquam suspendisse tortor.
+              Egestas amet aliquam euismod lobortis ac eget placerat.
+            </Typography>
+          </CardContent>
+        </Card>
+      </Grid>
+    </Grid>
+  </Story>
+</Canvas>
+
+#### One column, reverse
+
+To display a single column Card with the image below the content, simply change the order of the `<CardMedia>` component nested inside `<Card>`.
+
+<Canvas>
+  <Story argTypes={componentArgs} name="One column">
+    <Grid container spacing={4} py={2}>
+      <Grid xs={12} md={6} lg={4}>
+        <CardActionArea href="#">
+          <Card>
+            <CardContent sx={{ mb: 6 }}>
+              <Typography
+                sx={{ mb: 3 }}
+                variant="eyebrow"
+                color="ink-on-background-60"
+              >
+                Eyebrow
+              </Typography>
+              <Typography sx={{ mb: 3 }} variant="headline-medium">
+                Headline ut risus sed risus pellentesque at.
+              </Typography>
+              <Typography>
+                Sit nulla leo eu vestibulum fermentum aliquam suspendisse
+                tortor. Egestas amet aliquam euismod lobortis ac eget placerat.
+              </Typography>
+            </CardContent>
+            <CardDivider />
+            <CardActions>
+              <Button
+                variant="link-button"
+                href="#"
+                sx={{
+                  '& [class*="MuiSvgIcon-root"]:nth-of-type(2), &:hover [class*="MuiSvgIcon-root"]:nth-of-type(1), &:focus-visible [class*="MuiSvgIcon-root"]:nth-of-type(1), &:active [class*="MuiSvgIcon-root"]:nth-of-type(1)':
+                    {
+                      display: "none"
+                    },
+                  '&:hover [class*="MuiSvgIcon-root"]:nth-of-type(2), &:focus-visible [class*="MuiSvgIcon-root"]:nth-of-type(2), &:active [class*="MuiSvgIcon-root"]:nth-of-type(2)':
+                    {
+                      display: "block"
+                    }
+                }}
+                startIcon={
+                  <>
+                    <SvgIcon fontSize="medium">
+                      <CtaArrowRight />
+                    </SvgIcon>
+                    <SvgIcon fontSize="medium">
+                      <CtaArrowRightSolid />
+                    </SvgIcon>
+                  </>
+                }
+              >
+                Action
+              </Button>
+            </CardActions>
+            <CardMedia
+              image="https://swc.autodesk.com/pharmacopeia/img/placeholders/960x640.png"
+              alt="Alt text"
+              component="img"
+            />
+          </Card>
+        </CardActionArea>
+      </Grid>
+    </Grid>
+  </Story>
+</Canvas>
+
+#### Two columns
+
+To display a two column Card, add a prop of `twoColumns={true}`. You'll also need to wrap your content components in an extra `<div>` to group them together. The examples below show image first, and image last.
+
+Because the image automatically scales to fit, you'll need to pass in a custom height for the container to accomodate for this & ensure your content fits with your image.
+
+<Canvas>
+  <Story name="Two columns">
+    <Box sx={{ maxWidth: 520 }} py={2}>
+      <Card twoColumns>
+        <Box
+          sx={{
+            flex: "1 0 50%",
+            minWidth: "200px",
+            overflow: "hidden"
+          }}
+        >
+          <CardMedia
+            image="https://swc.autodesk.com/pharmacopeia/img/placeholders/960x640.png"
+            alt="Alt text"
+            component="img"
+          />
+        </Box>
+        <Box sx={{ display: "flex", flexDirection: "column", flex: "1 0 50%" }}>
+          <CardContent>
+            <Box mb={3}>
+              <Typography variant="headline-medium">Two columns</Typography>
+            </Box>
+            <Box mb={7}>
+              <Typography>
+                Lobortis quis libero, duis nisl, dignissim erat. Libero quis
+                posuere nulla at ac.
+              </Typography>
+            </Box>
+          </CardContent>
+        </Box>
+      </Card>
+      <br />
+      <Card twoColumns>
+        <Box sx={{ display: "flex", flexDirection: "column", flex: "1 0 50%" }}>
+          <CardContent>
+            <Box mb={3}>
+              <Typography variant="headline-medium">
+                Two columns, reverse
+              </Typography>
+            </Box>
+            <Box mb={7}>
+              <Typography>
+                Sit nulla leo eu vestibulum fermentum aliquam.
+              </Typography>
+            </Box>
+          </CardContent>
+        </Box>
+        <Box
+          sx={{
+            flex: "1 0 50%",
+            minWidth: "200px",
+            overflow: "hidden"
+          }}
+        >
+          <CardMedia
+            image="https://swc.autodesk.com/pharmacopeia/img/placeholders/960x640.png"
+            alt="Alt text"
+            component="img"
+          />
+        </Box>
+      </Card>
+    </Box>
+  </Story>
+</Canvas>
+
+### Appearance
+
+#### Quiet
+
+The `quiet` variant, when set to `true`, displays a card with a more subtle style.
+
+<Canvas>
+  <Story name="Quiet">
+    <Grid container spacing={4} py={2}>
+      <Grid xs={12} md={6} lg={4}>
+        <CardActionArea href="#">
+          <Card quiet>
+            <CardMedia
+              image="https://swc.autodesk.com/pharmacopeia/img/placeholders/960x640.png"
+              alt="Alt text"
+              component="img"
+            />
+            <CardContent>
+              <Typography
+                sx={{ mb: 3 }}
+                variant="eyebrow"
+                color="ink-on-background-60"
+              >
+                Eyebrow
+              </Typography>
+              <Typography sx={{ mb: 3 }} variant="headline-medium">
+                Headline ut risus sed risus pellentesque at.
+              </Typography>
+              <Typography>
+                Sit nulla leo eu vestibulum fermentum aliquam suspendisse
+                tortor. Egestas amet aliquam euismod lobortis ac eget placerat.
+              </Typography>
+            </CardContent>
+            <CardDivider />
+            <CardActions>
+              <Button
+                variant="link-button"
+                href="#"
+                sx={{
+                  '& [class*="MuiSvgIcon-root"]:nth-of-type(2), &:hover [class*="MuiSvgIcon-root"]:nth-of-type(1), &:focus-visible [class*="MuiSvgIcon-root"]:nth-of-type(1), &:active [class*="MuiSvgIcon-root"]:nth-of-type(1)':
+                    {
+                      display: "none"
+                    },
+                  '&:hover [class*="MuiSvgIcon-root"]:nth-of-type(2), &:focus-visible [class*="MuiSvgIcon-root"]:nth-of-type(2), &:active [class*="MuiSvgIcon-root"]:nth-of-type(2)':
+                    {
+                      display: "block"
+                    }
+                }}
+                startIcon={
+                  <>
+                    <SvgIcon fontSize="medium">
+                      <CtaArrowRight />
+                    </SvgIcon>
+                    <SvgIcon fontSize="medium">
+                      <CtaArrowRightSolid />
+                    </SvgIcon>
+                  </>
+                }
+              >
+                Action
+              </Button>
+            </CardActions>
+          </Card>
+        </CardActionArea>
+      </Grid>
+    </Grid>
+  </Story>
+</Canvas>
+
+#### Framed
+
+Use the `framed` prop to create a framed card.
+
+<Canvas>
+  <Story name="Framed">
+    <Grid container spacing={4} py={2}>
+      <Grid xs={12} md={6} lg={4}>
+        <CardActionArea href="#">
+          <Card framed>
+            <CardMedia
+              image="https://swc.autodesk.com/pharmacopeia/img/placeholders/960x640.png"
+              alt="Alt text"
+              component="img"
+            />
+            <CardContent>
+              <Typography
+                sx={{ mb: 3 }}
+                variant="eyebrow"
+                color="ink-on-background-60"
+              >
+                Eyebrow
+              </Typography>
+              <Typography sx={{ mb: 3 }} variant="headline-medium">
+                Headline ut risus sed risus pellentesque at.
+              </Typography>
+              <Typography>
+                Sit nulla leo eu vestibulum fermentum aliquam suspendisse
+                tortor. Egestas amet aliquam euismod lobortis ac eget placerat.
+              </Typography>
+            </CardContent>
+            <CardDivider />
+            <CardActions>
+              <Button
+                variant="link-button"
+                href="#"
+                sx={{
+                  '& [class*="MuiSvgIcon-root"]:nth-of-type(2), &:hover [class*="MuiSvgIcon-root"]:nth-of-type(1), &:focus-visible [class*="MuiSvgIcon-root"]:nth-of-type(1), &:active [class*="MuiSvgIcon-root"]:nth-of-type(1)':
+                    {
+                      display: "none"
+                    },
+                  '&:hover [class*="MuiSvgIcon-root"]:nth-of-type(2), &:focus-visible [class*="MuiSvgIcon-root"]:nth-of-type(2), &:active [class*="MuiSvgIcon-root"]:nth-of-type(2)':
+                    {
+                      display: "block"
+                    }
+                }}
+                startIcon={
+                  <>
+                    <SvgIcon fontSize="medium">
+                      <CtaArrowRight />
+                    </SvgIcon>
+                    <SvgIcon fontSize="medium">
+                      <CtaArrowRightSolid />
+                    </SvgIcon>
+                  </>
+                }
+              >
+                Action
+              </Button>
+            </CardActions>
+          </Card>
+        </CardActionArea>
+      </Grid>
+    </Grid>
+  </Story>
+</Canvas>
+
+#### Quiet & Framed
+
+Quiet and framed, paired together.
+
+<Canvas>
+  <Story name="Quiet and framed">
+    <Grid container spacing={4} py={2}>
+      <Grid xs={12} md={6} lg={4}>
+        <CardActionArea href="#">
+          <Card framed quiet>
+            <CardMedia
+              image="https://swc.autodesk.com/pharmacopeia/img/placeholders/960x640.png"
+              alt="Alt text"
+              component="img"
+            />
+            <CardContent>
+              <Typography
+                sx={{ mb: 3 }}
+                variant="eyebrow"
+                color="ink-on-background-60"
+              >
+                Eyebrow
+              </Typography>
+              <Typography sx={{ mb: 3 }} variant="headline-medium">
+                Headline ut risus sed risus pellentesque at.
+              </Typography>
+              <Typography>
+                Sit nulla leo eu vestibulum fermentum aliquam suspendisse
+                tortor. Egestas amet aliquam euismod lobortis ac eget placerat.
+              </Typography>
+            </CardContent>
+            <CardDivider />
+            <CardActions>
+              <Button
+                variant="link-button"
+                href="#"
+                sx={{
+                  '& [class*="MuiSvgIcon-root"]:nth-of-type(2), &:hover [class*="MuiSvgIcon-root"]:nth-of-type(1), &:focus-visible [class*="MuiSvgIcon-root"]:nth-of-type(1), &:active [class*="MuiSvgIcon-root"]:nth-of-type(1)':
+                    {
+                      display: "none"
+                    },
+                  '&:hover [class*="MuiSvgIcon-root"]:nth-of-type(2), &:focus-visible [class*="MuiSvgIcon-root"]:nth-of-type(2), &:active [class*="MuiSvgIcon-root"]:nth-of-type(2)':
+                    {
+                      display: "block"
+                    }
+                }}
+                startIcon={
+                  <>
+                    <SvgIcon fontSize="medium">
+                      <CtaArrowRight />
+                    </SvgIcon>
+                    <SvgIcon fontSize="medium">
+                      <CtaArrowRightSolid />
+                    </SvgIcon>
+                  </>
+                }
+              >
+                Action
+              </Button>
+            </CardActions>
+          </Card>
+        </CardActionArea>
+      </Grid>
+    </Grid>
+  </Story>
+</Canvas>
+
+### Overlays
+
+The overlay covers the image in a card, and is not enabled by default.
+
+Coming Soon: This variant has not been built yet. If your team needs this variant, reach out to us so we can prioritize accordingly.
+
+### Grouping in a grid
+
+Card naturally expands to the width of its container. Use a grid container to display several cards grouped together.
+
+<Canvas>
+  <Story name="In responsive grid">
+    <Grid container spacing={4} py={2}>
+      <Grid xs={12} md={6} lg={4}>
+        <CardActionArea href="#">
+          <Card>
+            <CardContent>
+              <Typography
+                sx={{ mb: 3 }}
+                variant="eyebrow"
+                color="ink-on-background-60"
+              >
+                Eyebrow
+              </Typography>
+              <Typography sx={{ mb: 3 }} variant="headline-medium">
+                Headline ut risus sed risus pellentesque at.
+              </Typography>
+              <Typography>
+                Sit nulla leo eu vestibulum fermentum aliquam suspendisse
+                tortor. Egestas amet aliquam euismod lobortis ac eget placerat.
+              </Typography>
+            </CardContent>
+            <CardDivider />
+            <CardActions>
+              <Button
+                variant="link-button"
+                href="#"
+                sx={{
+                  '& [class*="MuiSvgIcon-root"]:nth-of-type(2), &:hover [class*="MuiSvgIcon-root"]:nth-of-type(1), &:focus-visible [class*="MuiSvgIcon-root"]:nth-of-type(1), &:active [class*="MuiSvgIcon-root"]:nth-of-type(1)':
+                    {
+                      display: "none"
+                    },
+                  '&:hover [class*="MuiSvgIcon-root"]:nth-of-type(2), &:focus-visible [class*="MuiSvgIcon-root"]:nth-of-type(2), &:active [class*="MuiSvgIcon-root"]:nth-of-type(2)':
+                    {
+                      display: "block"
+                    }
+                }}
+                startIcon={
+                  <>
+                    <SvgIcon fontSize="medium">
+                      <CtaArrowRight />
+                    </SvgIcon>
+                    <SvgIcon fontSize="medium">
+                      <CtaArrowRightSolid />
+                    </SvgIcon>
+                  </>
+                }
+              >
+                Action
+              </Button>
+            </CardActions>
+          </Card>
+        </CardActionArea>
+      </Grid>
+      <Grid xs={12} md={6} lg={4}>
+        <CardActionArea href="#">
+          <Card>
+            <CardContent>
+              <Typography
+                sx={{ mb: 3 }}
+                variant="eyebrow"
+                color="ink-on-background-60"
+              >
+                Eyebrow
+              </Typography>
+              <Typography sx={{ mb: 3 }} variant="headline-medium">
+                Headline ut risus sed risus pellentesque at.
+              </Typography>
+              <Typography>
+                Sit nulla leo eu vestibulum fermentum aliquam suspendisse
+                tortor. Egestas amet aliquam euismod lobortis ac eget placerat.
+              </Typography>
+            </CardContent>
+            <CardDivider />
+            <CardActions>
+              <Button
+                variant="link-button"
+                href="#"
+                sx={{
+                  '& [class*="MuiSvgIcon-root"]:nth-of-type(2), &:hover [class*="MuiSvgIcon-root"]:nth-of-type(1), &:focus-visible [class*="MuiSvgIcon-root"]:nth-of-type(1), &:active [class*="MuiSvgIcon-root"]:nth-of-type(1)':
+                    {
+                      display: "none"
+                    },
+                  '&:hover [class*="MuiSvgIcon-root"]:nth-of-type(2), &:focus-visible [class*="MuiSvgIcon-root"]:nth-of-type(2), &:active [class*="MuiSvgIcon-root"]:nth-of-type(2)':
+                    {
+                      display: "block"
+                    }
+                }}
+                startIcon={
+                  <>
+                    <SvgIcon fontSize="medium">
+                      <CtaArrowRight />
+                    </SvgIcon>
+                    <SvgIcon fontSize="medium">
+                      <CtaArrowRightSolid />
+                    </SvgIcon>
+                  </>
+                }
+              >
+                Action
+              </Button>
+            </CardActions>
+          </Card>
+        </CardActionArea>
+      </Grid>
+    </Grid>
+  </Story>
+</Canvas>
+
+### Dark theme
+
+<Canvas>
+  <Story name="Dark theme" parameters={{ theme: "dark" }}>
+    <Grid container spacing={4} py={2}>
+      <Grid xs={12} md={6} lg={4}>
+        <CardActionArea href="#">
+          <Card>
+            <CardContent>
+              <Typography
+                sx={{ mb: 3 }}
+                variant="eyebrow"
+                color="ink-on-background-60"
+              >
+                Eyebrow
+              </Typography>
+              <Typography sx={{ mb: 3 }} variant="headline-medium">
+                Headline ut risus sed risus pellentesque at.
+              </Typography>
+              <Typography>
+                Sit nulla leo eu vestibulum fermentum aliquam suspendisse
+                tortor. Egestas amet aliquam euismod lobortis ac eget placerat.
+              </Typography>
+            </CardContent>
+            <CardDivider />
+            <CardActions>
+              <Button
+                variant="link-button"
+                href="#"
+                sx={{
+                  '& [class*="MuiSvgIcon-root"]:nth-of-type(2), &:hover [class*="MuiSvgIcon-root"]:nth-of-type(1), &:focus-visible [class*="MuiSvgIcon-root"]:nth-of-type(1), &:active [class*="MuiSvgIcon-root"]:nth-of-type(1)':
+                    {
+                      display: "none"
+                    },
+                  '&:hover [class*="MuiSvgIcon-root"]:nth-of-type(2), &:focus-visible [class*="MuiSvgIcon-root"]:nth-of-type(2), &:active [class*="MuiSvgIcon-root"]:nth-of-type(2)':
+                    {
+                      display: "block"
+                    }
+                }}
+                startIcon={
+                  <>
+                    <SvgIcon fontSize="medium">
+                      <CtaArrowRight />
+                    </SvgIcon>
+                    <SvgIcon fontSize="medium">
+                      <CtaArrowRightSolid />
+                    </SvgIcon>
+                  </>
+                }
+              >
+                Action
+              </Button>
+            </CardActions>
+          </Card>
+        </CardActionArea>
+      </Grid>
+      <Grid xs={12} md={6} lg={4}>
+        <CardActionArea href="#">
+          <Card>
+            <CardMedia
+              image="https://swc.autodesk.com/pharmacopeia/img/placeholders/960x640.png"
+              alt="Alt text"
+              component="img"
+            />
+            <CardContent>
+              <Typography
+                sx={{ mb: 3 }}
+                variant="eyebrow"
+                color="ink-on-background-60"
+              >
+                Eyebrow
+              </Typography>
+              <Typography sx={{ mb: 3 }} variant="headline-medium">
+                Headline ut risus sed risus pellentesque at.
+              </Typography>
+              <Typography>
+                Sit nulla leo eu vestibulum fermentum aliquam suspendisse
+                tortor. Egestas amet aliquam euismod lobortis ac eget placerat.
+              </Typography>
+            </CardContent>
+            <CardDivider />
+            <CardActions>
+              <Button
+                variant="link-button"
+                href="#"
+                sx={{
+                  '& [class*="MuiSvgIcon-root"]:nth-of-type(2), &:hover [class*="MuiSvgIcon-root"]:nth-of-type(1), &:focus-visible [class*="MuiSvgIcon-root"]:nth-of-type(1), &:active [class*="MuiSvgIcon-root"]:nth-of-type(1)':
+                    {
+                      display: "none"
+                    },
+                  '&:hover [class*="MuiSvgIcon-root"]:nth-of-type(2), &:focus-visible [class*="MuiSvgIcon-root"]:nth-of-type(2), &:active [class*="MuiSvgIcon-root"]:nth-of-type(2)':
+                    {
+                      display: "block"
+                    }
+                }}
+                startIcon={
+                  <>
+                    <SvgIcon fontSize="medium">
+                      <CtaArrowRight />
+                    </SvgIcon>
+                    <SvgIcon fontSize="medium">
+                      <CtaArrowRightSolid />
+                    </SvgIcon>
+                  </>
+                }
+              >
+                Action
+              </Button>
+            </CardActions>
+          </Card>
+        </CardActionArea>
+      </Grid>
+    </Grid>
+  </Story>
+</Canvas>
+
+## Accessibility
+
+When "cover" variant is enabled and displayed as `<img>` tag, ensure that Alt text is included if context is needed.
+
+## VR: pseudo states
+
+<Canvas>
+  <Story
+    name="VR: pseudo states"
+    parameters={{
+      pseudo: {
+        hover: "#vr-multiple-hover",
+        active: "#vr-multiple-active",
+        focus: "#vr-multiple-focus"
+      }
+    }}
+  >
+    <Grid container spacing={4} px={2}>
+      <Grid xs={12}>
+        <Card id="vr-multiple-hover">
+          <CardContent>
+            <Typography
+              sx={{ mb: 3 }}
+              variant="eyebrow"
+              color="ink-on-background-60"
+            >
+              Eyebrow
+            </Typography>
+            <Typography sx={{ mb: 3 }} variant="headline-medium">
+              Hover
+            </Typography>
+            <Typography>
+              Sit nulla leo eu vestibulum fermentum aliquam suspendisse tortor.
+              Egestas amet aliquam euismod lobortis ac eget placerat.
+            </Typography>
+          </CardContent>
+          <CardDivider />
+          <CardActions>
+            <Button
+              className="vr-multiple-hover"
+              variant="link-button"
+              href="#"
+              sx={{
+                '& [class*="MuiSvgIcon-root"]:nth-of-type(2), &:hover [class*="MuiSvgIcon-root"]:nth-of-type(1), &:focus-visible [class*="MuiSvgIcon-root"]:nth-of-type(1), &:active [class*="MuiSvgIcon-root"]:nth-of-type(1)':
+                  {
+                    display: "none"
+                  },
+                '&:hover [class*="MuiSvgIcon-root"]:nth-of-type(2), &:focus-visible [class*="MuiSvgIcon-root"]:nth-of-type(2), &:active [class*="MuiSvgIcon-root"]:nth-of-type(2)':
+                  {
+                    display: "block"
+                  }
+              }}
+              startIcon={
+                <>
+                  <SvgIcon fontSize="medium">
+                    <CtaArrowRight />
+                  </SvgIcon>
+                  <SvgIcon fontSize="medium">
+                    <CtaArrowRightSolid />
+                  </SvgIcon>
+                </>
+              }
+            >
+              Multiple actions
+            </Button>
+            <Button
+              className="vr-multiple-hover"
+              variant="link-button"
+              size="small"
+              href="#"
+              sx={{
+                '& [class*="MuiSvgIcon-root"]:nth-of-type(2), &:hover [class*="MuiSvgIcon-root"]:nth-of-type(1), &:focus-visible [class*="MuiSvgIcon-root"]:nth-of-type(1), &:active [class*="MuiSvgIcon-root"]:nth-of-type(1)':
+                  {
+                    display: "none"
+                  },
+                '&:hover [class*="MuiSvgIcon-root"]:nth-of-type(2), &:focus-visible [class*="MuiSvgIcon-root"]:nth-of-type(2), &:active [class*="MuiSvgIcon-root"]:nth-of-type(2)':
+                  {
+                    display: "block"
+                  }
+              }}
+              startIcon={
+                <>
+                  <SvgIcon fontSize="medium">
+                    <CtaArrowRight />
+                  </SvgIcon>
+                  <SvgIcon fontSize="medium">
+                    <CtaArrowRightSolid />
+                  </SvgIcon>
+                </>
+              }
+            >
+              Small action button
+            </Button>
+          </CardActions>
+        </Card>
+      </Grid>
+      <Grid xs={12}>
+        <Card id="vr-multiple-active">
+          <CardContent>
+            <Typography
+              sx={{ mb: 3 }}
+              variant="eyebrow"
+              color="ink-on-background-60"
+            >
+              Eyebrow
+            </Typography>
+            <Typography sx={{ mb: 3 }} variant="headline-medium">
+              Active
+            </Typography>
+            <Typography>
+              Sit nulla leo eu vestibulum fermentum aliquam suspendisse tortor.
+              Egestas amet aliquam euismod lobortis ac eget placerat.
+            </Typography>
+          </CardContent>
+          <CardDivider />
+          <CardActions>
+            <Button
+              className="vr-multiple-active"
+              variant="link-button"
+              href="#"
+              sx={{
+                '& [class*="MuiSvgIcon-root"]:nth-of-type(2), &:hover [class*="MuiSvgIcon-root"]:nth-of-type(1), &:focus-visible [class*="MuiSvgIcon-root"]:nth-of-type(1), &:active [class*="MuiSvgIcon-root"]:nth-of-type(1)':
+                  {
+                    display: "none"
+                  },
+                '&:hover [class*="MuiSvgIcon-root"]:nth-of-type(2), &:focus-visible [class*="MuiSvgIcon-root"]:nth-of-type(2), &:active [class*="MuiSvgIcon-root"]:nth-of-type(2)':
+                  {
+                    display: "block"
+                  }
+              }}
+              startIcon={
+                <>
+                  <SvgIcon fontSize="medium">
+                    <CtaArrowRight />
+                  </SvgIcon>
+                  <SvgIcon fontSize="medium">
+                    <CtaArrowRightSolid />
+                  </SvgIcon>
+                </>
+              }
+            >
+              Multiple actions
+            </Button>
+            <Button
+              className="vr-multiple-active"
+              variant="link-button"
+              size="small"
+              href="#"
+              sx={{
+                '& [class*="MuiSvgIcon-root"]:nth-of-type(2), &:hover [class*="MuiSvgIcon-root"]:nth-of-type(1), &:focus-visible [class*="MuiSvgIcon-root"]:nth-of-type(1), &:active [class*="MuiSvgIcon-root"]:nth-of-type(1)':
+                  {
+                    display: "none"
+                  },
+                '&:hover [class*="MuiSvgIcon-root"]:nth-of-type(2), &:focus-visible [class*="MuiSvgIcon-root"]:nth-of-type(2), &:active [class*="MuiSvgIcon-root"]:nth-of-type(2)':
+                  {
+                    display: "block"
+                  }
+              }}
+              startIcon={
+                <>
+                  <SvgIcon fontSize="medium">
+                    <CtaArrowRight />
+                  </SvgIcon>
+                  <SvgIcon fontSize="medium">
+                    <CtaArrowRightSolid />
+                  </SvgIcon>
+                </>
+              }
+            >
+              Small action button
+            </Button>
+          </CardActions>
+        </Card>
+      </Grid>
+      <Grid xs={12}>
+        <Card id="vr-multiple-focus">
+          <CardContent>
+            <Typography
+              sx={{ mb: 3 }}
+              variant="eyebrow"
+              color="ink-on-background-60"
+            >
+              Eyebrow
+            </Typography>
+            <Typography sx={{ mb: 3 }} variant="headline-medium">
+              Focus
+            </Typography>
+            <Typography>
+              Sit nulla leo eu vestibulum fermentum aliquam suspendisse tortor.
+              Egestas amet aliquam euismod lobortis ac eget placerat.
+            </Typography>
+          </CardContent>
+          <CardDivider />
+          <CardActions>
+            <Button
+              className="vr-multiple-focus"
+              variant="link-button"
+              href="#"
+              sx={{
+                '& [class*="MuiSvgIcon-root"]:nth-of-type(2), &:hover [class*="MuiSvgIcon-root"]:nth-of-type(1), &:focus [class*="MuiSvgIcon-root"]:nth-of-type(1), &:active [class*="MuiSvgIcon-root"]:nth-of-type(1)':
+                  {
+                    display: "none"
+                  },
+                '&:hover [class*="MuiSvgIcon-root"]:nth-of-type(2), &:focus [class*="MuiSvgIcon-root"]:nth-of-type(2), &:active [class*="MuiSvgIcon-root"]:nth-of-type(2)':
+                  {
+                    display: "block"
+                  },
+                "&:focus": {
+                  outline: "2px solid rgb(95, 96, 255)",
+                  outlineOffset: "1px"
+                }
+              }}
+              startIcon={
+                <>
+                  <SvgIcon fontSize="medium">
+                    <CtaArrowRight />
+                  </SvgIcon>
+                  <SvgIcon fontSize="medium">
+                    <CtaArrowRightSolid />
+                  </SvgIcon>
+                </>
+              }
+            >
+              Multiple actions
+            </Button>
+            <Button
+              className="vr-multiple-focus"
+              variant="link-button"
+              size="small"
+              href="#"
+              sx={{
+                '& [class*="MuiSvgIcon-root"]:nth-of-type(2), &:hover [class*="MuiSvgIcon-root"]:nth-of-type(1), &:focus [class*="MuiSvgIcon-root"]:nth-of-type(1), &:active [class*="MuiSvgIcon-root"]:nth-of-type(1)':
+                  {
+                    display: "none"
+                  },
+                '&:hover [class*="MuiSvgIcon-root"]:nth-of-type(2), &:focus [class*="MuiSvgIcon-root"]:nth-of-type(2), &:active [class*="MuiSvgIcon-root"]:nth-of-type(2)':
+                  {
+                    display: "block"
+                  },
+                "&:focus": {
+                  outline: "2px solid rgb(95, 96, 255)",
+                  outlineOffset: "1px"
+                }
+              }}
+              startIcon={
+                <>
+                  <SvgIcon fontSize="medium">
+                    <CtaArrowRight />
+                  </SvgIcon>
+                  <SvgIcon fontSize="medium">
+                    <CtaArrowRightSolid />
+                  </SvgIcon>
+                </>
+              }
+            >
+              Small action button
+            </Button>
+          </CardActions>
+        </Card>
+      </Grid>
+      <Grid xs={12}>
+        <CardActionArea disabled>
+          <Card>
+            <CardContent>
+              <Typography
+                sx={{ mb: 3 }}
+                variant="eyebrow"
+                color="ink-on-background-60"
+              >
+                Eyebrow
+              </Typography>
+              <Typography sx={{ mb: 3 }} variant="headline-medium">
+                Disabled
+              </Typography>
+              <Typography>
+                Sit nulla leo eu vestibulum fermentum aliquam suspendisse
+                tortor. Egestas amet aliquam euismod lobortis ac eget placerat.
+              </Typography>
+            </CardContent>
+            <CardDivider />
+            <CardActions>
+              <Button
+                className="vr-multiple-disabled"
+                variant="link-button"
+                href="#"
+                sx={{
+                  '& [class*="MuiSvgIcon-root"]:nth-of-type(2)': {
+                    display: "none"
+                  },
+                  '&:hover [class*="MuiSvgIcon-root"]:nth-of-type(1)': {
+                    display: "none"
+                  },
+                  '&:hover [class*="MuiSvgIcon-root"]:nth-of-type(2)': {
+                    display: "block"
+                  }
+                }}
+                startIcon={
+                  <>
+                    <SvgIcon fontSize="medium">
+                      <CtaArrowRight />
+                    </SvgIcon>
+                    <SvgIcon fontSize="medium">
+                      <CtaArrowRightSolid />
+                    </SvgIcon>
+                  </>
+                }
+              >
+                Multiple actions
+              </Button>
+              <Button
+                className="vr-multiple-disabled"
+                variant="link-button"
+                size="small"
+                href="#"
+                sx={{
+                  '& [class*="MuiSvgIcon-root"]:nth-of-type(2)': {
+                    display: "none"
+                  },
+                  '&:hover [class*="MuiSvgIcon-root"]:nth-of-type(1)': {
+                    display: "none"
+                  },
+                  '&:hover [class*="MuiSvgIcon-root"]:nth-of-type(2)': {
+                    display: "block"
+                  }
+                }}
+                startIcon={
+                  <>
+                    <SvgIcon fontSize="medium">
+                      <CtaArrowRight />
+                    </SvgIcon>
+                    <SvgIcon fontSize="medium">
+                      <CtaArrowRightSolid />
+                    </SvgIcon>
+                  </>
+                }
+              >
+                Small action button
+              </Button>
+            </CardActions>
+          </Card>
+        </CardActionArea>
+      </Grid>
+    </Grid>
+  </Story>
+</Canvas>

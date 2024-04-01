@@ -1,0 +1,600 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { componentArgs } from "../constants";
+import {
+  ComponentTitle,
+  VariantRangeNotice,
+  VersionNotice,
+  InstallationInstructions
+} from "../../../docs/src/partials";
+import { name, peerDependencies, version } from "../../package.json";
+import { within, userEvent } from "@storybook/testing-library";
+import Accordion, { defaultProps } from "../accordion";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import CompleteIcon from "@iccc/icon/lib/build/display-icons/complete";
+import { One, Two, Three } from "@iccc/icon";
+import prettier from "prettier/standalone";
+import prettierBabel from "prettier/parser-babel";
+import SvgIcon from "@mui/material/SvgIcon";
+import Typography from "@iccc/typography";
+
+<Meta
+  args={{ ...defaultProps, variant: "individualPanel" }}
+  argTypes={componentArgs}
+  component={Accordion}
+  id="components/accordion"
+  title="Digital HIG/Components/Accordion"
+  parameters={{
+    docs: {
+      source: {
+        type: "code"
+      },
+      transformSource: (input) =>
+        prettier.format(input, {
+          parser: "babel",
+          plugins: [prettierBabel]
+        })
+    }
+  }}
+/>
+
+<ComponentTitle name="Accordion" status="Stable" />
+
+<code>
+  <VersionNotice packageName="accordion" version={version} />
+</code>
+
+The accordion component is a thin wrapper around MUI [`<Accordion>`](https://mui.com/material-ui/react-accordion/), with Digital HIG defaults.
+
+For related design documentation, please see the [Digital HIG Figma UI Toolkit](https://www.figma.com/file/Eks986gkqncHjkLnwQjO7g/iccc-sticker-sheets?node-id=4203%3A237744&t=rQp6ogW3N5TrVAF7-1).
+
+## Installation
+
+<InstallationInstructions
+  componentImport="Accordion"
+  name={name}
+  peerDependencies={peerDependencies}
+/>
+
+## API
+
+For all supported MUI `<Accordion />` props, see [Accordion API](https://mui.com/material-ui/api/accordion/)
+
+<Canvas>
+  <Story
+    name="API"
+    parameters={{
+      docs: {
+        source: {
+          type: "auto"
+        }
+      }
+    }}
+  >
+    {(args) => (
+      <Accordion {...args}>
+        <AccordionSummary>
+          <Typography variant="headline-smaller">Accordion</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>Accordion content</Typography>
+        </AccordionDetails>
+      </Accordion>
+    )}
+  </Story>
+</Canvas>
+
+<ArgsTable story="API" />
+
+## Variants
+
+<VariantRangeNotice />
+
+### Type: Accordion List
+
+A normal accordion. Visual indicators aligned to the right of each summary. This is the default type.
+
+<Canvas>
+  <Story name="Type: Accordion List">
+    {
+      <>
+        <Accordion>
+          <AccordionSummary
+            id="accordion-list"
+            aria-controls="accordion-list-content"
+          >
+            <Typography variant="headline-smaller">Accordion List</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography>Accordion content</Typography>
+          </AccordionDetails>
+        </Accordion>
+        <Box my={2} />
+        <Accordion>
+          <AccordionSummary
+            id="accordion-list-2"
+            aria-controls="accordion-list-2-content"
+          >
+            <Typography variant="headline-smaller">Accordion List</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography>Accordion content</Typography>
+          </AccordionDetails>
+        </Accordion>
+        <Box my={2} />
+        <Accordion>
+          <AccordionSummary
+            id="accordion-list-3"
+            aria-controls="accordion-list-3-content"
+          >
+            <Typography variant="headline-smaller">Accordion List</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography>Accordion content</Typography>
+          </AccordionDetails>
+        </Accordion>
+      </>
+    }
+  </Story>
+</Canvas>
+
+### Type: Stepper
+
+A sequence of actions with a button instead of a visual indicator. The "mergedPanel" `variant` must be used in combination with the "stepper" `type` in order to achieve this. Below is one possible implementation example.
+
+<Canvas>
+  <Story name="Type: Stepper">
+    {() => {
+      const [current, setCurrent] = React.useState(false);
+      return (
+        <>
+          <Accordion
+            expanded={current === 0}
+            onChange={(e, value) => setCurrent(0)}
+            variant="mergedPanel"
+            type="stepper"
+          >
+            <AccordionSummary
+              expandIcon={
+                current === 0 ? null : <Button variant="outlined">Edit</Button>
+              }
+            >
+              <SvgIcon>{current === 0 ? <One /> : <CompleteIcon />}</SvgIcon>
+              <Typography variant="headline-smaller">Stepper</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Button onClick={() => setCurrent(1)}>Next step</Button>
+            </AccordionDetails>
+          </Accordion>
+          <Accordion
+            expanded={current === 1}
+            onChange={(e, value) => setCurrent(1)}
+            variant="mergedPanel"
+            type="stepper"
+          >
+            <AccordionSummary
+              expandIcon={
+                current === 1 ? null : <Button variant="outlined">Edit</Button>
+              }
+            >
+              <SvgIcon>{current === 1 ? <Two /> : <CompleteIcon />}</SvgIcon>
+              <Typography variant="headline-smaller">
+                Concrete pavement
+              </Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Button onClick={() => setCurrent(2)}>Next step</Button>
+            </AccordionDetails>
+          </Accordion>
+          <Accordion
+            expanded={current === 2}
+            onChange={(e, value) => setCurrent(2)}
+            variant="mergedPanel"
+            type="stepper"
+          >
+            <AccordionSummary
+              expandIcon={
+                current === 2 ? null : <Button variant="outlined">Edit</Button>
+              }
+            >
+              <SvgIcon>{current === 2 ? <Three /> : <CompleteIcon />}</SvgIcon>
+              <Typography variant="headline-smaller">Volcano rock</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Button onClick={() => setCurrent(3)}>Next step</Button>
+            </AccordionDetails>
+          </Accordion>
+        </>
+      );
+    }}
+  </Story>
+</Canvas>
+
+### Density: Normal
+
+A normal accordion.
+
+Please note that the `size` prop has been replaced by the `dense` prop. The `size` prop is now deprecated and will be removed in a future release.
+
+<Canvas>
+  <Story name="Density: Normal">
+    {
+      <Accordion>
+        <AccordionSummary
+          id="accordion-normal"
+          aria-controls="accordion-normal-content"
+        >
+          <Typography variant="headline-smaller">Normal</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>Accordion content</Typography>
+        </AccordionDetails>
+      </Accordion>
+    }
+  </Story>
+</Canvas>
+
+### Density: Dense
+
+An accordion with a tighter content arrangement.
+
+<Canvas>
+  <Story name="Density: Dense">
+    {
+      <Accordion dense>
+        <AccordionSummary
+          aria-controls="accordion-dense-content"
+          id="accordion-dense"
+        >
+          <Typography variant="headline-smaller">Dense</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>Accordion content</Typography>
+        </AccordionDetails>
+      </Accordion>
+    }
+  </Story>
+</Canvas>
+
+### Variant: Flat
+
+Horizontal rulers divide panels, no border around container.
+
+Please note that the `styleVariant` prop has been replaced by the `variant` prop. The `styleVariant` prop is now deprecated and will be removed in a future release.
+
+<Canvas>
+  <Story name="Variant: Flat">
+    {
+      <Accordion variant="flat">
+        <AccordionSummary
+          aria-controls="accordion-flat-content"
+          id="accordion-flat"
+        >
+          <Typography variant="headline-smaller">Flat</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>Accordion content</Typography>
+        </AccordionDetails>
+      </Accordion>
+    }
+  </Story>
+</Canvas>
+
+### Variant: Individual panel
+
+Each item has its own outline.
+
+<Canvas>
+  <Story name="Variant: Individual panel">
+    {
+      <Accordion>
+        <AccordionSummary
+          id="accordion-individual-panel"
+          aria-controls="accordion-individual-panel-content"
+        >
+          <Typography variant="headline-smaller">Individual panel</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>Accordion content</Typography>
+        </AccordionDetails>
+      </Accordion>
+    }
+  </Story>
+</Canvas>
+
+### Variant: Merged panel
+
+Horizontal rulers divide panels, with a border around container.
+
+<Canvas>
+  <Story name="Variant: Merged panel">
+    {
+      <Accordion variant="mergedPanel">
+        <AccordionSummary
+          aria-controls="accordion-merged-panel-content"
+          id="accordion-merged-panel"
+        >
+          <Typography variant="headline-smaller">Merged panel</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>Accordion content</Typography>
+        </AccordionDetails>
+      </Accordion>
+    }
+  </Story>
+</Canvas>
+
+### Variant: Minimal
+
+No discernible separation between panels or container.
+
+<Canvas>
+  <Story name="Variant: Minimal">
+    {
+      <Accordion variant="minimal">
+        <AccordionSummary
+          aria-controls="accordion-minimal-content"
+          id="accordion-minimal"
+        >
+          <Typography variant="headline-smaller">Minimal</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>Accordion content</Typography>
+        </AccordionDetails>
+      </Accordion>
+    }
+  </Story>
+</Canvas>
+
+### Accessibility: Heading component options
+
+Set `id` and `aria-controls` on the AccordionSummary. The Accordion will derive the necessary `aria-labelledby` and `id` for the content region of the accordion.
+
+<Canvas>
+  <Story name="Accesibility: heading">
+    {
+      <Accordion>
+        <AccordionSummary
+          aria-controls="accordion-accessibility-content"
+          id="accordion-accessibility-summary"
+          component="h6"
+        >
+          <Typography variant="headline-smaller">Accordion Heading</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>Accordion content</Typography>
+        </AccordionDetails>
+      </Accordion>
+    }
+  </Story>
+</Canvas>
+
+## Advanced composition
+
+### Accordion summary with custom html
+
+In some situations, it might be necessary to include custom HTML in the accordion summary. In such cases, pass whatever composition you need to the `children` prop of `AccordionSummary`:
+
+<Canvas>
+  <Story name="Custom html in summary">
+    <>
+      <Accordion>
+        <AccordionSummary>
+          <Typography>
+            <SvgIcon fontSize="extra-large">
+              <CompleteIcon />
+            </SvgIcon>
+            {` `}
+            This summary has an icon
+          </Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>Accordion content</Typography>
+        </AccordionDetails>
+      </Accordion>
+    </>
+  </Story>
+</Canvas>
+
+### Disable carets
+
+Pass `null` to `expandIcon` prop to remove the caret.
+
+<Canvas>
+  <Story name="Disable caret">
+    <Accordion>
+      <AccordionSummary expandIcon={null}>
+        <Typography variant="headline-smaller">
+          Accordion with no caret
+        </Typography>
+      </AccordionSummary>
+      <AccordionDetails>
+        <Typography>Accordion content</Typography>
+      </AccordionDetails>
+    </Accordion>
+  </Story>
+</Canvas>
+
+### Disable interactions
+
+If the accordion is not to be controlled by the user, but by the app, use MUI `expanded` API.
+
+<Canvas>
+  <Story name="Disable interactions">
+    <>
+      <Accordion expanded={true}>
+        <AccordionSummary>
+          <Typography variant="headline-smaller">Always expanded</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>Accordion content</Typography>
+        </AccordionDetails>
+      </Accordion>
+      <Accordion expanded={false}>
+        <AccordionSummary>
+          <Typography variant="headline-smaller">Always collapsed</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>Accordion content</Typography>
+        </AccordionDetails>
+      </Accordion>
+    </>
+  </Story>
+</Canvas>
+
+### Dark theme
+
+<Canvas>
+  <Story name="Dark theme" parameters={{ theme: "dark" }}>
+    {(args) => {
+      return (
+        <>
+          <div>
+            <Accordion variant="mergedPanel">
+              <AccordionSummary>
+                <Typography variant="headline-smaller">Merged panel</Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography>Accordion content</Typography>
+              </AccordionDetails>
+            </Accordion>
+          </div>
+          <Box my={6} />
+          <Accordion variant="minimal">
+            <AccordionSummary>
+              <Typography variant="headline-smaller">
+                Accordion minimal
+              </Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Typography>Accordion content</Typography>
+            </AccordionDetails>
+          </Accordion>
+        </>
+      );
+    }}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story
+    name="VR: interactions"
+    play={async ({ canvasElement }) => {
+      const canvas = within(canvasElement);
+      const trigger = await canvas.getAllByRole("button");
+      await trigger.forEach((trigger) => {
+        userEvent.click(trigger);
+      });
+    }}
+  >
+    {(args) => (
+      <>
+        <Accordion {...args} key="accordion-1" disableTransitions>
+          <AccordionSummary
+            aria-controls="accordion-disabledTransitions-content"
+            id="accordion-disabledTransitions"
+          >
+            <Typography variant="headline-smaller">
+              Disabled transitions
+            </Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography>Accordion content</Typography>
+          </AccordionDetails>
+        </Accordion>
+        <Accordion key="accordion-2" {...args}>
+          <AccordionSummary
+            aria-controls="accordion-enabledTransitions-content"
+            id="accordion-enabledTransitions"
+          >
+            <Typography variant="headline-smaller">
+              Enabled transitions
+            </Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography>Accordion content</Typography>
+          </AccordionDetails>
+        </Accordion>
+      </>
+    )}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story
+    name="VR: pseudo states"
+    parameters={{
+      pseudo: {
+        hover: "#accordion-1",
+        active: "#accordion-2",
+        focusVisible: "#accordion-3",
+        focusWithin: ".DhigAccordion--variant--individualPanel"
+      }
+    }}
+  >
+    {(args) => {
+      return (
+        <>
+          <Accordion>
+            <AccordionSummary
+              aria-controls="accordion-hover-state-content"
+              id="accordion-1"
+            >
+              <Typography variant="headline-smaller">Hover state</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Typography>Accordion content</Typography>
+            </AccordionDetails>
+          </Accordion>
+          <Accordion id="accordion-2">
+            <AccordionSummary aria-controls="accordion-active-state-content">
+              <Typography variant="headline-smaller">Active state</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Typography>Accordion content</Typography>
+            </AccordionDetails>
+          </Accordion>
+          <Accordion id="accordion-3">
+            <AccordionSummary aria-controls="accordion-focus-state-content">
+              <Typography variant="headline-smaller">Focus state</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Typography>Accordion content</Typography>
+            </AccordionDetails>
+          </Accordion>
+          <Accordion id="accordion-4" disabled>
+            <AccordionSummary aria-controls="accordion-disabled-content">
+              <Typography variant="headline-smaller">Disabled</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Typography>Accordion content</Typography>
+            </AccordionDetails>
+          </Accordion>
+        </>
+      );
+    }}
+  </Story>
+</Canvas>
+
+### Performance
+
+To aid in transitions, a `<style>` tag is injected for every instance of the `<Accordion>` component. If there are several instances of the `<Accordion>` component on a page, it might lead to performance degradation in extreme cases. Consider setting the `disableTransitions` to `true` to help improve performance.
+
+<Canvas>
+  <Story name="Performance">
+    {
+      <Accordion disableTransitions={true}>
+        <AccordionSummary>
+          <Typography variant="headline-smaller">
+            Accordion performance
+          </Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>Accordion content</Typography>
+        </AccordionDetails>
+      </Accordion>
+    }
+  </Story>
+</Canvas>

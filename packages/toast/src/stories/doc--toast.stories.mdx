@@ -1,0 +1,611 @@
+import { AlertIcon } from "@iccc/alert";
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import {
+  ComponentTitle,
+  DarkThemeNotice,
+  InstallationInstructions,
+  MuiLink,
+  VariantRangeNotice
+} from "../../../docs/src/partials";
+import Button from "@mui/material/Button";
+import Container from "@mui/material/Container";
+import CrossSVG from "@iccc/icon/lib/build/icons/cross";
+import Link from "@mui/material/Link";
+import prettier from "prettier/standalone";
+import prettierBabel from "prettier/parser-babel";
+import Slide from "@mui/material/Slide";
+import Snackbar from "@mui/material/Snackbar";
+import SvgIcon from "@mui/material/SvgIcon";
+import Typography from "@iccc/typography";
+
+export const messages = [
+  {
+    level: "info",
+    content: (
+      <>
+        <AlertIcon severity="info" alt="info icon" />
+        <Typography variant="short-copy-small">
+          3 updates are available.
+        </Typography>
+      </>
+    ),
+    action: (handleClose) => (
+      <>
+        <Typography variant="body-copy-small">
+          <Link tabIndex="0">View</Link>
+        </Typography>
+        <SvgIcon onClick={handleClose} tabIndex="0">
+          <CrossSVG />
+        </SvgIcon>
+      </>
+    )
+  },
+  {
+    level: "warning",
+    content: (
+      <Container>
+        <AlertIcon severity="warning" alt="info icon" />
+        <Container>
+          <Typography variant="short-copy-small">
+            2 days remaining until your team’s subscription comes to an end.
+          </Typography>
+          <Typography variant="body-copy-small">
+            <Link tabIndex="0">View details</Link>
+          </Typography>
+        </Container>
+      </Container>
+    ),
+    action: (handleClose) => (
+      <>
+        <SvgIcon onClick={handleClose} tabIndex="0">
+          <CrossSVG />
+        </SvgIcon>
+      </>
+    )
+  },
+  {
+    level: "success",
+    content: (
+      <>
+        <AlertIcon severity="success" alt="success icon" />
+        <Container>
+          <Typography variant="short-copy-small">
+            Billing address has been updated.
+          </Typography>
+        </Container>
+      </>
+    ),
+    action: (handleClose) => (
+      <>
+        <SvgIcon onClick={handleClose} tabIndex="0">
+          <CrossSVG />
+        </SvgIcon>
+      </>
+    )
+  },
+  {
+    level: "error",
+    content: (
+      <>
+        <AlertIcon severity="error" alt="error icon" />
+        <Typography variant="short-copy-small">Adding seats failed.</Typography>
+      </>
+    ),
+    action: (handleClose) => (
+      <>
+        <Typography variant="body-copy-small">
+          <Link tabIndex="0">View</Link>
+        </Typography>
+        <SvgIcon onClick={handleClose} tabIndex="0">
+          <CrossSVG />
+        </SvgIcon>
+      </>
+    )
+  }
+];
+
+<Meta
+  id="components/toast"
+  title="Digital HIG/Components/Toast"
+  parameters={{
+    docs: {
+      source: {
+        type: "code"
+      },
+      transformSource: (input) =>
+        prettier.format(input, {
+          parser: "babel",
+          plugins: [prettierBabel]
+        })
+    },
+    vr: false
+  }}
+/>
+
+<ComponentTitle name="Toast" status="Stable" />
+
+<code>
+  <MuiLink
+    componentName="Snackbar"
+    link="https://mui.com/material-ui/react-snackbar/"
+  />
+</code>
+
+Toasts are short messages that provide non-disruptive feedback on user actions.
+
+The Toast component applies Digital HIG styles to MUI [`<Snackbar>`](https://mui.com/material-ui/react-snackbar/).
+
+For related design documentation, please see the Digital HIG [Figma UI Toolkit](https://www.figma.com/file/Eks986gkqncHjkLnwQjO7g/iccc-sticker-sheets?node-id=4203%3A319723&t=iL4WgXwqDMZvxUAw-1).
+
+For the initial engineering prototype, see the archived [Toast prototype page](https://storybook.digital-help-stg.autodesk.com/iccc/prerelease/PR-589/index.html?path=/docs/components-toast--severity).
+
+## Installation
+
+<InstallationInstructions componentImport="Snackbar" />
+
+## API
+
+- For all supported MUI `<Snackbar />` props, see [Snackbar API](https://mui.com/material-ui/api/snackbar/).
+- For all supported MUI `<SnackbarContent />` props, see [SnackbarContent API](https://mui.com/material-ui/api/snackbar-content/).
+
+## Toast variants
+
+<VariantRangeNotice />
+
+### Severity
+
+Toast component has four severity levels: info, warning, error, and success. We use the `AlertIcon` component from the `@iccc/alert` package to display the appropriate icon for each severity level. To use `AlertIcon`, import it and pass in the desired severity level via the `severity` prop.
+
+```jsx
+import { AlertIcon } from "@iccc/alert";
+
+// ...
+
+<AlertIcon severity="warning" alt="warning icon" />;
+```
+
+<Canvas>
+  <Story
+    name="Severity"
+    parameters={{
+      docs: {
+        source: {
+          type: "code"
+        }
+      }
+    }}
+  >
+    {() => {
+      const [open, setOpen] = React.useState(false);
+      const [messageInfo, setMessageInfo] = React.useState(undefined);
+      const handleClick = (item) => () => {
+        setMessageInfo((prev) => ({
+          ...prev,
+          message: item.content,
+          action: item.action,
+          key: new Date().getTime()
+        }));
+        setOpen(true);
+      };
+      const handleClose = (event, reason) => {
+        if (reason === "clickaway") {
+          return;
+        }
+        setOpen(false);
+      };
+      const handleExited = () => {
+        setMessageInfo(undefined);
+      };
+      return (
+        <>
+          {messages.map((item) => (
+            <Button onClick={handleClick(item)} key={item.level} sx={{ mr: 2 }}>
+              Open {item.level}
+            </Button>
+          ))}
+          <Snackbar
+            open={open}
+            onClose={handleClose}
+            action={messageInfo ? messageInfo.action(handleClose) : undefined}
+            message={messageInfo ? messageInfo.message : undefined}
+            key={messageInfo ? messageInfo.key : undefined}
+            TransitionComponent={Slide}
+            TransitionProps={{ onExited: handleExited }}
+          />
+        </>
+      );
+    }}
+  </Story>
+</Canvas>
+
+### Layout
+
+- The horizontal layout is recommended for short messages only.
+- The vertical layout is recommended for longer toast messages and those with lengthy action buttons. Use it when the text spans more than two lines or the action button has a long label. To achieve this layout use the `Container`` component as shown below:
+
+<Canvas>
+  <Story name="Layout">
+    {() => {
+      const [openHorizontal, setOpenHorizontal] = React.useState(false);
+      const [openVertical, setOpenVertical] = React.useState(false);
+      const handleClickHorizontal = () => {
+        setOpenHorizontal(true);
+      };
+      const handleCloseHorizontal = (event, reason) => {
+        if (reason === "clickaway") {
+          return;
+        }
+        setOpenHorizontal(false);
+      };
+      const handleClickVertical = () => {
+        setOpenVertical(true);
+      };
+      const handleCloseVertical = (event, reason) => {
+        if (reason === "clickaway") {
+          return;
+        }
+        setOpenVertical(false);
+      };
+      return (
+        <>
+          <Button onClick={handleClickHorizontal} sx={{ mr: 2 }}>
+            Open a toast with horizontal layout
+          </Button>
+          <Button onClick={handleClickVertical}>
+            Open a toast with vertical layout
+          </Button>
+          <Snackbar
+            open={openHorizontal}
+            onClose={handleCloseHorizontal}
+            TransitionComponent={Slide}
+            message={
+              <>
+                <AlertIcon severity="info" variant="standard" alt="info icon" />
+                <Typography variant="short-copy-small">
+                  Horizontal layout
+                </Typography>
+              </>
+            }
+            action={
+              <>
+                <Typography variant="body-copy-small">
+                  <Link tabIndex="0">Action label</Link>
+                </Typography>
+                <SvgIcon onClick={handleCloseHorizontal} tabIndex="0">
+                  <CrossSVG />
+                </SvgIcon>
+              </>
+            }
+          />
+          <Snackbar
+            open={openVertical}
+            onClose={handleCloseVertical}
+            TransitionComponent={Slide}
+            message={
+              <Container>
+                <AlertIcon severity="warning" alt="info icon" />
+                <Container>
+                  <Typography variant="short-copy-small">
+                    2 days remaining until your team’s subscription comes to an
+                    end.
+                  </Typography>
+                  <Typography variant="body-copy-small">
+                    <Link tabIndex="0">Action label</Link>
+                  </Typography>
+                </Container>
+              </Container>
+            }
+            action={
+              <>
+                <SvgIcon onClick={handleCloseVertical} tabIndex="0">
+                  <CrossSVG />
+                </SvgIcon>
+              </>
+            }
+          />
+        </>
+      );
+    }}
+  </Story>
+</Canvas>
+
+**Note:** Avoid switching between layouts for toasts that appear in the same context, as this can be confusing and disruptive for the user.
+
+### Non-dismissable
+
+A non-dismissable Toast does not have a close button and must have a value set in the `autoHideDuration` prop. This means that the toast will remain visible on the screen for a specified amount of time, after which it will automatically be hidden from view. This can be useful for displaying important information or alerts that the user needs to see, but that should not be dismissed immediately.
+
+<Canvas>
+  <Story name="Non-dismissable">
+    {() => {
+      const [open, setOpen] = React.useState(false);
+      const handleClick = () => {
+        setOpen(true);
+      };
+      const handleClose = (event, reason) => {
+        if (reason === "clickaway" || (event && event.key === "Escape")) {
+          return;
+        }
+        setOpen(false);
+      };
+      return (
+        <>
+          <Button onClick={handleClick}>Open a non-dismissable toast</Button>
+          <Snackbar
+            open={open}
+            autoHideDuration={4000}
+            onClose={handleClose}
+            TransitionComponent={Slide}
+            message={
+              <>
+                <AlertIcon severity="info" variant="standard" alt="info icon" />
+                <Typography variant="short-copy-small">
+                  Non-dismissable
+                </Typography>
+              </>
+            }
+            action={
+              <Typography variant="body-copy-small">
+                <Link tabIndex="0">Action label</Link>
+              </Typography>
+            }
+          />
+        </>
+      );
+    }}
+  </Story>
+</Canvas>
+
+### With action
+
+A Toast can contain a `Link` separate from the main message, or the link can be included within the message itself.
+
+<Canvas>
+  <Story name="With action">
+    {() => {
+      const [openWithActionLabel, setOpenWithActionLabel] =
+        React.useState(false);
+      const [openWithinText, setOpenWithinText] = React.useState(false);
+      const handleClickWithActionLabel = () => {
+        setOpenWithActionLabel(true);
+      };
+      const handleCloseWithActionLabel = (event, reason) => {
+        if (reason === "clickaway") {
+          return;
+        }
+        setOpenWithActionLabel(false);
+      };
+      const handleClickWithinText = () => {
+        setOpenWithinText(true);
+      };
+      const handleCloseWithinText = (event, reason) => {
+        if (reason === "clickaway") {
+          return;
+        }
+        setOpenWithinText(false);
+      };
+      return (
+        <>
+          <Button onClick={handleClickWithActionLabel} sx={{ mr: 2 }}>
+            Open a toast with action label
+          </Button>
+          <Button onClick={handleClickWithinText}>
+            Open a toast with a Link within the message
+          </Button>
+          <Snackbar
+            open={openWithActionLabel}
+            onClose={handleCloseWithActionLabel}
+            TransitionComponent={Slide}
+            message={
+              <>
+                <AlertIcon severity="info" variant="standard" alt="info icon" />
+                <Typography variant="short-copy-small">
+                  With action label
+                </Typography>
+              </>
+            }
+            action={
+              <>
+                <Typography variant="body-copy-small">
+                  <Link tabIndex="0">Action label</Link>
+                </Typography>
+                <SvgIcon onClick={handleCloseWithActionLabel} tabIndex="0">
+                  <CrossSVG />
+                </SvgIcon>
+              </>
+            }
+          />
+          <Snackbar
+            open={openWithinText}
+            onClose={handleCloseWithinText}
+            TransitionComponent={Slide}
+            message={
+              <>
+                <AlertIcon severity="info" variant="standard" alt="info icon" />
+                <Typography variant="short-copy-small">
+                  With <Link>Link</Link> within message.
+                </Typography>
+              </>
+            }
+            action={
+              <SvgIcon onClick={handleCloseWithinText} tabIndex="0">
+                <CrossSVG />
+              </SvgIcon>
+            }
+          />
+        </>
+      );
+    }}
+  </Story>
+</Canvas>
+
+### With emphasis
+
+To emphasize part of a message, use the `<strong/>` tag. This will bold the text and add visual emphasis to it.
+
+<Canvas>
+  <Story name="With emphasis">
+    {() => {
+      const [open, setOpen] = React.useState(false);
+      const handleClick = () => {
+        setOpen(true);
+      };
+      const handleClose = (event, reason) => {
+        if (reason === "clickaway") {
+          return;
+        }
+        setOpen(false);
+      };
+      return (
+        <>
+          <Button onClick={handleClick}>
+            Open a toast with emphasized text
+          </Button>
+          <Snackbar
+            open={open}
+            onClose={handleClose}
+            TransitionComponent={Slide}
+            message={
+              <>
+                <AlertIcon severity="info" variant="standard" alt="info icon" />
+                <Typography variant="short-copy-small">
+                  <strong>With emphasis.</strong> And some regular text.
+                </Typography>
+              </>
+            }
+            action={
+              <SvgIcon onClick={handleClose} tabIndex="0">
+                <CrossSVG />
+              </SvgIcon>
+            }
+          />
+        </>
+      );
+    }}
+  </Story>
+</Canvas>
+
+### Dark theme
+
+<DarkThemeNotice />
+
+<Canvas>
+  <Story
+    name="Dark theme"
+    parameters={{
+      theme: "dark",
+      docs: {
+        source: {
+          type: "code"
+        }
+      }
+    }}
+  >
+    {() => {
+      const [open, setOpen] = React.useState(false);
+      const [messageInfo, setMessageInfo] = React.useState(undefined);
+      const handleClick = (item) => () => {
+        setMessageInfo((prev) => ({
+          ...prev,
+          message: item.content,
+          action: item.action,
+          key: new Date().getTime()
+        }));
+        setOpen(true);
+      };
+      const handleClose = (event, reason) => {
+        if (reason === "clickaway") {
+          return;
+        }
+        setOpen(false);
+      };
+      const handleExited = () => {
+        setMessageInfo(undefined);
+      };
+      return (
+        <>
+          {messages.map((item) => (
+            <Button onClick={handleClick(item)} key={item.level} sx={{ mr: 2 }}>
+              Open {item.level}
+            </Button>
+          ))}
+          <Snackbar
+            open={open}
+            onClose={handleClose}
+            TransitionComponent={Slide}
+            action={messageInfo ? messageInfo.action(handleClose) : undefined}
+            message={messageInfo ? messageInfo.message : undefined}
+            key={messageInfo ? messageInfo.key : undefined}
+            TransitionProps={{ onExited: handleExited }}
+          />
+        </>
+      );
+    }}
+  </Story>
+</Canvas>
+
+### Automatically hide
+
+By default, toast don't disappear automatically. Toasts can be customized to disappear automatically after
+a given time. To decide how long a toast should stick around, consider the following guidelines:
+
+- Don't automatically hide crucial notification messages, e.g. error messages
+- Make sure users have sufficient time to read and understand the notification message
+- Make sure users have sufficient time to react, if a toast contains an action or a link
+- For short success notifications that do not demand action, a time of 4 seconds until they automatically
+  disappear is recommended
+
+<Canvas>
+  <Story
+    name="Automatically hide"
+    parameters={{
+      docs: {
+        source: {
+          type: "code"
+        }
+      }
+    }}
+  >
+    {() => {
+      const [open, setOpen] = React.useState(false);
+      const handleClick = () => {
+        setOpen(true);
+      };
+      const handleClose = (event, reason) => {
+        if (reason === "clickaway") {
+          return;
+        }
+        setOpen(false);
+      };
+      return (
+        <>
+          <Button onClick={handleClick}>Open toast</Button>
+          <Snackbar
+            open={open}
+            onClose={handleClose}
+            autoHideDuration={4000}
+            TransitionComponent={Slide}
+            action={
+              <>
+                <Typography variant="body-copy-small">
+                  <Link tabIndex="0">View</Link>
+                </Typography>
+                <SvgIcon onClick={handleClose} tabIndex="0">
+                  <CrossSVG />
+                </SvgIcon>
+              </>
+            }
+            message={
+              <>
+                <AlertIcon />
+                <Typography variant="short-copy-small">
+                  Sed ut perspiciatis unde.
+                </Typography>
+              </>
+            }
+          />
+        </>
+      );
+    }}
+  </Story>
+</Canvas>

@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Character counter component renders 1`] = `
+<div>
+  <p
+    class="MuiTypography-root MuiTypography-body-copy-medium DhigTextInput--count emotion-0"
+  >
+    undefined / undefined
+  </p>
+</div>
+`;

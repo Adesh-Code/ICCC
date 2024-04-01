@@ -1,0 +1,7 @@
+src
+CHANGELOG.md
+README.md
+.DS_STORE
+node_modules
+tsconfig.json
+.env.rename-for-development

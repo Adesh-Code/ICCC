@@ -1,0 +1,366 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import {
+  ComponentTitle,
+  DarkThemeNotice,
+  InstallationInstructions,
+  VariantRangeNotice,
+  VersionNotice
+} from "../../../docs/src/partials";
+import { componentArgs } from "../constants";
+import { MinimalTreeItem, FlatTreeItem } from "@iccc/tree-item";
+import { name, peerDependencies, version } from "../../package.json";
+import Box from "@mui/material/Box";
+import CaretDownIcon from "@iccc/icon/lib/build/ui-controls/caret-down-small";
+import CaretRight from "@iccc/icon/lib/build/ui-controls/caret-right-small";
+import Checkbox from "@mui/material/Checkbox";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import SvgIcon from "@mui/material/SvgIcon";
+import TreeView from "../index.js";
+
+<Meta
+  args={TreeView.defaultProps}
+  argTypes={componentArgs}
+  component={TreeView}
+  id="components/tree-view"
+  title="Digital HIG/Components/Tree view"
+/>
+
+<ComponentTitle name="Tree view" status="Stable" />
+
+<code>
+  <VersionNotice packageName="tree-view" version={version} />
+</code>
+
+Tree views can be used to represent a file system navigator displaying folders and files. An item representing a folder can be expanded to reveal the contents of the folder, which may be files, folders, or both.
+
+The tree view component is a thin wrapper around MUI [`<TreeView>`](https://mui.com/material-ui/api/tree-view/), with Digital HIG defaults.
+
+The `<TreeView>` component is used to display the contents of a folder. Additionally, the [`<TreeItem>`](https://mui.com/material-ui/api/tree-item/) component is used to display the contents of a tree node.
+
+For related design documentation, please see the Digital HIG [Figma UI Toolkit](https://www.figma.com/file/Eks986gkqncHjkLnwQjO7g/iccc-sticker-sheets?node-id=4246%3A314582&t=iL4WgXwqDMZvxUAw-1).
+
+## Installation
+
+<InstallationInstructions
+  componentImport="TreeView"
+  name={name}
+  peerDependencies={peerDependencies}
+/>
+
+Finally, import the desired `TreeItem` variant:
+
+- Minimal: `import { MinimalTreeItem } from "@iccc/tree-item";`
+- Flat: `import { FlatTreeItem } from "@iccc/tree-item";`
+
+## API
+
+- For all supported MUI `<TreeView />` props, see [TreeView API](https://mui.com/material-ui/api/tree-view/).
+- For all supported MUI `<TreeItem />` props, see [TreeItem API](https://mui.com/material-ui/api/tree-item/).
+
+<Canvas>
+  <Story name="API">
+    {(args) => {
+      const TreeItem = args.variant === "flat" ? FlatTreeItem : MinimalTreeItem;
+      return (
+        <TreeView {...args} aria-label="minimal tree view">
+          <TreeItem nodeId="1" label="Applications">
+            <TreeItem nodeId="2" label="Calendar" />
+            <TreeItem nodeId="3" label="Calculator" />
+            <TreeItem nodeId="4" label="Spreadsheets">
+              <TreeItem nodeId="5" label="Excel" />
+              <TreeItem nodeId="6" label="Forms" />
+              <TreeItem nodeId="7" label="Charts">
+                <TreeItem nodeId="8" label="Bar" />
+                <TreeItem nodeId="9" label="Line" />
+                <TreeItem nodeId="10" label="Disabled" disabled />
+              </TreeItem>
+            </TreeItem>
+          </TreeItem>
+          <TreeItem nodeId="11" label="Documents">
+            <TreeItem nodeId="12" label="OSS" />
+            <TreeItem nodeId="13" label="MUI">
+              <TreeItem nodeId="14" label="index.js" />
+            </TreeItem>
+          </TreeItem>
+          <TreeItem nodeId="15" label="Disabled" disabled></TreeItem>
+        </TreeView>
+      );
+    }}
+  </Story>
+</Canvas>
+
+<ArgsTable story="API" />
+
+## Tree view variants
+
+<VariantRangeNotice />
+
+### Variant: Minimal
+
+For minimal variant import `<MinimalTreeItem/>` component from Digital HIG TreeItem:
+
+```jsx
+import { MinimalTreeItem } from "@iccc/tree-item";
+```
+
+<Canvas>
+  <Story name="Variant: minimal">
+    {(args) => (
+      <TreeView {...args} aria-label="minimal tree view">
+        <MinimalTreeItem nodeId="1" label="Applications">
+          <MinimalTreeItem nodeId="2" label="Calendar" />
+          <MinimalTreeItem nodeId="3" label="Calculator" />
+          <MinimalTreeItem nodeId="4" label="Spreadsheets">
+            <MinimalTreeItem nodeId="5" label="Excel" />
+            <MinimalTreeItem nodeId="6" label="Forms" />
+            <MinimalTreeItem nodeId="7" label="Charts">
+              <MinimalTreeItem nodeId="8" label="Bar" />
+              <MinimalTreeItem nodeId="9" label="Line" />
+              <MinimalTreeItem nodeId="10" label="Disabled" disabled />
+            </MinimalTreeItem>
+          </MinimalTreeItem>
+        </MinimalTreeItem>
+        <MinimalTreeItem nodeId="11" label="Documents">
+          <MinimalTreeItem nodeId="12" label="OSS" />
+          <MinimalTreeItem nodeId="13" label="MUI">
+            <MinimalTreeItem nodeId="14" label="index.js" />
+          </MinimalTreeItem>
+        </MinimalTreeItem>
+        <MinimalTreeItem
+          nodeId="15"
+          label="Disabled"
+          disabled
+        ></MinimalTreeItem>
+      </TreeView>
+    )}
+  </Story>
+</Canvas>
+
+### Variant: Flat
+
+For flat variant use the `variant` prop set to `flat` on the `<TreeView/>` component and import `<FlatTreeItem/>` component from Digital HIG TreeItem:
+
+```jsx
+import { FlatTreeItem } from "@iccc/tree-item";
+```
+
+<Canvas>
+  <Story name="Variant: flat">
+    {(args) => (
+      <TreeView {...args} variant="flat" aria-label="flat tree view">
+        <FlatTreeItem nodeId="1" label="Applications">
+          <FlatTreeItem nodeId="2" label="Calendar" />
+          <FlatTreeItem nodeId="3" label="Calculator" />
+          <FlatTreeItem nodeId="4" label="Spreadsheets">
+            <FlatTreeItem nodeId="5" label="Excel" />
+            <FlatTreeItem nodeId="6" label="Forms" />
+            <FlatTreeItem nodeId="7" label="Charts">
+              <FlatTreeItem nodeId="8" label="Bar" />
+              <FlatTreeItem nodeId="9" label="Line" />
+              <FlatTreeItem nodeId="10" label="Disabled" disabled />
+            </FlatTreeItem>
+          </FlatTreeItem>
+        </FlatTreeItem>
+        <FlatTreeItem nodeId="11" label="Documents">
+          <FlatTreeItem nodeId="12" label="OSS" />
+          <FlatTreeItem nodeId="13" label="MUI">
+            <FlatTreeItem nodeId="14" label="index.js" />
+          </FlatTreeItem>
+        </FlatTreeItem>
+        <FlatTreeItem nodeId="15" label="Disabled" disabled />
+      </TreeView>
+    )}
+  </Story>
+</Canvas>
+
+### Variant: Minimal and dense
+
+For this variant use the `size` prop to set the size to `dense`.
+
+<Canvas>
+  <Story name="Variant: Minimal and dense">
+    <TreeView
+      size="dense"
+      aria-label="minimal tree view"
+      defaultCollapseIcon={
+        <SvgIcon>
+          <CaretDownIcon />
+        </SvgIcon>
+      }
+      defaultExpandIcon={
+        <SvgIcon>
+          <CaretRight />
+        </SvgIcon>
+      }
+    >
+      <MinimalTreeItem nodeId="1" label="Applications">
+        <MinimalTreeItem nodeId="2" label="Calendar" />
+        <MinimalTreeItem nodeId="3" label="Calculator" />
+        <MinimalTreeItem nodeId="4" label="Spreadsheets">
+          <MinimalTreeItem nodeId="5" label="Excel" />
+          <MinimalTreeItem nodeId="6" label="Forms" />
+          <MinimalTreeItem nodeId="7" label="Charts">
+            <MinimalTreeItem nodeId="8" label="Bar" />
+            <MinimalTreeItem nodeId="9" label="Line" />
+            <MinimalTreeItem nodeId="10" label="Disabled" disabled />
+          </MinimalTreeItem>
+        </MinimalTreeItem>
+      </MinimalTreeItem>
+      <MinimalTreeItem nodeId="11" label="Documents">
+        <MinimalTreeItem nodeId="12" label="OSS" />
+        <MinimalTreeItem nodeId="13" label="MUI">
+          <MinimalTreeItem nodeId="14" label="index.js" />
+        </MinimalTreeItem>
+      </MinimalTreeItem>
+      <MinimalTreeItem nodeId="15" label="Disabled" disabled></MinimalTreeItem>
+    </TreeView>
+  </Story>
+</Canvas>
+
+### Variant: Flat and dense
+
+For this variant use the `size` prop set to `dense`, the `variant` prop set to `flat` and use the `<FlatTreeItem/>` component.
+
+<Canvas>
+  <Story name="Variant: Flat and dense">
+    <TreeView
+      size="dense"
+      variant="flat"
+      aria-label="flat tree view"
+      defaultCollapseIcon={
+        <SvgIcon>
+          <CaretDownIcon />
+        </SvgIcon>
+      }
+      defaultExpandIcon={
+        <SvgIcon>
+          <CaretRight />
+        </SvgIcon>
+      }
+    >
+      <FlatTreeItem nodeId="1" label="Applications">
+        <FlatTreeItem nodeId="2" label="Calendar" />
+        <FlatTreeItem nodeId="3" label="Calculator" />
+        <FlatTreeItem nodeId="4" label="Spreadsheets">
+          <FlatTreeItem nodeId="5" label="Excel" />
+          <FlatTreeItem nodeId="6" label="Forms" />
+          <FlatTreeItem nodeId="7" label="Charts">
+            <FlatTreeItem nodeId="8" label="Bar" />
+            <FlatTreeItem nodeId="9" label="Line" />
+            <FlatTreeItem nodeId="10" label="Disabled" disabled />
+          </FlatTreeItem>
+        </FlatTreeItem>
+      </FlatTreeItem>
+      <FlatTreeItem nodeId="11" label="Documents">
+        <FlatTreeItem nodeId="12" label="OSS" />
+        <FlatTreeItem nodeId="13" label="MUI">
+          <FlatTreeItem nodeId="14" label="index.js" />
+        </FlatTreeItem>
+      </FlatTreeItem>
+      <FlatTreeItem nodeId="15" label="Disabled" disabled />
+    </TreeView>
+  </Story>
+</Canvas>
+
+### Custom content
+
+<Canvas>
+  <Story name="Custom content">
+    {(args) => (
+      <TreeView {...args} aria-label="minimal tree view">
+        <MinimalTreeItem nodeId="1" label="Applications">
+          <MinimalTreeItem nodeId="2" label="Calendar">
+            <Box
+              sx={{
+                padding: "8px 8px 8px 32px"
+              }}
+            >
+              <FormControlLabel
+                control={<Checkbox />}
+                nodeId="3"
+                label="Custom content 1"
+              />
+            </Box>
+            <Box
+              sx={{
+                padding: "8px 8px 8px 32px"
+              }}
+            >
+              <FormControlLabel
+                control={<Checkbox />}
+                nodeId="3"
+                label="Custom content 2"
+              />
+            </Box>
+          </MinimalTreeItem>
+        </MinimalTreeItem>
+      </TreeView>
+    )}
+  </Story>
+</Canvas>
+
+### Dark theme
+
+<DarkThemeNotice />
+
+<Canvas>
+  <Story name="Dark theme" parameters={{ theme: "dark" }}>
+    <>
+      <TreeView aria-label="dark theme minimal tree view">
+        <MinimalTreeItem nodeId="1" label="Minimal">
+          <MinimalTreeItem nodeId="2" label="Lorem">
+            <MinimalTreeItem nodeId="3" label="Ipsum">
+              <MinimalTreeItem nodeId="4" label="Dolor" />
+              <MinimalTreeItem nodeId="5" label="Disabled" disabled />
+            </MinimalTreeItem>
+          </MinimalTreeItem>
+        </MinimalTreeItem>
+        <MinimalTreeItem nodeId="6" label="Disabled" disabled />
+      </TreeView>
+      <Box my={6} />
+      <TreeView variant="flat" aria-label="dark theme flat tree view">
+        <FlatTreeItem nodeId="1" label="Flat">
+          <FlatTreeItem nodeId="2" label="Lorem">
+            <FlatTreeItem nodeId="3" label="Ipsum">
+              <FlatTreeItem nodeId="4" label="Dolor" />
+              <FlatTreeItem nodeId="5" label="Disabled" disabled />
+            </FlatTreeItem>
+          </FlatTreeItem>
+        </FlatTreeItem>
+        <FlatTreeItem nodeId="6" label="Disabled" disabled />
+      </TreeView>
+      <Box my={6} />
+      <TreeView size="dense" aria-label="dark theme minimal tree view">
+        <MinimalTreeItem nodeId="1" label="Minimal and dense">
+          <MinimalTreeItem nodeId="2" label="Lorem">
+            <MinimalTreeItem nodeId="3" label="Ipsum">
+              <MinimalTreeItem nodeId="4" label="Dolor" />
+              <MinimalTreeItem nodeId="5" label="Disabled" disabled />
+            </MinimalTreeItem>
+          </MinimalTreeItem>
+        </MinimalTreeItem>
+        <MinimalTreeItem nodeId="6" label="Disabled" disabled />
+      </TreeView>
+      <Box my={6} />
+      <TreeView
+        variant="flat"
+        size="dense"
+        aria-label="dark theme flat tree view"
+      >
+        <FlatTreeItem nodeId="1" label="Flat and dense">
+          <FlatTreeItem nodeId="2" label="Lorem">
+            <FlatTreeItem nodeId="3" label="Ipsum">
+              <FlatTreeItem nodeId="4" label="Dolor" />
+              <FlatTreeItem nodeId="5" label="Disabled" disabled />
+            </FlatTreeItem>
+          </FlatTreeItem>
+        </FlatTreeItem>
+        <FlatTreeItem nodeId="6" label="Disabled" disabled />
+      </TreeView>
+    </>
+  </Story>
+</Canvas>
+
+## Accessibility
+
+For more details about accessibility for Tree view, visit the [MUI Tree view Accessibility section](https://mui.com/material-ui/react-tree-view/#accessibility).

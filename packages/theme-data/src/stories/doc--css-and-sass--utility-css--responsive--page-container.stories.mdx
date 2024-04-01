@@ -1,0 +1,72 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import defaultTheme from "@iccc/theme-data/lib/build/json/light/design-tokens.json";
+import Typography from "@iccc/typography";
+
+export const gridTokens = defaultTheme.tokens.grid;
+export const maxWidth = defaultTheme.primitives.grid["max-width"];
+
+<Meta title="Digital HIG/CSS and SASS/Utility CSS/Responsive/Page container" />
+
+# Responsive page container
+
+Digital HIG spec for page container can be implemented using [grid tokens](/docs/iccc-theme-data-tokens-grid--page) and [primitives](/docs/iccc-theme-data-primitives-grid--page).
+
+Values are retrieved from the Digital HIG theme. Use the implementation below as reference:
+
+```javascript
+import theme from "@iccc/theme-data/lib/build/json/light/design-tokens.json";
+
+// extract object containing grid values at current viewport size
+const currentScreen = theme.tokens.<sm|md|lg|xl>;
+
+// extract margin value from token
+const horizontalMargin = currentScreen.margin;
+
+// max width value
+const maxWidth = theme.primitives.grid["max-width"];
+```
+
+Change your browser screen size to see the values in this demo:
+
+<Canvas>
+  <Story name="Page container">
+    {() => {
+      let currentScreen = gridTokens.sm;
+      if (useMediaQuery(`@media (min-width:${gridTokens.md.breakpoint})`)) {
+        currentScreen = gridTokens.md;
+      }
+      if (useMediaQuery(`@media (min-width:${gridTokens.lg.breakpoint})`)) {
+        currentScreen = gridTokens.lg;
+      }
+      if (useMediaQuery(`@media (min-width:${gridTokens.xl.breakpoint})`)) {
+        currentScreen = gridTokens.xl;
+      }
+      return (
+        <div style={{ backgroundColor: "orange" }}>
+          <div
+            className="dhig-p-4"
+            style={{
+              backgroundColor: "lightgray",
+              margin: `0 ${currentScreen.margin}`,
+              maxWidth
+            }}
+          >
+            <Typography className="dhig-m-0">
+              Screen size: {currentScreen.name}
+              <br />
+              Horizontal margin: {currentScreen.margin}
+              <br />
+              Max width: {maxWidth}
+            </Typography>
+          </div>
+        </div>
+      );
+    }}
+  </Story>
+</Canvas>
+
+Please note:
+
+- `orange` background represents the page container.
+- `lightgray` background represents the responsive content wrapper.

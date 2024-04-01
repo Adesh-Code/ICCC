@@ -1,0 +1,46 @@
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import SvgIcon from "@mui/material/SvgIcon";
+
+<Meta
+  title="Digital HIG/Documentation/Usage/How to use icon sprite"
+  parameters={{
+    docs: {
+      source: {
+        type: "code"
+      }
+    }
+  }}
+/>
+
+# How to use icons from the SVG sprite
+
+SVG sprites are consumable collections of icons that can be used across websites compatible with Digital HIG.
+
+We publish SVG sprites to CDN so they can be included into the document where they intend to be used.
+
+We also publish json manifest files that contain all the available icons, to allow for programatic access to the icon collection.
+
+| Sprite name     | SVG                                                                                    | Manifest                                                                                 |
+| --------------- | -------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| All icons       | [icons.svg](https://swc.autodesk.com/pharmacopeia/svg/icons.svg)                 | [icons.json](https://swc.autodesk.com/pharmacopeia/svg/icons.json)                 |
+| Display actions | [display-icons.svg](https://swc.autodesk.com/pharmacopeia/svg/display-icons.svg) | [display-icons.json](https://swc.autodesk.com/pharmacopeia/svg/display-icons.json) |
+
+### Create icons by reference
+
+Create icons by reference using the `use` html tag and passing the id to the icon from the Digital HIG library.
+
+See json manifests for a complete list of available icons.
+
+<Canvas>
+  <Story name="By reference">
+    <SvgIcon fontSize="small">
+      <use xlinkHref="#dhig--icons--add-folder" />
+    </SvgIcon>
+    <SvgIcon fontSize="medium">
+      <use xlinkHref="#dhig--icons--add-folder" />
+    </SvgIcon>
+    <SvgIcon fontSize="large">
+      <use xlinkHref="#dhig--icons--add-folder" />
+    </SvgIcon>
+  </Story>
+</Canvas>

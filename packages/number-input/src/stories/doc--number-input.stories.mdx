@@ -1,0 +1,60 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { componentArgs } from "../constants";
+import { name, peerDependencies, version } from "../../package.json";
+import {
+  ComponentTitle,
+  VersionNotice,
+  InstallationInstructions
+} from "../../../docs/src/partials";
+import NumberInput from "../number-input";
+
+<Meta
+  args={NumberInput.defaultProps}
+  argTypes={componentArgs}
+  component={NumberInput}
+  id="components/number-input"
+  title="Digital HIG/Components/Number input"
+/>
+
+<ComponentTitle name="Number input" status="In Progress" />
+
+<code>
+  <VersionNotice packageName="numeric-input" version={version} />
+</code>
+
+The numeric input component is a thin wrapper around Digital HIG's [`<FormControl>`](?path=/docs/components-form-control--api) and MUI [`<Input>`](https://mui.com/material-ui/api/input/) components.
+
+For related design documentation, please see the [Digital HIG Figma UI Sticker sheets](https://www.figma.com/file/Eks986gkqncHjkLnwQjO7g/iccc-sticker-sheets?type=design&node-id=6100-550854&mode=design&t=Eamz91RXqJELQSgb-0).
+
+## Installation
+
+<InstallationInstructions
+  componentImport="NumberInput"
+  name={name}
+  peerDependencies={peerDependencies}
+/>
+
+## API
+
+- For all supported MUI `<FormControl />` props, see [FormControl API](https://mui.com/material-ui/api/form-control/#main-content).
+- For all supported MUI `<Input />` props, see [Input API](https://mui.com/material-ui/api/input/).
+
+<Canvas>
+  <Story
+    name="API"
+    parameters={{
+      docs: {
+        source: {
+          type: "code"
+        }
+      }
+    }}
+  >
+    {(args) => {
+      const [num, setNum] = React.useState(args.value);
+      return <NumberInput {...args} value={num} onChange={setNum} />;
+    }}
+  </Story>
+</Canvas>
+
+<ArgsTable story="API" />

@@ -1,0 +1,422 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import "../../lib/build/css/dhig-global.css";
+
+<Meta
+  title="Digital HIG/CSS and SASS/MUI component CSS/Select"
+  parameters={{
+    disableThemeMui: true,
+    renderHTML: true
+  }}
+/>
+
+# Select
+
+HTML snippets to generate Digital HIG select.
+
+<Canvas>
+  <Story name="Light theme">
+    <div className="dhig-theme--light">
+      <div className="MuiFormControl-root MuiFormControl-fullWidth">
+        <label
+          className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+          data-shrink="false"
+          htmlFor="select-placeholder-input"
+          id="select-placeholder-input-label"
+        >
+          Placeholder text
+          <span className="DhigInputLabel--hintText">(optional)</span>
+        </label>
+        <div
+          className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl"
+          data-active="false"
+        >
+          <div
+            className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input"
+            tabIndex="0"
+            role="button"
+            aria-haspopup="listbox"
+            aria-labelledby="select-id-placeholder"
+          >
+            <em>Select...</em>
+            <svg
+              className="MuiSvgIcon-root MuiSvgIcon-root DhigSvgIcon DhigSvgIcon--size--inherit DhigSelect--checkedIcon DhigSvgIcon DhigSvgIcon--type--ui-control-icon DhigSvgIcon--size--small"
+              focusable="false"
+              viewBox="0 0 24 24"
+              aria-hidden="false"
+            >
+              <use
+                xlinkHref="#dhig--ui-controls--checkmark"
+                className="dhig--ui-controls--checkmark"
+              ></use>
+              <title>Selected</title>
+            </svg>
+          </div>
+          <input
+            aria-hidden="true"
+            tabIndex="-1"
+            className="MuiSelect-nativeInput"
+            onChange={() => {}}
+            id="select-placeholder-input"
+          />
+          <svg
+            className="MuiSvgIcon-root MuiSelect-icon DhigSvgIcon DhigSvgIcon--type--ui-control-icon DhigSvgIcon--size--small"
+            focusable="false"
+            viewBox="0 0 24 24"
+            aria-hidden="false"
+          >
+            <use
+              xlinkHref="#dhig--ui-controls--caret-down"
+              className="dhig--ui-controls--caret-down"
+            ></use>
+            <title>Toggle</title>
+          </svg>
+        </div>
+        <p
+          className="MuiFormHelperText-root MuiFormHelperText-contained"
+          id="select-placeholder-helper-text"
+        >
+          Helper text
+        </p>
+      </div>
+      <div className="dhig-mb-6" />
+      <div className="MuiFormControl-root">
+        <label
+          className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-filled MuiFormLabel-filled"
+          data-shrink="true"
+          htmlFor="select-input"
+        >
+          Select label
+          <span className="DhigInputLabel--hintText">(optional)</span>
+        </label>
+        <div
+          className="MuiInputBase-root MuiFilledInput-root MuiFilledInput-underline MuiInputBase-formControl"
+          data-active="false"
+        >
+          <div
+            className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiSelect-filled MuiInputBase-input MuiFilledInput-input"
+            tabIndex="0"
+            role="button"
+            aria-haspopup="listbox"
+          >
+            Carbon-negative rubber
+            <svg
+              className="MuiSvgIcon-root MuiSvgIcon-root DhigSvgIcon DhigSvgIcon--size--inherit DhigSelect--checkedIcon DhigSvgIcon DhigSvgIcon--type--ui-control-icon DhigSvgIcon--size--small"
+              focusable="false"
+              viewBox="0 0 24 24"
+              aria-hidden="false"
+            >
+              <use
+                xlinkHref="#dhig--ui-controls--checkmark"
+                className="dhig--ui-controls--checkmark"
+              ></use>
+              <title>Selected</title>
+            </svg>
+          </div>
+          <input
+            aria-hidden="true"
+            tabIndex="-1"
+            className="MuiSelect-nativeInput"
+            value="2"
+            onChange={() => {}}
+            id="select-input"
+          />
+          <svg
+            className="MuiSvgIcon-root MuiSelect-icon DhigSvgIcon DhigSvgIcon--type--ui-control-icon DhigSvgIcon--size--small"
+            focusable="false"
+            viewBox="0 0 24 24"
+            aria-hidden="false"
+          >
+            <use
+              xlinkHref="#dhig--ui-controls--caret-down"
+              className="dhig--ui-controls--caret-down"
+            ></use>
+            <title>Toggle</title>
+          </svg>
+        </div>
+        <p className="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled">
+          Helper text
+        </p>
+      </div>
+      <div className="dhig-mb-6" />
+      <div
+        className="MuiPaper-root MuiMenu-paper MuiPopover-paper MuiPaper-elevation0 MuiPaper-rounded"
+        style={{ opacity: 1, transform: "none", minWidth: "220px" }}
+        tabIndex="-1"
+      >
+        <ul
+          className="MuiList-root MuiMenu-list MuiList-padding"
+          role="listbox"
+          tabIndex="-1"
+        >
+          <li
+            className="MuiButtonBase-root MuiListItem-root MuiMenuItem-root MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button"
+            tabIndex="-1"
+            role="option"
+            aria-selected="false"
+            aria-disabled="false"
+            data-value="1"
+          >
+            Beton brut
+          </li>
+          <li
+            className="MuiButtonBase-root MuiListItem-root MuiMenuItem-root Mui-selected MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button Mui-selected"
+            tabIndex="0"
+            role="option"
+            aria-disabled="false"
+            aria-selected="true"
+            data-value="2"
+          >
+            Carbon-negative rubber
+            <svg
+              className="MuiSvgIcon-root MuiSvgIcon-root DhigSvgIcon DhigSvgIcon--size--inherit DhigSelect--checkedIcon DhigSvgIcon DhigSvgIcon--type--ui-control-icon DhigSvgIcon--size--small"
+              focusable="false"
+              viewBox="0 0 24 24"
+              aria-hidden="false"
+            >
+              <use
+                xlinkHref="#dhig--ui-controls--checkmark"
+                className="dhig--ui-controls--checkmark"
+              ></use>
+              <title>Selected</title>
+            </svg>
+          </li>
+          <li
+            className="MuiButtonBase-root MuiListItem-root MuiMenuItem-root MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button"
+            tabIndex="-1"
+            role="option"
+            aria-selected="false"
+            aria-disabled="false"
+            data-value="3"
+          >
+            Dark marble
+          </li>
+          <li
+            className="MuiButtonBase-root MuiListItem-root MuiMenuItem-root MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button"
+            tabIndex="-1"
+            role="option"
+            aria-selected="false"
+            aria-disabled="false"
+            data-value="4"
+          >
+            Durable bamboo
+          </li>
+          <li
+            className="MuiButtonBase-root MuiListItem-root MuiMenuItem-root MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button"
+            tabIndex="-1"
+            role="option"
+            aria-selected="false"
+            aria-disabled="false"
+            data-value="5"
+          >
+            Frosted glass
+          </li>
+        </ul>
+      </div>
+      <div style={{ height: "220px" }} />
+    </div>
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="Dark theme" parameters={{ theme: "dark" }}>
+    <div className="dhig-theme--dark">
+      <div className="MuiFormControl-root MuiFormControl-fullWidth">
+        <label
+          className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+          data-shrink="false"
+          htmlFor="select-placeholder-dark"
+          id="select-placeholder-label-dark"
+        >
+          Placeholder text
+          <span className="DhigInputLabel--hintText">(optional)</span>
+        </label>
+        <div
+          className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl"
+          data-active="false"
+        >
+          <div
+            className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input"
+            tabIndex="0"
+            role="button"
+            aria-haspopup="listbox"
+            aria-labelledby="select-id-placeholder"
+          >
+            <em>Select...</em>
+            <svg
+              className="MuiSvgIcon-root MuiSvgIcon-root DhigSvgIcon DhigSvgIcon--size--inherit DhigSelect--checkedIcon DhigSvgIcon DhigSvgIcon--type--ui-control-icon DhigSvgIcon--size--small"
+              focusable="false"
+              viewBox="0 0 24 24"
+              aria-hidden="false"
+            >
+              <use
+                xlinkHref="#dhig--ui-controls--checkmark"
+                className="dhig--ui-controls--checkmark"
+              ></use>
+              <title>Selected</title>
+            </svg>
+          </div>
+          <input
+            aria-hidden="true"
+            tabIndex="-1"
+            className="MuiSelect-nativeInput"
+            onChange={() => {}}
+            id="select-placeholder-dark"
+          />
+          <svg
+            className="MuiSvgIcon-root MuiSelect-icon DhigSvgIcon DhigSvgIcon--type--ui-control-icon DhigSvgIcon--size--small"
+            focusable="false"
+            viewBox="0 0 24 24"
+            aria-hidden="false"
+          >
+            <use
+              xlinkHref="#dhig--ui-controls--caret-down"
+              className="dhig--ui-controls--caret-down"
+            ></use>
+            <title>Toggle</title>
+          </svg>
+        </div>
+        <p
+          className="MuiFormHelperText-root MuiFormHelperText-contained"
+          id="select-placeholder-helper-text-dark"
+        >
+          Helper text
+        </p>
+      </div>
+      <div className="dhig-mb-6" />
+      <div className="MuiFormControl-root">
+        <label
+          className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-filled MuiFormLabel-filled"
+          data-shrink="true"
+          htmlFor="select-input-dark"
+        >
+          Select label
+          <span className="DhigInputLabel--hintText">(optional)</span>
+        </label>
+        <div
+          className="MuiInputBase-root MuiFilledInput-root MuiFilledInput-underline MuiInputBase-formControl"
+          data-active="false"
+        >
+          <div
+            className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiSelect-filled MuiInputBase-input MuiFilledInput-input"
+            tabIndex="0"
+            role="button"
+            aria-haspopup="listbox"
+          >
+            Carbon-negative rubber
+            <svg
+              className="MuiSvgIcon-root MuiSvgIcon-root DhigSvgIcon DhigSvgIcon--size--inherit DhigSelect--checkedIcon DhigSvgIcon DhigSvgIcon--type--ui-control-icon DhigSvgIcon--size--small"
+              focusable="false"
+              viewBox="0 0 24 24"
+              aria-hidden="false"
+            >
+              <use
+                xlinkHref="#dhig--ui-controls--checkmark"
+                className="dhig--ui-controls--checkmark"
+              ></use>
+              <title>Selected</title>
+            </svg>
+          </div>
+          <input
+            aria-hidden="true"
+            tabIndex="-1"
+            className="MuiSelect-nativeInput"
+            value="2"
+            onChange={() => {}}
+            id="select-input-dark"
+          />
+          <svg
+            className="MuiSvgIcon-root MuiSelect-icon DhigSvgIcon DhigSvgIcon--type--ui-control-icon DhigSvgIcon--size--small"
+            focusable="false"
+            viewBox="0 0 24 24"
+            aria-hidden="false"
+          >
+            <use
+              xlinkHref="#dhig--ui-controls--caret-down"
+              className="dhig--ui-controls--caret-down"
+            ></use>
+            <title>Toggle</title>
+          </svg>
+        </div>
+        <p className="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled">
+          Helper text
+        </p>
+      </div>
+      <div className="dhig-mb-6" />
+      <div
+        className="MuiPaper-root MuiMenu-paper MuiPopover-paper MuiPaper-elevation0 MuiPaper-rounded"
+        style={{ opacity: 1, transform: "none", minWidth: "220px" }}
+        tabIndex="-1"
+      >
+        <ul
+          className="MuiList-root MuiMenu-list MuiList-padding"
+          role="listbox"
+          tabIndex="-1"
+        >
+          <li
+            className="MuiButtonBase-root MuiListItem-root MuiMenuItem-root MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button"
+            tabIndex="-1"
+            role="option"
+            aria-disabled="false"
+            aria-selected="false"
+            data-value="1"
+          >
+            Beton brut
+          </li>
+          <li
+            className="MuiButtonBase-root MuiListItem-root MuiMenuItem-root Mui-selected MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button Mui-selected"
+            tabIndex="0"
+            role="option"
+            aria-disabled="false"
+            aria-selected="true"
+            data-value="2"
+          >
+            Carbon-negative rubber
+            <svg
+              className="MuiSvgIcon-root MuiSvgIcon-root DhigSvgIcon DhigSvgIcon--size--inherit DhigSelect--checkedIcon DhigSvgIcon DhigSvgIcon--type--ui-control-icon DhigSvgIcon--size--small"
+              focusable="false"
+              viewBox="0 0 24 24"
+              aria-hidden="false"
+            >
+              <use
+                xlinkHref="#dhig--ui-controls--checkmark"
+                className="dhig--ui-controls--checkmark"
+              ></use>
+              <title>Selected</title>
+            </svg>
+          </li>
+          <li
+            className="MuiButtonBase-root MuiListItem-root MuiMenuItem-root MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button"
+            tabIndex="-1"
+            role="option"
+            aria-selected="false"
+            aria-disabled="false"
+            data-value="3"
+          >
+            Dark marble
+          </li>
+          <li
+            className="MuiButtonBase-root MuiListItem-root MuiMenuItem-root MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button"
+            tabIndex="-1"
+            role="option"
+            aria-selected="false"
+            aria-disabled="false"
+            data-value="4"
+          >
+            Durable bamboo
+          </li>
+          <li
+            className="MuiButtonBase-root MuiListItem-root MuiMenuItem-root MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button"
+            tabIndex="-1"
+            role="option"
+            aria-selected="false"
+            aria-disabled="false"
+            data-value="5"
+          >
+            Frosted glass
+          </li>
+        </ul>
+      </div>
+      <div style={{ height: "220px" }} />
+    </div>
+  </Story>
+</Canvas>

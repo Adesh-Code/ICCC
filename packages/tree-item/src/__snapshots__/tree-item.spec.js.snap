@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Flat Tree Item component renders 1`] = `
+<div>
+  <ul
+    aria-multiselectable="false"
+    class="MuiTreeView-root DhigTreeView--variant--flat DhigTreeView--size--default emotion-0"
+    id="mui-1"
+    role="tree"
+    tabindex="0"
+  >
+    <li
+      aria-expanded="false"
+      class="MuiTreeItem-root emotion-1"
+      id="mui-1-1"
+      role="treeitem"
+      tabindex="-1"
+    >
+      <div
+        class="DhigTreeItem"
+      >
+        <hr
+          class="MuiDivider-root MuiDivider-fullWidth MuiDivider-light emotion-2"
+        />
+        <div
+          class="emotion-3 MuiTreeItem-content DhigTreeView--variant--flat"
+        >
+          <div
+            class="MuiTreeItem-iconContainer"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeInherit emotion-4"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <svg
+                fill="none"
+                viewBox="0 0 6 16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g
+                  id="caret-right-small"
+                >
+                  <path
+                    d="M1.00098 4.5L4.50098 8L1.00098 11.5"
+                    id="stroke"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.1"
+                  />
+                </g>
+              </svg>
+            </svg>
+          </div>
+          <div
+            class="MuiTypography-root MuiTypography-body1 MuiTreeItem-label emotion-5"
+          >
+            Spreadsheets
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+`;

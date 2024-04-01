@@ -1,0 +1,197 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { componentArgs } from "../constants";
+import {
+  ComponentTitle,
+  DarkThemeNotice,
+  InstallationInstructions,
+  MuiLink
+} from "../../../docs/src/partials";
+import { peerDependencies } from "../../package.json";
+import Box from "@mui/material/Box";
+import Divider from "@mui/material/Divider";
+import List from "@mui/material/List";
+
+export const Filler = () => (
+  <Box width="100%" height="3rem" bgcolor="rgba(0, 0, 0, 0.1)" />
+);
+
+export const HorizontalWrapper = ({ children }) => (
+  <Box
+    border="1px dashed #666"
+    display="flex"
+    flexDirection="column"
+    mt={2}
+    mb={2}
+    p={2}
+  >
+    {children}
+  </Box>
+);
+
+export const VerticalWrapper = ({ children }) => (
+  <Box
+    border="1px dashed #666"
+    display="flex"
+    flexDirection="row"
+    mt={2}
+    mb={2}
+    p={2}
+  >
+    {children}
+  </Box>
+);
+
+<Meta
+  args={{ light: true, orientation: "horizontal" }}
+  argTypes={componentArgs}
+  component={Divider}
+  id="components/divider"
+  title="Digital HIG/Components/Divider"
+/>
+
+<ComponentTitle name="Divider" status="Stable" />
+
+<code>
+  <MuiLink
+    componentName="Divider"
+    link="https://mui.com/material-ui/react-divider/"
+  />
+</code>
+
+The Divider component is the out-of-the-box MUI [`<Divider>`](https://mui.com/material-ui/react-divider/), with Digital HIG defaults.
+
+For related design documentation, please see the [Digital HIG Figma UI Toolkit](https://www.figma.com/file/Eks986gkqncHjkLnwQjO7g/iccc-sticker-sheets?node-id=4203%3A268732&t=iL4WgXwqDMZvxUAw-1).
+
+## Installation
+
+<InstallationInstructions
+  componentImport="Divider"
+  peerDependencies={peerDependencies}
+/>
+
+## API
+
+For all supported MUI `<Divider />` props, see [Divider API](https://mui.com/material-ui/api/divider/).
+
+<Canvas>
+  <Story
+    name="API"
+    decorators={[
+      (Story, options) => {
+        const verticalContainerStyles =
+          options.args.orientation === "vertical"
+            ? { height: "50px", display: "flex" }
+            : {};
+        return (
+          <Box {...verticalContainerStyles}>
+            <Story />
+          </Box>
+        );
+      }
+    ]}
+  >
+    {(args) => <Divider {...args} flexItem={args.orientation === "vertical"} />}
+  </Story>
+</Canvas>
+
+<ArgsTable story="API" />
+
+### Horizontal spacing
+
+Use MUI's `sx` prop to indicate how much blank space should be rendered around the divider component.
+
+<Canvas>
+  <Story name="Spacing: horizontal">
+    <HorizontalWrapper>
+      <Filler />
+      <Divider sx={{ my: 1 }} />
+      <Filler />
+    </HorizontalWrapper>
+    <HorizontalWrapper>
+      <Filler />
+      <Divider sx={{ my: 2 }} />
+      <Filler />
+    </HorizontalWrapper>
+    <HorizontalWrapper>
+      <Filler />
+      <Divider sx={{ my: 3 }} />
+      <Filler />
+    </HorizontalWrapper>
+    <HorizontalWrapper>
+      <Filler />
+      <Divider sx={{ my: 6 }} />
+      <Filler />
+    </HorizontalWrapper>
+    <HorizontalWrapper>
+      <Filler />
+      <Divider sx={{ my: 7 }} />
+      <Filler />
+    </HorizontalWrapper>
+  </Story>
+</Canvas>
+
+### Vertical spacing
+
+Note the use of the `flexItem` prop to accommodate for the flex container.
+
+<Canvas>
+  <Story name="Spacing: vertical">
+    <VerticalWrapper>
+      <Filler />
+      <Divider flexItem orientation="vertical" sx={{ mx: 1 }} />
+      <Filler />
+    </VerticalWrapper>
+    <VerticalWrapper>
+      <Filler />
+      <Divider flexItem orientation="vertical" sx={{ mx: 2 }} />
+      <Filler />
+    </VerticalWrapper>
+    <VerticalWrapper>
+      <Filler />
+      <Divider flexItem orientation="vertical" sx={{ mx: 3 }} />
+      <Filler />
+    </VerticalWrapper>
+    <VerticalWrapper>
+      <Filler />
+      <Divider flexItem orientation="vertical" sx={{ mx: 6 }} />
+      <Filler />
+    </VerticalWrapper>
+    <VerticalWrapper>
+      <Filler />
+      <Divider flexItem orientation="vertical" sx={{ mx: 7 }} />
+      <Filler />
+    </VerticalWrapper>
+  </Story>
+</Canvas>
+
+### Dark theme
+
+<DarkThemeNotice />
+
+#### Light
+
+<Canvas>
+  <Story name="Dark theme: light" parameters={{ theme: "dark" }}>
+    <Divider light />
+  </Story>
+</Canvas>
+
+#### Strong
+
+<Canvas>
+  <Story name="Dark theme: strong" parameters={{ theme: "dark" }}>
+    <Divider light={false} />
+  </Story>
+</Canvas>
+
+### Forward MUI props
+
+Demonstrating capability to forward MUI props. In this particular example, the `component` prop is set to `<li>`, instead of the default `<hr>`. Using the `<li>` component is recommended when rendering the divider in a list, to match the HTML5 specification.
+
+<Canvas>
+  <Story name="MUI props" parameters={{ vr: false }}>
+    <List>
+      <Divider component="li" />
+    </List>
+  </Story>
+</Canvas>

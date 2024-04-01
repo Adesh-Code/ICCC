@@ -1,0 +1,68 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import "../../lib/build/css/dhig-global.css";
+
+<Meta
+  title="Digital HIG/CSS and SASS/MUI component CSS/Typography"
+  parameters={{
+    disableThemeMui: true,
+    renderHTML: true
+  }}
+/>
+
+# Typography
+
+<Canvas>
+  <Story name="Light theme">
+    <div className="dhig-theme--light">
+      <div className="dhig-typography-display-extra">display-extra</div>
+      <div className="dhig-typography-display">display</div>
+      <div className="dhig-typography-headline-largest">headline-largest</div>
+      <div className="dhig-typography-headline-larger">headline-larger</div>
+      <div className="dhig-typography-headline-large">headline-large</div>
+      <div className="dhig-typography-headline-medium">headline-medium</div>
+      <div className="dhig-typography-headline-small">headline-small</div>
+      <div className="dhig-typography-headline-smaller">headline-smaller</div>
+      <div className="dhig-typography-headline-smallest">headline-smallest</div>
+      <div className="dhig-typography-body-copy-large">body-copy-large</div>
+      <div className="dhig-typography-body-copy-medium">body-copy-medium</div>
+      <div className="dhig-typography-body-copy-small">body-copy-small</div>
+      <div className="dhig-typography-short-copy-large">short-copy-large</div>
+      <div className="dhig-typography-short-copy-medium">short-copy-medium</div>
+      <div className="dhig-typography-short-copy-small">short-copy-small</div>
+      <div className="dhig-typography-smallprint">smallprint</div>
+      <div className="dhig-typography-code">code</div>
+      <div className="dhig-typography-caption">caption</div>
+      <div className="dhig-typography-eyebrow">eyebrow</div>
+      <div className="dhig-typography-pull-quote-medium">pull-quote-medium</div>
+      <div className="dhig-typography-pull-quote-large">pull-quote-large</div>
+    </div>
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="Dark theme" parameters={{ theme: "dark" }}>
+    <div className="dhig-theme--dark">
+      <div className="dhig-typography-display-extra">display-extra</div>
+      <div className="dhig-typography-display">display</div>
+      <div className="dhig-typography-headline-largest">headline-largest</div>
+      <div className="dhig-typography-headline-larger">headline-larger</div>
+      <div className="dhig-typography-headline-large">headline-large</div>
+      <div className="dhig-typography-headline-medium">headline-medium</div>
+      <div className="dhig-typography-headline-small">headline-small</div>
+      <div className="dhig-typography-headline-smaller">headline-smaller</div>
+      <div className="dhig-typography-headline-smallest">headline-smallest</div>
+      <div className="dhig-typography-body-copy-large">body-copy-large</div>
+      <div className="dhig-typography-body-copy-medium">body-copy-medium</div>
+      <div className="dhig-typography-body-copy-small">body-copy-small</div>
+      <div className="dhig-typography-short-copy-large">short-copy-large</div>
+      <div className="dhig-typography-short-copy-medium">short-copy-medium</div>
+      <div className="dhig-typography-short-copy-small">short-copy-small</div>
+      <div className="dhig-typography-smallprint">smallprint</div>
+      <div className="dhig-typography-code">code</div>
+      <div className="dhig-typography-caption">caption</div>
+      <div className="dhig-typography-eyebrow">eyebrow</div>
+      <div className="dhig-typography-pull-quote-medium">pull-quote-medium</div>
+      <div className="dhig-typography-pull-quote-large">pull-quote-large</div>
+    </div>
+  </Story>
+</Canvas>

@@ -1,0 +1,6 @@
+/**
+* Generates DHIG component css.
+*/
+@use "../scss/mixins" as *;
+
+@include dhig-mui-component-classes;

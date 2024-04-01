@@ -1,0 +1,656 @@
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import {
+  ComponentTitle,
+  DarkThemeNotice,
+  InstallationInstructions,
+  MuiLink,
+  VariantRangeNotice
+} from "../../../docs/src/partials";
+import Avatar from "@mui/material/Avatar";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import CaretRightIcon from "@iccc/icon/lib/build/icons/caret-right";
+import Checkbox from "@mui/material/Checkbox";
+import DeleteIcon from "@iccc/icon/lib/build/icons/trash";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import ForwardIcon from "@iccc/icon/lib/build/icons/forward";
+import IconButton from "@iccc/icon-button";
+import lightThemeData from "@iccc/theme-data/lib/build/json/light/design-tokens.json";
+import PinIcon from "@iccc/icon/lib/build/icons/pin";
+import SvgIcon from "@mui/material/SvgIcon";
+import Table from "@iccc/table";
+import TableBody from "@mui/material/TableBody";
+import TableCell from "@mui/material/TableCell";
+import TableHead, { getComparator, stableSort } from "@iccc/table-head";
+import TableRow from "@iccc/table-row";
+import Toolbar from "@mui/material/Toolbar";
+import Typography from "@iccc/typography";
+
+export const rows = [
+  {
+    avatar: <Avatar src="" />,
+    name: "Cupcake",
+    description: "Lorem ipsum",
+    calories: 305,
+    fat: 3.7,
+    carbs: 67,
+    protein: 4.3
+  },
+  {
+    avatar: <Avatar src="" />,
+    name: "Donut",
+    description: "Dolor sit amet",
+    calories: 452,
+    fat: 25,
+    carbs: 51,
+    protein: 4.9
+  },
+  {
+    avatar: <Avatar src="" />,
+    name: "Activated",
+    description: "I'm activated!",
+    calories: 213,
+    fat: 17.4,
+    carbs: 9,
+    protein: 20,
+    activated: true
+  },
+  {
+    avatar: <Avatar src="" />,
+    name: "Honeycomb",
+    calories: 408,
+    fat: 3.2,
+    carbs: 87,
+    protein: 6.5
+  },
+  {
+    avatar: <Avatar src="" />,
+    name: "Ice cream sandwich",
+    description: "Fugiat nisi pariatur",
+    calories: 237,
+    fat: 9,
+    carbs: 37,
+    protein: 4.3
+  },
+  {
+    avatar: <Avatar src="" />,
+    name: "Jelly Bean",
+    calories: 375,
+    fat: 0,
+    carbs: 94,
+    protein: 0
+  }
+];
+
+export const headCells = [
+  { id: "avatar", label: "", disableInteractions: true },
+  { id: "name", label: "Dessert (100g serving)" },
+  { id: "calories", label: "Calories" },
+  { id: "fat", label: "Fat (g)" },
+  { id: "carbs", label: "Carbs (g)" },
+  { id: "protein", label: "Protein (g)" },
+  { id: "icon", label: "", disableInteractions: true }
+];
+
+export const cells = (row, icon = "caret", size = "default") => {
+  const mappedCells = [];
+  mappedCells.push(
+    row.avatar,
+    <>
+      <Typography
+        variant={size === "small" ? "headline-smallest" : "headline-smaller"}
+      >
+        {row.name}
+      </Typography>
+      {row.description && (
+        <Typography color="ink-on-background-60" variant="body-copy-small">
+          {row.description}
+        </Typography>
+      )}
+    </>,
+    row.calories,
+    row.fat,
+    row.carbs,
+    row.protein,
+    <SvgIcon>{icon === "caret" ? <CaretRightIcon /> : <ForwardIcon />}</SvgIcon>
+  );
+  return mappedCells;
+};
+
+<Meta
+  id="components/panel-list"
+  title="Digital HIG/Components/Panel list"
+  parameters={{
+    docs: { source: { type: "code" } }
+  }}
+/>
+
+<ComponentTitle name="Panel list" status="Stable" />
+
+<code>
+  <MuiLink
+    componentName="Table"
+    link="https://mui.com/material-ui/react-table/"
+  />
+</code>
+
+The panel list component is a specific composition of all the [Digital HIG Table components](/docs/components-table--api).
+
+For related design documentation, please see the [Digital HIG Figma UI Toolkit](https://www.figma.com/file/Eks986gkqncHjkLnwQjO7g/iccc-sticker-sheets?node-id=4520%3A305007&t=iL4WgXwqDMZvxUAw-1).
+
+For the initial engineering prototype, see the archived [Panel List prototype page](https://storybook.digital-help-dev.autodesk.com/iccc/prerelease/PR-408/index.html?path=/docs/components-panel-list-prototype--multi-select-with-header).
+
+## Installation
+
+<InstallationInstructions name="@iccc/table @iccc/table-head @iccc/table-row @iccc/icon" />
+
+```jsx
+import Table from "@iccc/table";
+import TableBody from "@mui/material/TableBody";
+import TableCell from "@mui/material/TableCell";
+import TableHead from "@iccc/table-head";
+import TableRow from "@iccc/table-row";
+import SvgIcon from "@mui/material/SvgIcon";
+```
+
+## API
+
+- For all supported MUI `<Avatar />` props, see [Avatar API](https://mui.com/material-ui/api/avatar/).
+- For more information about the Digital HIG `<Table />` component, see [the table component page](/docs/components-table--api).
+- For all supported MUI `<TableBody />` props, see [TableBody API](https://mui.com/material-ui/api/table-body/).
+- For more information about the Digital HIG `<TableCell />` component, see [the table cell component page](/docs/components-table-cell--api).
+- For more information about the Digital HIG `<TableHead />` component, see [the table head component page](/docs/components-table-head--api).
+- For more information about the Digital HIG `<TableRow />` component, see [the table row component page](/docs/components-table-row--api).
+- For all supported MUI `<SvgIcon />` props, see [SvgIcon API](https://mui.com/material-ui/api/svg-icon/).
+
+The panel list component can be assembled by passing the following props into the [Digital HIG `<Table />` component](/docs/components-table--api): `loud`, `bordered`, and `verticalAlignment="center"`. The `<TableRow />` component should ensure the `enableInteractions` prop is set to `true` (as per the default).
+
+Please note that the `<TableRow />` component that has the prop `activated` set to `true` is not clickable. It is also important to know that the desired behavior is to have only one row activated at a time and this behavior will be implemented by the consuming team.
+
+<Canvas>
+  <Story name="API">
+    <Table loud bordered verticalAlignment="center">
+      <TableBody>
+        {rows.map((row, rowIndex) => (
+          <TableRow key={`row-${rowIndex}`} activated={row.activated}>
+            {cells(row).map((cell, cellIndex) => (
+              <TableCell key={`cell-${cellIndex}`}>{cell}</TableCell>
+            ))}
+          </TableRow>
+        ))}
+      </TableBody>
+    </Table>
+  </Story>
+</Canvas>
+
+The panel list rows can contain any content, but here is an example row, used above:
+
+```jsx
+<TableRow>
+  <TableCell>
+    <Avatar src="" />
+  </TableCell>
+  <TableCell>
+    <Typography variant="headline-smaller">Text</Typography>
+    <Typography color="ink-on-background-60" variant="body-copy-small">
+      Description
+    </Typography>
+  </TableCell>
+  <TableCell>200</TableCell>
+  <TableCell>52</TableCell>
+  <TableCell>13</TableCell>
+  <TableCell>4.8</TableCell>
+  <TableCell>
+    <SvgIcon>
+      <CaretRightIcon />
+    </SvgIcon>
+  </TableCell>
+</TableRow>
+```
+
+## Panel list variants
+
+<VariantRangeNotice />
+
+### Small
+
+Pass `size="small"` to the `<Table />` component for small panel list styling.
+
+<Canvas>
+  <Story name="Small">
+    <Table loud bordered verticalAlignment="center" size="small">
+      <TableBody>
+        {rows.map((row, rowIndex) => (
+          <TableRow key={`row-${rowIndex}`} activated={row.activated}>
+            {cells(row, "caret", "small").map((cell, cellIndex) => (
+              <TableCell key={`cell-${cellIndex}`}>{cell}</TableCell>
+            ))}
+          </TableRow>
+        ))}
+      </TableBody>
+    </Table>
+  </Story>
+</Canvas>
+
+### New
+
+A small cell can be added at the start of a row to indicate a new row. An additional `headCell` entry should also be added if the header is present to ensure correct alignment. Use the `highlighted` row prop for new rows. Below is one possible implementation example.
+
+<Canvas>
+  <Story name="New">
+    <Table loud bordered verticalAlignment="center">
+      <TableHead
+        headCells={[
+          { id: "new", label: "", disableInteractions: true },
+          { id: "avatar", label: "", disableInteractions: true },
+          { id: "name", label: "Name" },
+          { id: "calories", label: "Calories" },
+          { id: "fat", label: "Fat (g)" },
+          { id: "carbs", label: "Carbs (g)" },
+          { id: "protein", label: "Protein (g)" },
+          { id: "icon", label: "", disableInteractions: true }
+        ]}
+      />
+      <TableBody>
+        <TableRow highlighted>
+          <TableCell
+            sx={{
+              width: 6,
+              padding: `0 ${lightThemeData.primitives.spacings[1]}`
+            }}
+          >
+            <div
+              style={{
+                height: "6px",
+                width: "6px",
+                borderRadius: "50%",
+                background: lightThemeData.primitives.colors.accent.iris
+              }}
+            />
+          </TableCell>
+          <TableCell>
+            <Avatar src="" />
+          </TableCell>
+          <TableCell>
+            <Typography variant="headline-smaller">New row</Typography>
+            <Typography color="ink-on-background-60" variant="body-copy-small">
+              I'm new!
+            </Typography>
+          </TableCell>
+          <TableCell>
+            <Typography>200</Typography>
+          </TableCell>
+          <TableCell>
+            <Typography>52</Typography>
+          </TableCell>
+          <TableCell>
+            <Typography>13</Typography>
+          </TableCell>
+          <TableCell>
+            <Typography>4.8</Typography>
+          </TableCell>
+          <TableCell>
+            <SvgIcon>
+              <CaretRightIcon />
+            </SvgIcon>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell
+            sx={{
+              width: 6,
+              padding: `0 ${lightThemeData.primitives.spacings[1]}`
+            }}
+          />
+          <TableCell>
+            <Avatar src="" />
+          </TableCell>
+          <TableCell>
+            <Typography variant="headline-smaller">Default row</Typography>
+            <Typography color="ink-on-background-60" variant="body-copy-small">
+              Lorem ipsum
+            </Typography>
+          </TableCell>
+          <TableCell>
+            <Typography>923</Typography>
+          </TableCell>
+          <TableCell>
+            <Typography>25</Typography>
+          </TableCell>
+          <TableCell>
+            <Typography>0</Typography>
+          </TableCell>
+          <TableCell>
+            <Typography>64</Typography>
+          </TableCell>
+          <TableCell>
+            <SvgIcon>
+              <CaretRightIcon />
+            </SvgIcon>
+          </TableCell>
+        </TableRow>
+      </TableBody>
+    </Table>
+  </Story>
+</Canvas>
+
+### External target
+
+If the links for your panel list items are external, use the `<ForwardIcon />` imported from `@iccc/icon/lib/build/icons/forward`. Otherwise, use the `<CaretRightIcon />` imported from `@iccc/icon/lib/build/icons/caret-right`. Both should be wrapped in the [MUI `<SvgIcon />` component](/docs/components-svg-icon--api).
+
+<Canvas>
+  <Story name="External target">
+    <Table loud bordered verticalAlignment="center">
+      <TableBody>
+        {rows.map((row, rowIndex) => (
+          <TableRow key={`row-${rowIndex}`} activated={row.activated}>
+            {cells(row, "forward").map((cell, cellIndex) => (
+              <TableCell key={`cell-${cellIndex}`}>{cell}</TableCell>
+            ))}
+          </TableRow>
+        ))}
+      </TableBody>
+    </Table>
+  </Story>
+</Canvas>
+
+## Headers
+
+These are the `headCells` used in all the following examples:
+
+```jsx
+[
+  { id: "avatar", label: "", disableInteractions: true },
+  { id: "name", label: "Dessert (100g serving)" },
+  { id: "calories", label: "Calories" },
+  { id: "fat", label: "Fat (g)" },
+  { id: "carbs", label: "Carbs (g)" },
+  { id: "protein", label: "Protein (g)" },
+  { id: "icon", label: "", disableInteractions: true }
+];
+```
+
+Note that data should be provided even for the cells with no labels (e.g. avatars or icons), but the `disableInteractions` property should be set to `true` for those cells.
+
+### Default
+
+Use the [Digital HIG `<TableHead />` component](/docs/components-table-head--api) for the panel list header.
+
+<Canvas>
+  <Story name="Header: default">
+    <Table loud bordered verticalAlignment="center">
+      <TableHead headCells={headCells} />
+      <TableBody>
+        {rows.map((row, rowIndex) => (
+          <TableRow key={`row-${rowIndex}`} activated={row.activated}>
+            {cells(row).map((cell, cellIndex) => (
+              <TableCell key={`cell-${cellIndex}`}>{cell}</TableCell>
+            ))}
+          </TableRow>
+        ))}
+      </TableBody>
+    </Table>
+  </Story>
+</Canvas>
+
+### Sortable
+
+The `stableSort` and `getComparator` helper functions can be imported directly from `@iccc/table-head`, or you can use your own. For more information on table head props, visit the [`<TableHead />` component page](/docs/components-table-head--sortable).
+
+<Canvas>
+  <Story name="Header: sortable">
+    {() => {
+      const [order, setOrder] = React.useState("asc");
+      const [orderBy, setOrderBy] = React.useState("calories");
+      const handleRequestSort = (_event, property) => {
+        const isAsc = orderBy === property && order === "asc";
+        setOrder(isAsc ? "desc" : "asc");
+        setOrderBy(property);
+      };
+      return (
+        <Table loud bordered verticalAlignment="center">
+          <TableHead
+            headCells={headCells}
+            enableSort
+            order={order}
+            orderBy={orderBy}
+            onRequestSort={handleRequestSort}
+          />
+          <TableBody>
+            {stableSort(rows, getComparator(order, orderBy)).map(
+              (row, rowIndex) => (
+                <TableRow key={`row-${rowIndex}`} activated={row.activated}>
+                  {cells(row).map((cell, cellIndex) => (
+                    <TableCell key={`cell-${cellIndex}`}>{cell}</TableCell>
+                  ))}
+                </TableRow>
+              )
+            )}
+          </TableBody>
+        </Table>
+      );
+    }}
+  </Story>
+</Canvas>
+
+## Multi-select
+
+Below is an example of a multi-select implementation, using the `enableSelect`, `onSelectAllClick`, `rowCount`, and `selectedRowCount` table head props.
+
+Using the MUI prop `padding="checkbox"` on the table cells with a checkbox, along with wrapping the checkbox in the [Digital HIG FormControlLabel](/docs/components-form-control--api) is recommended for optimal styling (including an increased touch target around the checkbox).
+
+Note that multi-select functionality is available even without the header.
+
+<Canvas>
+  <Story name="Multi-select">
+    {() => {
+      const [selected, setSelected] = React.useState([]);
+      const handleRowClick = (event, name) => {
+        const selectedIndex = selected.indexOf(name);
+        let newSelected = [];
+        if (selectedIndex === -1) {
+          newSelected = newSelected.concat(selected, name);
+        } else if (selectedIndex === 0) {
+          newSelected = newSelected.concat(selected.slice(1));
+        } else if (selectedIndex === selected.length - 1) {
+          newSelected = newSelected.concat(selected.slice(0, -1));
+        } else if (selectedIndex > 0) {
+          newSelected = newSelected.concat(
+            selected.slice(0, selectedIndex),
+            selected.slice(selectedIndex + 1)
+          );
+        }
+        setSelected(newSelected);
+      };
+      const handleSelectAllClick = (event) => {
+        if (event.target.checked) {
+          const newSelecteds = rows.map((n) => n.name);
+          setSelected(newSelecteds);
+          return;
+        }
+        setSelected([]);
+      };
+      const isSelected = (name) => selected.indexOf(name) !== -1;
+      return (
+        <Table loud bordered verticalAlignment="center">
+          <TableHead
+            headCells={headCells}
+            enableSelect
+            onSelectAllClick={handleSelectAllClick}
+            rowCount={rows.length}
+            selectedRowCount={selected.length}
+          />
+          <TableBody>
+            {rows.map((row, rowIndex) => (
+              <TableRow
+                key={`row-${rowIndex}`}
+                selected={isSelected(row.name)}
+                activated={row.activated}
+              >
+                <TableCell padding="checkbox">
+                  <FormControlLabel
+                    control={
+                      <Checkbox
+                        onChange={(event) => handleRowClick(event, row.name)}
+                        checked={isSelected(row.name)}
+                        inputProps={{
+                          "aria-labelledby": `panel-list-row-${rowIndex}-checkbox`
+                        }}
+                      />
+                    }
+                    label=""
+                  />
+                </TableCell>
+                {cells(row).map((cell, cellIndex) => (
+                  <TableCell key={`cell-${cellIndex}`}>{cell}</TableCell>
+                ))}
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      );
+    }}
+  </Story>
+</Canvas>
+
+## Batch processing
+
+Batch processing can be achieved by using the multi-select implementation of panel list, in combination with the [toolbar component](/docs/components-toolbar--api). The content and associated functions of the toolbar are custom, as well as its positioning. Below is one possible implementation example, highlighting the delete functionality.
+
+<Canvas>
+  <Story name="Batch processing">
+    {() => {
+      const [batchRows, setBatchRows] = React.useState(rows);
+      const [selected, setSelected] = React.useState([]);
+      const handleRowClick = (event, name) => {
+        const selectedIndex = selected.indexOf(name);
+        let newSelected = [];
+        if (selectedIndex === -1) {
+          newSelected = newSelected.concat(selected, name);
+        } else if (selectedIndex === 0) {
+          newSelected = newSelected.concat(selected.slice(1));
+        } else if (selectedIndex === selected.length - 1) {
+          newSelected = newSelected.concat(selected.slice(0, -1));
+        } else if (selectedIndex > 0) {
+          newSelected = newSelected.concat(
+            selected.slice(0, selectedIndex),
+            selected.slice(selectedIndex + 1)
+          );
+        }
+        setSelected(newSelected);
+      };
+      const handleSelectAllClick = (event) => {
+        if (event.target.checked) {
+          const newSelecteds = batchRows.map((n) => n.name);
+          setSelected(newSelecteds);
+          return;
+        }
+        setSelected([]);
+      };
+      const isSelected = (name) => selected.indexOf(name) !== -1;
+      const handleResetClick = () => setBatchRows(rows);
+      const handleDeleteClick = (selected) => {
+        const remainingRows = batchRows.filter(
+          (row) => !selected.includes(row.name)
+        );
+        setBatchRows(remainingRows);
+        setSelected([]);
+      };
+      return (
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center"
+          }}
+        >
+          <Table loud bordered verticalAlignment="center">
+            <TableHead
+              headCells={headCells}
+              enableSelect
+              onSelectAllClick={handleSelectAllClick}
+              rowCount={batchRows.length}
+              selectedRowCount={selected.length}
+            />
+            <TableBody>
+              {batchRows.map((row, rowIndex) => (
+                <TableRow
+                  key={`row-${rowIndex}`}
+                  selected={isSelected(row.name)}
+                  activated={row.activated}
+                >
+                  <TableCell padding="checkbox">
+                    <FormControlLabel
+                      control={
+                        <Checkbox
+                          onChange={(event) => handleRowClick(event, row.name)}
+                          checked={isSelected(row.name)}
+                          inputProps={{
+                            "aria-labelledby": `panel-list-row-${rowIndex}-checkbox`
+                          }}
+                        />
+                      }
+                      label=""
+                    />
+                  </TableCell>
+                  {cells(row).map((cell, cellIndex) => (
+                    <TableCell key={`cell-${cellIndex}`}>{cell}</TableCell>
+                  ))}
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+          <Box my={1} />
+          <Toolbar>
+            <Typography variant="short-copy-medium" color="ink-on-fill-primary">
+              {selected.length} items selected
+            </Typography>
+            <div>
+              <IconButton
+                size="small"
+                onClick={() => handleDeleteClick(selected)}
+              >
+                <SvgIcon>
+                  <DeleteIcon />
+                </SvgIcon>
+              </IconButton>
+              <IconButton size="small">
+                <SvgIcon>
+                  <PinIcon />
+                </SvgIcon>
+              </IconButton>
+              <Button
+                size="small"
+                variant="outlined"
+                onClick={handleResetClick}
+              >
+                Reset rows
+              </Button>
+            </div>
+          </Toolbar>
+        </Box>
+      );
+    }}
+  </Story>
+</Canvas>
+
+### Dark theme
+
+<DarkThemeNotice />
+
+<Canvas>
+  <Story name="Dark theme" parameters={{ theme: "dark" }}>
+    <Table loud bordered verticalAlignment="center">
+      <TableHead headCells={headCells} />
+      <TableBody>
+        {rows.map((row, rowIndex) => (
+          <TableRow key={`row-${rowIndex}`} activated={row.activated}>
+            {cells(row).map((cell, cellIndex) => (
+              <TableCell key={`cell-${cellIndex}`}>{cell}</TableCell>
+            ))}
+          </TableRow>
+        ))}
+      </TableBody>
+    </Table>
+  </Story>
+</Canvas>

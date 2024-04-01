@@ -1,0 +1,181 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { componentArgs } from "../constants";
+import {
+  ComponentTitle,
+  DarkThemeNotice,
+  InstallationInstructions,
+  VariantRangeNotice,
+  VersionNotice
+} from "../../../docs/src/partials";
+import { name, peerDependencies, version } from "../../package.json";
+import Box from "@mui/material/Box";
+import CircularProgress from "../circular-progress";
+
+<Meta
+  args={{
+    ...CircularProgress.defaultProps,
+    value: 0,
+    variant: "indeterminate"
+  }}
+  argTypes={componentArgs}
+  component={CircularProgress}
+  id="components/circular-progress"
+  title="Digital HIG/Components/Circular progress"
+  parameters={{
+    docs: {
+      source: {
+        type: "code"
+      }
+    },
+    vr: false
+  }}
+/>
+
+<ComponentTitle name="Circular progress" status="Stable" />
+
+<code>
+  <VersionNotice packageName="circular-progress" version={version} />
+</code>
+
+The circular progress component is a thin wrapper around MUI [`<CircularProgress>`](https://mui.com/material-ui/react-progress/#circular), with Digital HIG defaults.
+
+For related design documentation, please see the [Digital HIG Figma UI Toolkit](https://www.figma.com/file/Eks986gkqncHjkLnwQjO7g/iccc-sticker-sheets?node-id=4203%3A279994&t=iL4WgXwqDMZvxUAw-1).
+
+## Installation
+
+<InstallationInstructions
+  componentImport="CircularProgress"
+  name={name}
+  peerDependencies={peerDependencies}
+/>
+
+## API
+
+For all supported MUI `<CircularProgress />` props, see [CircularProgress API](https://mui.com/material-ui/api/circular-progress/).
+
+<Canvas>
+  <Story
+    name="API"
+    parameters={{
+      docs: {
+        source: {
+          type: "auto"
+        }
+      }
+    }}
+  >
+    {(args) => <CircularProgress {...args} />}
+  </Story>
+</Canvas>
+
+<ArgsTable story="API" />
+
+## Circular progress variants
+
+<VariantRangeNotice />
+
+### Sizes
+
+The circular progress component is available in sizes `x-small`, `small` (default), `medium`, and `large`.
+
+<Canvas>
+  <Story name="Sizes" parameters={{ vr: false }}>
+    <CircularProgress size="x-small" />
+    <Box py={1} />
+    <CircularProgress size="small" />
+    <Box py={1} />
+    <CircularProgress size="medium" />
+    <Box py={1} />
+    <CircularProgress size="large" />
+  </Story>
+</Canvas>
+
+### Variants
+
+#### Indeterminate
+
+The indeterminate variant shows that the wait time is unspecified. The circular progress component is `indeterminate` by default.
+
+##### Labels
+
+The label position of the circular progress component is related to its size.
+
+<Canvas>
+  <Story name="Indeterminate: labels" parameters={{ vr: false }}>
+    <CircularProgress size="x-small" label="X-small label" />
+    <Box py={3} />
+    <CircularProgress size="small" label="Small label" />
+    <Box py={3} />
+    <CircularProgress size="medium" label="Medium label" />
+    <Box py={3} />
+    <CircularProgress size="large" label="Large label" />
+  </Story>
+</Canvas>
+
+#### Determinate
+
+The determinate variant shows an estimated completion time of an operation. The circular progress component can be `determinate` if a numerical value is supplied to the `value` prop.
+
+##### Labels
+
+The percentage value can optionally replace the label prop.
+
+<Canvas>
+  <Story name="Determinate: labels">
+    <CircularProgress
+      size="x-small"
+      label="X-small label"
+      variant="determinate"
+      value={64}
+    />
+    <Box py={3} />
+    <CircularProgress
+      size="small"
+      label="Small label"
+      variant="determinate"
+      value={64}
+    />
+    <Box py={3} />
+    <CircularProgress
+      size="medium"
+      label="Medium label"
+      variant="determinate"
+      value={64}
+    />
+    <Box py={3} />
+    <CircularProgress
+      size="large"
+      label="Large label"
+      variant="determinate"
+      value={64}
+    />
+    <Box py={3} />
+    <CircularProgress size="x-small" variant="determinate" value={64} />
+    <Box py={3} />
+    <CircularProgress size="small" variant="determinate" value={64} />
+    <Box py={3} />
+    <CircularProgress size="medium" variant="determinate" value={64} />
+    <Box py={3} />
+    <CircularProgress size="large" variant="determinate" value={64} />
+  </Story>
+</Canvas>
+
+### Dark theme
+
+<DarkThemeNotice />
+
+<Canvas>
+  <Story name="Dark theme" parameters={{ theme: "dark" }}>
+    <CircularProgress size="x-small" />
+    <Box py={1} />
+    <CircularProgress size="small" />
+    <Box py={1} />
+    <CircularProgress size="medium" />
+    <Box py={1} />
+    <CircularProgress size="large" />
+  </Story>
+</Canvas>
+
+## Accessibility
+
+For more details about accessibility implementation for progress, visit the [MUI CircularProgress API page](https://mui.com/material-ui/api/circular-progress/#aria) or the [MUI LinearProgress API page](https://mui.com/material-ui/api/linear-progress/#aria).

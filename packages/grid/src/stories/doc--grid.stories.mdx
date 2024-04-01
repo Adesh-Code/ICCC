@@ -1,0 +1,200 @@
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import {
+  ComponentTitle,
+  InstallationInstructions,
+  MuiLink
+} from "../../../docs/src/partials";
+import { peerDependencies } from "../../package.json";
+import { useTheme } from "@mui/material";
+import MuiBox from "@mui/material/Box";
+import Grid from "@mui/material/Grid";
+import Typography from "@iccc/typography";
+import useMediaQuery from "@mui/material/useMediaQuery";
+
+export const Box = ({ text, minHeight = "100%" }) => (
+  <MuiBox
+    alignContent="center"
+    backgroundColor="rgb(238, 238, 238)"
+    border="1px dashed rgb(102, 102, 102)"
+    display="flex"
+    flexWrap="wrap"
+    justifyContent="center"
+    minHeight={minHeight}
+  >
+    {text && <Typography align="center">{text}</Typography>}
+  </MuiBox>
+);
+
+<Meta
+  component={Grid}
+  id="components/grid"
+  title="Digital HIG/Components/Grid"
+/>
+
+<ComponentTitle name="Grid" status="Stable" />
+
+<code>
+  <MuiLink
+    componentName="Grid"
+    link="https://mui.com/material-ui/react-grid/"
+  />
+</code>
+
+The Grid component is the out-of-the-box MUI [`<Grid>`](https://mui.com/material-ui/react-grid/), with Digital HIG spacings.
+
+For related design documentation, please see the [Digital HIG Figma UI Toolkit](https://www.figma.com/file/Eks986gkqncHjkLnwQjO7g/iccc-sticker-sheets?node-id=4259%3A331696).
+
+## Installation
+
+<InstallationInstructions
+  peerDependencies={peerDependencies}
+  componentImport="Grid"
+/>
+
+## API
+
+For all supported MUI `<Grid />` props, see [Grid API](https://mui.com/material-ui/api/grid/).
+
+## Layout
+
+There are two types of grid layouts: containers and items. Passing the `container` prop to the grid component will enable it to function as a wrapper, following a 12-column pattern by default. The child grid elements use the `item` prop instead.
+
+All examples on this page have the following child content for grid items (referenced by the `<Box />` element) unless otherwise specified. The Box elements are styled for presentation purposes only:
+
+```jsx
+<Box
+  alignContent="center"
+  backgroundColor="rgb(238, 238, 238)"
+  border="1px dashed rgb(102, 102, 102)"
+  display="flex"
+  flexWrap="wrap"
+  justifyContent="center"
+  minHeight={minHeight || "100%"}
+>
+  <Typography align="center">{text}</Typography>
+</Box>
+```
+
+## Breakpoints
+
+Breakpoints define the point at which the browser reflows website content to respond in the most optimal way to the user's current screen size. Each breakpoint has associated gutter and margin values. The gutter refers to the space between the columns and rows (i.e. between each grid `item`), while the margin refers to the horizontal margin of the grid `container`. A full list of breakpoints and their respective values can be [found on the grid tokens page](/docs/iccc-theme-data-tokens-grid--page).
+
+Digital HIG MUI theme provider defines the following named standard breakpoints:
+
+| Breakpoint | Name | Alias                  | Gutter  | Margin |
+| ---------- | ---- | ---------------------- | ------- | ------ |
+| 0px        | sm   | none                   | 1rem    | 1rem   |
+| 560px      | md   | tablet-small-portrait  | 1.25rem | 1.5rem |
+| 1040px     | lg   | tablet-small-landscape | 1.5rem  | 5%     |
+| 1520px     | xl   | laptop-large           | 1.5rem  | 5%     |
+
+> [Source: Digital HIG website (grid)](https://iccc.autodesk.com/grid/)
+
+Resize the browser window to observe the breakpoint behaviour in the example below:
+
+export const useWindowBreakpoint = ({ theme }) => {
+  const matches = Object.entries(theme.breakpoints.values).reduce(
+    (acc, [breakpoint, value]) => ({
+      ...acc,
+      // eslint-disable-next-line react-hooks/rules-of-hooks
+      [breakpoint]: useMediaQuery(`(min-width: ${value}px)`)
+    }),
+    {}
+  );
+  return Object.keys(matches).reduce((acc, breakpoint) => {
+    if (matches[breakpoint]) {
+      return breakpoint;
+    }
+    return acc;
+  }, "xs");
+};
+
+<Canvas>
+  <Story name="Breakpoints">
+    {({ args }) => {
+      const theme = useTheme();
+      const breakpoint = useWindowBreakpoint({ theme });
+      return (
+        <>
+          <Typography align="center" sx={{ mb: 6 }}>
+            Breakpoint: {breakpoint}
+          </Typography>
+          <Grid
+            {...args}
+            container
+            sx={{
+              height: "300px",
+              background: "#BDBDFF"
+            }}
+          >
+            <Grid item xs={1}>
+              <Box />
+            </Grid>
+            <Grid item xs={1}>
+              <Box />
+            </Grid>
+            <Grid item xs={1}>
+              <Box />
+            </Grid>
+            <Grid item xs={1}>
+              <Box />
+            </Grid>
+            <Grid item xs={1}>
+              <Box />
+            </Grid>
+            <Grid item xs={1}>
+              <Box />
+            </Grid>
+            <Grid item xs={1}>
+              <Box />
+            </Grid>
+            <Grid item xs={1}>
+              <Box />
+            </Grid>
+            <Grid item xs={1}>
+              <Box />
+            </Grid>
+            <Grid item xs={1}>
+              <Box />
+            </Grid>
+            <Grid item xs={1}>
+              <Box />
+            </Grid>
+            <Grid item xs={1}>
+              <Box />
+            </Grid>
+          </Grid>
+        </>
+      );
+    }}
+  </Story>
+</Canvas>
+
+An important detail to note, as outlined in the [MUI grid docs](https://mui.com/material-ui/react-grid/):
+
+> A value given to a breakpoint applies to all the other breakpoints wider than it (unless overridden). For example, `xs={12}` sizes a component to occupy the whole viewport width regardless of its size.
+
+## Item widths
+
+Grid items can have multiple widths, to enable different layouts to be displayed based on screen resolution.
+
+<Canvas>
+  <Story name="Item widths">
+    {() => (
+      <Grid container sx={{ background: "#BDBDFF" }}>
+        <Grid item sm={6} md={8}>
+          <Box text="sm=6, md=8" />
+        </Grid>
+        <Grid item sm={6} md={4}>
+          <Box text="sm=6, md=4" />
+        </Grid>
+        <Grid item sm={6} md={4}>
+          <Box text="sm=6, md=4" />
+        </Grid>
+        <Grid item sm={6} md={8}>
+          <Box text="sm=6, md=8" />
+        </Grid>
+      </Grid>
+    )}
+  </Story>
+</Canvas>

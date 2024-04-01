@@ -1,0 +1,43 @@
+@layer components {
+  .dhig-link {
+    /* typography */
+    @apply dhig-underline;
+
+    text-decoration-color: var(--color--ink-on-background);
+    text-decoration-thickness: 0.0625em;
+    text-underline-offset: 0.125em;
+    color: var(--color--ink-on-background);
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+
+    &:visited {
+      color: var(--color--text-link-visited);
+      text-decoration-color: var(--color--text-link-visited);
+    }
+    &:hover {
+      text-decoration-color: var(--color--ink-hover);
+    }
+    &:focus-visible {
+      outline-color: var(--color--ink-focus);
+    }
+    &:active {
+      text-decoration-color: var(--color--ink-pressed);
+      text-decoration-thickness: 0.125em;
+    }
+
+    &-disabled {
+      /* effects */
+      @apply dhig-opacity-semi-transparent;
+      /* interactivity */
+      @apply dhig-cursor-default dhig-pointer-events-none;
+    }
+
+    &-no-underline {
+      text-decoration-line: none;
+
+      &:hover {
+        text-decoration-line: underline;
+      }
+    }
+  }
+}

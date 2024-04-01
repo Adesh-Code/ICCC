@@ -1,0 +1,198 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { componentArgs } from "../constants";
+import {
+  ComponentTitle,
+  DarkThemeNotice,
+  InstallationInstructions,
+  MuiLink,
+  VariantRangeNotice
+} from "../../../docs/src/partials";
+import { peerDependencies } from "../../package.json";
+import AddFolderIcon from "@iccc/icon/lib/build/icons/add-folder";
+import AlertIcon from "@iccc/icon/lib/build/display-icons/alert";
+import CancelIcon from "@iccc/icon/lib/build/display-icons/cancel";
+import CompleteIcon from "@iccc/icon/lib/build/display-icons/complete";
+import ErrorIcon from "@iccc/icon/lib/build/display-icons/error";
+import FeaturedIcon from "@iccc/icon/lib/build/icons/featured";
+import InfoIcon from "@iccc/icon/lib/build/display-icons/info";
+import LockIcon from "@iccc/icon/lib/build/display-icons/lock";
+import ProfileIcon from "@iccc/icon/lib/build/display-icons/profile";
+import SvgIcon from "@mui/material/SvgIcon";
+
+<Meta
+  args={{ fontSize: "inherit" }}
+  argTypes={componentArgs}
+  component={SvgIcon}
+  id="components/svg-icon"
+  title="Digital HIG/Components/SVG icon"
+  parameters={{
+    docs: {
+      source: {
+        type: "code"
+      }
+    }
+  }}
+/>
+
+<ComponentTitle name="SVG icon" status="Stable" />
+
+<code>
+  <MuiLink
+    componentName="SVG icon"
+    link="https://mui.com/material-ui/api/svg-icon/"
+  />
+</code>
+
+For related design documentation, please see the [Digital HIG Figma UI Toolkit](https://www.figma.com/file/BlT5r9tYb2mgog4TJjBOjw/%E2%9D%96-iccc-icons-%26-symbols?node-id=0%3A1&t=mNqeopakqHUXfV4M-0).
+
+## Installation
+
+<InstallationInstructions
+  componentImport="SvgIcon"
+  peerDependencies={peerDependencies}
+/>
+
+## API
+
+For all supported MUI `<SvgIcon />` props, see [SvgIcon API](https://mui.com/material-ui/api/svg-icon/).
+
+All Digital HIG icons are available as SVG assets in the `@iccc/icon` package. See our [icon component page](/docs/components-icon--display-icons) for more information.
+
+More information [can be found here](/docs/iccc-documentation-usage-how-to-use-icon-sprite--by-reference).
+
+<Canvas>
+  <Story argTypes={componentArgs} name="API">
+    {(args) => (
+      <SvgIcon {...args}>
+        <FeaturedIcon />
+      </SvgIcon>
+    )}
+  </Story>
+</Canvas>
+
+<ArgsTable story="API" />
+
+## Icon variants
+
+<VariantRangeNotice />
+
+### Sizes
+
+Icon sizes can be set using the `fontSize` property. Supported options are `small`, `medium`, `large` and `inherit` (default).
+
+<Canvas>
+  <Story name="Icon sizes">
+    <>
+      <SvgIcon fontSize="small">
+        <AddFolderIcon />
+      </SvgIcon>
+      <SvgIcon fontSize="medium">
+        <AddFolderIcon />
+      </SvgIcon>
+      <SvgIcon fontSize="large">
+        <AddFolderIcon />
+      </SvgIcon>
+    </>
+  </Story>
+</Canvas>
+
+### Display icon sizes
+
+Display icons should only be rendered in large and extra large, using the `fontSize` property. Supported options are `large`, `extra-large`.
+
+<Canvas>
+  <Story name="Display icon sizes">
+    <>
+      <SvgIcon fontSize="large">
+        <AlertIcon />
+      </SvgIcon>
+      <SvgIcon fontSize="large">
+        <CancelIcon />
+      </SvgIcon>
+      <SvgIcon fontSize="large">
+        <CompleteIcon />
+      </SvgIcon>
+      <SvgIcon fontSize="large">
+        <ErrorIcon />
+      </SvgIcon>
+      <SvgIcon fontSize="large">
+        <InfoIcon />
+      </SvgIcon>
+      <SvgIcon fontSize="large">
+        <LockIcon />
+      </SvgIcon>
+      <SvgIcon fontSize="large">
+        <ProfileIcon />
+      </SvgIcon>
+      <SvgIcon fontSize="extra-large">
+        <AlertIcon />
+      </SvgIcon>
+      <SvgIcon fontSize="extra-large">
+        <CancelIcon />
+      </SvgIcon>
+      <SvgIcon fontSize="extra-large">
+        <CompleteIcon />
+      </SvgIcon>
+      <SvgIcon fontSize="extra-large">
+        <ErrorIcon />
+      </SvgIcon>
+      <SvgIcon fontSize="extra-large">
+        <InfoIcon />
+      </SvgIcon>
+      <SvgIcon fontSize="extra-large">
+        <LockIcon />
+      </SvgIcon>
+      <SvgIcon fontSize="extra-large">
+        <ProfileIcon />
+      </SvgIcon>
+    </>
+  </Story>
+</Canvas>
+
+### Dark theme
+
+<DarkThemeNotice />
+
+<Canvas>
+  <Story name="Dark theme" parameters={{ theme: "dark" }}>
+    <>
+      <SvgIcon fontSize="extra-large">
+        <AlertIcon />
+      </SvgIcon>
+      <SvgIcon fontSize="extra-large">
+        <CancelIcon />
+      </SvgIcon>
+      <SvgIcon fontSize="extra-large">
+        <CompleteIcon />
+      </SvgIcon>
+      <SvgIcon fontSize="extra-large">
+        <ErrorIcon />
+      </SvgIcon>
+      <SvgIcon fontSize="extra-large">
+        <InfoIcon />
+      </SvgIcon>
+      <SvgIcon fontSize="extra-large">
+        <LockIcon />
+      </SvgIcon>
+      <SvgIcon fontSize="extra-large">
+        <ProfileIcon />
+      </SvgIcon>
+    </>
+  </Story>
+</Canvas>
+
+## Accessibility
+
+The `aria-hidden=true` attribute is automatically added by MUI so that your icons are properly accessible (invisible). This means there is no additional action needed for decorative icons.
+
+For semantic icons, include the `titleAccess` prop with a meaningful value. This will ensure that the necessary `role="img"` attribute and `<title>` element are added.
+
+<Canvas>
+  <Story name="Accessibility">
+    <SvgIcon fontSize="large" titleAccess="folder icon">
+      <AddFolderIcon />
+    </SvgIcon>
+  </Story>
+</Canvas>
+
+For more details about accessibility for SvgIcon, visit the [MUI SvgIcon Accessibility section](https://mui.com/material-ui/icons/#accessibility).

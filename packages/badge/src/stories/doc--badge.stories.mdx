@@ -1,0 +1,263 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { componentArgs } from "../constants";
+import {
+  ComponentTitle,
+  DarkThemeNotice,
+  InstallationInstructions,
+  VariantRangeNotice
+} from "../../../docs/src/partials";
+import Badge from "@mui/material/Badge";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import SvgCtaArrowRightSolid from "@iccc/icon/lib/build/icons/cta-arrow-right-solid";
+import SvgIcon from "@mui/material/SvgIcon";
+import SvgMail from "@iccc/icon/lib/build/icons/mail";
+import Typography from "@iccc/typography";
+
+<Meta
+  args={{
+    badgeContent: "Badge",
+    color: "default",
+    variant: "standard"
+  }}
+  argTypes={componentArgs}
+  component={Badge}
+  id="components/badge"
+  title="Digital HIG/Components/Badge"
+/>
+
+<ComponentTitle name="Badge" status="Stable" />
+
+Badge generates a small badge to the top-right of its child(ren).
+
+The Badge component is the out-of-the-box MUI [`<Badge>`](https://mui.com/material-ui/react-badge/), with Digital HIG defaults.
+
+For related design documentation, please see the Digital HIG [Figma UI Toolkit](https://www.figma.com/file/Eks986gkqncHjkLnwQjO7g/iccc-sticker-sheets?node-id=4203%3A249627&t=pTfzpGDpokVB8t0o-1).
+
+## Installation
+
+<InstallationInstructions componentImport="Badge" />
+
+## API
+
+For all supported MUI `<Badge />` props, see [Badge API](https://mui.com/material-ui/react-badge/#main-content).
+
+<Canvas>
+  <Story name="API">
+    {(args) => {
+      return args.variant === "inline" ? (
+        <Badge {...args} />
+      ) : (
+        <Badge {...args}>Badge</Badge>
+      );
+    }}
+  </Story>
+</Canvas>
+
+<ArgsTable story="API" />
+
+## Badge variants
+
+<VariantRangeNotice />
+
+### Inline badge
+
+Use `variant="inline"` to achieve this variant.
+
+<Canvas>
+  <Story name="Inline badge">
+    <Box sx={{ display: "flex", gap: 1 }}>
+      <Badge badgeContent="Inline" color="default" variant="inline" />
+      <Badge badgeContent="Oh no!" color="urgency" variant="inline" />
+      <Badge badgeContent="Well done" color="success" variant="inline" />
+      <Badge badgeContent="Watch out" color="attention" variant="inline" />
+      <Badge badgeContent="Here it is" color="neutral" variant="inline" />
+    </Box>
+  </Story>
+</Canvas>
+
+### Dot badge
+
+The `dot` variant changes a badge into a small dot. This can be used as a notification that something has changed without giving a count.
+
+<Canvas>
+  <Story name="Dot badge">
+    <Box sx={{ display: "inline-flex", flexDirection: "column", gap: 6 }}>
+      <Badge badgeContent="notifications: 3" color="default" variant="dot">
+        <Typography>Notifications</Typography>
+      </Badge>
+      <Badge badgeContent="notifications: 3" color="urgency" variant="dot">
+        <Typography>Notifications</Typography>
+      </Badge>
+      <Badge badgeContent="notifications: 3" color="success" variant="dot">
+        <Typography>Notifications</Typography>
+      </Badge>
+      <Badge badgeContent="notifications: 3" color="attention" variant="dot">
+        <Typography>Notifications</Typography>
+      </Badge>
+      <Badge badgeContent="notifications: 3" color="neutral" variant="dot">
+        <Typography>Notifications</Typography>
+      </Badge>
+    </Box>
+  </Story>
+</Canvas>
+
+### Color
+
+<Canvas>
+  <Story name="Color">
+    <Box sx={{ display: "inline-flex", flexDirection: "column", gap: 6 }}>
+      <Badge badgeContent="Default">
+        <Typography>Default</Typography>
+      </Badge>
+      <Badge badgeContent="Urgency" color="urgency">
+        <Typography>Urgency</Typography>
+      </Badge>
+      <Badge badgeContent="Success" color="success">
+        <Typography>Success</Typography>
+      </Badge>
+      <Badge badgeContent="Attention" color="attention">
+        <Typography>Attention</Typography>
+      </Badge>
+      <Badge badgeContent="Neutral" color="neutral">
+        <Typography>Neutral</Typography>
+      </Badge>
+    </Box>
+  </Story>
+</Canvas>
+
+### Anchor origin
+
+The `anchorOrigin` prop can be used to move the badge to any corner of the wrapped element.
+
+<Canvas>
+  <Story name="Anchor origin">
+    <Box sx={{ display: "flex", gap: 4 }}>
+      <Badge
+        variant="dot"
+        color="success"
+        anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
+      >
+        Bottom right
+      </Badge>
+      <Badge
+        variant="dot"
+        color="default"
+        anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
+      >
+        Bottom left
+      </Badge>
+      <Badge
+        variant="dot"
+        color="urgency"
+        anchorOrigin={{ vertical: "top", horizontal: "left" }}
+      >
+        Top left
+      </Badge>
+      <Badge variant="dot" color="attention">
+        Top right (default)
+      </Badge>
+    </Box>
+  </Story>
+</Canvas>
+
+### Icon badge
+
+Provide an `<SvgIcon>` component to the badge's `badgeContent` to render it with the appropriate colors.
+
+<Canvas>
+  <Story name="Icon badge">
+    <Box sx={{ display: "flex", gap: 1, mb: 6 }}>
+      <Badge
+        badgeContent={
+          <SvgIcon fontSize="medium">
+            <SvgCtaArrowRightSolid />
+          </SvgIcon>
+        }
+        color="default"
+        variant="inline"
+      />
+      <Badge
+        badgeContent={
+          <SvgIcon fontSize="medium">
+            <SvgCtaArrowRightSolid />
+          </SvgIcon>
+        }
+        color="urgency"
+        variant="inline"
+      />
+      <Badge
+        badgeContent={
+          <SvgIcon fontSize="medium">
+            <SvgCtaArrowRightSolid />
+          </SvgIcon>
+        }
+        color="success"
+        variant="inline"
+      />
+      <Badge
+        badgeContent={
+          <SvgIcon fontSize="medium">
+            <SvgCtaArrowRightSolid />
+          </SvgIcon>
+        }
+        color="attention"
+        variant="inline"
+      />
+      <Badge
+        badgeContent={
+          <SvgIcon fontSize="medium">
+            <SvgCtaArrowRightSolid />
+          </SvgIcon>
+        }
+        color="neutral"
+        variant="inline"
+      />
+    </Box>
+    <Badge
+      badgeContent={
+        <SvgIcon fontSize="medium">
+          <SvgCtaArrowRightSolid />
+        </SvgIcon>
+      }
+      color="success"
+    >
+      <Button>Click me!</Button>
+    </Badge>
+  </Story>
+</Canvas>
+
+### Dark theme
+
+<DarkThemeNotice />
+
+<Canvas>
+  <Story name="Dark theme" parameters={{ theme: "dark" }}>
+    <Box sx={{ display: "flex", gap: 1 }}>
+      <Badge badgeContent="Default" color="default" variant="inline" />
+      <Badge badgeContent="Urgency" color="urgency" variant="inline" />
+      <Badge badgeContent="Success" color="success" variant="inline" />
+      <Badge badgeContent="Attention" color="attention" variant="inline" />
+      <Badge badgeContent="Neutral" color="neutral" variant="inline" />
+    </Box>
+  </Story>
+</Canvas>
+
+## Accessibility
+
+A full description should be provided using an `aria-label` in order for screen readers to correctly announce the content of the badge.
+
+<Canvas>
+  <Story name="Accessibility">
+    <Box
+      aria-label="Notifications: Two new notifications available"
+      role="status"
+    >
+      <Badge badgeContent={2} color="attention">
+        <SvgIcon fontSize="large">
+          <SvgMail />
+        </SvgIcon>
+      </Badge>
+    </Box>
+  </Story>
+</Canvas>

@@ -1,0 +1,173 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { componentArgs } from "../constants";
+import {
+  ComponentTitle,
+  DarkThemeNotice,
+  InstallationInstructions,
+  VersionNotice
+} from "../../../docs/src/partials";
+import { name, peerDependencies, version } from "../../package.json";
+import FormControl from "@mui/material/FormControl";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import FormLabel from "@mui/material/FormLabel";
+import Radio from "../radio.js";
+import RadioGroup from "@mui/material/RadioGroup";
+
+<Meta
+  args={{ checked: false, disabled: false }}
+  argTypes={componentArgs}
+  component={Radio}
+  id="components/radio"
+  parameters={{
+    docs: {
+      source: {
+        type: "code"
+      }
+    }
+  }}
+  title="Digital HIG/Components/Radio"
+/>
+
+<ComponentTitle name="Radio" status="Stable" />
+
+<code>
+  <VersionNotice packageName="radio" version={version} />
+</code>
+
+The radio component is a wrapper around MUI [`<Radio>`](https://mui.com/material-ui/api/radio/), with Digital HIG defaults.
+
+For related design documentation, please see the [Digital HIG Figma UI Toolkit](https://www.figma.com/file/Eks986gkqncHjkLnwQjO7g/iccc-sticker-sheets?node-id=4203%3A280236&t=iL4WgXwqDMZvxUAw-1).
+
+## Installation
+
+<InstallationInstructions
+  componentImport="Radio"
+  name={name}
+  peerDependencies={peerDependencies}
+/>
+
+## API
+
+- For all supported MUI `<Radio />` props, see [Radio API](https://mui.com/material-ui/api/radio/).
+- For all supported MUI `<FormControl />` props, see [FormControl API](https://mui.com/material-ui/api/form-control/).
+- For all supported MUI `<InputLabel />` props, see [InputLabel API](https://mui.com/material-ui/api/input-label/).
+
+<Canvas>
+  <Story
+    name="API"
+    parameters={{
+      docs: {
+        source: {
+          type: "auto"
+        }
+      }
+    }}
+  >
+    {(args) => <FormControlLabel label="API" control={<Radio {...args} />} />}
+  </Story>
+</Canvas>
+
+<ArgsTable story="API" />
+
+### Radio wrapped in form control label
+
+For most practical applications, radio buttons will be rendered inside a MUI [`<FormControlLabel/>`](https://mui.com/material-ui/api/form-control-label) component that provides a label and other properties. All the examples below display usage of checkbox instances using this pattern. Use the following to import `FormControlLabel`.
+
+`import FormControlLabel from '@mui/material/FormControlLabel';`
+
+## Radio states
+
+### Unchecked
+
+Default state of radio is unchecked.
+
+<Canvas>
+  <Story name="States: Unchecked">
+    <FormControlLabel control={<Radio />} label="Unchecked" />
+  </Story>
+</Canvas>
+
+### Disabled
+
+A radio can be rendered in a disabled state. Notice the disabled state is applied to `<FormControlLabel />` to enable rendering the label itself in a disabled state. The radio component inherits the disabled state automatically.
+
+<Canvas>
+  <Story name="States: Disabled">
+    <FormControlLabel control={<Radio />} label="Disabled" disabled />
+  </Story>
+</Canvas>
+
+### Checked
+
+A radio can be rendered in a checked state.
+
+<Canvas>
+  <Story name="States: Checked">
+    <FormControlLabel checked control={<Radio />} label="Checked" />
+  </Story>
+</Canvas>
+
+### Checked and disabled
+
+Props can be combined.
+
+<Canvas>
+  <Story name="States: Checked and disabled">
+    <FormControlLabel
+      checked
+      control={<Radio />}
+      disabled
+      label="Checked and disabled"
+    />
+  </Story>
+</Canvas>
+
+## Radio group
+
+In many situations, radio buttons will appear as part of a group. For this use case it is recommended to use a combination of:
+
+- MUI `<FormControl />` to wrap the group and pass contextual props
+- MUI `<RadioGroup />` to group all the radio buttons in a single group
+
+<Canvas>
+  <Story name="Radio group">
+    <FormControl component="fieldset">
+      <FormLabel component="legend">Radio group</FormLabel>
+      <RadioGroup>
+        <FormControlLabel control={<Radio />} value="one" label="One" />
+        <FormControlLabel control={<Radio />} value="two" label="Two" />
+        <FormControlLabel control={<Radio />} value="three" label="Three" />
+      </RadioGroup>
+    </FormControl>
+  </Story>
+</Canvas>
+
+### Dark theme
+
+<DarkThemeNotice />
+
+#### Default
+
+<Canvas>
+  <Story
+    name="Dark theme: Default"
+    parameters={{
+      theme: "dark"
+    }}
+  >
+    {(args) => <FormControlLabel control={<Radio />} label="Unchecked" />}
+  </Story>
+</Canvas>
+
+## Accessibility
+
+- All form controls should have labels, and this includes radio buttons, checkboxes, and switches. In most cases, this is done by using the `<label>` element ([FormControlLabel](https://mui.com/material-ui/api/form-control-label/)).
+- When a label can't be used, it's necessary to add an attribute directly to the input component. In this case, you can apply the additional attribute (e.g. aria-label, aria-labelledby, title) via the inputProps property.
+
+For more details about accessibility for radio buttons, visit the [MUI Radio Accessibility section](https://mui.com/material-ui/react-radio-button/#accessibility).
+
+<Canvas>
+  <Story name="Accessibility">
+    <Radio inputProps={{ "aria-label": "Radio A" }} />
+  </Story>
+</Canvas>

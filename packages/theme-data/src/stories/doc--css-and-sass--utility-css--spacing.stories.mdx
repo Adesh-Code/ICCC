@@ -1,0 +1,119 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import Typography from "@iccc/typography";
+import { StyledEngineProvider } from "@mui/material/styles";
+
+export const Container = (props) => (
+  <StyledEngineProvider injectFirst>
+    <Typography
+      {...props}
+      style={{
+        backgroundColor: "#eee",
+        border: "1px dashed #666",
+        whiteSpace: "nowrap"
+      }}
+    />
+  </StyledEngineProvider>
+);
+
+<Meta title="Digital HIG/CSS and SASS/Utility CSS/Spacing" />
+
+# Spacing utility CSS
+
+Digital HIG utility CSS provides a collection of spacing classes based on [Tailwind CSS](https://tailwindcss.com/).
+
+Note: Requires utility CSS to be present in the document. See [the CSS overview page](?path=/docs/iccc-css-and-sass-css-overview--page) for more details.
+
+## Digital HIG ready
+
+The spacing classes are customized to match the specification of Digital HIG, so refer to the [spacing primitives page](/docs/iccc-theme-data-primitives-spacing--page) to consult the available spacing options.
+
+## How to use Tailwind CSS
+
+Spacing utility classes are generated with a `dhig-` prefix. Please use the Tailwind documentation and adjust classnames accordingly. For example:
+
+For example, in Tailwind docs:
+
+`p-0` padding: 0px;
+
+Becomes:
+
+```html
+<div class="dhig-p-0">This div will have no padding</div>
+```
+
+Please note: The scale of the Tailwind configuration and Digital HIG is slighty different:
+
+```
+// Tailwind
+p-1	padding: 0.25rem; // Resolves to 4px
+p-2	padding: 0.5rem;  // Resolves to 8px
+p-3	padding: 0.75rem; // Resolves to 12px
+p-4	padding: 1rem;    // Resolves to 16px
+p-5	padding: 1.25rem; // Resolves to 20px
+p-6	padding: 1.5rem;  // Resolves to 24px
+p-7	padding: 1.75rem; // Resolves to 28px
+p-8	padding: 2rem;    // Resolves to 32px
+p-9	padding: 2.25rem; // Resolves to 36px
+```
+
+```
+// Digital HIG implementation
+.dhig-p-1 // Resolves to 4px
+.dhig-p-2 // Resolves to 8px
+.dhig-p-3 // Resolves to 12px
+.dhig-p-4 // Resolves to 16px
+.dhig-p-5 // Resolves to 20px
+.dhig-p-6 // Resolves to 24px
+.dhig-p-7 // Resolves to 32px <-- Does not match
+.dhig-p-8 // Resolves to 48px <-- Does not match
+.dhig-p-9 // Resolves to 64px <-- Does not match
+```
+
+All values assume a root font size of 16 pixels.
+
+## Examples
+
+A few selected examples and common use cases. Press the "Show code" button on the right of each example to view the implementation code. For full Tailwind CSS documentation, see links below.
+
+### Margin
+
+<Canvas>
+  <Story name="Margin">
+    <Container className="dhig-m-4">This element has 16 px of margin</Container>
+  </Story>
+</Canvas>
+
+### Padding
+
+<Canvas>
+  <Story name="Padding">
+    <Container className="dhig-p-4">
+      This element has 16 px of padding
+    </Container>
+  </Story>
+</Canvas>
+
+### Width
+
+<Canvas>
+  <Story name="Width">
+    <Container className="dhig-w-4">This element is 16 px wide</Container>
+  </Story>
+</Canvas>
+
+### Height
+
+<Canvas>
+  <Story name="Height">
+    <Container className="dhig-h-4">This element is 16 px tall</Container>
+  </Story>
+</Canvas>
+
+## Tailwind CSS documentation
+
+| Module  | Documentation                        | Description                                    |
+| ------- | ------------------------------------ | ---------------------------------------------- |
+| Margin  | https://tailwindcss.com/docs/margin  | Utilities for controlling an element's margin  |
+| Padding | https://tailwindcss.com/docs/padding | Utilities for controlling an element's padding |
+| Width   | https://tailwindcss.com/docs/width   | Utilities for setting the width of an element  |
+| Height  | https://tailwindcss.com/docs/height  | Utilities for setting the height of an element |

@@ -1,0 +1,166 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { availablePlacements, componentArgs } from "../constants";
+import { peerDependencies } from "../../package.json";
+import {
+  ComponentTitle,
+  DarkThemeNotice,
+  InstallationInstructions,
+  MuiLink,
+  VariantRangeNotice
+} from "../../../docs/src/partials";
+import { within, userEvent } from "@storybook/testing-library";
+import Button from "@mui/material/Button";
+import Tooltip from "@mui/material/Tooltip";
+import Typography from "@iccc/typography";
+
+<Meta
+  args={{ arrow: true, placement: "bottom" }}
+  argTypes={componentArgs}
+  component={Tooltip}
+  id="components/tooltip"
+  title="Digital HIG/Components/Tooltip"
+/>
+
+<ComponentTitle name="Tooltip" status="Stable" />
+
+<code>
+  <MuiLink
+    componentName="Tooltip"
+    link="https://mui.com/material-ui/react-tooltip/"
+  />
+</code>
+
+The tooltip component applies Digital HIG styles to MUI [`<Tooltip>`](https://mui.com/components/tooltips).
+
+For related design documentation, please see the [Digital HIG Figma UI Toolkit](https://www.figma.com/file/Eks986gkqncHjkLnwQjO7g/iccc-sticker-sheets?node-id=4369%3A299741&t=iL4WgXwqDMZvxUAw-1).
+
+## Installation
+
+<InstallationInstructions
+  componentImport="Tooltip"
+  peerDependencies={peerDependencies}
+/>
+
+## API
+
+For all supported MUI `<Toolbar />` props, see [Toolbar API](https://mui.com/api/tooltip/).
+
+<Canvas>
+  <Story
+    name="API"
+    parameters={{
+      docs: {
+        source: {
+          type: "auto"
+        }
+      }
+    }}
+  >
+    {(args) => (
+      <Tooltip
+        {...args}
+        title="Default consequat vitae sagittis, aliquam purus at senectus tempus enim vitae"
+      >
+        <Button variant="text">Text</Button>
+      </Tooltip>
+    )}
+  </Story>
+</Canvas>
+
+<ArgsTable story="API" />
+
+## Tooltip variants
+
+<VariantRangeNotice />
+
+### Content
+
+#### Headline
+
+Tooltips can optionally be displayed with a headline, using the combination of Digital HIG typography elements displayed below.
+
+<Canvas>
+  <Story name="Content: Headline">
+    {(args) => (
+      <Tooltip
+        {...args}
+        placement={"bottom-end"}
+        title={
+          <div>
+            <Typography variant="smallprint">
+              <strong>Optional headline</strong>
+            </Typography>
+            <Typography variant="smallprint">
+              Consequat vitae sagittis, aliquam purus at senectus tempus enim
+              vitae
+            </Typography>
+          </div>
+        }
+      >
+        <Button variant="text">Text</Button>
+      </Tooltip>
+    )}
+  </Story>
+</Canvas>
+
+### Placement
+
+<Canvas>
+  <Story name="Placement">
+    {(args) =>
+      availablePlacements.map((placement, index) => (
+        <Tooltip
+          {...args}
+          key={`tooltip-placement-${index}`}
+          title="Default consequat vitae sagittis, aliquam purus at senectus tempus enim vitae"
+          placement={placement}
+        >
+          <Button sx={{ display: "block" }} variant="text">
+            Placement: {placement}
+          </Button>
+        </Tooltip>
+      ))
+    }
+  </Story>
+</Canvas>
+
+### Dark theme
+
+<DarkThemeNotice />
+
+<Canvas>
+  <Story name="Dark theme" parameters={{ theme: "dark" }}>
+    {(args) => (
+      <Tooltip
+        {...args}
+        title="Default consequat vitae sagittis, aliquam purus at senectus tempus enim vitae"
+      >
+        <Button variant="text">Text</Button>
+      </Tooltip>
+    )}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story
+    name="VR: interactions"
+    play={async ({ canvasElement }) => {
+      const canvas = within(canvasElement);
+      const trigger = await canvas.getByText(/Text/);
+      await userEvent.hover(trigger);
+    }}
+  >
+    {(args) => (
+      <Tooltip
+        {...args}
+        title="Default consequat vitae sagittis, aliquam purus at senectus tempus enim vitae"
+      >
+        <Button variant="text">Text</Button>
+      </Tooltip>
+    )}
+  </Story>
+</Canvas>
+
+## Accessibility
+
+For more details about accessibility for tooltip, visit the [MUI Tooltip Accessibility section](https://mui.com/components/tooltips/#accessibility)

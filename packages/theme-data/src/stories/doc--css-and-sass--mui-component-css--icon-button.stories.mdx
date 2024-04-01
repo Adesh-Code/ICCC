@@ -1,0 +1,668 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import "../../lib/build/css/dhig-global.css";
+
+export const Spacer = ({ height = "4px" }) => <div style={{ height }} />;
+
+<Meta
+  title="Digital HIG/CSS and SASS/MUI component CSS/Icon button"
+  parameters={{
+    disableThemeMui: true,
+    renderHTML: true
+  }}
+/>
+
+# Icon button
+
+HTML snippets to generate Digital HIG icon buttons.
+
+Note that the disabled attribute can be passed directly to the button, so it does not need a unique className to turn on the state.
+
+## Contained
+
+<Canvas>
+  <Story name="Icon button: contained">
+    <div className="dhig-theme--light">
+      <Spacer height="8px" />
+      <button
+        className="MuiButtonBase-root MuiIconButton-root DhigIconButton--layout--hug DhigIconButton--size--defaultSize DhigIconButton--variant--contained"
+        tabIndex="0"
+        type="button"
+      >
+        <span className="MuiIconButton-label">
+          <svg
+            className="MuiSvgIcon-root DhigSvgIcon DhigSvgIcon--size--inherit"
+            focusable="false"
+            viewBox="0 0 24 24"
+            aria-hidden="false"
+          >
+            <use
+              xlinkHref="#dhig--icons--sync"
+              className="dhig--icons--sync"
+            ></use>
+          </svg>
+        </span>
+      </button>
+      <Spacer height="8px" />
+      <button
+        className="MuiButtonBase-root MuiIconButton-root DhigIconButton--layout--hug DhigIconButton--size--defaultSize DhigIconButton--variant--contained Mui-disabled"
+        tabIndex="-1"
+        type="button"
+        disabled={true}
+      >
+        <span className="MuiIconButton-label">
+          <svg
+            className="MuiSvgIcon-root DhigSvgIcon DhigSvgIcon--size--inherit"
+            focusable="false"
+            viewBox="0 0 24 24"
+            aria-hidden="false"
+          >
+            <use
+              xlinkHref="#dhig--icons--sync"
+              className="dhig--icons--sync"
+            ></use>
+          </svg>
+        </span>
+      </button>
+      <Spacer height="8px" />
+      <button
+        className="MuiButtonBase-root MuiIconButton-root DhigIconButton--layout--stretch DhigIconButton--size--defaultSize DhigIconButton--variant--contained"
+        tabIndex="0"
+        type="button"
+      >
+        <span className="MuiIconButton-label">
+          <svg
+            className="MuiSvgIcon-root DhigSvgIcon DhigSvgIcon--size--inherit"
+            focusable="false"
+            viewBox="0 0 24 24"
+            aria-hidden="false"
+          >
+            <use
+              xlinkHref="#dhig--icons--sync"
+              className="dhig--icons--sync"
+            ></use>
+          </svg>
+        </span>
+      </button>
+      <Spacer height="8px" />
+      <button
+        className="MuiButtonBase-root MuiIconButton-root DhigIconButton--layout--hug DhigIconButton--size--dense DhigIconButton--variant--contained"
+        tabIndex="0"
+        type="button"
+      >
+        <span className="MuiIconButton-label">
+          <svg
+            className="MuiSvgIcon-root DhigSvgIcon DhigSvgIcon--size--inherit"
+            focusable="false"
+            viewBox="0 0 24 24"
+            aria-hidden="false"
+          >
+            <use
+              xlinkHref="#dhig--icons--sync"
+              className="dhig--icons--sync"
+            ></use>
+          </svg>
+        </span>
+      </button>
+      <Spacer height="8px" />
+      <button
+        className="MuiButtonBase-root MuiIconButton-root DhigIconButton--layout--hug DhigIconButton--layout--stretch DhigIconButton--size--dense DhigIconButton--variant--contained"
+        tabIndex="0"
+        type="button"
+      >
+        <span className="MuiIconButton-label">
+          <svg
+            className="MuiSvgIcon-root DhigSvgIcon DhigSvgIcon--size--inherit"
+            focusable="false"
+            viewBox="0 0 24 24"
+            aria-hidden="false"
+          >
+            <use
+              xlinkHref="#dhig--icons--sync"
+              className="dhig--icons--sync"
+            ></use>
+          </svg>
+        </span>
+      </button>
+    </div>
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="Icon button: contained (dark)" parameters={{ theme: "dark" }}>
+    <div className="dhig-theme--dark">
+      <Spacer height="8px" />
+      <button
+        className="MuiButtonBase-root MuiIconButton-root DhigIconButton--layout--hug DhigIconButton--size--defaultSize DhigIconButton--variant--contained"
+        tabIndex="0"
+        type="button"
+      >
+        <span className="MuiIconButton-label">
+          <svg
+            className="MuiSvgIcon-root DhigSvgIcon DhigSvgIcon--size--inherit"
+            focusable="false"
+            viewBox="0 0 24 24"
+            aria-hidden="false"
+          >
+            <use
+              xlinkHref="#dhig--icons--sync"
+              className="dhig--icons--sync"
+            ></use>
+          </svg>
+        </span>
+      </button>
+      <Spacer height="8px" />
+      <button
+        className="MuiButtonBase-root MuiIconButton-root DhigIconButton--layout--hug DhigIconButton--size--defaultSize DhigIconButton--variant--contained Mui-disabled"
+        tabIndex="-1"
+        type="button"
+        disabled={true}
+      >
+        <span className="MuiIconButton-label">
+          <svg
+            className="MuiSvgIcon-root DhigSvgIcon DhigSvgIcon--size--inherit"
+            focusable="false"
+            viewBox="0 0 24 24"
+            aria-hidden="false"
+          >
+            <use
+              xlinkHref="#dhig--icons--sync"
+              className="dhig--icons--sync"
+            ></use>
+          </svg>
+        </span>
+      </button>
+      <Spacer height="8px" />
+      <button
+        className="MuiButtonBase-root MuiIconButton-root DhigIconButton--layout--stretch DhigIconButton--size--defaultSize DhigIconButton--variant--contained"
+        tabIndex="0"
+        type="button"
+      >
+        <span className="MuiIconButton-label">
+          <svg
+            className="MuiSvgIcon-root DhigSvgIcon DhigSvgIcon--size--inherit"
+            focusable="false"
+            viewBox="0 0 24 24"
+            aria-hidden="false"
+          >
+            <use
+              xlinkHref="#dhig--icons--sync"
+              className="dhig--icons--sync"
+            ></use>
+          </svg>
+        </span>
+      </button>
+      <Spacer height="8px" />
+      <button
+        className="MuiButtonBase-root MuiIconButton-root DhigIconButton--layout--hug DhigIconButton--size--dense DhigIconButton--variant--contained"
+        tabIndex="0"
+        type="button"
+      >
+        <span className="MuiIconButton-label">
+          <svg
+            className="MuiSvgIcon-root DhigSvgIcon DhigSvgIcon--size--inherit"
+            focusable="false"
+            viewBox="0 0 24 24"
+            aria-hidden="false"
+          >
+            <use
+              xlinkHref="#dhig--icons--sync"
+              className="dhig--icons--sync"
+            ></use>
+          </svg>
+        </span>
+      </button>
+      <Spacer height="8px" />
+      <button
+        className="MuiButtonBase-root MuiIconButton-root DhigIconButton--layout--hug DhigIconButton--layout--stretch DhigIconButton--size--dense DhigIconButton--variant--contained"
+        tabIndex="0"
+        type="button"
+      >
+        <span className="MuiIconButton-label">
+          <svg
+            className="MuiSvgIcon-root DhigSvgIcon DhigSvgIcon--size--inherit"
+            focusable="false"
+            viewBox="0 0 24 24"
+            aria-hidden="false"
+          >
+            <use
+              xlinkHref="#dhig--icons--sync"
+              className="dhig--icons--sync"
+            ></use>
+          </svg>
+        </span>
+      </button>
+    </div>
+  </Story>
+</Canvas>
+
+## Outlined
+
+<Canvas>
+  <Story name="Icon button: outlined">
+    <div className="dhig-theme--light">
+      <Spacer height="8px" />
+      <button
+        className="MuiButtonBase-root MuiIconButton-root DhigIconButton--layout--hug DhigIconButton--size--defaultSize DhigIconButton--variant--outlined"
+        tabIndex="0"
+        type="button"
+      >
+        <span className="MuiIconButton-label">
+          <svg
+            className="MuiSvgIcon-root DhigSvgIcon DhigSvgIcon--size--inherit"
+            focusable="false"
+            viewBox="0 0 24 24"
+            aria-hidden="false"
+          >
+            <use
+              xlinkHref="#dhig--icons--sync"
+              className="dhig--icons--sync"
+            ></use>
+          </svg>
+        </span>
+      </button>
+      <Spacer height="8px" />
+      <button
+        className="MuiButtonBase-root MuiIconButton-root DhigIconButton--layout--hug DhigIconButton--size--defaultSize DhigIconButton--variant--outlined Mui-disabled"
+        tabIndex="0"
+        type="button"
+      >
+        <span className="MuiIconButton-label">
+          <svg
+            className="MuiSvgIcon-root DhigSvgIcon DhigSvgIcon--size--inherit"
+            focusable="false"
+            viewBox="0 0 24 24"
+            aria-hidden="false"
+          >
+            <use
+              xlinkHref="#dhig--icons--sync"
+              className="dhig--icons--sync"
+            ></use>
+          </svg>
+        </span>
+      </button>
+      <Spacer height="8px" />
+      <button
+        className="MuiButtonBase-root MuiIconButton-root DhigIconButton--layout--stretch DhigIconButton--size--defaultSize DhigIconButton--variant--outlined"
+        tabIndex="0"
+        type="button"
+      >
+        <span className="MuiIconButton-label">
+          <svg
+            className="MuiSvgIcon-root DhigSvgIcon DhigSvgIcon--size--inherit"
+            focusable="false"
+            viewBox="0 0 24 24"
+            aria-hidden="false"
+          >
+            <use
+              xlinkHref="#dhig--icons--sync"
+              className="dhig--icons--sync"
+            ></use>
+          </svg>
+        </span>
+      </button>
+      <Spacer height="8px" />
+      <button
+        className="MuiButtonBase-root MuiIconButton-root DhigIconButton--layout--hug DhigIconButton--size--dense DhigIconButton--variant--outlined"
+        tabIndex="0"
+        type="button"
+      >
+        <span className="MuiIconButton-label">
+          <svg
+            className="MuiSvgIcon-root DhigSvgIcon DhigSvgIcon--size--inherit"
+            focusable="false"
+            viewBox="0 0 24 24"
+            aria-hidden="false"
+          >
+            <use
+              xlinkHref="#dhig--icons--sync"
+              className="dhig--icons--sync"
+            ></use>
+          </svg>
+        </span>
+      </button>
+      <Spacer height="8px" />
+      <button
+        className="MuiButtonBase-root MuiIconButton-root DhigIconButton--layout--stretch DhigIconButton--size--dense DhigIconButton--variant--outlined"
+        tabIndex="0"
+        type="button"
+      >
+        <span className="MuiIconButton-label">
+          <svg
+            className="MuiSvgIcon-root DhigSvgIcon DhigSvgIcon--size--inherit"
+            focusable="false"
+            viewBox="0 0 24 24"
+            aria-hidden="false"
+          >
+            <use
+              xlinkHref="#dhig--icons--sync"
+              className="dhig--icons--sync"
+            ></use>
+          </svg>
+        </span>
+      </button>
+    </div>
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="Icon button: outlined (dark)" parameters={{ theme: "dark" }}>
+    <div className="dhig-theme--dark">
+      <Spacer height="8px" />
+      <button
+        className="MuiButtonBase-root MuiIconButton-root DhigIconButton--layout--hug DhigIconButton--size--defaultSize DhigIconButton--variant--outlined"
+        tabIndex="0"
+        type="button"
+      >
+        <span className="MuiIconButton-label">
+          <svg
+            className="MuiSvgIcon-root DhigSvgIcon DhigSvgIcon--size--inherit"
+            focusable="false"
+            viewBox="0 0 24 24"
+            aria-hidden="false"
+          >
+            <use
+              xlinkHref="#dhig--icons--sync"
+              className="dhig--icons--sync"
+            ></use>
+          </svg>
+        </span>
+      </button>
+      <Spacer height="8px" />
+      <button
+        className="MuiButtonBase-root MuiIconButton-root DhigIconButton--layout--hug DhigIconButton--size--defaultSize DhigIconButton--variant--outlined Mui-disabled"
+        tabIndex="0"
+        type="button"
+      >
+        <span className="MuiIconButton-label">
+          <svg
+            className="MuiSvgIcon-root DhigSvgIcon DhigSvgIcon--size--inherit"
+            focusable="false"
+            viewBox="0 0 24 24"
+            aria-hidden="false"
+          >
+            <use
+              xlinkHref="#dhig--icons--sync"
+              className="dhig--icons--sync"
+            ></use>
+          </svg>
+        </span>
+      </button>
+      <Spacer height="8px" />
+      <button
+        className="MuiButtonBase-root MuiIconButton-root DhigIconButton--layout--stretch DhigIconButton--size--defaultSize DhigIconButton--variant--outlined"
+        tabIndex="0"
+        type="button"
+      >
+        <span className="MuiIconButton-label">
+          <svg
+            className="MuiSvgIcon-root DhigSvgIcon DhigSvgIcon--size--inherit"
+            focusable="false"
+            viewBox="0 0 24 24"
+            aria-hidden="false"
+          >
+            <use
+              xlinkHref="#dhig--icons--sync"
+              className="dhig--icons--sync"
+            ></use>
+          </svg>
+        </span>
+      </button>
+      <Spacer height="8px" />
+      <button
+        className="MuiButtonBase-root MuiIconButton-root DhigIconButton--layout--hug DhigIconButton--size--dense DhigIconButton--variant--outlined"
+        tabIndex="0"
+        type="button"
+      >
+        <span className="MuiIconButton-label">
+          <svg
+            className="MuiSvgIcon-root DhigSvgIcon DhigSvgIcon--size--inherit"
+            focusable="false"
+            viewBox="0 0 24 24"
+            aria-hidden="false"
+          >
+            <use
+              xlinkHref="#dhig--icons--sync"
+              className="dhig--icons--sync"
+            ></use>
+          </svg>
+        </span>
+      </button>
+      <Spacer height="8px" />
+      <button
+        className="MuiButtonBase-root MuiIconButton-root DhigIconButton--layout--stretch DhigIconButton--size--dense DhigIconButton--variant--outlined"
+        tabIndex="0"
+        type="button"
+      >
+        <span className="MuiIconButton-label">
+          <svg
+            className="MuiSvgIcon-root DhigSvgIcon DhigSvgIcon--size--inherit"
+            focusable="false"
+            viewBox="0 0 24 24"
+            aria-hidden="false"
+          >
+            <use
+              xlinkHref="#dhig--icons--sync"
+              className="dhig--icons--sync"
+            ></use>
+          </svg>
+        </span>
+      </button>
+    </div>
+  </Story>
+</Canvas>
+
+## Text
+
+<Canvas>
+  <Story name="Icon button: text">
+    <div className="dhig-theme--light">
+      <Spacer height="8px" />
+      <button
+        className="MuiButtonBase-root MuiIconButton-root DhigIconButton--layout--hug DhigIconButton--size--defaultSize DhigIconButton--variant--text"
+        tabIndex="0"
+        type="button"
+      >
+        <span className="MuiIconButton-label">
+          <svg
+            className="MuiSvgIcon-root DhigSvgIcon DhigSvgIcon--size--inherit"
+            focusable="false"
+            viewBox="0 0 24 24"
+            aria-hidden="false"
+          >
+            <use
+              xlinkHref="#dhig--icons--sync"
+              className="dhig--icons--sync"
+            ></use>
+          </svg>
+        </span>
+      </button>
+      <Spacer height="8px" />
+      <button
+        className="MuiButtonBase-root MuiIconButton-root DhigIconButton--layout--hug DhigIconButton--size--defaultSize DhigIconButton--variant--text Mui-disabled"
+        tabIndex="0"
+        type="button"
+      >
+        <span className="MuiIconButton-label">
+          <svg
+            className="MuiSvgIcon-root DhigSvgIcon DhigSvgIcon--size--inherit"
+            focusable="false"
+            viewBox="0 0 24 24"
+            aria-hidden="false"
+          >
+            <use
+              xlinkHref="#dhig--icons--sync"
+              className="dhig--icons--sync"
+            ></use>
+          </svg>
+        </span>
+      </button>
+      <Spacer height="8px" />
+      <button
+        className="MuiButtonBase-root MuiIconButton-root DhigIconButton--layout--stretch DhigIconButton--size--defaultSize DhigIconButton--variant--text"
+        tabIndex="0"
+        type="button"
+      >
+        <span className="MuiIconButton-label">
+          <svg
+            className="MuiSvgIcon-root DhigSvgIcon DhigSvgIcon--size--inherit"
+            focusable="false"
+            viewBox="0 0 24 24"
+            aria-hidden="false"
+          >
+            <use
+              xlinkHref="#dhig--icons--sync"
+              className="dhig--icons--sync"
+            ></use>
+          </svg>
+        </span>
+      </button>
+      <Spacer height="8px" />
+      <button
+        className="MuiButtonBase-root MuiIconButton-root DhigIconButton--layout--hug DhigIconButton--size--dense DhigIconButton--variant--text"
+        tabIndex="0"
+        type="button"
+      >
+        <span className="MuiIconButton-label">
+          <svg
+            className="MuiSvgIcon-root DhigSvgIcon DhigSvgIcon--size--inherit"
+            focusable="false"
+            viewBox="0 0 24 24"
+            aria-hidden="false"
+          >
+            <use
+              xlinkHref="#dhig--icons--sync"
+              className="dhig--icons--sync"
+            ></use>
+          </svg>
+        </span>
+      </button>
+      <Spacer height="8px" />
+      <button
+        className="MuiButtonBase-root MuiIconButton-root DhigIconButton--layout--stretch DhigIconButton--size--dense DhigIconButton--variant--text"
+        tabIndex="0"
+        type="button"
+      >
+        <span className="MuiIconButton-label">
+          <svg
+            className="MuiSvgIcon-root DhigSvgIcon DhigSvgIcon--size--inherit"
+            focusable="false"
+            viewBox="0 0 24 24"
+            aria-hidden="false"
+          >
+            <use
+              xlinkHref="#dhig--icons--sync"
+              className="dhig--icons--sync"
+            ></use>
+          </svg>
+        </span>
+      </button>
+    </div>
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="Icon button: text (dark)" parameters={{ theme: "dark" }}>
+    <div className="dhig-theme--dark">
+      <Spacer height="8px" />
+      <button
+        className="MuiButtonBase-root MuiIconButton-root DhigIconButton--layout--hug DhigIconButton--size--defaultSize DhigIconButton--variant--text"
+        tabIndex="0"
+        type="button"
+      >
+        <span className="MuiIconButton-label">
+          <svg
+            className="MuiSvgIcon-root DhigSvgIcon DhigSvgIcon--size--inherit"
+            focusable="false"
+            viewBox="0 0 24 24"
+            aria-hidden="false"
+          >
+            <use
+              xlinkHref="#dhig--icons--sync"
+              className="dhig--icons--sync"
+            ></use>
+          </svg>
+        </span>
+      </button>
+      <Spacer height="8px" />
+      <button
+        className="MuiButtonBase-root MuiIconButton-root DhigIconButton--layout--hug DhigIconButton--size--defaultSize DhigIconButton--variant--text Mui-disabled"
+        tabIndex="0"
+        type="button"
+      >
+        <span className="MuiIconButton-label">
+          <svg
+            className="MuiSvgIcon-root DhigSvgIcon DhigSvgIcon--size--inherit"
+            focusable="false"
+            viewBox="0 0 24 24"
+            aria-hidden="false"
+          >
+            <use
+              xlinkHref="#dhig--icons--sync"
+              className="dhig--icons--sync"
+            ></use>
+          </svg>
+        </span>
+      </button>
+      <Spacer height="8px" />
+      <button
+        className="MuiButtonBase-root MuiIconButton-root DhigIconButton--layout--stretch DhigIconButton--size--defaultSize DhigIconButton--variant--text"
+        tabIndex="0"
+        type="button"
+      >
+        <span className="MuiIconButton-label">
+          <svg
+            className="MuiSvgIcon-root DhigSvgIcon DhigSvgIcon--size--inherit"
+            focusable="false"
+            viewBox="0 0 24 24"
+            aria-hidden="false"
+          >
+            <use
+              xlinkHref="#dhig--icons--sync"
+              className="dhig--icons--sync"
+            ></use>
+          </svg>
+        </span>
+      </button>
+      <Spacer height="8px" />
+      <button
+        className="MuiButtonBase-root MuiIconButton-root DhigIconButton--layout--hug DhigIconButton--size--dense DhigIconButton--variant--text"
+        tabIndex="0"
+        type="button"
+      >
+        <span className="MuiIconButton-label">
+          <svg
+            className="MuiSvgIcon-root DhigSvgIcon DhigSvgIcon--size--inherit"
+            focusable="false"
+            viewBox="0 0 24 24"
+            aria-hidden="false"
+          >
+            <use
+              xlinkHref="#dhig--icons--sync"
+              className="dhig--icons--sync"
+            ></use>
+          </svg>
+        </span>
+      </button>
+      <Spacer height="8px" />
+      <button
+        className="MuiButtonBase-root MuiIconButton-root DhigIconButton--layout--stretch DhigIconButton--size--dense DhigIconButton--variant--text"
+        tabIndex="0"
+        type="button"
+      >
+        <span className="MuiIconButton-label">
+          <svg
+            className="MuiSvgIcon-root DhigSvgIcon DhigSvgIcon--size--inherit"
+            focusable="false"
+            viewBox="0 0 24 24"
+            aria-hidden="false"
+          >
+            <use
+              xlinkHref="#dhig--icons--sync"
+              className="dhig--icons--sync"
+            ></use>
+          </svg>
+        </span>
+      </button>
+    </div>
+  </Story>
+</Canvas>

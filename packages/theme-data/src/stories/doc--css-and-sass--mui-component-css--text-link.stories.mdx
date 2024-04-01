@@ -1,0 +1,52 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import "../../lib/build/css/dhig-global.css";
+
+export const Spacer = ({ height = "4px" }) => <div style={{ height }} />;
+
+<Meta
+  title="Digital HIG/CSS and SASS/MUI component CSS/Text link"
+  parameters={{
+    disableThemeMui: true,
+    renderHTML: true
+  }}
+/>
+
+# Text link
+
+HTML snippets to generate Digital HIG text links.
+
+Using an `<a>` element will render the same styles as using the text link utility class, as long as both are wrapped in the relevant theme:
+
+<Canvas>
+  <Story name="Light theme">
+    <div className="dhig-theme--light">
+      <a href="#">Text link using the anchor element</a>
+      <Spacer />
+      <span className="dhig-text-link">Text link using the utility class</span>
+      <Spacer />
+      <a
+        href="#"
+        className="MuiTypography-root MuiLink-root MuiLink-underlineHover"
+      >
+        Text link using Material UI classnames
+      </a>
+    </div>
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="Dark theme" parameters={{ theme: "dark" }}>
+    <div className="dhig-theme--dark">
+      <a href="#">Text link using the anchor element</a>
+      <Spacer />
+      <span className="dhig-text-link">Text link using the utility class</span>
+      <Spacer />
+      <a
+        href="#"
+        className="MuiTypography-root MuiLink-root MuiLink-underlineHover"
+      >
+        Text link using Material UI classnames
+      </a>
+    </div>
+  </Story>
+</Canvas>

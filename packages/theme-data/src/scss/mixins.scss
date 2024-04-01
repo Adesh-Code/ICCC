@@ -1,0 +1,134 @@
+/**
+* Includes all mixins.
+*/
+@use "@iccc/theme-data/lib/build/scss/mixins/utilities/theme" as *;
+@use "@iccc/theme-data/lib/build/scss/mixins/utilities/typography" as *;
+@use "@iccc/theme-data/lib/build/scss/mixins/components/button" as *;
+@use "@iccc/theme-data/lib/build/scss/mixins/components/text-link" as *;
+@use "mui-theme-css/light" as light-mui-theme;
+@use "mui-theme-css/dark" as dark-mui-theme;
+
+/**
+* Maps DHIG typography tokens to class names.
+*/
+@mixin dhig-typography-classes {
+  .dhig-typography-display-extra {
+    @include dhig-typography-display-extra;
+  }
+  .dhig-typography-display {
+    @include dhig-typography-display;
+  }
+  .dhig-typography-headline-largest {
+    @include dhig-typography-headline-largest;
+  }
+  .dhig-typography-headline-larger {
+    @include dhig-typography-headline-larger;
+  }
+  .dhig-typography-headline-large {
+    @include dhig-typography-headline-large;
+  }
+  .dhig-typography-headline-medium {
+    @include dhig-typography-headline-medium;
+  }
+  .dhig-typography-headline-small {
+    @include dhig-typography-headline-small;
+  }
+  .dhig-typography-headline-smaller {
+    @include dhig-typography-headline-smaller;
+  }
+  .dhig-typography-headline-smallest {
+    @include dhig-typography-headline-smallest;
+  }
+  .dhig-typography-body-copy-large {
+    @include dhig-typography-body-copy-large;
+  }
+  .dhig-typography-body-copy-medium {
+    @include dhig-typography-body-copy-medium;
+  }
+  .dhig-typography-body-copy-small {
+    @include dhig-typography-body-copy-small;
+  }
+  .dhig-typography-short-copy-large {
+    @include dhig-typography-short-copy-large;
+  }
+  .dhig-typography-short-copy-medium {
+    @include dhig-typography-short-copy-medium;
+  }
+  .dhig-typography-short-copy-small {
+    @include dhig-typography-short-copy-small;
+  }
+  .dhig-typography-smallprint {
+    @include dhig-typography-smallprint;
+  }
+  .dhig-typography-code {
+    @include dhig-typography-code;
+  }
+  .dhig-typography-caption {
+    @include dhig-typography-caption;
+  }
+  .dhig-typography-eyebrow {
+    @include dhig-typography-eyebrow;
+  }
+  .dhig-typography-pull-quote-medium {
+    @include dhig-typography-pull-quote-medium;
+  }
+  .dhig-typography-pull-quote-large {
+    @include dhig-typography-pull-quote-large;
+  }
+  .dhig-typography-tabular-numeric {
+    @include dhig-typography-tabular-numeric;
+  }
+  .dhig-typography-input-value {
+    @include dhig-typography-input-value;
+  }
+  .dhig-typography-button-label {
+    @include dhig-typography-button-label;
+  }
+  .dhig-typography-button-label-dense {
+    @include dhig-typography-button-label-dense;
+  }
+}
+
+/**
+* Applies light and dark palette to:
+* - Some html typography elements
+* - .dhig-text-link class
+*/
+@mixin dhig-palette-classes {
+  .dhig-theme--light {
+    @include dhig-theme($theme: "light");
+
+    .dhig-text-link {
+      @include dhig-textLink;
+    }
+  }
+
+  .dhig-theme--dark {
+    @include dhig-theme($theme: "dark");
+
+    .dhig-text-link {
+      @include dhig-textLink($theme: "dark");
+    }
+  }
+}
+
+/**
+* Includes DHIG MUI component styles.
+*/
+@mixin dhig-mui-component-classes {
+  .dhig-theme--light {
+    @include light-mui-theme.mui-css;
+  }
+  .dhig-theme--dark {
+    @include dark-mui-theme.mui-css;
+  }
+}
+
+/**
+* Includes all styles
+*/
+@mixin dhig-global-classes {
+  @include dhig-typography-classes;
+  @include dhig-palette-classes;
+  @include dhig-mui-component-classes;
+}

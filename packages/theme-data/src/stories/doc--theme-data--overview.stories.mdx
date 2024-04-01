@@ -1,0 +1,83 @@
+import { Meta } from "@storybook/addon-docs";
+import { version } from "../../package.json";
+import { ComponentTitle, VersionNotice } from "../../../docs/src/partials";
+
+<Meta title="Digital HIG/Theme Data/Overview" />
+
+<ComponentTitle name="Theme data" status="Stable" />
+
+<code>
+  <VersionNotice packageName="theme-data" version={version} />
+</code>
+
+Digital HIG theme data makes the Digital HIG style definitions available in `key:value` pairs, and is the core implementation of the design system. Digital HIG currently has 2 theme data sets, `lightTheme` and `darkTheme`.
+
+## Using with Digital HIG components
+
+No work required! Digital HIG theme data is already integrated into the ThemeMui wrapper.
+
+## Using the values directly
+
+Primitives are the root style values for the Digital HIG. Tokens are named based on how they should be used, and map to primitives. We recommend using token values, unless a value you need is not available as a token.
+
+For front-end work that does not have a Digital HIG component implementation, you'll need to use the theme data directly. Follow the steps below for implementation.
+
+### Installing Digital HIG theme data
+
+To add Digital HIG theme data to your project:
+
+```js
+yarn add @iccc/theme-data
+```
+
+## Theme data formats
+
+Theme data is available in several formats. You can choose which format you need depending on the type of project in which you are implementing design tokens.
+
+### JSON
+
+Design tokens
+
+```js
+import lightTheme from "@iccc/theme-data/lib/build/json/light/design-tokens.json";
+import darkTheme from "@iccc/theme-data/lib/build/json/dark/design-tokens.json";
+```
+
+Component tokens
+
+```js
+import lightComponentTokens from "@iccc/theme-data/lib/build/json/light/component-tokens.json";
+import darkComponentTokens from "@iccc/theme-data/lib/build/json/dark/component-tokens.json";
+```
+
+### SCSS variables
+
+Design tokens in a flat SCSS variable format.
+
+```js
+@import "@iccc/theme-data/lib/build/scss/variables/light/design-tokens.scss";
+@import "@iccc/theme-data/lib/build/scss/variables/dark/design-tokens.scss";
+```
+
+This file includes design tokens in a SCSS maps format.
+
+```js
+@import "@iccc/theme-data/lib/build/scss/variables/_dhig_maps.scss";
+```
+
+### SCSS mixins
+
+This file includes SCSS mixins that implement Digital HIG patterns:
+
+```js
+@import "@iccc/theme-data/lib/build/scss/mixins/_dhig_mixins.scss";
+```
+
+### LESS variables
+
+Design tokens in LESS format.
+
+```js
+import lightTheme from "@iccc/theme-data/lib/build/less/light/design-tokens.less";
+import darkTheme from "@iccc/theme-data/lib/build/less/dark/design-tokens.less";
+```

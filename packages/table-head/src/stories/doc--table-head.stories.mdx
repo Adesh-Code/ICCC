@@ -1,0 +1,203 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { componentArgs } from "../constants";
+import {
+  ComponentTitle,
+  DarkThemeNotice,
+  InstallationInstructions,
+  VariantRangeNotice,
+  VersionNotice
+} from "../../../docs/src/partials";
+import { name, peerDependencies, version } from "../../package.json";
+import prettier from "prettier/standalone";
+import prettierBabel from "prettier/parser-babel";
+import TableHead from "../table-head";
+
+export const TableHeadComponent = ({ ...args }) => (
+  <table>
+    <TableHead {...args} />
+  </table>
+);
+
+<Meta
+  args={{
+    ...TableHead.defaultProps,
+    headCells: [
+      { id: "name", label: "Dessert (100g serving)" },
+      { id: "calories", label: "Calories" },
+      { id: "fat", label: "Fat (g)" },
+      { id: "carbs", label: "Carbs (g)" },
+      { id: "protein", label: "Protein (g)" }
+    ]
+  }}
+  argTypes={componentArgs}
+  component={TableHead}
+  id="components/table-head"
+  title="Digital HIG/Components/Table/Table head"
+  parameters={{
+    docs: {
+      source: {
+        type: "code"
+      },
+      transformSource: (input) =>
+        prettier.format(input, {
+          parser: "babel",
+          plugins: [prettierBabel]
+        })
+    }
+  }}
+/>
+
+<ComponentTitle name="Table head" status="Stable" />
+
+<code>
+  <VersionNotice packageName="table-head" version={version} />
+</code>
+
+The Table head component is a thin wrapper around MUI [`<TableHead>`](https://mui.com/material-ui/react-table/), with Digital HIG defaults.
+
+For related design documentation, please see the [Digital HIG Figma UI Toolkit](https://www.figma.com/file/NpV47EII6zCxkpPoChejg0/%E2%9D%96-iccc-UI-toolkit?node-id=9009%3A200194).
+
+For usage of table head in the context of `<Table />`, see [table component page](/docs/components-table--api).
+
+## Installation
+
+<InstallationInstructions
+  name={name}
+  peerDependencies={peerDependencies}
+  componentImport="TableHead"
+/>
+
+## API
+
+For all supported MUI `<TableHead />` props, see [TableHead API](https://mui.com/material-ui/api/table-head/).
+
+<Canvas>
+  <Story
+    name="API"
+    parameters={{
+      docs: {
+        source: {
+          type: "auto"
+        }
+      }
+    }}
+  >
+    {(args) => <TableHeadComponent {...args} />}
+  </Story>
+</Canvas>
+
+<ArgsTable story="API" />
+
+## Table head variants
+
+<VariantRangeNotice />
+
+### Sortable
+
+The table head can have sort capabilities using the `enableSort` prop. In this scenario, the `onRequestSort`, `order`, and `orderBy` props must also be provided. The `stableSort` and `getComparator` helper functions are available for import from `@iccc/table-head` if needed. See the example on the [Table component page](/docs/components-table--sortable) to see it in action.
+
+<Canvas>
+  <Story name="Sortable">
+    {(args) => {
+      const [order, setOrder] = React.useState("asc");
+      const [orderBy, setOrderBy] = React.useState("calories");
+      const handleRequestSort = (event, property) => {
+        const isAsc = orderBy === property && order === "asc";
+        setOrder(isAsc ? "desc" : "asc");
+        setOrderBy(property);
+      };
+      return (
+        <TableHeadComponent
+          {...args}
+          enableSort
+          onRequestSort={handleRequestSort}
+          order={order}
+          orderBy={orderBy}
+        />
+      );
+    }}
+  </Story>
+</Canvas>
+
+#### Disable sort on specific columns
+
+Sorting can be disabled on specific columns by passing `disableInteractions: true` to the headCell(s) to be excluded from the sorting functionality, as well as modifying the `handleRequestSort` function.
+
+<Canvas>
+  <Story name="Sortable: disable sort on specific columns">
+    {(args) => {
+      const [order, setOrder] = React.useState("asc");
+      const [orderBy, setOrderBy] = React.useState("calories");
+      const headCells = [
+        { id: "name", label: "Dessert (100g serving)" },
+        { id: "calories", label: "Calories" },
+        { id: "unsortable", label: "Unsortable", disableInteractions: true },
+        { id: "carbs", label: "Carbs (g)" },
+        { id: "protein", label: "Protein (g)" }
+      ];
+      const unsortable = ["unsortable"];
+      const handleRequestSort = (event, property) => {
+        const isAsc = orderBy === property && order === "asc";
+        if (!unsortable.includes(property)) {
+          setOrder(isAsc ? "desc" : "asc");
+          setOrderBy(property);
+        }
+      };
+      return (
+        <TableHeadComponent
+          {...args}
+          headCells={headCells}
+          enableSort
+          onRequestSort={handleRequestSort}
+          order={order}
+          orderBy={orderBy}
+        />
+      );
+    }}
+  </Story>
+</Canvas>
+
+### Select all
+
+The table head can be rendered with a checkbox using the `enableSelect` prop. In this scenario, the `selectedRowCount`, `onSelectAllClick`, and `rowCount` props should also be provided. Use `CheckboxProps` to pass any additional props to the checkbox component.
+
+<Canvas>
+  <Story name="Select all">
+    {(args) => {
+      const rowCount = 3;
+      const [selectedRowCount, setSelectedRowCount] = React.useState(0);
+      const handleSelectAllClick = (event) => {
+        if (selectedRowCount === 0) {
+          setSelectedRowCount(3);
+        } else {
+          setSelectedRowCount(0);
+        }
+      };
+      return (
+        <TableHeadComponent
+          {...args}
+          enableSelect
+          onSelectAllClick={handleSelectAllClick}
+          rowCount={rowCount}
+          selectedRowCount={selectedRowCount}
+          CheckboxProps={{
+            foo: "bar",
+            inputProps: {
+              baz: "quux"
+            }
+          }}
+        />
+      );
+    }}
+  </Story>
+</Canvas>
+
+### Dark theme
+
+<DarkThemeNotice />
+
+<Canvas>
+  <Story name="Dark theme" parameters={{ theme: "dark" }}>
+    {(args) => <TableHeadComponent {...args} />}
+  </Story>
+</Canvas>

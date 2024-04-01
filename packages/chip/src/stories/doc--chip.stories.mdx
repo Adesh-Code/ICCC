@@ -1,0 +1,283 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { componentArgs } from "../constants";
+import {
+  ComponentTitle,
+  DarkThemeNotice,
+  VariantRangeNotice,
+  VersionNotice,
+  InstallationInstructions
+} from "../../../docs/src/partials";
+import { name, peerDependencies, version } from "../../package.json";
+import Avatar from "@mui/material/Avatar";
+import BookmarkFilledIcon from "@iccc/icon/lib/build/icons/bookmark-filled";
+import Box from "@mui/material/Box";
+import ChatIcon from "@iccc/icon/lib/build/icons/chat";
+import Chip from "../chip.js";
+import MailIcon from "@iccc/icon/lib/build/icons/mail";
+import NotificationIcon from "@iccc/icon/lib/build/icons/notification";
+import prettier from "prettier/standalone";
+import prettierBabel from "prettier/parser-babel";
+import SvgIcon from "@mui/material/SvgIcon";
+import Typography from "@iccc/typography";
+
+export const handleClick = () => {};
+export const handleDelete = () => {};
+
+export const Chips = () => (
+  <>
+    <Chip label="Default" />
+    <Chip label="Selected" selected />
+    <Chip color="error" label="Invalid" />
+    <Chip color="error" label="Invalid, selected" selected />
+    <Chip icon={<SvgIcon>{<NotificationIcon />}</SvgIcon>} label="Icon" />
+    <Chip
+      avatar={<Avatar src="https://mui.com/static/images/avatar/1.jpg" />}
+      label="Avatar"
+    />
+    <Chip label="Clickable" onClick={handleClick} />
+    <Chip label="Removable" onDelete={handleDelete} />
+    <Chip
+      label="Clickable and removable"
+      onDelete={handleDelete}
+      onClick={handleClick}
+    />
+    <Chip disabled label="Disabled" onClick={handleClick} />
+    <Chip disabled label="Disabled" onDelete={handleDelete} />
+  </>
+);
+
+<Meta
+  args={{
+    ...Chip.defaultProps,
+    label: "Label"
+  }}
+  argTypes={componentArgs}
+  component={Chip}
+  decorators={[
+    (Story) => (
+      <Box
+        sx={{
+          display: "flex",
+          flexWrap: "wrap",
+          rowGap: "8px",
+          columnGap: "4px"
+        }}
+      >
+        <Story />
+      </Box>
+    )
+  ]}
+  id="components/chip"
+  title="Digital HIG/Components/Chip"
+  parameters={{
+    docs: {
+      source: {
+        type: "code"
+      },
+      transformSource: (input) =>
+        prettier.format(input, {
+          parser: "babel",
+          plugins: [prettierBabel]
+        })
+    }
+  }}
+/>
+
+<ComponentTitle name="Chip" status="Stable" />
+
+<code>
+  <VersionNotice packageName="chip" version={version} />
+</code>
+
+The chip component is used to display a single piece of information, such as a tag, a category, or a label. The chip component applies styles to the MUI [`<Chip>`](https://mui.com/material-ui/react-chip/) element.
+
+For related design documentation, please see the [Digital HIG Figma UI Toolkit](https://www.figma.com/file/Eks986gkqncHjkLnwQjO7g/iccc-sticker-sheets?node-id=4363%3A299435&t=iL4WgXwqDMZvxUAw-1).
+
+For the initial engineering prototype, see the archived [Chip prototype page](https://storybook.digital-help-stg.autodesk.com/iccc/prerelease/PR-401/index.html?path=/docs/components-chip-prototype--basic).
+
+## Installation
+
+<InstallationInstructions
+  componentImport="Chip"
+  name={name}
+  peerDependencies={peerDependencies}
+/>
+
+## API
+
+- For all supported MUI `<Chip />` props, see [Chip API](https://mui.com/material-ui/api/chip/).
+- For all supported MUI `<Box />` props, see [Box API](https://mui.com/material-ui/api/box/).
+
+<Canvas>
+  <Story
+    name="API"
+    parameters={{
+      docs: {
+        source: {
+          type: "auto"
+        }
+      }
+    }}
+  >
+    {(args) => <Chip {...args} />}
+  </Story>
+</Canvas>
+
+<ArgsTable story="API" />
+
+## Chip variants
+
+<VariantRangeNotice />
+
+### Actions
+
+By providing `onClick` or `onDelete` functions, chips can be clickable, removable, or both.
+
+<Canvas>
+  <Story name="Actions">
+    <>
+      <Chip label="Clickable" onClick={handleClick} />
+      <Chip label="Removable" onDelete={handleDelete} />
+      <Chip
+        label="Clickable and removable"
+        onDelete={handleDelete}
+        onClick={handleClick}
+      />
+    </>
+  </Story>
+</Canvas>
+
+### Adornment
+
+Either the `icon` or `avatar` props can be used to provide start adornments for chips. The [Digital HIG `<SvgIcon />`](/docs/components-svg-icon--api) and [Material UI `<Avatar />`](https://mui.com/material-ui/react-avatar/) components can be used for this purpose, respectively. Examples of both can be seen below.
+
+<Canvas>
+  <Story name="Adornment">
+    <>
+      <Chip label="None" />
+      <Chip icon={<SvgIcon>{<MailIcon />}</SvgIcon>} label="Icon" />
+      <Chip icon={<SvgIcon>{<BookmarkFilledIcon />}</SvgIcon>} label="Icon" />
+      <Chip icon={<SvgIcon>{<ChatIcon />}</SvgIcon>} label="Icon" />
+      <Chip icon={<SvgIcon>{<NotificationIcon />}</SvgIcon>} label="Icon" />
+      <Chip
+        avatar={<Avatar src="https://mui.com/static/images/avatar/1.jpg" />}
+        label="Avatar"
+      />
+    </>
+  </Story>
+</Canvas>
+
+### Selected
+
+Use the `selected` prop to indicate that a chip is selected.
+
+<Canvas>
+  <Story name="Selected">
+    <>
+      <Chip label="Default" />
+      <Chip label="Selected" selected />
+    </>
+  </Story>
+</Canvas>
+
+### Invalid
+
+Use the `color="error"` prop for the invalid state.
+
+<Canvas>
+  <Story name="Invalid">
+    <>
+      <Chip color="error" label="Invalid" />
+      <Chip color="error" label="Invalid, selected" selected />
+    </>
+  </Story>
+</Canvas>
+
+### Disabled
+
+Passing the `disabled` prop will render the chip in a disabled state.
+
+<Canvas>
+  <Story name="Disabled">
+    <>
+      <Chip disabled label="Disabled" onClick={handleClick} />
+      <Chip disabled label="Disabled" onDelete={handleDelete} />
+    </>
+  </Story>
+</Canvas>
+
+### Grouping
+
+Chips can be grouped in various ways, but using Material UI's `<Box />` component is recommended, it wraps accordingly out of the box. See the [Box component](https://mui.com/material-ui/react-box/#main-content) and [Box API](https://mui.com/material-ui/api/box/) pages for more information.
+
+<Canvas>
+  <Story name="Grouping">
+    <Box sx={{ flexDirection: "column" }}>
+      <Typography variant="headline-smallest" sx={{ mb: 2 }}>
+        Box column
+      </Typography>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          rowGap: "8px",
+          columnGap: "4px"
+        }}
+      >
+        <Chips />
+      </Box>
+      <Box mb={6} />
+      <Typography variant="headline-smallest" sx={{ mb: 2 }}>
+        Box row
+      </Typography>
+      <Box
+        sx={{
+          display: "flex",
+          flexWrap: "wrap",
+          rowGap: "8px",
+          columnGap: "4px"
+        }}
+      >
+        <Chips />
+      </Box>
+    </Box>
+  </Story>
+</Canvas>
+
+### Dark theme
+
+<DarkThemeNotice />
+
+<Canvas>
+  <Story name="Dark theme" parameters={{ theme: "dark" }}>
+    <Box sx={{ flexDirection: "column" }}>
+      <Typography variant="headline-smallest">Box column</Typography>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          rowGap: "8px",
+          columnGap: "4px"
+        }}
+      >
+        <Chips />
+      </Box>
+      <Box my={6} />
+      <Typography variant="headline-smallest">Box row</Typography>
+      <Box
+        sx={{
+          display: "flex",
+          flexWrap: "wrap",
+          rowGap: "8px",
+          columnGap: "4px"
+        }}
+      >
+        <Chips />
+      </Box>
+    </Box>
+  </Story>
+</Canvas>
+
+### Accessibility
+
+For more details about accessibility for chip, visit the [MUI Chip Accessibility section](https://mui.com/components/chip/#accessibility).

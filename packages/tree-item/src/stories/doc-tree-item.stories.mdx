@@ -1,0 +1,63 @@
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import {
+  ComponentTitle,
+  InstallationInstructions,
+  VariantRangeNotice,
+  VersionNotice
+} from "../../../docs/src/partials";
+import { name, peerDependencies, version } from "../../package.json";
+import { MinimalTreeItem, FlatTreeItem } from "../index.js";
+
+<Meta
+  component={(MinimalTreeItem, FlatTreeItem)}
+  id="components/tree-item"
+  title="Digital HIG/Components/Tree view/Tree item"
+/>
+
+<ComponentTitle name="Tree item" status="Stable" />
+
+<code>
+  <VersionNotice packageName="tree-item" version={version} />
+</code>
+
+The tree item component is a thin wrapper around MUI [`<TreeItem>`](https://mui.com/material-ui/api/tree-item/), with Digital HIG defaults.
+
+The `<TreeItem>` component is used to display the contents of a tree node inside `<TreeView />`. It can be used to display a single node or a group of nodes.
+
+For related design documentation, please see the Digital HIG [Figma UI Toolkit](https://www.figma.com/file/Eks986gkqncHjkLnwQjO7g/iccc-sticker-sheets?node-id=4246%3A314582&t=iL4WgXwqDMZvxUAw-1).
+
+For usage of tree item in the context of `<TreeView />`, see [tree view component page](/docs/components-tree-view--variant-minimal).
+
+## Installation
+
+<InstallationInstructions name={name} peerDependencies={peerDependencies} />
+
+## Variants
+
+<VariantRangeNotice />
+
+### Variant: Minimal
+
+```jsx
+import { MinimalTreeItem } from "@iccc/tree-item";
+```
+
+<Canvas>
+  <Story name="Variant: Minimal">
+    <MinimalTreeItem nodeId="1" label="Minimal" />
+  </Story>
+</Canvas>
+
+### Variant: Flat
+
+For flat variant is necessary to use the `variant` prop set to `flat` on the `<TreeView/>` component
+
+```jsx
+import { FlatTreeItem } from "@iccc/tree-item";
+```
+
+<Canvas>
+  <Story name="Variant: Flat">
+    <FlatTreeItem nodeId="1" label="Flat" />
+  </Story>
+</Canvas>

@@ -1,0 +1,601 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import "../../lib/build/css/dhig-global.css";
+
+<Meta
+  title="Digital HIG/CSS and SASS/MUI component CSS/Accordion"
+  parameters={{
+    disableThemeMui: true,
+    renderHTML: true
+  }}
+/>
+
+# Accordion
+
+HTML snippets to generate styling for Digital HIG accordion. The javascript to insert the `Mui-expanded` classes will need to be added on the consumer side.
+
+## Accordion: list (collapsed)
+
+<Canvas>
+  <Story name="Accordion: list (collapsed)">
+    <div className="dhig-theme--light">
+      <div className="MuiPaper-root MuiAccordion-root DhigAccordion--size--normal DhigAccordion--styleVariant--individualPanel DhigAccordion--type--accordionList MuiAccordion-rounded MuiPaper-elevation0 MuiPaper-rounded">
+        <div
+          className="MuiButtonBase-root MuiAccordionSummary-root"
+          tabIndex="0"
+          role="button"
+          aria-disabled="false"
+          aria-expanded="false"
+        >
+          <div className="MuiAccordionSummary-content">
+            <p className="DhigAccordionSummary--title">Accordion List</p>
+          </div>
+          <div
+            className="MuiButtonBase-root MuiIconButton-root MuiAccordionSummary-expandIcon MuiIconButton-edgeEnd"
+            aria-disabled="false"
+            aria-hidden="true"
+          >
+            <span className="MuiIconButton-label-282">
+              <svg
+                id="assets"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="utility/caret-down">
+                  <path
+                    id="stroke"
+                    d="M18 9.5L12 15.5L6 9.5"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  ></path>
+                </g>
+              </svg>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story
+    name="Accordion: list (collapsed, dark)"
+    parameters={{ theme: "dark" }}
+  >
+    <div className="dhig-theme--dark">
+      <div className="MuiPaper-root MuiAccordion-root DhigAccordion--size--normal DhigAccordion--styleVariant--individualPanel DhigAccordion--type--accordionList MuiAccordion-rounded MuiPaper-elevation0 MuiPaper-rounded">
+        <div
+          className="MuiButtonBase-root MuiAccordionSummary-root"
+          tabIndex="0"
+          role="button"
+          aria-disabled="false"
+          aria-expanded="false"
+        >
+          <div className="MuiAccordionSummary-content">
+            <p className="DhigAccordionSummary--title">Accordion List</p>
+          </div>
+          <div
+            className="MuiButtonBase-root MuiIconButton-root MuiAccordionSummary-expandIcon MuiIconButton-edgeEnd"
+            aria-disabled="false"
+            aria-hidden="true"
+          >
+            <span className="MuiIconButton-label-282">
+              <svg
+                id="assets"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="utility/caret-down">
+                  <path
+                    id="stroke"
+                    d="M18 9.5L12 15.5L6 9.5"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  ></path>
+                </g>
+              </svg>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </Story>
+</Canvas>
+
+## Accordion: list (expanded)
+
+<Canvas>
+  <Story name="Accordion: list (expanded)">
+    <div className="dhig-theme--light">
+      <div className="MuiPaper-root MuiAccordion-root DhigAccordion--size--normal DhigAccordion--styleVariant--individualPanel DhigAccordion--type--accordionList Mui-expanded MuiAccordion-rounded MuiPaper-elevation0 MuiPaper-rounded">
+        <div
+          className="MuiButtonBase-root MuiAccordionSummary-root Mui-expanded"
+          tabIndex="0"
+          role="button"
+          aria-disabled="false"
+          aria-expanded="true"
+        >
+          <div className="MuiAccordionSummary-content Mui-expanded">
+            <p className="DhigAccordionSummary--title">Accordion List</p>
+          </div>
+          <div
+            className="MuiButtonBase-root MuiIconButton-root MuiAccordionSummary-expandIcon Mui-expanded MuiIconButton-edgeEnd"
+            aria-disabled="false"
+            aria-hidden="true"
+          >
+            <span className="MuiIconButton-label">
+              <svg
+                id="assets"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="utility/caret-down">
+                  <path
+                    id="stroke"
+                    d="M18 9.5L12 15.5L6 9.5"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  ></path>
+                </g>
+              </svg>
+            </span>
+          </div>
+        </div>
+        <div
+          className="MuiCollapse-root MuiCollapse-entered"
+          style={{
+            minHeight: "0px",
+            height: "auto",
+            transitionDuration: "210ms"
+          }}
+        >
+          <div className="MuiCollapse-wrapper">
+            <div className="MuiCollapse-wrapperInner">
+              <div role="region">
+                <div className="MuiAccordionDetails-root">
+                  <p className="dhig-m-0">Accordion content</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="Accordion: list (expanded, dark)" parameters={{ theme: "dark" }}>
+    <div className="dhig-theme--dark">
+      <div className="MuiPaper-root MuiAccordion-root DhigAccordion--size--normal DhigAccordion--styleVariant--individualPanel DhigAccordion--type--accordionList Mui-expanded MuiAccordion-rounded MuiPaper-elevation0 MuiPaper-rounded">
+        <div
+          className="MuiButtonBase-root MuiAccordionSummary-root Mui-expanded"
+          tabIndex="0"
+          role="button"
+          aria-disabled="false"
+          aria-expanded="true"
+        >
+          <div className="MuiAccordionSummary-content Mui-expanded">
+            <p className="DhigAccordionSummary--title">Accordion List</p>
+          </div>
+          <div
+            className="MuiButtonBase-root MuiIconButton-root MuiAccordionSummary-expandIcon Mui-expanded MuiIconButton-edgeEnd"
+            aria-disabled="false"
+            aria-hidden="true"
+          >
+            <span className="MuiIconButton-label">
+              <svg
+                id="assets"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="utility/caret-down">
+                  <path
+                    id="stroke"
+                    d="M18 9.5L12 15.5L6 9.5"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  ></path>
+                </g>
+              </svg>
+            </span>
+          </div>
+        </div>
+        <div
+          className="MuiCollapse-root MuiCollapse-entered"
+          style={{
+            minHeight: "0px",
+            height: "auto",
+            transitionDuration: "210ms"
+          }}
+        >
+          <div className="MuiCollapse-wrapper">
+            <div className="MuiCollapse-wrapperInner">
+              <div role="region">
+                <div className="MuiAccordionDetails-root">
+                  <p className="dhig-m-0">Accordion content</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </Story>
+</Canvas>
+
+## Accordion group
+
+<Canvas>
+  <Story name="Accordion group">
+    <div className="dhig-theme--light">
+      <div className="MuiPaper-root MuiAccordion-root DhigAccordion--size--normal DhigAccordion--styleVariant--individualPanel DhigAccordion--type--accordionList MuiAccordion-rounded MuiPaper-elevation0 MuiPaper-rounded">
+        <div
+          className="MuiButtonBase-root MuiAccordionSummary-root"
+          tabIndex="0"
+          role="button"
+          aria-disabled="false"
+          aria-expanded="false"
+        >
+          <div className="MuiAccordionSummary-content">
+            <p className="DhigAccordionSummary--title">First</p>
+          </div>
+          <div
+            className="MuiButtonBase-root MuiIconButton-root MuiAccordionSummary-expandIcon MuiIconButton-edgeEnd"
+            aria-disabled="false"
+            aria-hidden="true"
+          >
+            <span className="MuiIconButton-label">
+              <svg
+                id="assets"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="utility/caret-down">
+                  <path
+                    id="stroke"
+                    d="M18 9.5L12 15.5L6 9.5"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  ></path>
+                </g>
+              </svg>
+            </span>
+          </div>
+        </div>
+        <div
+          className="MuiCollapse-root MuiCollapse-hidden"
+          style={{
+            minHeight: "0px",
+            height: "0px",
+            transitionDuration: "210ms"
+          }}
+        >
+          <div className="MuiCollapse-wrapper">
+            <div className="MuiCollapse-wrapperInner">
+              <div role="region">
+                <div className="MuiAccordionDetails-root">
+                  <p className="dhig-m-0">First accordion content</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="MuiPaper-root MuiAccordion-root DhigAccordion--size--normal DhigAccordion--styleVariant--individualPanel DhigAccordion--type--accordionList Mui-expanded MuiAccordion-rounded MuiPaper-elevation0 MuiPaper-rounded">
+        <div
+          className="MuiButtonBase-root MuiAccordionSummary-root Mui-expanded"
+          tabIndex="0"
+          role="button"
+          aria-disabled="false"
+          aria-expanded="true"
+        >
+          <div className="MuiAccordionSummary-content Mui-expanded">
+            <p className="DhigAccordionSummary--title">Second</p>
+          </div>
+          <div
+            className="MuiButtonBase-root MuiIconButton-root MuiAccordionSummary-expandIcon Mui-expanded MuiIconButton-edgeEnd"
+            aria-disabled="false"
+            aria-hidden="true"
+          >
+            <span className="MuiIconButton-label">
+              <svg
+                id="assets"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="utility/caret-down">
+                  <path
+                    id="stroke"
+                    d="M18 9.5L12 15.5L6 9.5"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  ></path>
+                </g>
+              </svg>
+            </span>
+          </div>
+        </div>
+        <div
+          className="MuiCollapse-root MuiCollapse-entered"
+          style={{
+            minHeight: "0px",
+            height: "auto",
+            transitionDuration: "210ms"
+          }}
+        >
+          <div className="MuiCollapse-wrapper">
+            <div className="MuiCollapse-wrapperInner">
+              <div role="region">
+                <div className="MuiAccordionDetails-root">
+                  <p className="dhig-m-0">Second accordion content</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="MuiPaper-root MuiAccordion-root DhigAccordion--size--normal DhigAccordion--styleVariant--individualPanel DhigAccordion--type--accordionList Mui-disabled MuiAccordion-rounded MuiPaper-elevation0 MuiPaper-rounded">
+        <div
+          className="MuiButtonBase-root MuiAccordionSummary-root Mui-disabled Mui-disabled"
+          tabIndex="-1"
+          role="button"
+          aria-disabled="true"
+          aria-expanded="false"
+        >
+          <div className="MuiAccordionSummary-content">
+            <p className="DhigAccordionSummary--title">Third (disabled)</p>
+          </div>
+          <div
+            className="MuiButtonBase-root MuiIconButton-root MuiAccordionSummary-expandIcon MuiIconButton-edgeEnd"
+            aria-disabled="false"
+            aria-hidden="true"
+          >
+            <span className="MuiIconButton-label">
+              <svg
+                id="assets"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="utility/caret-down">
+                  <path
+                    id="stroke"
+                    d="M18 9.5L12 15.5L6 9.5"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  ></path>
+                </g>
+              </svg>
+            </span>
+          </div>
+        </div>
+        <div
+          className="MuiCollapse-root MuiCollapse-hidden"
+          style={{ minHeight: "0px" }}
+        >
+          <div className="MuiCollapse-wrapper">
+            <div className="MuiCollapse-wrapperInner">
+              <div role="region">
+                <div className="MuiAccordionDetails-root">
+                  <p className="dhig-m-0">You can't really see this</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="Accordion group (dark)" parameters={{ theme: "dark" }}>
+    <div className="dhig-theme--dark">
+      <div className="MuiPaper-root MuiAccordion-root DhigAccordion--size--normal DhigAccordion--styleVariant--individualPanel DhigAccordion--type--accordionList MuiAccordion-rounded MuiPaper-elevation0  MuiPaper-rounded">
+        <div
+          className="MuiButtonBase-root MuiAccordionSummary-root"
+          tabIndex="0"
+          role="button"
+          aria-disabled="false"
+          aria-expanded="false"
+        >
+          <div className="MuiAccordionSummary-content">
+            <p className="DhigAccordionSummary--title">First</p>
+          </div>
+          <div
+            className="MuiButtonBase-root MuiIconButton-root MuiAccordionSummary-expandIcon MuiIconButton-edgeEnd"
+            aria-disabled="false"
+            aria-hidden="true"
+          >
+            <span className="MuiIconButton-label">
+              <svg
+                id="assets"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="utility/caret-down">
+                  <path
+                    id="stroke"
+                    d="M18 9.5L12 15.5L6 9.5"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  ></path>
+                </g>
+              </svg>
+            </span>
+          </div>
+        </div>
+        <div
+          className="MuiCollapse-root MuiCollapse-hidden"
+          style={{
+            minHeight: "0px",
+            height: "0px",
+            transitionDuration: "210ms"
+          }}
+        >
+          <div className="MuiCollapse-wrapper">
+            <div className="MuiCollapse-wrapperInner">
+              <div role="region">
+                <div className="MuiAccordionDetails-root">
+                  <p className="dhig-m-0">First accordion content</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="MuiPaper-root MuiAccordion-root DhigAccordion--size--normal DhigAccordion--styleVariant--individualPanel DhigAccordion--type--accordionList Mui-expanded MuiAccordion-rounded MuiPaper-elevation0 MuiPaper-rounded">
+        <div
+          className="MuiButtonBase-root MuiAccordionSummary-root Mui-expanded"
+          tabIndex="0"
+          role="button"
+          aria-disabled="false"
+          aria-expanded="true"
+        >
+          <div className="MuiAccordionSummary-content Mui-expanded">
+            <p className="DhigAccordionSummary--title">Second</p>
+          </div>
+          <div
+            className="MuiButtonBase-root MuiIconButton-root MuiAccordionSummary-expandIcon Mui-expanded MuiIconButton-edgeEnd"
+            aria-disabled="false"
+            aria-hidden="true"
+          >
+            <span className="MuiIconButton-label">
+              <svg
+                id="assets"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="utility/caret-down">
+                  <path
+                    id="stroke"
+                    d="M18 9.5L12 15.5L6 9.5"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  ></path>
+                </g>
+              </svg>
+            </span>
+          </div>
+        </div>
+        <div
+          className="MuiCollapse-root MuiCollapse-entered"
+          style={{
+            minHeight: "0px",
+            height: "auto",
+            transitionDuration: "210ms"
+          }}
+        >
+          <div className="MuiCollapse-wrapper">
+            <div className="MuiCollapse-wrapperInner">
+              <div role="region">
+                <div className="MuiAccordionDetails-root">
+                  <p className="dhig-m-0">Second accordion content</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="MuiPaper-root MuiAccordion-root DhigAccordion--size--normal DhigAccordion--styleVariant--individualPanel DhigAccordion--type--accordionList Mui-disabled MuiAccordion-rounded MuiPaper-elevation0 MuiPaper-rounded">
+        <div
+          className="MuiButtonBase-root MuiAccordionSummary-root Mui-disabled Mui-disabled"
+          tabIndex="-1"
+          role="button"
+          aria-disabled="true"
+          aria-expanded="false"
+        >
+          <div className="MuiAccordionSummary-content">
+            <p className="DhigAccordionSummary--title">Third (disabled)</p>
+          </div>
+          <div
+            className="MuiButtonBase-root MuiIconButton-root MuiAccordionSummary-expandIcon MuiIconButton-edgeEnd"
+            aria-disabled="false"
+            aria-hidden="true"
+          >
+            <span className="MuiIconButton-label">
+              <svg
+                id="assets"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="utility/caret-down">
+                  <path
+                    id="stroke"
+                    d="M18 9.5L12 15.5L6 9.5"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  ></path>
+                </g>
+              </svg>
+            </span>
+          </div>
+        </div>
+        <div
+          className="MuiCollapse-root MuiCollapse-hidden"
+          style={{ minHeight: "0px" }}
+        >
+          <div className="MuiCollapse-wrapper">
+            <div className="MuiCollapse-wrapperInner">
+              <div role="region">
+                <div className="MuiAccordionDetails-root">
+                  <p className="dhig-m-0">You can't really see this</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </Story>
+</Canvas>

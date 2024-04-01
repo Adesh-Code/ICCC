@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="alternate icon" type="image/png"
+    href="https://damassets.autodesk.net/content/dam/autodesk/logos/favicon.png" />
+  <link rel="icon" type="image/svg+xml"
+    href="https://damassets.autodesk.net/content/dam/autodesk/logos/autodesk-symbol-32x32.svg" />
+  <link rel="stylesheet" href="https://swc.autodesk.com/pharmacopeia/fonts/dhig2021.css">
+  <link rel="stylesheet" href="https://swc.autodesk.com/pharmacopeia/css/dhig2021/v17/dhig-tw-components.css">
+  <link rel="stylesheet" href="
+  https://swc.autodesk.com/pharmacopeia/css/dhig2021/v17/dhig-utility.css">
+  <link rel="stylesheet" href="https://swc.autodesk.com/pharmacopeia/css/dhig2021/v17/dhig-mui-components.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
+  <title>Digital HIG Reference App</title>
+</head>
+
+<body>
+  <div id="svg-container"></div>
+  <div id="iccc-ref-app"></div>
+  <!-- Inject icon sprites into app body using the "#svg-container" div  -->
+  <script>
+    !function () {
+      var xhr = new XMLHttpRequest();
+      xhr.open("GET", 'https://swc.autodesk.com/pharmacopeia/svg/v0/icons.svg');
+      xhr.onload = function () {
+        document.getElementById('svg-container').innerHTML += xhr.responseText;
+      }
+      xhr.send();
+    }();
+  </script>
+</body>
+
+</html>

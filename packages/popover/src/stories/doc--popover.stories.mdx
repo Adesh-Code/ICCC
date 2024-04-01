@@ -1,0 +1,244 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { ComponentTitle, WarningNotice } from "../../../docs/src/partials";
+import { useState } from "react";
+import Popover from "@mui/material/Popover";
+import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
+import Box from "@mui/material/Box";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemText from "@mui/material/ListItemText";
+
+<Meta
+  id="components/popover"
+  title="Digital HIG/Components/Popover"
+  args={{
+    anchorOrigin: {
+      vertical: "bottom",
+      horizontal: "left"
+    },
+    transformOrigin: {
+      vertical: "top",
+      horizontal: "left"
+    }
+  }}
+  parameters={{
+    docs: { source: { type: "code" } }
+  }}
+/>
+
+<ComponentTitle name="Popover" status="In Progress" />
+
+<WarningNotice />
+
+A Popover can be used to display some content on top of another.
+
+Unlike a menu, the popover is only used to display very concise and helpful information while the menu can be used to display more information with complex layout.
+
+## Installation
+
+```bash
+yarn add @mui/material
+```
+
+## Importing the component
+
+```jsx
+import Popover from "@mui/material/Popover";
+```
+
+## API
+
+For all supported MUI `<Popover />` props, see [Popover API](https://mui.com/material-ui/api/popover).
+
+<Canvas>
+  <Story name="API">
+    {(args) => {
+      const [anchorEl, setAnchorEl] = useState(null);
+      const handleClick = (event) => {
+        setAnchorEl(event.currentTarget);
+      };
+      const handleClose = () => {
+        setAnchorEl(null);
+      };
+      const open = Boolean(anchorEl);
+      return (
+        <>
+          <Button onClick={handleClick}>Open popover</Button>
+          <Popover
+            open={open}
+            anchorEl={anchorEl}
+            onClose={handleClose}
+            {...args}
+          >
+            <Typography sx={{ margin: "20px" }}>Popover content</Typography>
+          </Popover>
+        </>
+      );
+    }}
+  </Story>
+</Canvas>
+
+<ArgsTable story="API" />
+
+## Trigger on hover
+
+<Canvas>
+  <Story name="Trigger on hover">
+    {(args) => {
+      const [anchorEl, setAnchorEl] = useState(null);
+      const handlePopoverOpen = (event) => {
+        setAnchorEl(event.currentTarget);
+      };
+      const handlePopoverClose = () => {
+        setAnchorEl(null);
+      };
+      const open = Boolean(anchorEl);
+      return (
+        <>
+          <Typography
+            onMouseEnter={handlePopoverOpen}
+            onMouseLeave={handlePopoverClose}
+          >
+            Hover with a Popover
+          </Typography>
+          <Popover
+            open={open}
+            onClose={() => setOpen(false)}
+            anchorEl={anchorEl}
+            sx={{
+              pointerEvents: "none"
+            }}
+            {...args}
+          >
+            <Typography sx={{ margin: "20px" }}>Popover content</Typography>
+          </Popover>
+        </>
+      );
+    }}
+  </Story>
+</Canvas>
+
+## Click-outside to close
+
+<Canvas>
+  <Story name="Click-outside to close">
+    {(args) => {
+      const [anchorEl, setAnchorEl] = useState(null);
+      const handleClick = (event) => {
+        setAnchorEl(event.currentTarget);
+      };
+      const handleClose = () => {
+        setAnchorEl(null);
+      };
+      const open = Boolean(anchorEl);
+      return (
+        <>
+          <Button onClick={handleClick}>Open popover</Button>
+          <Popover
+            open={open}
+            anchorEl={anchorEl}
+            onClose={handleClose}
+            {...args}
+          >
+            <Typography sx={{ margin: "20px" }}>Popover content</Typography>
+          </Popover>
+        </>
+      );
+    }}
+  </Story>
+</Canvas>
+
+## Popover with content
+
+<Canvas>
+  <Story name="Popover with content">
+    {(args) => {
+      const [anchorEl, setAnchorEl] = useState(null);
+      const handleClick = (event) => {
+        setAnchorEl(event.currentTarget);
+      };
+      const handleClose = () => {
+        setAnchorEl(null);
+      };
+      const open = Boolean(anchorEl);
+      return (
+        <>
+          <Button onClick={handleClick}>Open popover</Button>
+          <Popover
+            open={open}
+            anchorEl={anchorEl}
+            onClose={handleClose}
+            {...args}
+          >
+            <Typography
+              sx={{
+                textAlign: "center",
+                padding: "20px"
+              }}
+            >
+              Popover content
+            </Typography>
+            <Box
+              sx={{
+                height: "250px",
+                width: "250px"
+              }}
+            >
+              <img
+                alt="placeholder"
+                src="https://swc.autodesk.com/pharmacopeia/img/placeholders/960x640.png"
+              />
+            </Box>
+          </Popover>
+        </>
+      );
+    }}
+  </Story>
+</Canvas>
+
+## Popover with list
+
+<Canvas>
+  <Story name="Popover with list">
+    {(args) => {
+      const [anchorEl, setAnchorEl] = useState(null);
+      const handleClick = (event) => {
+        setAnchorEl(event.currentTarget);
+      };
+      const handleClose = () => {
+        setAnchorEl(null);
+      };
+      const open = Boolean(anchorEl);
+      return (
+        <>
+          <Button onClick={handleClick}>Open popover</Button>
+          <Popover
+            open={open}
+            anchorEl={anchorEl}
+            onClose={handleClose}
+            {...args}
+          >
+            <List>
+              <ListItem>
+                <ListItemText primary="The Shawshank Redemption" />
+              </ListItem>
+              <ListItem>
+                <ListItemText primary="The Godfather" />
+              </ListItem>
+              <ListItem>
+                <ListItemText primary="The Dark Knight" />
+              </ListItem>
+              <ListItem>
+                <ListItemText primary="12 Angry Men" />
+              </ListItem>
+              <ListItem>
+                <ListItemText primary="Schindler's List" />
+              </ListItem>
+            </List>
+          </Popover>
+        </>
+      );
+    }}
+  </Story>
+</Canvas>

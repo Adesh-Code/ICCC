@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tree View component renders 1`] = `
+<div>
+  <ul
+    aria-multiselectable="false"
+    class="MuiTreeView-root DhigTreeView--variant--minimal DhigTreeView--size--default emotion-0"
+    id="mui-1"
+    role="tree"
+    tabindex="0"
+  />
+</div>
+`;

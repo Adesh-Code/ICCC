@@ -1,0 +1,440 @@
+import { useState } from "react";
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { CharacterCounter, useCount } from "@iccc/character-counter";
+import {
+  ComponentTitle,
+  DarkThemeNotice,
+  InstallationInstructions,
+  MuiLink,
+  VariantRangeNotice
+} from "../../../docs/src/partials";
+import { peerDependencies } from "../../package.json";
+import Box from "@mui/material/Box";
+import FormControl from "@mui/material/FormControl";
+import FormHelperText from "@mui/material/FormHelperText";
+import InputLabel from "@mui/material/InputLabel";
+import IconButton from "@mui/material/IconButton";
+import Input from "@mui/material/Input";
+import InputAdornment from "@mui/material/InputAdornment";
+import Typography from "@mui/material/Typography";
+import prettier from "prettier/standalone";
+import prettierBabel from "prettier/parser-babel";
+import SvgHidden from "@iccc/icon/lib/build/icons/hidden";
+import SvgIcon from "@mui/material/SvgIcon";
+import SvgSync from "@iccc/icon/lib/build/icons/sync";
+import SvgVisible from "@iccc/icon/lib/build/icons/visible";
+import ErrorIcon from "@iccc/icon/lib/build/display-icons/error";
+
+<Meta
+  args={{
+    fullWidth: true
+  }}
+  component={Input}
+  id="components/input"
+  title="Digital HIG/Components/Input"
+  parameters={{
+    docs: {
+      source: {
+        type: "code"
+      },
+      transformSource: (input) =>
+        prettier.format(input, {
+          parser: "babel",
+          plugins: [prettierBabel]
+        })
+    }
+  }}
+/>
+
+<ComponentTitle name="Input" status="Stable" />
+
+<code>
+  <MuiLink
+    componentName="Input"
+    link="https://mui.com/material-ui/api/input/"
+  />
+</code>
+
+The Input component is the out-of-the-box MUI [`<Input>`](https://mui.com/material-ui/api/input/), with Digital HIG defaults.
+
+For related design documentation, please visit the [Digital HIG Figma UI Toolkit](https://www.figma.com/file/Eks986gkqncHjkLnwQjO7g/iccc-sticker-sheets?node-id=4203%3A313951&t=iL4WgXwqDMZvxUAw-1).
+
+## Installation
+
+<InstallationInstructions
+  peerDependencies={peerDependencies}
+  componentImport="Input"
+/>
+
+## API
+
+- For all supported MUI `<Input />` props, see [Input API](https://mui.com/material-ui/api/input/).
+- For all supported MUI `<FormControl />` props, see [FormControl API](https://mui.com/material-ui/api/form-control/).
+- For all supported MUI `<FormHelperText/>` props, see [FormHelperText API](https://mui.com/material-ui/api/form-helper-text/).
+- For all supported MUI `<InputLabel />` props, see [InputLabel API](https://mui.com/material-ui/api/input-label/).
+
+<Canvas>
+  <Story name="API">
+    {({ label, id = "default-input", InputLabelProps, ...otherProps }) => (
+      <FormControl fullWidth={otherProps.fullWidth}>
+        <Input {...otherProps} id={id} />
+      </FormControl>
+    )}
+  </Story>
+</Canvas>
+
+<ArgsTable story="API" />
+
+## Input variants
+
+<VariantRangeNotice />
+
+### Hint text
+
+By default, inputs are optional. Use `variant="smallprint"` prop in `<Typography>` inside of `<InputLabel />` to specify a hint for the user.
+
+<Canvas>
+  <Story name="Hint text">
+    <FormControl fullWidth>
+      <InputLabel htmlFor="optional-text-input">
+        Hint text
+        <Typography variant="smallprint" component="span">
+          (Optional)
+        </Typography>
+      </InputLabel>
+      <Input id="optional-text-input" />
+    </FormControl>
+  </Story>
+</Canvas>
+
+### Required
+
+Use `required` prop on both the `<FormControl>` wrapper and the `<Input>` component for mandatory fields.
+
+<Canvas>
+  <Story name="Required">
+    <FormControl fullWidth required>
+      <InputLabel htmlFor="req-text-input">Required input</InputLabel>
+      <Input required id="req-text-input" />
+    </FormControl>
+  </Story>
+</Canvas>
+
+### Helper text
+
+Use the `<FormHelperText>` component inside of `<FormControl>` wrapper.
+
+<Canvas>
+  <Story name="Helper text">
+    <FormControl fullWidth>
+      <InputLabel htmlFor="help-text-input">Helper text</InputLabel>
+      <Input id="help-text-input" />
+      <FormHelperText>
+        Helper text: Sit dolore cupidatat enim exercitation magna velit eu quis
+        laborum adipisicing voluptate incididunt adipisicing. Officia consequat
+        cupidatat eu veniam minim. Amet excepteur labore ea duis. Pariatur
+        fugiat mollit irure commodo aute.
+      </FormHelperText>
+    </FormControl>
+  </Story>
+</Canvas>
+
+### Error
+
+Use the `error` prop on both the `<FormControl>` wrapper and the `<Input>` component.
+
+<Canvas>
+  <Story name="Error">
+    <FormControl fullWidth error>
+      <InputLabel htmlFor="basic-error-text">Error</InputLabel>
+      <Input error id="basic-error-text" />
+      <FormHelperText>
+        <SvgIcon title="Error">
+          <ErrorIcon />
+        </SvgIcon>
+        Error text: Laborum velit est et culpa do anim excepteur cillum cupidatat
+        deserunt sint. Eiusmod ut aute labore ad dolor ipsum elit esse. Cupidatat
+        ad est voluptate qui aliquip culpa sunt enim excepteur.
+      </FormHelperText>
+    </FormControl>
+  </Story>
+</Canvas>
+
+### Read-only
+
+Use the `readOnly` MUI prop in `<Input>` component to set the input as read-only.
+
+<Canvas>
+  <Story name="Read-only">
+    <FormControl fullWidth>
+      <InputLabel htmlFor="basic-readonly-text">Read-only</InputLabel>
+      <Input
+        id="basic-readonly-text"
+        value="Sit dolore cupidatat enim exercitation magna velit"
+        readOnly
+      />
+    </FormControl>
+  </Story>
+</Canvas>
+
+### Text area
+
+Use the `multiline` MUI prop in conjunction with the `rows` prop to produce text areas.
+
+<Canvas>
+  <Story name="Text area" parameters={{ vr: false }}>
+    <FormControl fullWidth>
+      <InputLabel htmlFor="basic-text-area">Text area label</InputLabel>
+      <Input id="basic-text-area" multiline rows={4} />
+    </FormControl>
+  </Story>
+</Canvas>
+
+### Character counter
+
+The `<CharacterCounter />` component can be imported directly from Digital HIG's `character-counter` package. It accepts `count` and `maxLength` props. We also offer an optional `useCount` hook.
+
+```jsx
+import { CharacterCounter, useCount } from "@iccc/character-counter";
+```
+
+A few implementation examples can be seen below.
+
+<Canvas>
+  <Story name="Character counter with error" parameters={{ vr: false }}>
+    {() => {
+      const maxLength = 10;
+      const { count, value, exceeded, handleChange } = useCount(
+        10,
+        "Eiusmod magna non."
+      );
+      return (
+        <FormControl
+          fullWidth
+          error={exceeded}
+          value={value}
+          onChange={handleChange}
+        >
+          <InputLabel htmlFor="basic-text-area-count-error">
+            Character counter with error
+          </InputLabel>
+          <Input
+            id="basic-text-area-count-error"
+            multiline
+            rows={4}
+            value={value}
+          />
+          <CharacterCounter count={count} maxLength={maxLength} />
+          <FormHelperText>
+            {exceeded && (
+              <>
+                <SvgIcon title="Error">
+                  <ErrorIcon />
+                </SvgIcon>
+                Error text: Eiusmod magna non sint esse fugiat amet laboris id. Consectetur
+                esse sunt dolore irure tempor cupidatat. Velit veniam Lorem cupidatat
+                pariatur deserunt sint proident nostrud. Occaecat cupidatat nostrud
+                quis deserunt adipisicing sit minim reprehenderit qui ad duis ut
+                tempor ea.
+              </>
+            )}
+          </FormHelperText>
+        </FormControl>
+      );
+    }}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="Character counter with helper text" parameters={{ vr: false }}>
+    {() => {
+      const maxLength = 550;
+      const { count, value, handleChange, exceeded } = useCount(maxLength);
+      return (
+        <FormControl fullWidth error={exceeded}>
+          <InputLabel htmlFor="basic-text-area-count-helper">
+            Character counter with helper text
+          </InputLabel>
+          <Input
+            id="basic-text-area-count-helper"
+            multiline
+            rows={4}
+            value={value}
+            onChange={handleChange}
+          />
+          <CharacterCounter count={count} maxLength={maxLength} />
+          <FormHelperText>
+            {exceeded ? (
+              <>
+                <SvgIcon title="Error">
+                  <ErrorIcon />
+                </SvgIcon>
+                Error text: Eiusmod magna non sint esse fugiat amet laboris id. Consectetur
+                esse sunt dolore irure tempor cupidatat. Velit veniam Lorem cupidatat
+                pariatur deserunt sint proident nostrud. Occaecat cupidatat nostrud
+                quis deserunt adipisicing sit minim reprehenderit qui ad duis ut
+                tempor ea.
+              </>
+            ) : (
+              "Helper text: In amet excepteur excepteur ut labore fugiat nostrud pariatur do tempor. Fugiat nostrud ea laborum ullamco ex deserunt nisi sunt occaecat dolor do culpa do. Elit ad adipisicing elit minim esse. Ut elit esse aliqua fugiat eiusmod laboris."
+            )}
+          </FormHelperText>
+        </FormControl>
+      );
+    }}
+  </Story>
+</Canvas>
+
+### Input adornments
+
+Start and end adornments can be provided using MUI's `startAdornment` and `endAdornment` props, respectively. The `<InputAdornment>` component can be imported directly from MUI, and used with icons from the Digital HIG library.
+
+```jsx
+import InputAdornment from "@mui/material/InputAdornment";
+```
+
+<Canvas>
+  <Story name="Input adornments">
+    <>
+      <FormControl fullWidth>
+        <InputLabel htmlFor="start-adornment-text">Start adornment</InputLabel>
+        <Input
+          id="start-adornment-text"
+          startAdornment={
+            <InputAdornment position="start">
+              <SvgIcon fontSize="medium">
+                <SvgSync />
+              </SvgIcon>
+            </InputAdornment>
+          }
+        />
+      </FormControl>
+      <Box py={3} />
+      <FormControl fullWidth id="end-adornment-text-label">
+        <InputLabel htmlFor="end-adornment-text">End adornment</InputLabel>
+        <Input
+          id="end-adornment-text"
+          endAdornment={
+            <InputAdornment position="end">
+              <SvgIcon fontSize="medium">
+                <SvgSync />
+              </SvgIcon>
+            </InputAdornment>
+          }
+        />
+      </FormControl>
+    </>
+  </Story>
+</Canvas>
+
+### Password input
+
+You can use the combination of `endAdornment` and `InputAdornment` props to create the password composition.
+
+<Canvas>
+  <Story name="Password input">
+    {() => {
+      const [show, setShow] = useState(false);
+      return (
+        <FormControl fullWidth>
+          <InputLabel htmlFor="basic-password-text">Password</InputLabel>
+          <Input
+            id="basic-password-text"
+            type={show ? "text" : "password"}
+            endAdornment={
+              <InputAdornment position="end">
+                <IconButton edge="end" onClick={() => setShow(!show)}>
+                  <SvgIcon>{show ? <SvgHidden /> : <SvgVisible />}</SvgIcon>
+                </IconButton>
+              </InputAdornment>
+            }
+          />
+          <FormHelperText>Helper text</FormHelperText>
+        </FormControl>
+      );
+    }}
+  </Story>
+</Canvas>
+
+### Dark theme
+
+<DarkThemeNotice />
+
+<Canvas>
+  <Story name="Dark theme" parameters={{ theme: "dark" }}>
+    {() => {
+      const maxLength = 10;
+      const { count, value, exceeded, handleChange } = useCount(maxLength);
+      return (
+        <>
+          <FormControl fullWidth>
+            <InputLabel htmlFor="dark-basic-text">Dark theme</InputLabel>
+            <Input id="dark-basic-text" />
+          </FormControl>
+          <Box py={3} />
+          <FormControl fullWidth disabled>
+            <InputLabel htmlFor="dark-disabled-text">
+              Dark theme disabled
+            </InputLabel>
+            <Input id="dark-disabled-text" disabled />
+          </FormControl>
+          <Box py={3} />
+          <FormControl fullWidth>
+            <InputLabel htmlFor="dark-adornment-text">
+              Dark theme adornment
+            </InputLabel>
+            <Input
+              id="dark-adornment-text"
+              startAdornment={
+                <InputAdornment position="start">
+                  <SvgIcon fontSize="medium">
+                    <SvgSync />
+                  </SvgIcon>
+                </InputAdornment>
+              }
+            />
+          </FormControl>
+          <Box py={3} />
+          <FormControl fullWidth error>
+            <InputLabel htmlFor="dark-error-text">
+              Dark theme with error
+            </InputLabel>
+            <Input id="dark-error-text" error />
+            <FormHelperText>
+              <SvgIcon title="Error">
+                <ErrorIcon />
+              </SvgIcon>
+              Minim consectetur eu anim duis ut anim sint.
+            </FormHelperText>
+          </FormControl>
+          <Box py={3} />
+          <FormControl fullWidth>
+            <InputLabel htmlFor="dark-helper-text">
+              Dark theme with helper text
+            </InputLabel>
+            <Input id="dark-helper-text" />
+            <FormHelperText>
+              Proident excepteur occaecat voluptate aliqua incididunt elit
+              tempor et sint.
+            </FormHelperText>
+          </FormControl>
+          <Box py={3} />
+          <FormControl fullWidth>
+            <InputLabel htmlFor="dark-text-area">
+              Dark theme text area
+            </InputLabel>
+            <Input
+              id="dark-text-area"
+              value={value}
+              multiline
+              rows={4}
+              onChange={handleChange}
+              error={exceeded}
+            />
+            <CharacterCounter count={count} maxLength={maxLength} />
+          </FormControl>
+        </>
+      );
+    }}
+  </Story>
+</Canvas>

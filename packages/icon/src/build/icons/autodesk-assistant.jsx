@@ -1,0 +1,59 @@
+import * as React from "react";
+const SvgAutodeskAssistant = (props) => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <path
+      d="M1.0874 13.3424L14.8566 4.73842M1.42189 18.0475L22.3991 4.93953M20.176 11.2511L22.2819 9.93519M15.3594 19.0246L22.9122 14.3051M22.505 19.2575L22.4982 19.2618"
+      stroke="currentColor"
+      strokeWidth={2.1}
+      strokeLinecap="round"
+    />
+    <mask
+      id="mask0_6205_27"
+      style={{
+        maskType: "alpha"
+      }}
+      maskUnits="userSpaceOnUse"
+      x={6}
+      y={9}
+      width={16}
+      height={12}
+    >
+      <rect
+        x={6.41577}
+        y={18.4524}
+        width={16.4018}
+        height={2.3112}
+        transform="rotate(-32 6.41577 18.4524)"
+        fill="url(#paint0_linear_6205_27)"
+      />
+    </mask>
+    <g mask="url(#mask0_6205_27)">
+      <path
+        d="M7.99463 18.8624L20.1761 11.251"
+        stroke="currentColor"
+        strokeWidth={2.1}
+        strokeLinecap="round"
+      />
+    </g>
+    <defs>
+      <linearGradient
+        id="paint0_linear_6205_27"
+        x1={21.196}
+        y1={19.49}
+        x2={18.6238}
+        y2={24.9813}
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stopOpacity={0.6} />
+        <stop offset={0.5} stopOpacity={0.25} />
+        <stop offset={1} stopOpacity={0.1} />
+      </linearGradient>
+    </defs>
+  </svg>
+);
+export default SvgAutodeskAssistant;

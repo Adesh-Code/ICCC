@@ -1,0 +1,20 @@
+{
+  "name": "@iccc/table-cell",
+  "version": "5.0.0",
+  "private": true,
+  "main": "lib/table-cell.js",
+  "module": "src/index.js",
+  "author": "Digital HIG Engineering",
+  "slack": "#dpe-dhig-engineering-support",
+  "email": "digital.hig.engineering@autodesk.com",
+  "files": [
+    "lib/*"
+  ],
+  "peerDependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/material": "^5.5.0",
+    "react": "^16.14.0 || ^17.0.0",
+    "react-dom": "^16.14.0 || ^17.0.0"
+  }
+}

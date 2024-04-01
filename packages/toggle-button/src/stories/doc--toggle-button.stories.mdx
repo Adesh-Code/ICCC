@@ -1,0 +1,206 @@
+import { useState } from "react";
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { componentArgs, sizes } from "../constants";
+import {
+  ComponentTitle,
+  DarkThemeNotice,
+  InstallationInstructions,
+  MuiLink,
+  VariantRangeNotice
+} from "../../../docs/src/partials";
+import Box from "@mui/material/Box";
+import ToggleButton from "@mui/material/ToggleButton";
+import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
+import { peerDependencies } from "../../package.json";
+
+export const toggleButtons = [
+  { children: "Cursus quis", value: "cursus" },
+  { children: "Condimentum porttitor", value: "condimentum" },
+  { children: "Integer nisl", value: "integer" },
+  { children: "Disabled", disabled: true, value: "disabled" }
+];
+
+<Meta
+  args={{ size: sizes.MEDIUM }}
+  argTypes={componentArgs}
+  component={ToggleButtonGroup}
+  id="components/toggle-button"
+  title="Digital HIG/Components/Toggle button"
+/>
+
+<ComponentTitle name="Toggle button" status="Stable" />
+
+<code>
+  <MuiLink
+    componentName="Toggle button"
+    link="https://mui.com/material-ui/react-toggle-button/"
+  />
+</code>
+
+<code>
+  <MuiLink
+    componentName="Toggle button group"
+    link="https://mui.com/material-ui/api/toggle-button-group/"
+  />
+</code>
+
+For related design documentation, please see the [Digital HIG Figma UI Toolkit](https://www.figma.com/file/Eks986gkqncHjkLnwQjO7g/iccc-sticker-sheets?node-id=4203%3A281997&t=iL4WgXwqDMZvxUAw-1).
+
+For the initial engineering prototype, see the archived [Segmented control prototype page](https://storybook.digital-help-stg.autodesk.com/iccc/prerelease/PR-369/index.html?path=/docs/components-segmented-control-audit--segmented-control-basic).
+
+## Installation
+
+<InstallationInstructions peerDependencies={peerDependencies} />
+
+```jsx
+import ToggleButton from "@mui/material/ToggleButton";
+import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
+```
+
+## API
+
+- For all supported MUI `<ToggleButtonGroup />` props, see [ToggleButtonGroup API](https://mui.com/material-ui/api/toggle-button-group/).
+- For all supported MUI `<ToggleButton />` props, see [ToggleButton API](https://mui.com/material-ui/api/toggle-button/).
+
+Note that one value should be selected at all times. See the [MUI docs for more information](https://mui.com/material-ui/react-toggle-button/#enforce-value-set) on implementation.
+
+<Canvas>
+  <Story name="API">
+    {(args) => {
+      const [selectedButton, setSelectedButton] = useState(
+        toggleButtons[0].value
+      );
+      const handleChange = (event, newValue) => {
+        if (newValue !== null) {
+          setSelectedButton(newValue);
+        }
+      };
+      return (
+        <ToggleButtonGroup
+          {...args}
+          value={selectedButton}
+          onChange={handleChange}
+          exclusive
+        >
+          {toggleButtons.map((toggleButtonProps, index) => (
+            <ToggleButton key={index} {...toggleButtonProps} />
+          ))}
+        </ToggleButtonGroup>
+      );
+    }}
+  </Story>
+</Canvas>
+
+<ArgsTable story="API" />
+
+## Toggle button variants
+
+<VariantRangeNotice />
+
+### Size options
+
+Defaults to `medium`, but `small` can also be used to render slightly denser buttons.
+
+#### Medium
+
+<Canvas>
+  <Story name="Size: Medium">
+    {() => {
+      const [selectedButton, setSelectedButton] = useState(
+        toggleButtons[0].value
+      );
+      const handleChange = (event, newValue) => {
+        if (newValue !== null) {
+          setSelectedButton(newValue);
+        }
+      };
+      return (
+        <ToggleButtonGroup
+          value={selectedButton}
+          onChange={handleChange}
+          exclusive
+        >
+          {toggleButtons.map((toggleButtonProps, index) => (
+            <ToggleButton key={index} {...toggleButtonProps} />
+          ))}
+        </ToggleButtonGroup>
+      );
+    }}
+  </Story>
+</Canvas>
+
+#### Small
+
+<Canvas>
+  <Story name="Size: Small">
+    {() => {
+      const [selectedButton, setSelectedButton] = useState(
+        toggleButtons[0].value
+      );
+      const handleChange = (event, newValue) => {
+        if (newValue !== null) {
+          setSelectedButton(newValue);
+        }
+      };
+      return (
+        <ToggleButtonGroup
+          value={selectedButton}
+          onChange={handleChange}
+          exclusive
+          size={"small"}
+        >
+          {toggleButtons.map((toggleButtonProps, index) => (
+            <ToggleButton key={index} {...toggleButtonProps} />
+          ))}
+        </ToggleButtonGroup>
+      );
+    }}
+  </Story>
+</Canvas>
+
+### Dark theme
+
+<DarkThemeNotice />
+
+<Canvas>
+  <Story name="Dark theme" parameters={{ theme: "dark" }}>
+    {() => {
+      const [selectedButton, setSelectedButton] = useState(
+        toggleButtons[0].value
+      );
+      const handleChange = (event, newValue) => {
+        if (newValue !== null) {
+          setSelectedButton(newValue);
+        }
+      };
+      return (
+        <>
+          <ToggleButtonGroup
+            value={selectedButton}
+            onChange={handleChange}
+            exclusive
+          >
+            {toggleButtons.map((toggleButtonProps, index) => (
+              <ToggleButton key={index} {...toggleButtonProps} />
+            ))}
+          </ToggleButtonGroup>
+          <Box my={3} />
+          <ToggleButtonGroup
+            value={selectedButton}
+            onChange={handleChange}
+            exclusive
+            size={"small"}
+          >
+            {toggleButtons.map((toggleButtonProps, index) => (
+              <ToggleButton key={index} {...toggleButtonProps} />
+            ))}
+          </ToggleButtonGroup>
+        </>
+      );
+    }}
+  </Story>
+</Canvas>
+
+## Accessibility
+
+For more details about accessibility for ToggleButton, visit the [MUI ToggleButton Accessibility section](https://mui.com/material-ui/react-toggle-button/#accessibility).

@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Accordion mounts an accordion 1`] = `
+<div>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAccordion-root  DhigAccordion--variant--individualPanel DhigAccordion--type--accordionList MuiAccordion-rounded MuiAccordion-gutters emotion-0"
+  >
+    <p
+      class="MuiTypography-root MuiTypography-body-copy-medium dhig-m-0 emotion-1"
+    >
+      Accordion content
+    </p>
+    <div
+      class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-hidden emotion-2"
+      style="min-height: 0px;"
+    >
+      <div
+        class="MuiCollapse-wrapper MuiCollapse-vertical emotion-3"
+      >
+        <div
+          class="MuiCollapse-wrapperInner MuiCollapse-vertical emotion-4"
+        >
+          <div
+            class="MuiAccordion-region"
+            role="region"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

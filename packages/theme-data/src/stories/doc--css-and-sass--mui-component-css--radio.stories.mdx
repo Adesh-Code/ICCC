@@ -1,0 +1,320 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import "../../lib/build/css/dhig-global.css";
+
+<Meta
+  title="Digital HIG/CSS and SASS/MUI component CSS/Radio"
+  parameters={{
+    disableThemeMui: true,
+    renderHTML: true
+  }}
+/>
+
+# Radio
+
+HTML snippets to generate Digital HIG radio buttons.
+
+<Canvas>
+  <Story name="Light theme">
+    <div className="dhig-theme--light">
+      <fieldset className="MuiFormControl-root">
+        <legend
+          className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+          data-shrink="false"
+        >
+          Radio group
+        </legend>
+        <div className="MuiFormGroup-root" role="radiogroup">
+          <label className="MuiFormControlLabel-root" htmlFor="radio-input-1">
+            <span
+              className="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiRadio-root MuiRadio-colorSecondary MuiIconButton-colorSecondary Mui-checked"
+              aria-disabled="false"
+            >
+              <span className="MuiIconButton-label">
+                <input
+                  className="PrivateSwitchBase-input-4"
+                  type="radio"
+                  value="one"
+                  name="mui-70202"
+                  onChange={() => {}}
+                  id="radio-input-1"
+                />
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    x="0.5"
+                    y="0.5"
+                    width="19"
+                    height="19"
+                    rx="9.5"
+                    fill="white"
+                  ></rect>
+                  <rect
+                    x="0.5"
+                    y="0.5"
+                    width="19"
+                    height="19"
+                    rx="9.5"
+                    stroke="black"
+                  ></rect>
+                  <circle cx="10" cy="10" r="5" fill="black"></circle>
+                </svg>
+              </span>
+            </span>
+            <span className="MuiTypography-root MuiFormControlLabel-label MuiTypography-body1">
+              Checked
+            </span>
+          </label>
+          <label className="MuiFormControlLabel-root" htmlFor="radio-input-2">
+            <span
+              className="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiRadio-root MuiRadio-colorSecondary MuiIconButton-colorSecondary"
+              aria-disabled="false"
+            >
+              <span className="MuiIconButton-label">
+                <input
+                  className="PrivateSwitchBase-input-4"
+                  type="radio"
+                  value="two"
+                  name="mui-70202"
+                  onChange={() => {}}
+                  id="radio-input-2"
+                />
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    x="0.5"
+                    y="0.5"
+                    width="19"
+                    height="19"
+                    rx="9.5"
+                    fill="white"
+                  ></rect>
+                  <rect
+                    x="0.5"
+                    y="0.5"
+                    width="19"
+                    height="19"
+                    rx="9.5"
+                    stroke="black"
+                  ></rect>
+                </svg>
+              </span>
+            </span>
+            <span className="MuiTypography-root MuiFormControlLabel-label MuiTypography-body1">
+              Unchecked
+            </span>
+          </label>
+          <label
+            className="MuiFormControlLabel-root Mui-disabled"
+            htmlFor="radio-input-3"
+          >
+            <span
+              className="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiRadio-root MuiRadio-colorSecondary MuiIconButton-colorSecondary Mui-disabled"
+              tabIndex="-1"
+              aria-disabled="true"
+            >
+              <span className="MuiIconButton-label">
+                <input
+                  className="PrivateSwitchBase-input-4"
+                  disabled={true}
+                  type="radio"
+                  onChange={() => {}}
+                  id="radio-input-3"
+                />
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    x="0.5"
+                    y="0.5"
+                    width="19"
+                    height="19"
+                    rx="9.5"
+                    fill="white"
+                  ></rect>
+                  <rect
+                    x="0.5"
+                    y="0.5"
+                    width="19"
+                    height="19"
+                    rx="9.5"
+                    stroke="black"
+                  ></rect>
+                </svg>
+              </span>
+            </span>
+            <span className="MuiTypography-root MuiFormControlLabel-label Mui-disabled MuiTypography-body1">
+              Disabled
+            </span>
+          </label>
+        </div>
+      </fieldset>
+    </div>
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="Dark theme" parameters={{ theme: "dark" }}>
+    <div className="dhig-theme--dark">
+      <fieldset className="MuiFormControl-root">
+        <legend
+          className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+          data-shrink="false"
+        >
+          Radio group
+        </legend>
+        <div className="MuiFormGroup-root" role="radiogroup">
+          <label className="MuiFormControlLabel-root" htmlFor="radio-input-4">
+            <span
+              className="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiRadio-root MuiRadio-colorSecondary MuiIconButton-colorSecondary Mui-checked"
+              aria-disabled="false"
+            >
+              <span className="MuiIconButton-label">
+                <input
+                  className="PrivateSwitchBase-input-4"
+                  type="radio"
+                  value="one"
+                  name="mui-70202"
+                  onChange={() => {}}
+                  id="radio-input-4"
+                />
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    x="0.5"
+                    y="0.5"
+                    width="19"
+                    height="19"
+                    rx="9.5"
+                    fill="white"
+                  ></rect>
+                  <rect
+                    x="0.5"
+                    y="0.5"
+                    width="19"
+                    height="19"
+                    rx="9.5"
+                    stroke="black"
+                  ></rect>
+                  <circle cx="10" cy="10" r="5" fill="black"></circle>
+                </svg>
+              </span>
+            </span>
+            <span className="MuiTypography-root MuiFormControlLabel-label MuiTypography-body1">
+              Checked
+            </span>
+          </label>
+          <label className="MuiFormControlLabel-root" htmlFor="radio-input-5">
+            <span
+              className="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiRadio-root MuiRadio-colorSecondary MuiIconButton-colorSecondary"
+              aria-disabled="false"
+            >
+              <span className="MuiIconButton-label">
+                <input
+                  className="PrivateSwitchBase-input-4"
+                  type="radio"
+                  value="two"
+                  name="mui-70202"
+                  onChange={() => {}}
+                  id="radio-input-5"
+                />
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    x="0.5"
+                    y="0.5"
+                    width="19"
+                    height="19"
+                    rx="9.5"
+                    fill="white"
+                  ></rect>
+                  <rect
+                    x="0.5"
+                    y="0.5"
+                    width="19"
+                    height="19"
+                    rx="9.5"
+                    stroke="black"
+                  ></rect>
+                </svg>
+              </span>
+            </span>
+            <span className="MuiTypography-root MuiFormControlLabel-label MuiTypography-body1">
+              Unchecked
+            </span>
+          </label>
+          <label
+            className="MuiFormControlLabel-root Mui-disabled"
+            htmlFor="radio-input-6"
+          >
+            <span
+              className="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiRadio-root MuiRadio-colorSecondary MuiIconButton-colorSecondary Mui-disabled"
+              tabIndex="-1"
+              aria-disabled="true"
+            >
+              <span className="MuiIconButton-label">
+                <input
+                  className="PrivateSwitchBase-input-4"
+                  disabled={true}
+                  type="radio"
+                  onChange={() => {}}
+                  id="radio-input-6"
+                />
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    x="0.5"
+                    y="0.5"
+                    width="19"
+                    height="19"
+                    rx="9.5"
+                    fill="white"
+                  ></rect>
+                  <rect
+                    x="0.5"
+                    y="0.5"
+                    width="19"
+                    height="19"
+                    rx="9.5"
+                    stroke="black"
+                  ></rect>
+                </svg>
+              </span>
+            </span>
+            <span className="MuiTypography-root MuiFormControlLabel-label Mui-disabled MuiTypography-body1">
+              Disabled
+            </span>
+          </label>
+        </div>
+      </fieldset>
+    </div>
+  </Story>
+</Canvas>

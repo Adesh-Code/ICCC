@@ -1,0 +1,144 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import Typography from "@iccc/typography";
+
+export const CellContent = ({ children = "Grid cell" }) => (
+  <div
+    className="dhig-p-4"
+    style={{ backgroundColor: "#eee", border: "1px dashed #666" }}
+  >
+    <Typography>{children}</Typography>
+  </div>
+);
+
+<Meta title="Digital HIG/CSS and SASS/Utility CSS/Responsive/CSS grid" />
+
+# Grid utility CSS
+
+Digital HIG utility CSS provides a collection of CSS grid classes based on [Tailwind CSS](https://tailwindcss.com/).
+
+For more in-depth information about CSS grid, [MDN basic concepts of grid layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout) is a good place to go.
+
+Note: Requires utility CSS to be present in the document. See [the CSS overview page](?path=/docs/iccc-css-and-sass-css-overview--page) for more details.
+
+## Digital HIG ready
+
+Utility CSS is responsive-design ready. The available classes are customized to match the breakpoint Figma specification, so refer to the [grid tokens page](/docs/iccc-theme-data-tokens-grid--page) to consult the available grid tokens, and [grid primitives page](/docs/iccc-theme-data-primitives-grid--page) for the full suite of grid-related options.
+
+## How to use Tailwind CSS
+
+Utility classes are generated with a `dhig-` prefix. Please use the Tailwind documentation and adjust classnames accordingly.
+
+For example, in Tailwind docs:
+
+`grid` display: grid;
+
+Becomes:
+
+```html
+<div class="dhig-grid">This element will have display set to grid</div>
+```
+
+## Examples
+
+A few selected examples and common use cases. Press the "Show code" button on the right of each example to view the implementation code. For full Tailwind CSS documentation, see links below.
+
+### Equal-sized columns
+
+Each row is split in 3 equal-sized cells in small screens, 4 in medium and 6 in large.
+
+<Canvas>
+  <Story name="Grid columns">
+    <div className="dhig-grid dhig-grid-cols-3 md:dhig-grid-cols-4 lg:dhig-grid-cols-6 dhig-gap-4">
+      <CellContent>Grid cell 1</CellContent>
+      <CellContent>Grid cell 2</CellContent>
+      <CellContent>Grid cell 3</CellContent>
+      <CellContent>Grid cell 4</CellContent>
+      <CellContent>Grid cell 5</CellContent>
+      <CellContent>Grid cell 6</CellContent>
+      <CellContent>Grid cell 7</CellContent>
+    </div>
+  </Story>
+</Canvas>
+
+### Cell size and placement
+
+Some cells might span more than one column. Cells will wrap to the next row automatically.
+
+<Canvas>
+  <Story name="Grid column size and placement">
+    <div className="dhig-grid dhig-grid-cols-6 dhig-gap-4">
+      <CellContent>Grid cell 1</CellContent>
+      <CellContent>Grid cell 2</CellContent>
+      <div className="dhig-col-span-2">
+        <CellContent className="">Grid cell 3</CellContent>
+      </div>
+      <CellContent>Grid cell 4</CellContent>
+      <CellContent>Grid cell 5</CellContent>
+      <CellContent>Grid cell 6</CellContent>
+      <div className="dhig-col-start-1 dhig-col-end-7">
+        <CellContent>Grid cell 7</CellContent>
+      </div>
+    </div>
+  </Story>
+</Canvas>
+
+### Grid rows
+
+Cells can be laid out in a predefined number of rows.
+
+<Canvas>
+  <Story name="Grid rows">
+    <div className="dhig-grid dhig-grid-rows-4 dhig-grid-flow-col dhig-gap-4">
+      <CellContent>Grid cell 1</CellContent>
+      <CellContent>Grid cell 2</CellContent>
+      <CellContent>Grid cell 3</CellContent>
+      <CellContent>Grid cell 4</CellContent>
+      <CellContent>Grid cell 5</CellContent>
+      <CellContent>Grid cell 6</CellContent>
+      <CellContent>Grid cell 7</CellContent>
+    </div>
+  </Story>
+</Canvas>
+
+### Responsive gutters
+
+Digital HIG specifies responsive gutter values that can be implemented with `gap` classes.
+
+<Canvas>
+  <Story name="Gutters">
+    <div className="dhig-grid dhig-gap-4 md:dhig-gap-5 lg:dhig-gap-6 dhig-grid-cols-3">
+      <CellContent>Grid cell 1</CellContent>
+      <CellContent>Grid cell 2</CellContent>
+      <CellContent>Grid cell 3</CellContent>
+      <CellContent>Grid cell 4</CellContent>
+      <CellContent>Grid cell 5</CellContent>
+      <CellContent>Grid cell 6</CellContent>
+    </div>
+  </Story>
+</Canvas>
+
+## Tailwind CSS documentation
+
+| Module                | Documentation                                      | Description                                                           |
+| --------------------- | -------------------------------------------------- | --------------------------------------------------------------------- |
+| Align content         | https://tailwindcss.com/docs/align-content         | How rows are positioned in multi-row grid containers                  |
+| Align items           | https://tailwindcss.com/docs/align-items           | How grid items are positioned along a container's cross axis          |
+| Align self            | https://tailwindcss.com/docs/align-self            | How an individual item is positioned along its container's cross axis |
+| Display               | https://tailwindcss.com/docs/display               | The display box type of an element                                    |
+| Fluid width           | https://tailwindcss.com/docs/width#fluid-width     | How to set an element to a percentage based width                     |
+| Gap                   | https://tailwindcss.com/docs/gap                   | Gutters between grid items                                            |
+| Grid auto columns     | https://tailwindcss.com/docs/grid-auto-columns     | The size of implicitly-created grid columns                           |
+| Grid auto flow        | https://tailwindcss.com/docs/grid-auto-flow        | How elements in a grid are auto-placed                                |
+| Grid auto rows        | https://tailwindcss.com/docs/grid-auto-rows        | The size of implicitly-created grid rows                              |
+| Grid column           | https://tailwindcss.com/docs/grid-column           | How elements are sized and placed across grid columns                 |
+| Grid row              | https://tailwindcss.com/docs/grid-row              | how elements are sized and placed across grid rows                    |
+| Grid template columns | https://tailwindcss.com/docs/grid-template-columns | Specify the columns in a grid layout                                  |
+| Grid template rows    | https://tailwindcss.com/docs/grid-template-rows    | Specify the rows in a grid layout                                     |
+| Justify content       | https://tailwindcss.com/docs/justify-content       | How grid items are positioned along a container's main axis           |
+| Justify items         | https://tailwindcss.com/docs/justify-items         | How grid items are aligned along their inline axis                    |
+| Justify self          | https://tailwindcss.com/docs/justify-self          | How an individual grid item is aligned along its inline axis          |
+| Place content         | https://tailwindcss.com/docs/place-content         | How content is justified and aligned at the same time                 |
+| Place items           | https://tailwindcss.com/docs/place-items           | How items are justified and aligned at the same time                  |
+| Place self            | https://tailwindcss.com/docs/place-self            | How an individual item is justified and aligned at the same time      |
+| Order                 | https://tailwindcss.com/docs/order                 | The order of grid items                                               |
+| Space                 | https://tailwindcss.com/docs/space                 | The space between child elements                                      |

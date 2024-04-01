@@ -1,0 +1,8 @@
+/**
+* Generates global properties, wrapped in a namespaced class.
+*/
+@use "../scss/mixins" as *;
+
+.dhig-wrapper {
+  @include dhig-global-classes;
+}

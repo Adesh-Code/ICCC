@@ -1,0 +1,740 @@
+import { AlertIcon } from "../index.js"; // CloseIcon
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { componentArgs } from "../constants";
+import {
+  ComponentTitle,
+  DarkThemeNotice,
+  InstallationInstructions,
+  MuiLink,
+  VariantRangeNotice,
+  VersionNotice
+} from "../../../docs/src/partials";
+import { version, peerDependencies } from "../../package.json";
+import Alert from "@mui/material/Alert";
+import AlertTitle from "@mui/material/AlertTitle";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Container from "@mui/material/Container";
+import prettier from "prettier/standalone";
+import prettierBabel from "prettier/parser-babel";
+
+<Meta
+  argTypes={componentArgs}
+  args={{
+    icon: <AlertIcon severity="info" alt="info icon" />,
+    severity: "info",
+    variant: "outlined"
+  }}
+  component={Alert}
+  id="components/alert"
+  title="Digital HIG/Components/Alert"
+/>
+
+<ComponentTitle name="Alert" status="Stable" />
+
+<code>
+  <VersionNotice packageName="alert" version={version} />
+</code>
+
+<code>
+  <MuiLink componentName="Alert" link="https://mui.com/components/alert/" />
+</code>
+
+The Alert component applies Digital HIG styles to MUI [`<Alert>`](https://mui.com/components/alert/).
+
+For related design documentation, please see the [Digital HIG Figma UI Toolkit](https://www.figma.com/file/Eks986gkqncHjkLnwQjO7g/iccc-sticker-sheets?node-id=4252%3A336184&t=pTfzpGDpokVB8t0o-1).
+
+For the initial engineering prototype, see the archived [Alert prototype page](https://storybook.digital-help-dev.autodesk.com/iccc/prerelease/PR-397/index.html?path=/docs/components-alert-prototype--severity).
+
+## Installation
+
+<InstallationInstructions
+  componentImport="Alert"
+  peerDependencies={peerDependencies}
+/>
+
+## API
+
+- For all supported MUI `<Alert />` props, see [Alert API](https://mui.com/api/alert/).
+- For all supported MUI `<AlertTitle />` props, see [AlertTitle API](https://mui.com/api/alert-title/).
+
+Note that, the intended default behavior is to be dismissible - see [Actions: Close](/docs/components-alert--actions-close) story for more info
+
+<Canvas>
+  <Story
+    name="API"
+    parameters={{
+      docs: {
+        source: {
+          type: "auto"
+        }
+      }
+    }}
+  >
+    {(args) => (
+      <Alert
+        {...args}
+        icon={
+          <AlertIcon
+            severity={args.severity}
+            variant={args.variant}
+            alt={`${args.severity} icon`}
+          />
+        }
+        onClose={() => {}}
+      >
+        {args.severity[0].toUpperCase() + args.severity.substring(1)}
+      </Alert>
+    )}
+  </Story>
+</Canvas>
+
+<ArgsTable story="API" />
+
+## Alert variants
+
+<VariantRangeNotice />
+
+### Severity
+
+MUI's API provides the four severity levels needed to build this component, which can be adjusted using the `severity` prop.
+
+<Canvas>
+  <Story name="Severity">
+    <Alert
+      icon={<AlertIcon alt="info icon" severity="info" variant="standard" />}
+      severity="info"
+      variant="standard"
+    >
+      Info
+    </Alert>
+    <Box my={3} />
+    <Alert
+      severity="error"
+      icon={<AlertIcon severity="error" variant="standard" alt="error icon" />}
+      variant="standard"
+    >
+      Error
+    </Alert>
+    <Box my={3} />
+    <Alert
+      severity="success"
+      icon={
+        <AlertIcon severity="success" variant="standard" alt="success icon" />
+      }
+      variant="standard"
+    >
+      Success
+    </Alert>
+    <Box my={3} />
+    <Alert
+      severity="warning"
+      icon={
+        <AlertIcon severity="warning" variant="standard" alt="warning icon" />
+      }
+      variant="standard"
+    >
+      Warning
+    </Alert>
+  </Story>
+</Canvas>
+
+### Appearance
+
+#### Icons
+
+To ensure the correct icon is used, the `<AlertIcon />` component can be imported from `@iccc/alert`, with the `severity` and `variant` props passed in. Alt text should also be provided using the `alt` prop for accessibility purposes. Some examples can be seen below.
+
+```jsx
+import Alert from "@mui/material/Alert";
+import { AlertIcon } from "@iccc/alert";
+
+// Icons
+<AlertIcon severity="info" variant="filled" alt="info icon" />
+<AlertIcon severity="error" variant="outlined" alt="error icon" />
+<AlertIcon severity="success" variant="standard" alt="success icon" />
+<AlertIcon severity="warning" alt="warning icon" />
+
+// Used in Alert component
+<Alert
+  severity="info"
+  icon={<AlertIcon severity="info" variant="filled" alt="info icon" />}
+  variant="filled"
+>
+  Info
+</Alert>
+```
+
+#### Filled
+
+Achieved by passing `"filled"` to the `variant` prop.
+
+<Canvas>
+  <Story name="Variant: filled">
+    <Alert
+      icon={<AlertIcon alt="info icon" variant="filled" />}
+      severity="info"
+      variant="filled"
+    >
+      Info
+    </Alert>
+    <Box my={3} />
+    <Alert
+      severity="error"
+      icon={<AlertIcon severity="error" variant="filled" alt="error icon" />}
+      variant="filled"
+    >
+      Error
+    </Alert>
+    <Box my={3} />
+    <Alert
+      severity="success"
+      icon={
+        <AlertIcon severity="success" variant="filled" alt="success icon" />
+      }
+      variant="filled"
+    >
+      Success
+    </Alert>
+    <Box my={3} />
+    <Alert
+      severity="warning"
+      icon={
+        <AlertIcon severity="warning" variant="filled" alt="warning icon" />
+      }
+      variant="filled"
+    >
+      Warning
+    </Alert>
+  </Story>
+</Canvas>
+
+#### Outlined
+
+This is our default variant (achieved either by passing `variant="outlined"` or not passing a `variant` prop at all).
+
+<Canvas>
+  <Story name="Variant: outlined">
+    <Alert icon={<AlertIcon alt="info icon" />} severity="info">
+      Info
+    </Alert>
+    <Box my={3} />
+    <Alert
+      severity="error"
+      icon={<AlertIcon severity="error" variant="outlined" alt="error icon" />}
+      variant="outlined"
+    >
+      Error
+    </Alert>
+    <Box my={3} />
+    <Alert
+      severity="success"
+      icon={<AlertIcon severity="success" alt="success icon" />}
+    >
+      Success
+    </Alert>
+    <Box my={3} />
+    <Alert
+      severity="warning"
+      icon={<AlertIcon severity="warning" alt="warning icon" />}
+    >
+      Warning
+    </Alert>
+  </Story>
+</Canvas>
+
+#### Standard
+
+Achieved by passing `"standard"` to the `variant` prop.
+
+<Canvas>
+  <Story name="Variant: standard">
+    <Alert
+      icon={<AlertIcon alt="info icon" variant="standard" />}
+      severity="info"
+      variant="standard"
+    >
+      Info
+    </Alert>
+    <Box my={3} />
+    <Alert
+      severity="error"
+      icon={<AlertIcon severity="error" variant="standard" alt="error icon" />}
+      variant="standard"
+    >
+      Error
+    </Alert>
+    <Box my={3} />
+    <Alert
+      severity="success"
+      icon={
+        <AlertIcon severity="success" variant="standard" alt="success icon" />
+      }
+      variant="standard"
+    >
+      Success
+    </Alert>
+    <Box my={3} />
+    <Alert
+      severity="warning"
+      icon={
+        <AlertIcon severity="warning" variant="standard" alt="warning icon" />
+      }
+      variant="standard"
+    >
+      Warning
+    </Alert>
+  </Story>
+</Canvas>
+
+### Actions
+
+#### Close
+
+Passing a function to the `onClose` prop will automatically display a close icon, which can be used to make alerts dismissable.
+
+<Canvas>
+  <Story
+    name="Actions: close"
+    parameters={{
+      docs: {
+        source: {
+          type: "code"
+        },
+        transformSource: (input) =>
+          prettier.format(input, {
+            parser: "babel",
+            plugins: [prettierBabel]
+          })
+      }
+    }}
+  >
+    <>
+      <Alert
+        variant="filled"
+        severity="info"
+        icon={<AlertIcon variant="filled" severity="info" alt="info icon" />}
+        onClose={() => {}}
+      >
+        Filled
+      </Alert>
+      <Box my={3} />
+      <Alert
+        variant="outlined"
+        severity="info"
+        icon={<AlertIcon severity="info" alt="info icon" />}
+        onClose={() => {}}
+      >
+        Outlined
+      </Alert>
+      <Box my={3} />
+      <Alert
+        variant="standard"
+        severity="info"
+        icon={<AlertIcon severity="info" alt="info icon" />}
+        onClose={() => {}}
+      >
+        Standard
+      </Alert>
+    </>
+  </Story>
+</Canvas>
+
+#### Multiple actions
+
+Coming soon...
+
+### Content
+
+MUI has an `<AlertTitle />` API that can be used for alerts with a title and body.
+
+<Canvas>
+  <Story name="Content">
+    {(args) => (
+      <>
+        <Alert {...args}>
+          <AlertTitle>Title</AlertTitle>
+          Body text goes here. Lorem ipsum dolor sit amet. Id optio animi eum nihil
+          quia aut mollitia nesciunt in quia internos quo repellendus beatae eum
+          quas rerum sit nesciunt rerum. Quo culpa omnis vel nisi blanditiis ea velit
+          vero qui iusto ipsam non dolores odio.
+        </Alert>
+        <Box my={3} />
+        <Alert {...args} onClose={() => {}}>
+          <AlertTitle>
+            Long titles...lorem ipsum dolor sit amet. Id optio animi eum nihil
+            quia aut mollitia nesciunt in quia internos quo repellendus beatae
+            eum quas rerum sit nesciunt rerum.
+          </AlertTitle>
+          Body text goes here. Lorem ipsum dolor sit amet. Id optio animi eum nihil
+          quia aut mollitia nesciunt in quia internos quo repellendus beatae eum
+          quas rerum sit nesciunt rerum. Quo culpa omnis vel nisi blanditiis ea velit
+          vero qui iusto ipsam non dolores odio.
+        </Alert>
+      </>
+    )}
+  </Story>
+</Canvas>
+
+### Layout
+
+The Alert component is full width by default. The "inline" layout option can be achieved either by passing width directly to the `sx` prop, or by putting it in a container of the desired width.
+
+Note: As illustrated below, the two different inline approaches have different results.
+
+<Canvas>
+  <Story
+    name="Layout"
+    parameters={{
+      docs: {
+        source: {
+          type: "code"
+        },
+        transformSource: (input) =>
+          prettier.format(input, {
+            parser: "babel",
+            plugins: [prettierBabel]
+          })
+      }
+    }}
+  >
+    {(args) => (
+      <>
+        <Alert {...args}>Full width</Alert>
+        <Box my={3} />
+        <Alert {...args} sx={{ width: 300 }}>
+          Inline (using sx prop)
+        </Alert>
+        <Box my={3} />
+        <div style={{ width: "300px" }}>
+          <Alert {...args}>Inline (using wrapper)</Alert>
+        </div>
+      </>
+    )}
+  </Story>
+</Canvas>
+
+#### Responsive content layout
+
+##### Alert with two buttons
+
+<Canvas>
+  <Story name="Alert with two buttons">
+    <Alert
+      onClose={() => {}}
+      sx={{
+        '& [class*="MuiAlert-message"]': {
+          width: "100%"
+        },
+        containerName: "alert-two-buttons",
+        containerType: "inline-size"
+      }}
+      severity="info"
+      icon={<AlertIcon severity="info" alt="info icon" />}
+      variant="outlined"
+    >
+      <Container
+        sx={{
+          alignItems: "center",
+          columnGap: "16px",
+          display: "flex",
+          flexWrap: "nowrap",
+          justifyContent: "space-between",
+          padding: "0 !important",
+          rowGap: "8px",
+          width: "100%",
+          "@container alert-two-buttons (width <= 889px)": {
+            flexWrap: "wrap"
+          },
+          "@container alert-two-buttons (width >= 409px)": {
+            maxWidth: "unset"
+          }
+        }}
+      >
+        <Container
+          sx={{
+            margin: 0,
+            padding: "0 !important",
+            "@container alert-two-buttons (width <= 409px)": {
+              flexWrap: "wrap",
+              maxWidth: "768px"
+            }
+          }}
+        >
+          <AlertTitle>Software update available</AlertTitle>
+          The latest version contains enhanced functionalities and improved performance.
+          The update is provided to you as part of your subscription package without
+          any extra charges.
+        </Container>
+        <Container
+          sx={{
+            display: "flex",
+            flexShrink: 0,
+            flexWrap: "nowrap",
+            gap: "8px",
+            margin: "4px",
+            padding: "0 !important",
+            width: "fit-content",
+            "@container alert-two-buttons (width >= 890px)": {
+              flexDirection: "row"
+            },
+            "@container alert-two-buttons (width <= 889px)": {
+              flexWrap: "wrap",
+              flexDirection: "row-reverse",
+              marginLeft: "1px"
+            },
+            "@container alert-two-buttons (width <= 409px)": {
+              flexDirection: "column-reverse"
+            }
+          }}
+        >
+          <Button size="small" variant="text">
+            Remind me later
+          </Button>
+          <Button size="small" variant="outlined">
+            Update now
+          </Button>
+        </Container>
+      </Container>
+    </Alert>
+  </Story>
+</Canvas>
+
+##### Alert with one button and no title
+
+<Canvas>
+  <Story name="Alert with one button and no title">
+    <Alert
+      onClose={() => {}}
+      sx={{
+        '& [class*="MuiAlert-message"]': {
+          width: "100%"
+        },
+        containerName: "alert-one-button-no-title",
+        containerType: "inline-size"
+      }}
+      severity="success"
+      icon={
+        <AlertIcon alt="success icon" severity="success" variant="outlined" />
+      }
+      variant="outlined"
+    >
+      <Container
+        sx={{
+          alignItems: "center",
+          columnGap: "16px",
+          display: "flex",
+          flexWrap: "nowrap",
+          justifyContent: "space-between",
+          padding: "0 !important",
+          rowGap: "8px",
+          width: "100%",
+          "@container alert-one-button-no-title (width <= 889px)": {
+            flexWrap: "wrap"
+          },
+          "@container alert-one-button-no-title (width >= 409px)": {
+            maxWidth: "unset"
+          }
+        }}
+      >
+        <Container
+          sx={{
+            margin: 0,
+            padding: "0 !important",
+            "@container alert-one-button-no-title (width >= 890px)": {
+              maxWidth: "768px"
+            }
+          }}
+        >
+          The latest version contains enhanced functionalities and improved
+          performance. The update is provided to you as part of your
+          subscription package without any extra charges.
+        </Container>
+        <Container
+          sx={{
+            display: "flex",
+            flexShrink: 0,
+            flexWrap: "nowrap",
+            gap: "8px",
+            margin: "4px",
+            maxWidth: "unset",
+            padding: "0 !important",
+            width: "fit-content",
+            "@container alert-one-button-no-title (width <= 409px)": {
+              flexWrap: "wrap"
+            }
+          }}
+        >
+          <Button size="small" variant="outlined">
+            Update now
+          </Button>
+        </Container>
+      </Container>
+    </Alert>
+  </Story>
+</Canvas>
+
+##### Alert with only text
+
+<Canvas>
+  <Story name="Alert with only text">
+    <Alert
+      onClose={() => {}}
+      severity="error"
+      icon={<AlertIcon alt="error icon" severity="error" variant="outlined" />}
+      variant="outlined"
+      sx={{
+        containerName: "alert-text-only",
+        containerType: "inline-size"
+      }}
+    >
+      <Container
+        sx={{
+          margin: 0,
+          maxWidth: "768px !important",
+          padding: "0 !important",
+          "@container alert-text-only (width >= 409px)": {
+            maxWidth: "unset"
+          }
+        }}
+      >
+        The latest version contains enhanced functionalities and improved
+        performance. The update is provided to you as part of your subscription
+        package without any extra charges.
+      </Container>
+    </Alert>
+  </Story>
+</Canvas>
+
+### Transitions
+
+Coming Soon...
+
+### Dark theme
+
+<DarkThemeNotice />
+
+<Canvas>
+  <Story name="Dark theme" parameters={{ theme: "dark" }}>
+    <>
+      <Alert
+        icon={<AlertIcon alt="info icon" severity="info" variant="filled" />}
+        severity="info"
+        variant="filled"
+        onClose={() => {}}
+      >
+        Info
+      </Alert>
+      <Box my={3} />
+      <Alert
+        severity="error"
+        icon={<AlertIcon severity="error" variant="filled" alt="error icon" />}
+        variant="filled"
+        onClose={() => {}}
+      >
+        Error
+      </Alert>
+      <Box my={3} />
+      <Alert
+        severity="success"
+        icon={
+          <AlertIcon severity="success" variant="filled" alt="success icon" />
+        }
+        variant="filled"
+        onClose={() => {}}
+      >
+        Success
+      </Alert>
+      <Box my={3} />
+      <Alert
+        severity="warning"
+        icon={
+          <AlertIcon severity="warning" variant="filled" alt="warning icon" />
+        }
+        variant="filled"
+        onClose={() => {}}
+      >
+        Warning
+      </Alert>
+      <Box my={6} />
+      <Alert
+        icon={<AlertIcon alt="info icon" severity="info" />}
+        severity="info"
+        onClose={() => {}}
+      >
+        Info
+      </Alert>
+      <Box my={3} />
+      <Alert
+        severity="error"
+        icon={<AlertIcon severity="error" alt="error icon" />}
+        onClose={() => {}}
+      >
+        Error
+      </Alert>
+      <Box my={3} />
+      <Alert
+        severity="success"
+        icon={<AlertIcon severity="success" alt="success icon" />}
+        onClose={() => {}}
+      >
+        Success
+      </Alert>
+      <Box my={3} />
+      <Alert
+        severity="warning"
+        icon={<AlertIcon severity="warning" alt="warning icon" />}
+        onClose={() => {}}
+      >
+        Warning
+      </Alert>
+      <Box my={6} />
+      <Alert
+        icon={<AlertIcon alt="info icon" severity="info" variant="standard" />}
+        severity="info"
+        variant="standard"
+        onClose={() => {}}
+      >
+        Info
+      </Alert>
+      <Box my={3} />
+      <Alert
+        severity="error"
+        icon={
+          <AlertIcon severity="error" variant="standard" alt="error icon" />
+        }
+        variant="standard"
+        onClose={() => {}}
+      >
+        Error
+      </Alert>
+      <Box my={3} />
+      <Alert
+        severity="success"
+        icon={
+          <AlertIcon severity="success" variant="standard" alt="success icon" />
+        }
+        variant="standard"
+        onClose={() => {}}
+      >
+        Success
+      </Alert>
+      <Box my={3} />
+      <Alert
+        severity="warning"
+        icon={
+          <AlertIcon severity="warning" variant="standard" alt="warning icon" />
+        }
+        variant="standard"
+        onClose={() => {}}
+      >
+        Warning
+      </Alert>
+    </>
+  </Story>
+</Canvas>
+
+## Accessibility
+
+Alt text should be passed to the `<AlertIcon />` component using the `alt` prop.
+For more details about accessibility for alert, visit the [MUI Alert Accessibility section](https://mui.com/components/alert/#accessibility).

@@ -1,0 +1,84 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import "../../lib/build/css/dhig-global.css";
+
+export const Spacer = ({ height = "4px" }) => <div style={{ height }} />;
+
+<Meta
+  title="Digital HIG/CSS and SASS/MUI component CSS/Divider"
+  parameters={{
+    disableThemeMui: true,
+    renderHTML: true
+  }}
+/>
+
+# Divider
+
+HTML snippets to generate Digital HIG dividers.
+
+## Default
+
+<Canvas>
+  <Story name="Divider">
+    <div className="dhig-theme--light">
+      Horizontal:
+      <Spacer />
+      <hr className="MuiDivider-root MuiDivider-light" />
+      <Spacer />
+      Vertical:
+      <Spacer />
+      <div style={{ height: "50px" }}>
+        <hr className="MuiDivider-root MuiDivider-light MuiDivider-vertical" />
+      </div>
+    </div>
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="Divider (dark)" parameters={{ theme: "dark" }}>
+    <div className="dhig-theme--dark">
+      Horizontal:
+      <Spacer />
+      <hr className="MuiDivider-root MuiDivider-light" />
+      <Spacer />
+      Vertical:
+      <Spacer />
+      <div style={{ height: "50px" }}>
+        <hr className="MuiDivider-root MuiDivider-light MuiDivider-vertical" />
+      </div>
+    </div>
+  </Story>
+</Canvas>
+
+## Strong
+
+<Canvas>
+  <Story name="Divider: strong">
+    <div className="dhig-theme--light">
+      Horizontal:
+      <Spacer />
+      <hr className="MuiDivider-root" />
+      <Spacer />
+      Vertical:
+      <Spacer />
+      <div style={{ height: "50px" }}>
+        <hr className="MuiDivider-root MuiDivider-vertical" />
+      </div>
+    </div>
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="Divider: strong (dark)" parameters={{ theme: "dark" }}>
+    <div className="dhig-theme--dark">
+      Horizontal:
+      <Spacer />
+      <hr className="MuiDivider-root" />
+      <Spacer />
+      Vertical:
+      <Spacer />
+      <div style={{ height: "50px" }}>
+        <hr className="MuiDivider-root MuiDivider-vertical" />
+      </div>
+    </div>
+  </Story>
+</Canvas>

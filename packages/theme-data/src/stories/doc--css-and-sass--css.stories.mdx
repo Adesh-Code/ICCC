@@ -1,0 +1,175 @@
+import { Meta } from "@storybook/addon-docs";
+
+<Meta title="Digital HIG/CSS and SASS/CSS overview" />
+
+# CSS overview
+
+Digital HIG theme data includes a set of CSS files. There are a couple of ways to add CSS to your site, depending on your integration needs.
+
+## Files
+
+### Component
+
+Component CSS includes styling for defaults and HTML elements, and is especially useful for publishing use cases. It uses pre-assembled utility classes to generate component presets.
+
+See the [component CSS overview page](?path=/story/iccc-css-and-sass-component-css-overview--page) for more information.
+
+### Utility
+
+Utility CSS can be used for application of styles globally or to a section of a site. It extends Tailwind's utility functionality using Digital HIG defaults, such as spacing values.
+
+See the [utility CSS overview page](?path=/story/iccc-css-and-sass-utility-css-overview--page) for more information.
+
+### Fonts
+
+Digital HIG uses the Artifakt fonts across their design system, and there is a single file that contains all required faces, weights, and fallbacks.
+
+## Importing
+
+To access the classes, CSS can be imported directly from the `theme-data` package, or added through the CDN.
+
+### Importing through theme-data package
+
+You can import theme data as a node module and compile the CSS into your own CSS.
+
+Start by adding the package to your project:
+
+```js
+yarn add @iccc/theme-data
+```
+
+#### Component
+
+```js
+@import "@iccc/theme-data/lib/build/css/dhig-tw-components.css";
+```
+
+#### Utility
+
+```js
+@import "@iccc/theme-data/lib/build/css/dhig-utility.css";
+```
+
+#### Fonts
+
+```js
+@import "@iccc/theme-data/lib/build/css/dhig-fonts.css";
+```
+
+### Importing through CDN
+
+The CSS is available as links which are shared out via the Akamai CDN, and are heavily cached.
+
+#### Component & utility
+
+Use this endpoint to specify an exact version. Check the project changelog for a complete list of available versions.
+
+```js
+https://swc.autodesk.com/pharmacopeia/css/dhig2021/v<SEMANTIC_VERSION>/dhig-tw-components.css
+```
+
+```js
+https://swc.autodesk.com/pharmacopeia/css/dhig2021/v<SEMANTIC_VERSION>/dhig-utility.css
+```
+
+Note: Replace `<SEMANTIC_VERSION>` as needed, e.g. https://swc.autodesk.com/pharmacopeia/css/dhig2021/v17.2.0/dhig-utility.css for version 17.2.0.
+
+#### Fonts
+
+```js
+https://swc.autodesk.com/pharmacopeia/fonts/dhig2021.css
+```
+
+## Implementation examples
+
+See the [component CSS](?path=/docs/iccc-css-and-sass-component-css-overview--page) and [utility CSS](?path=/docs/iccc-css-and-sass-utility-css-overview--page) folders respectively for implementation examples.
+
+## Versioning and release
+
+The versioning process is automated, and covered above briefly in terms of the major and semantic offerings. We currently rely on a manual process to publish the assets to production. This guide will be updated as we continue to make changes to this process.
+
+## ⚠️ Legacy
+
+We recommend using the semantic version for CSS files, but the major and latest are also available.
+
+### Major versions
+
+Use this to get the latest release of a specific major version.
+
+```js
+https://swc.autodesk.com/pharmacopeia/css/dhig2021/v<MAJOR_VERSION>/dhig-tw-components.css
+```
+
+```js
+https://swc.autodesk.com/pharmacopeia/css/dhig2021/v<MAJOR_VERSION>/dhig-utility.css
+```
+
+Note: Replace `<MAJOR_VERSION>` as needed, e.g. https://swc.autodesk.com/pharmacopeia/css/dhig2021/v11/dhig-utility.css for the latest release at major version 11.
+
+### Latest version
+
+Use this to get the latest version.
+
+```js
+https://swc.autodesk.com/pharmacopeia/css/dhig2021/dhig-tw-components.css
+```
+
+```js
+https://swc.autodesk.com/pharmacopeia/css/dhig2021/dhig-utility.css
+```
+
+We are currently in the process of moving away from global, global-wrapper, and MUI component CSS. Details on how to import are included below, but they will eventually be deprecated in favor of the files mentioned above.
+
+### Global
+
+Use the following import line if you wish to apply the utility CSS styles globally. This can be a useful method when building new work:
+
+```js
+@import "@iccc/theme-data/lib/build/css/dhig-global.css";
+```
+
+```js
+https://swc.autodesk.com/pharmacopeia/css/dhig2021/v<MAJOR_VERSION>/dhig-global.css
+```
+
+```js
+https://swc.autodesk.com/pharmacopeia/css/dhig2021/dhig-global.css
+```
+
+```js
+https://swc.autodesk.com/pharmacopeia/css/dhig2021/v<SEMANTIC_VERSION>/dhig-global.css
+```
+
+### Global wrapper
+
+Use the following import line if you wish to apply the utility CSS styles using wrapper classes. This can be a useful method when refactoring existing work, as it gives more control over where these styles are applied:
+
+```js
+@import "@iccc/theme-data/lib/build/css/dhig-global-wrapper.css";
+```
+
+```js
+https://swc.autodesk.com/pharmacopeia/css/dhig2021/v<MAJOR_VERSION>/dhig-global-wrapper.css
+```
+
+```js
+https://swc.autodesk.com/pharmacopeia/css/dhig2021/dhig-global-wrapper.css
+```
+
+```js
+https://swc.autodesk.com/pharmacopeia/css/dhig2021/v<SEMANTIC_VERSION>/dhig-global-wrapper.css
+```
+
+### MUI components
+
+```js
+https://swc.autodesk.com/pharmacopeia/css/dhig2021/v<MAJOR_VERSION>/dhig-mui-components.css
+```
+
+```js
+https://swc.autodesk.com/pharmacopeia/css/dhig2021/dhig-mui-components.css
+```
+
+```js
+https://swc.autodesk.com/pharmacopeia/css/dhig2021/v<SEMANTIC_VERSION>/dhig-mui-components.css
+```

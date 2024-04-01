@@ -1,0 +1,247 @@
+/* 
+* Implements SASS for button component.
+*
+* @theme: 'light' (default), 'dark'
+*/
+@use "@iccc/theme-data/lib/build/scss/light/design-tokens.scss" as light;
+@use "@iccc/theme-data/lib/build/scss/dark/design-tokens.scss" as dark;
+@use "@iccc/theme-data/lib/build/scss/mixins/utilities/typography" as *;
+
+// helper mixins
+@mixin dhig-button--dense {
+  font-size: light.$tokens-button-contained-dense-default-fontSize;
+  padding-bottom: light.$tokens-button-contained-dense-default-paddingBottom;
+  padding-left: light.$tokens-button-contained-dense-default-paddingLeft;
+  padding-right: light.$tokens-button-contained-dense-default-paddingRight;
+  padding-top: light.$tokens-button-contained-dense-default-paddingTop;
+}
+
+@mixin dhig-button--stretch {
+  width: 100%;
+}
+
+// main mixins
+@mixin dhig-button--contained--default($theme: "light") {
+  @include dhig-typography-body-copy-medium;
+  border-style: light.$tokens-button-contained-defaultSize-default-borderStyle;
+  border-width: light.$tokens-button-contained-defaultSize-default-borderWidth;
+  opacity: light.$tokens-button-contained-defaultSize-default-opacity;
+  padding-bottom: light.$tokens-button-contained-defaultSize-default-paddingBottom;
+  padding-left: light.$tokens-button-contained-defaultSize-default-paddingLeft;
+  padding-right: light.$tokens-button-contained-defaultSize-default-paddingRight;
+  padding-top: light.$tokens-button-contained-defaultSize-default-paddingTop;
+  text-transform: light.$tokens-button-contained-defaultSize-default-textTransform;
+
+  &:disabled {
+    opacity: light.$tokens-button-contained-defaultSize-disabled-opacity;
+
+    &:hover {
+      // necessary because the Mui-disabled class isn't automatically applied
+      box-shadow: none;
+      transition: none;
+    }
+  }
+
+  @if ($theme == "dark") {
+    background-color: dark.$tokens-button-contained-defaultSize-default-backgroundColor;
+    border-color: dark.$tokens-button-contained-defaultSize-default-borderColor;
+    color: dark.$tokens-button-contained-defaultSize-default-color;
+
+    &:hover,
+    :visited:hover {
+      background-color: dark.$tokens-button-contained-defaultSize-hover-backgroundColor;
+      border-color: dark.$tokens-button-contained-defaultSize-hover-borderColor;
+      box-shadow: dark.$tokens-button-contained-defaultSize-hover-boxShadow;
+    }
+
+    &:focus,
+    :focus-visible {
+      background-color: dark.$tokens-button-contained-defaultSize-focus-backgroundColor;
+      border-color: dark.$tokens-button-contained-defaultSize-focus-borderColor;
+      box-shadow: dark.$tokens-button-contained-defaultSize-focus-boxShadow;
+    }
+
+    &:active {
+      background-color: dark.$tokens-button-contained-defaultSize-pressed-backgroundColor;
+      border-color: dark.$tokens-button-contained-defaultSize-pressed-borderColor;
+      box-shadow: dark.$tokens-button-contained-defaultSize-pressed-boxShadow;
+    }
+  } @else {
+    background-color: light.$tokens-button-contained-defaultSize-default-backgroundColor;
+    border-color: light.$tokens-button-contained-defaultSize-default-borderColor;
+    color: light.$tokens-button-contained-defaultSize-default-color;
+
+    &:hover,
+    :visited:hover {
+      background-color: light.$tokens-button-contained-defaultSize-hover-backgroundColor;
+      border-color: light.$tokens-button-contained-defaultSize-hover-borderColor;
+      box-shadow: light.$tokens-button-contained-defaultSize-hover-boxShadow;
+    }
+
+    &:focus,
+    :focus-visible {
+      background-color: light.$tokens-button-contained-defaultSize-focus-backgroundColor;
+      border-color: light.$tokens-button-contained-defaultSize-focus-borderColor;
+      box-shadow: light.$tokens-button-contained-defaultSize-focus-boxShadow;
+    }
+
+    &:active {
+      background-color: light.$tokens-button-contained-defaultSize-pressed-backgroundColor;
+      border-color: light.$tokens-button-contained-defaultSize-pressed-borderColor;
+      box-shadow: light.$tokens-button-contained-defaultSize-pressed-boxShadow;
+    }
+  }
+}
+
+@mixin dhig-button--contained--default--stretch($theme: "light") {
+  @include dhig-button--contained--default($theme);
+  @include dhig-button--stretch;
+}
+
+@mixin dhig-button--contained--dense($theme: "light") {
+  @include dhig-button--contained--default($theme);
+  @include dhig-button--dense;
+}
+
+@mixin dhig-button--contained--dense--stretch($theme: "light") {
+  @include dhig-button--contained--dense($theme);
+  @include dhig-button--stretch;
+}
+
+@mixin dhig-button--outlined--default($theme: "light") {
+  @include dhig-button--contained--default($theme);
+
+  @if ($theme == "dark") {
+    background-color: dark.$tokens-button-outlined-defaultSize-default-backgroundColor;
+    border-color: dark.$tokens-button-outlined-defaultSize-default-borderColor;
+    color: dark.$tokens-button-outlined-defaultSize-default-color;
+
+    &:hover,
+    :visited:hover {
+      background-color: dark.$tokens-button-outlined-defaultSize-hover-backgroundColor;
+      border-color: dark.$tokens-button-outlined-defaultSize-hover-borderColor;
+      color: dark.$tokens-button-outlined-defaultSize-hover-color;
+    }
+
+    &:focus,
+    :focus-visible {
+      background-color: dark.$tokens-button-outlined-defaultSize-focus-backgroundColor;
+      border-color: dark.$tokens-button-outlined-defaultSize-focus-borderColor;
+      box-shadow: dark.$tokens-button-outlined-defaultSize-focus-boxShadow;
+    }
+
+    &:active {
+      background-color: dark.$tokens-button-outlined-defaultSize-pressed-backgroundColor;
+      border-color: dark.$tokens-button-outlined-defaultSize-pressed-borderColor;
+      box-shadow: dark.$tokens-button-outlined-defaultSize-pressed-boxShadow;
+    }
+  } @else {
+    background-color: light.$tokens-button-outlined-defaultSize-default-backgroundColor;
+    border-color: light.$tokens-button-outlined-defaultSize-default-borderColor;
+    color: light.$tokens-button-outlined-defaultSize-default-color;
+
+    &:hover,
+    :visited:hover {
+      background-color: light.$tokens-button-outlined-defaultSize-hover-backgroundColor;
+      border-color: light.$tokens-button-outlined-defaultSize-hover-borderColor;
+      color: light.$tokens-button-outlined-defaultSize-hover-color;
+    }
+
+    &:focus,
+    :focus-visible {
+      background-color: light.$tokens-button-outlined-defaultSize-focus-backgroundColor;
+      border-color: light.$tokens-button-outlined-defaultSize-focus-borderColor;
+      box-shadow: light.$tokens-button-outlined-defaultSize-focus-boxShadow;
+    }
+
+    &:active {
+      background-color: light.$tokens-button-outlined-defaultSize-pressed-backgroundColor;
+      border-color: light.$tokens-button-outlined-defaultSize-pressed-borderColor;
+      box-shadow: light.$tokens-button-outlined-defaultSize-pressed-boxShadow;
+    }
+  }
+}
+
+@mixin dhig-button--outlined--default--stretch($theme: "light") {
+  @include dhig-button--outlined--default($theme);
+  @include dhig-button--stretch;
+}
+
+@mixin dhig-button--outlined--dense($theme: "light") {
+  @include dhig-button--outlined--default($theme);
+  @include dhig-button--dense;
+}
+
+@mixin dhig-button--outlined--dense--stretch($theme: "light") {
+  @include dhig-button--outlined--dense($theme);
+  @include dhig-button--stretch;
+}
+
+@mixin dhig-button--text--default($theme: "light") {
+  @include dhig-button--contained--default($theme);
+
+  @if ($theme == "dark") {
+    background-color: dark.$tokens-button-text-defaultSize-default-backgroundColor;
+    border-color: dark.$tokens-button-text-defaultSize-default-borderColor;
+    color: dark.$tokens-button-text-defaultSize-default-color;
+
+    &:hover,
+    :visited:hover {
+      background-color: dark.$tokens-button-text-defaultSize-hover-backgroundColor;
+      border-color: dark.$tokens-button-text-defaultSize-hover-borderColor;
+      color: dark.$tokens-button-text-defaultSize-hover-color;
+    }
+
+    &:focus,
+    :focus-visible {
+      background-color: dark.$tokens-button-text-defaultSize-focus-backgroundColor;
+      border-color: dark.$tokens-button-text-defaultSize-focus-borderColor;
+      box-shadow: dark.$tokens-button-text-defaultSize-focus-boxShadow;
+    }
+
+    &:active {
+      background-color: dark.$tokens-button-text-defaultSize-pressed-backgroundColor;
+      border-color: dark.$tokens-button-text-defaultSize-pressed-borderColor;
+      box-shadow: dark.$tokens-button-text-defaultSize-pressed-boxShadow;
+    }
+  } @else {
+    background-color: light.$tokens-button-text-defaultSize-default-backgroundColor;
+    border-color: light.$tokens-button-text-defaultSize-default-borderColor;
+    color: light.$tokens-button-text-defaultSize-default-color;
+
+    &:hover,
+    :visited:hover {
+      background-color: light.$tokens-button-text-defaultSize-hover-backgroundColor;
+      border-color: light.$tokens-button-text-defaultSize-hover-borderColor;
+      color: light.$tokens-button-text-defaultSize-hover-color;
+    }
+
+    &:focus,
+    :focus-visible {
+      background-color: light.$tokens-button-text-defaultSize-focus-backgroundColor;
+      border-color: light.$tokens-button-text-defaultSize-focus-borderColor;
+      box-shadow: light.$tokens-button-text-defaultSize-focus-boxShadow;
+    }
+
+    &:active {
+      background-color: light.$tokens-button-text-defaultSize-pressed-backgroundColor;
+      border-color: light.$tokens-button-text-defaultSize-pressed-borderColor;
+      box-shadow: light.$tokens-button-text-defaultSize-pressed-boxShadow;
+    }
+  }
+}
+
+@mixin dhig-button--text--default--stretch($theme: "light") {
+  @include dhig-button--text--default($theme);
+  @include dhig-button--stretch;
+}
+
+@mixin dhig-button--text--dense($theme: "light") {
+  @include dhig-button--text--default($theme);
+  @include dhig-button--dense;
+}
+
+@mixin dhig-button--text--dense--stretch($theme: "light") {
+  @include dhig-button--text--dense($theme);
+  @include dhig-button--stretch;
+}

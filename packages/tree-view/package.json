@@ -1,0 +1,24 @@
+{
+  "name": "@iccc/tree-view",
+  "version": "3.0.0",
+  "main": "lib/index.js",
+  "module": "src/index.js",
+  "author": "Digital HIG Engineering",
+  "slack": "#dpe-dhig-engineering-support",
+  "email": "digital.hig.engineering@autodesk.com",
+  "files": [
+    "lib/*"
+  ],
+  "peerDependencies": {
+    "@iccc/theme-mui": ">=10.0.2",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/material": "^5.5.0",
+    "react": "^16.14.0 || ^17.0.0",
+    "react-dom": "^16.14.0 || ^17.0.0"
+  },
+  "scripts": {
+    "test": "cd ../../ && jest --roots=packages/tree-view",
+    "build": "babel --root-mode upward src -d lib --ignore **/*.stories.js,**/*.story.js,**/*.spec.js"
+  }
+}

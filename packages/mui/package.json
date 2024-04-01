@@ -1,0 +1,128 @@
+{
+  "name": "@iccc/mui",
+  "version": "0.2.4",
+  "author": "Digital HIG Engineering",
+  "slack": "#dpe-dhig-engineering-support",
+  "email": "digital.hig.engineering@autodesk.com",
+  "exports": {
+    "./dist/*": "./dist/*",
+    "./accordion": "./dist/accordion/lib/index.js",
+    "./alert": "./dist/alert/lib/index.js",
+    "./card": "./dist/card/lib/card.js",
+    "./character-counter": "./dist/character-counter/lib/index.js",
+    "./chip": "./dist/chip/lib/index.js",
+    "./circular-progress": "./dist/circular-progress/lib/index.js",
+    "./combobox": "./dist/combobox/lib/index.js",
+    "./flyout": "./dist/flyout/lib/index.js",
+    "./icon-button": "./dist/icon-button/lib/index.js",
+    "./linear-progress": "./dist/linear-progress/lib/index.js",
+    "./modal": "./dist/modal/lib/modal.js",
+    "./number-input": "./dist/number-input/lib/index.js",
+    "./radio": "./dist/radio/lib/radio.js",
+    "./search": "./dist/search/lib/index.js",
+    "./security-code": "./dist/security-code/lib/security-code.js",
+    "./select": "./dist/select/lib/index.js",
+    "./stepper": "./dist/stepper/lib/index.js",
+    "./table": "./dist/table/lib/table.js",
+    "./table-head": "./dist/table-head/lib/index.js",
+    "./table-row": "./dist/table-row/lib/table-row.js",
+    "./tabs": "./dist/tabs/lib/index.js",
+    "./theme-mui": {
+      "import": "./dist/theme-mui/lib/esm/index.js",
+      "require": "./dist/theme-mui/lib/cjs/index.js"
+    },
+    "./tree-item": "./dist/tree-item/lib/index.js",
+    "./tree-view": "./dist/tree-view/lib/index.js",
+    "./typography": {
+      "import": "./dist/typography/lib/esm/index.js",
+      "require": "./dist/typography/lib/cjs/index.js"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "theme-mui": [
+        "./dist/theme-mui/lib/types/index.d.ts"
+      ],
+      "typography": [
+        "./dist/typography/lib/types/index.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "dist/*"
+  ],
+  "scripts": {
+    "prebuild": "rm -rf dist",
+    "build": "node sync.js",
+    "postbuild": "node sanitize.js"
+  },
+  "nx": {
+    "implicitDependencies": [
+      "@iccc/accordion",
+      "@iccc/alert",
+      "@iccc/card",
+      "@iccc/character-counter",
+      "@iccc/chip",
+      "@iccc/circular-progress",
+      "@iccc/combobox",
+      "@iccc/flyout",
+      "@iccc/icon-button",
+      "@iccc/linear-progress",
+      "@iccc/modal",
+      "@iccc/number-input",
+      "@iccc/radio",
+      "@iccc/search",
+      "@iccc/security-code",
+      "@iccc/select",
+      "@iccc/stepper",
+      "@iccc/table",
+      "@iccc/table-head",
+      "@iccc/table-row",
+      "@iccc/tabs",
+      "@iccc/theme-mui",
+      "@iccc/tree-item",
+      "@iccc/tree-view",
+      "@iccc/typography"
+    ]
+  },
+  "peerDependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/lab": "^5.0.0-alpha.134",
+    "@mui/material": "^5.5.0",
+    "@mui/x-license-pro": "^6.10.2",
+    "react": "^16.14.0 || ^17.0.0",
+    "react-dom": "^16.14.0 || ^17.0.0",
+    "react-otp-input": "^3.0.4"
+  },
+  "devDependencies": {
+    "@iccc/accordion": "^11.1.7",
+    "@iccc/alert": "^4.1.1",
+    "@iccc/card": "*",
+    "@iccc/character-counter": "*",
+    "@iccc/chip": "^5.1.1",
+    "@iccc/circular-progress": "^5.0.15",
+    "@iccc/combobox": "^0.8.4",
+    "@iccc/flyout": "^3.0.3",
+    "@iccc/icon-button": "*",
+    "@iccc/linear-progress": "^5.0.15",
+    "@iccc/modal": "^10.1.2",
+    "@iccc/number-input": "*",
+    "@iccc/radio": "^3.0.3",
+    "@iccc/search": "^6.0.3",
+    "@iccc/security-code": "*",
+    "@iccc/select": "^9.0.4",
+    "@iccc/stepper": "*",
+    "@iccc/table": "*",
+    "@iccc/table-head": "^6.0.3",
+    "@iccc/table-row": "*",
+    "@iccc/tabs": "^7.0.7",
+    "@iccc/theme-mui": "^40.5.2",
+    "@iccc/tree-item": "*",
+    "@iccc/tree-view": "*",
+    "@iccc/typography": "^7.2.1"
+  },
+  "dependencies": {
+    "@iccc/theme-data": "^18.0.0"
+  }
+}

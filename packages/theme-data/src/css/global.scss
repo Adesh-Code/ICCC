@@ -1,0 +1,6 @@
+/**
+* Generates global properties.
+*/
+@use "../scss/mixins" as *;
+
+@include dhig-global-classes;

@@ -1,0 +1,50 @@
+{
+  "author": "Digital HIG Engineering",
+  "devDependencies": {
+    "@svgr/cli": "^6.2.1",
+    "glob": "^7.2.0",
+    "mkdirp": "^1.0.4",
+    "readdirp": "^3.6.0",
+    "svg-parser": "^2.0.4",
+    "svg-sprite": "^1.5.3"
+  },
+  "main": "lib/build/icons/index.js",
+  "module": "lib/build/icons/index.js",
+  "exports": {
+    ".": "./lib/build/icons/index.js",
+    "./lib/build/icons/*": "./lib/build/icons/*.js",
+    "./display-icons": "./lib/build/display-icons/index.js",
+    "./lib/build/display-icons/*": "./lib/build/display-icons/*.js",
+    "./stepper": "./lib/build/stepper/index.js",
+    "./lib/build/stepper/*": "./lib/build/stepper/*.js",
+    "./ui-controls": "./lib/build/ui-controls/index.js",
+    "./lib/build/ui-controls/*": "./lib/build/ui-controls/*.js",
+    "./ui-controls/manual-width": "./lib/build/ui-controls/manual-width/index.js"
+  },
+  "email": "digital.hig.engineering@autodesk.com",
+  "files": [
+    "lib/**"
+  ],
+  "name": "@iccc/icon",
+  "peerDependencies": {
+    "react": "^16.14.0 || ^17.0.0",
+    "react-dom": "^16.14.0 || ^17.0.0"
+  },
+  "scripts": {
+    "make-svg-sprites": "node scripts/make-svg-sprites.mjs",
+    "make-jsx-icons": "svgr --out-dir src/build src/assets/ --filename-case kebab --no-dimensions --ext jsx --svgo-config config.json",
+    "build": "babel --root-mode upward src -d lib --ignore **/*.stories.js,**/*.story.js,**/*.spec.js"
+  },
+  "nx": {
+    "targets": {
+      "build": {
+        "dependsOn": [
+          "make-svg-sprites",
+          "make-jsx-icons"
+        ]
+      }
+    }
+  },
+  "slack": "#dpe-dhig-engineering-support",
+  "version": "5.1.1"
+}

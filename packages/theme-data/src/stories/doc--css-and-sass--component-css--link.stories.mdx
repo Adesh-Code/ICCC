@@ -1,0 +1,82 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import "@iccc/theme-data/lib/build/css/dhig-tw-components.css";
+
+export const randomHref = `https://www.autodesk.com?r=${Math.random()
+  .toString(36)
+  .substring(7)}`;
+
+<Meta
+  title="Digital HIG/CSS and SASS/Component CSS/Link"
+  parameters={{
+    disableThemeMui: true,
+    renderHTML: true
+  }}
+/>
+
+# Tailwind components
+
+## Link
+
+### Light
+
+<Canvas>
+  <Story name="Light">
+    {() => (
+      <div className="dhig-theme-light">
+        <p className="dhig-typography-body-copy-medium">
+          <a className="dhig-link" href={randomHref}>
+            Link (default)
+          </a>
+          <br />
+          <a className="dhig-link" href="">
+            Link (visited)
+          </a>
+          <br />
+          <a className="dhig-link dhig-link-no-underline" href={randomHref}>
+            Link (no underline)
+          </a>
+          <br />
+          <a
+            className="dhig-link dhig-link-disabled"
+            href={randomHref}
+            tabIndex={-1}
+          >
+            Link (disabled)
+          </a>
+        </p>
+      </div>
+    )}
+  </Story>
+</Canvas>
+
+### Dark
+
+<Canvas>
+  <Story name="Dark" parameters={{ theme: "dark" }}>
+    {() => (
+      <div className="dhig-theme-dark">
+        <p className="dhig-typography-body-copy-medium">
+          <a className="dhig-link" href={randomHref}>
+            Link (default)
+          </a>
+          <br />
+          <a className="dhig-link" href="">
+            Link (visited)
+          </a>
+          <br />
+          <a className="dhig-link dhig-link-no-underline" href={randomHref}>
+            Link (no underline)
+          </a>
+          <br />
+          <a
+            className="dhig-link dhig-link-disabled"
+            href={randomHref}
+            tabIndex={-1}
+          >
+            Link (disabled)
+          </a>
+        </p>
+      </div>
+    )}
+  </Story>
+</Canvas>

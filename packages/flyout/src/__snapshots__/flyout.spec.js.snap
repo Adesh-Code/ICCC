@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Flyout component renders 1`] = `
+<div
+  class="MuiTooltip-popper DhigFlyout MuiTooltip-popperInteractive emotion-0 MuiPopper-root"
+  data-popper-escaped=""
+  data-popper-placement="bottom"
+  data-popper-reference-hidden=""
+  id="mui-1"
+  role="tooltip"
+  style="position: absolute; top: 0px; left: 0px; margin: 0px; transform: translate(0px, 0px);"
+>
+  <div
+    class="MuiTooltip-tooltip MuiTooltip-tooltipPlacementBottom emotion-1"
+    style="opacity: 1; transform: scale(1, 1); transition: opacity 125ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,transform 83ms cubic-bezier(0, 0, 0.4, 1) 0ms;"
+  >
+    <div
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 emotion-2"
+    >
+      <ul
+        class="MuiList-root MuiList-padding emotion-3"
+        role="menu"
+        tabindex="-1"
+      >
+        <li
+          class="MuiButtonBase-root MuiMenuItem-root MuiMenuItem-gutters Mui-focusVisible MuiMenuItem-root MuiMenuItem-gutters emotion-4"
+          role="menuitem"
+          tabindex="0"
+        >
+          Item 1
+        </li>
+        <li
+          class="MuiButtonBase-root MuiMenuItem-root MuiMenuItem-gutters MuiMenuItem-root MuiMenuItem-gutters emotion-4"
+          role="menuitem"
+          tabindex="0"
+        >
+          Item 2
+        </li>
+        <li
+          class="MuiButtonBase-root MuiMenuItem-root MuiMenuItem-gutters MuiMenuItem-root MuiMenuItem-gutters emotion-4"
+          role="menuitem"
+          tabindex="0"
+        >
+          Item 3
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,599 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { componentArgs } from "../constants";
+import {
+  ComponentTitle,
+  InstallationInstructions,
+  VariantRangeNotice
+} from "../../../docs/src/partials";
+import ArchiveIcon from "@iccc/icon/lib/build/icons/archive";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import ButtonGroup from "@mui/material/ButtonGroup";
+import ClickAwayListener from "@mui/material/ClickAwayListener";
+import CopyIcon from "@iccc/icon/lib/build/icons/copy";
+import DeleteIcon from "@iccc/icon/lib/build/icons/trash";
+import EditIcon from "@iccc/icon/lib/build/icons/edit";
+import Grow from "@mui/material/Grow";
+import MenuItem from "@mui/material/MenuItem";
+import MenuList from "@mui/material/MenuList";
+import NavMore from "@iccc/icon/lib/build/icons/more";
+import Paper from "@mui/material/Paper";
+import Popper from "@mui/material/Popper";
+import prettier from "prettier/standalone";
+import prettierBabel from "prettier/parser-babel";
+import SvgIcon from "@mui/material/SvgIcon";
+import Typography from "@iccc/typography";
+
+<Meta
+  args={{ size: "medium", variant: "contained" }}
+  argTypes={componentArgs}
+  component={ButtonGroup}
+  id="components/button-group"
+  title="Digital HIG/Components/Button group"
+/>
+
+<ComponentTitle name="Button group" status="Stable" />
+
+The button group component is the out-of-the-box MUI [`<ButtonGroup>`](https://mui.com/material-ui/react-button-group/), with Digital HIG defaults.
+
+For related design documentation, please see the [Digital HIG Figma UI Toolkit](https://www.figma.com/file/Eks986gkqncHjkLnwQjO7g/iccc-sticker-sheets?type=design&node-id=4203-241202&mode=design&t=oFsPjUO0LmXGJkCp-0).
+
+## Installation
+
+<InstallationInstructions componentImport="ButtonGroup" />
+
+## API
+
+For all supported MUI `<ButtonGroup />` props, see [ButtonGroup API](https://mui.com/material-ui/api/button-group/#main-content).
+
+<Canvas>
+  <Story name="API">
+    {(args) => (
+      <ButtonGroup {...args}>
+        <Button>One</Button>
+        <Button>Two</Button>
+        <Button>Three</Button>
+      </ButtonGroup>
+    )}
+  </Story>
+</Canvas>
+
+<ArgsTable story="API" />
+
+## Button group variants
+
+<VariantRangeNotice />
+
+### Contained
+
+Contained buttons provide a strong visual indicator to help guide the customer on their journey. Use only one contained/primary call to action per page or clearly defined area of the UI.
+
+<Canvas>
+  <Story name="Contained">
+    <>
+      <ButtonGroup>
+        <Button>One</Button>
+        <Button>Two</Button>
+        <Button>Three</Button>
+      </ButtonGroup>
+      <Box py={3} />
+      <ButtonGroup>
+        <Button>One</Button>
+        <Button>Two</Button>
+      </ButtonGroup>
+    </>
+  </Story>
+</Canvas>
+
+### Outlined
+
+Outlined buttons do not command as much attention as contained buttons. They are used to provide a secondary action.
+
+<Canvas>
+  <Story name="Outlined">
+    <>
+      <ButtonGroup variant="outlined">
+        <Button>One</Button>
+        <Button>Two</Button>
+        <Button>Three</Button>
+      </ButtonGroup>
+      <Box py={3} />
+      <ButtonGroup variant="outlined">
+        <Button>One</Button>
+        <Button>Two</Button>
+      </ButtonGroup>
+    </>
+  </Story>
+</Canvas>
+
+### Small
+
+For contexts with large amounts of information, a small variant is provided.
+
+<Canvas>
+  <Story name="Small">
+    <>
+      <ButtonGroup size="small">
+        <Button>One</Button>
+        <Button>Two</Button>
+        <Button>Three</Button>
+      </ButtonGroup>
+      <Box py={3} />
+      <ButtonGroup size="small">
+        <Button>One</Button>
+        <Button>Two</Button>
+      </ButtonGroup>
+    </>
+  </Story>
+</Canvas>
+
+### Icons
+
+#### Leading
+
+Use the `startIcon` Button prop to achieve this.
+
+<Canvas>
+  <Story name="Icons: Leading">
+    <>
+      <ButtonGroup>
+        <Button
+          startIcon={
+            <SvgIcon>
+              <EditIcon />
+            </SvgIcon>
+          }
+        >
+          One
+        </Button>
+        <Button>Two</Button>
+      </ButtonGroup>
+      <Box py={3} />
+      <ButtonGroup size="small">
+        <Button
+          startIcon={
+            <SvgIcon>
+              <EditIcon />
+            </SvgIcon>
+          }
+        >
+          One
+        </Button>
+        <Button>Two</Button>
+      </ButtonGroup>
+      <Box py={3} />
+      <ButtonGroup variant="outlined">
+        <Button
+          startIcon={
+            <SvgIcon>
+              <EditIcon />
+            </SvgIcon>
+          }
+        >
+          One
+        </Button>
+        <Button>Two</Button>
+      </ButtonGroup>
+      <Box py={3} />
+      <ButtonGroup variant="outlined" size="small">
+        <Button
+          startIcon={
+            <SvgIcon>
+              <EditIcon />
+            </SvgIcon>
+          }
+        >
+          One
+        </Button>
+        <Button>Two</Button>
+      </ButtonGroup>
+    </>
+  </Story>
+</Canvas>
+
+#### Standalone
+
+For standalone icons, pass the icon as a child to the desired button, and apply the `size="small"` prop to the same button if the `<ButtonGroup>` is size medium.
+
+<Canvas>
+  <Story name="Icons: Standalone">
+    <>
+      <ButtonGroup>
+        <Button size="small">
+          <SvgIcon>
+            <EditIcon />
+          </SvgIcon>
+        </Button>
+        <Button>Two</Button>
+      </ButtonGroup>
+      <Box py={3} />
+      <ButtonGroup size="small">
+        <Button>
+          <SvgIcon>
+            <EditIcon />
+          </SvgIcon>
+        </Button>
+        <Button>Two</Button>
+      </ButtonGroup>
+      <Box py={3} />
+      <ButtonGroup variant="outlined">
+        <Button size="small">
+          <SvgIcon>
+            <EditIcon />
+          </SvgIcon>
+        </Button>
+        <Button>Two</Button>
+      </ButtonGroup>
+      <Box py={3} />
+      <ButtonGroup variant="outlined" size="small">
+        <Button>
+          <SvgIcon>
+            <EditIcon />
+          </SvgIcon>
+        </Button>
+        <Button>Two</Button>
+      </ButtonGroup>
+    </>
+  </Story>
+</Canvas>
+
+### Split button
+
+Button groups can also be used to create a split button. The dropdown can change the button action (as in this example) or be used to immediately trigger a related action. Below is one possible implementation.
+
+<Canvas>
+  <Story
+    name="Split button"
+    parameters={{
+      style: { height: 200 },
+      docs: {
+        source: {
+          type: "code"
+        },
+        transformSource: (input) =>
+          prettier.format(input, {
+            parser: "babel",
+            plugins: [prettierBabel]
+          })
+      }
+    }}
+  >
+    {() => {
+      const options = [
+        { name: "Edit", icon: <EditIcon /> },
+        { name: "Delete", icon: <DeleteIcon /> },
+        { name: "Copy", icon: <CopyIcon />, disabled: true },
+        { name: "Archive", icon: <ArchiveIcon /> }
+      ];
+      const [open, setOpen] = React.useState(false);
+      const [selectedIndex, setSelectedIndex] = React.useState(0);
+      const anchorRef = React.useRef(null);
+      const handleClick = () => {
+        console.info(`You clicked ${options[selectedIndex].name}`);
+      };
+      const handleMenuItemClick = (index) => {
+        setSelectedIndex(index);
+        setOpen(false);
+      };
+      const handleToggle = () => {
+        setOpen((prevOpen) => !prevOpen);
+      };
+      const handleClose = (event) => {
+        if (anchorRef.current?.contains(event.target)) {
+          return;
+        }
+        setOpen(false);
+      };
+      return (
+        <>
+          <ButtonGroup
+            variant="contained"
+            ref={anchorRef}
+            aria-label="split button"
+          >
+            <Button
+              onClick={handleClick}
+              startIcon={<SvgIcon>{options[selectedIndex].icon}</SvgIcon>}
+            >
+              {options[selectedIndex].name}
+            </Button>
+            <Button
+              size="small"
+              aria-controls={open ? "split-button-menu" : undefined}
+              aria-expanded={open ? "true" : undefined}
+              aria-label="select merge strategy"
+              aria-haspopup="menu"
+              onClick={handleToggle}
+            >
+              <SvgIcon>
+                <NavMore />
+              </SvgIcon>
+            </Button>
+          </ButtonGroup>
+          <Popper
+            open={open}
+            anchorEl={anchorRef.current}
+            role={undefined}
+            transition
+            disablePortal
+          >
+            {({ TransitionProps, placement }) => (
+              <Grow
+                {...TransitionProps}
+                style={{
+                  transformOrigin: "0 0 0",
+                  transition: "all 130ms ease-in-out 0s"
+                }}
+              >
+                <Paper>
+                  <ClickAwayListener onClickAway={handleClose}>
+                    <MenuList id="split-button-menu" autoFocusItem>
+                      {options
+                        ?.filter((option, index) => !(index === selectedIndex))
+                        .map((option, index) => (
+                          <MenuItem
+                            tabIndex={0}
+                            disabled={option.disabled}
+                            key={option.name}
+                            selected={
+                              option.name === options[selectedIndex]?.name
+                            }
+                            onClick={() =>
+                              handleMenuItemClick(
+                                options.findIndex(
+                                  (element) => element?.name === option.name
+                                )
+                              )
+                            }
+                          >
+                            <SvgIcon>{option.icon}</SvgIcon>
+                            <Typography variant="button-label">
+                              {option.name}
+                            </Typography>
+                          </MenuItem>
+                        ))}
+                    </MenuList>
+                  </ClickAwayListener>
+                </Paper>
+              </Grow>
+            )}
+          </Popper>
+        </>
+      );
+    }}
+  </Story>
+</Canvas>
+
+### Dark theme
+
+<Canvas>
+  <Story name="Dark theme" parameters={{ theme: "dark" }}>
+    <>
+      <ButtonGroup>
+        <Button>One</Button>
+        <Button>Two</Button>
+        <Button>Three</Button>
+      </ButtonGroup>
+      <Box py={3} />
+      <ButtonGroup>
+        <Button
+          startIcon={
+            <SvgIcon>
+              <EditIcon />
+            </SvgIcon>
+          }
+        >
+          One
+        </Button>
+        <Button>Two</Button>
+      </ButtonGroup>
+      <Box py={3} />
+      <ButtonGroup>
+        <Button size="small">
+          <SvgIcon>
+            <EditIcon />
+          </SvgIcon>
+        </Button>
+        <Button>Two</Button>
+      </ButtonGroup>
+      <Box py={3} />
+      <ButtonGroup size="small">
+        <Button>One</Button>
+        <Button>Two</Button>
+        <Button>Three</Button>
+      </ButtonGroup>
+      <Box py={3} />
+      <ButtonGroup size="small">
+        <Button
+          startIcon={
+            <SvgIcon>
+              <EditIcon />
+            </SvgIcon>
+          }
+        >
+          One
+        </Button>
+        <Button>Two</Button>
+      </ButtonGroup>
+      <Box py={3} />
+      <ButtonGroup size="small">
+        <Button>
+          <SvgIcon>
+            <EditIcon />
+          </SvgIcon>
+        </Button>
+        <Button>Two</Button>
+      </ButtonGroup>
+      <Box py={3} />
+      <ButtonGroup variant="outlined">
+        <Button>One</Button>
+        <Button>Two</Button>
+        <Button>Three</Button>
+      </ButtonGroup>
+      <Box py={3} />
+      <ButtonGroup variant="outlined">
+        <Button
+          startIcon={
+            <SvgIcon>
+              <EditIcon />
+            </SvgIcon>
+          }
+        >
+          One
+        </Button>
+        <Button>Two</Button>
+      </ButtonGroup>
+      <Box py={3} />
+      <ButtonGroup variant="outlined">
+        <Button size="small">
+          <SvgIcon>
+            <EditIcon />
+          </SvgIcon>
+        </Button>
+        <Button>Two</Button>
+      </ButtonGroup>
+      <Box py={3} />
+      <ButtonGroup variant="outlined" size="small">
+        <Button>One</Button>
+        <Button>Two</Button>
+        <Button>Three</Button>
+      </ButtonGroup>
+      <Box py={3} />
+      <ButtonGroup variant="outlined" size="small">
+        <Button
+          startIcon={
+            <SvgIcon>
+              <EditIcon />
+            </SvgIcon>
+          }
+        >
+          One
+        </Button>
+        <Button>Two</Button>
+      </ButtonGroup>
+      <Box py={3} />
+      <ButtonGroup variant="outlined" size="small">
+        <Button>
+          <SvgIcon>
+            <EditIcon />
+          </SvgIcon>
+        </Button>
+        <Button>Two</Button>
+      </ButtonGroup>
+    </>
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story
+    name="Dark theme: split button"
+    parameters={{
+      theme: "dark",
+      style: { height: 200 },
+      docs: {
+        source: {
+          type: "code"
+        },
+        transformSource: (input) =>
+          prettier.format(input, {
+            parser: "babel",
+            plugins: [prettierBabel]
+          })
+      }
+    }}
+  >
+    {() => {
+      const options = [
+        { name: "Edit", icon: <EditIcon /> },
+        { name: "Delete", icon: <DeleteIcon /> },
+        { name: "Copy", icon: <CopyIcon />, disabled: true },
+        { name: "Archive", icon: <ArchiveIcon /> }
+      ];
+      const [open, setOpen] = React.useState(false);
+      const anchorRef = React.useRef(null);
+      const [selectedIndex, setSelectedIndex] = React.useState(1);
+      const handleClick = () => {
+        console.info(`You clicked ${options[selectedIndex].name}`);
+      };
+      const handleMenuItemClick = (event, index) => {
+        setSelectedIndex(index);
+        setOpen(false);
+      };
+      const handleToggle = () => {
+        setOpen((prevOpen) => !prevOpen);
+      };
+      const handleClose = (event) => {
+        if (anchorRef.current && anchorRef.current.contains(event.target)) {
+          return;
+        }
+        setOpen(false);
+      };
+      return (
+        <>
+          <ButtonGroup
+            variant="contained"
+            ref={anchorRef}
+            aria-label="split button"
+          >
+            <Button
+              onClick={handleClick}
+              startIcon={<SvgIcon>{options[selectedIndex].icon}</SvgIcon>}
+            >
+              {options[selectedIndex].name}
+            </Button>
+            <Button
+              size="small"
+              aria-controls={open ? "split-button-menu" : undefined}
+              aria-expanded={open ? "true" : undefined}
+              aria-label="select merge strategy"
+              aria-haspopup="menu"
+              onClick={handleToggle}
+            >
+              <SvgIcon>
+                <NavMore />
+              </SvgIcon>
+            </Button>
+          </ButtonGroup>
+          <Popper
+            open={open}
+            anchorEl={anchorRef.current}
+            role={undefined}
+            transition
+            disablePortal
+          >
+            {({ TransitionProps, placement }) => (
+              <Grow
+                {...TransitionProps}
+                style={{
+                  transformOrigin: "0 0 0",
+                  transition: "all 130ms ease-in-out 0s"
+                }}
+              >
+                <Paper>
+                  <ClickAwayListener onClickAway={handleClose}>
+                    <MenuList id="split-button-menu" autoFocusItem>
+                      {options.map((option, index) => (
+                        <MenuItem
+                          tabIndex={0}
+                          disabled={option.disabled}
+                          key={option.name}
+                          selected={index === selectedIndex}
+                          onClick={(event) => handleMenuItemClick(event, index)}
+                        >
+                          <SvgIcon>{option.icon}</SvgIcon>
+                          <Typography variant="button-label">
+                            {option.name}
+                          </Typography>
+                        </MenuItem>
+                      ))}
+                    </MenuList>
+                  </ClickAwayListener>
+                </Paper>
+              </Grow>
+            )}
+          </Popper>
+        </>
+      );
+    }}
+  </Story>
+</Canvas>

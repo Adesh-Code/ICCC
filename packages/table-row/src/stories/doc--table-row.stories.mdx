@@ -1,0 +1,291 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { componentArgs } from "../constants";
+import {
+  ComponentTitle,
+  DarkThemeNotice,
+  InstallationInstructions,
+  VariantRangeNotice,
+  VersionNotice
+} from "../../../docs/src/partials";
+import { defaultProps } from "../table-row";
+import { name, peerDependencies, version } from "../../package.json";
+import Checkbox from "@mui/material/Checkbox";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import Table from "@iccc/table";
+import TableBody from "@mui/material/TableBody";
+import TableCell from "@mui/material/TableCell";
+import TableRow from "@iccc/table-row";
+
+<Meta
+  args={defaultProps}
+  argTypes={componentArgs}
+  component={TableRow}
+  id="components/table-row"
+  title="Digital HIG/Components/Table/Table row"
+/>
+
+<ComponentTitle name="Table row" status="Stable" />
+
+<code>
+  <VersionNotice packageName="table-row" version={version} />
+</code>
+
+The table row component is a wrapper around MUI [`<TableRow>`](https://mui.com/material-ui/api/table-row/), with Digital HIG defaults.
+
+For related design documentation, please see the [Digital HIG Figma UI Toolkit](https://www.figma.com/file/NpV47EII6zCxkpPoChejg0/%E2%9D%96-iccc-UI-toolkit?node-id=9009%3A200194).
+
+For usage of table row in the context of `<Table />`, see [table component page](/docs/components-table--api).
+
+## Installation
+
+<InstallationInstructions
+  name={name}
+  peerDependencies={peerDependencies}
+  componentImport="TableRow"
+/>
+
+## API
+
+For all supported MUI `<TableRow />` props, see [TableRow API](https://mui.com/material-ui/api/table-row/).
+
+<Canvas>
+  <Story name="API">
+    {(args) => (
+      <Table>
+        <TableBody>
+          <TableRow {...args}>
+            <TableCell>Cell content</TableCell>
+          </TableRow>
+        </TableBody>
+      </Table>
+    )}
+  </Story>
+</Canvas>
+
+<ArgsTable story="API" />
+
+## Variants
+
+<VariantRangeNotice />
+
+### Enable interactions
+
+Set `enableInteractions` to `false` to disable hover/active/focus styles.
+
+<Canvas>
+  <Story name="Enable interactions">
+    {(args) => (
+      <Table>
+        <TableBody>
+          <TableRow>
+            <TableCell>Interactions enabled (default)</TableCell>
+          </TableRow>
+          <TableRow enableInteractions={false}>
+            <TableCell>Interactions disabled</TableCell>
+          </TableRow>
+        </TableBody>
+      </Table>
+    )}
+  </Story>
+</Canvas>
+
+### Activated
+
+Use the Digital HIG prop `activated` to render a activated row. This state is only for use when composing [a panel list](/docs/components-panel-list--api).
+
+Note that activated rows always have interactions disabled.
+
+<Canvas>
+  <Story name="Activated">
+    <Table>
+      <TableBody>
+        <TableRow activated enableInteractions={false}>
+          <TableCell>Cell content</TableCell>
+        </TableRow>
+      </TableBody>
+    </Table>
+  </Story>
+</Canvas>
+
+### Selected
+
+Use the MUI prop `selected` to render a selected row.
+
+<Canvas>
+  <Story name="Selected">
+    <Table>
+      <TableBody>
+        <TableRow selected enableInteractions={false}>
+          <TableCell padding="checkbox">
+            <FormControlLabel control={<Checkbox checked />} />
+          </TableCell>
+          <TableCell>Cell content</TableCell>
+        </TableRow>
+        <TableRow selected>
+          <TableCell padding="checkbox">
+            <FormControlLabel control={<Checkbox checked />} />
+          </TableCell>
+          <TableCell>Interactions enabled</TableCell>
+        </TableRow>
+      </TableBody>
+    </Table>
+  </Story>
+</Canvas>
+
+### Highlighted
+
+Use the Digital HIG prop `highlighted` to render a highlighted row. This state can be used to indicate [new rows in a panel list](/docs/components-panel-list--new-story).
+
+<Canvas>
+  <Story name="Highlighted">
+    <Table>
+      <TableBody>
+        <TableRow highlighted enableInteractions={false}>
+          <TableCell>Cell content</TableCell>
+        </TableRow>
+        <TableRow highlighted>
+          <TableCell>Interactions enabled</TableCell>
+        </TableRow>
+      </TableBody>
+    </Table>
+  </Story>
+</Canvas>
+
+### State combinations
+
+The `activated`, `highlighted`and `selected` states may be combined.
+
+<Canvas>
+  <Story name="State combinations">
+    <Table>
+      <TableBody>
+        <TableRow activated highlighted enableInteractions={false}>
+          <TableCell padding="checkbox" />
+          <TableCell>Activated & highlighted</TableCell>
+        </TableRow>
+        <TableRow activated selected enableInteractions={false}>
+          <TableCell padding="checkbox">
+            <FormControlLabel control={<Checkbox checked />} />
+          </TableCell>
+          <TableCell>Activated & selected</TableCell>
+        </TableRow>
+        <TableRow highlighted selected enableInteractions={false}>
+          <TableCell padding="checkbox">
+            <FormControlLabel control={<Checkbox checked />} />
+          </TableCell>
+          <TableCell>Highlighted & selected</TableCell>
+        </TableRow>
+        <TableRow highlighted selected>
+          <TableCell padding="checkbox">
+            <FormControlLabel control={<Checkbox checked />} />
+          </TableCell>
+          <TableCell>Highlighted & selected, interactions enabled</TableCell>
+        </TableRow>
+        <TableRow activated highlighted selected enableInteractions={false}>
+          <TableCell padding="checkbox">
+            <FormControlLabel control={<Checkbox checked />} />
+          </TableCell>
+          <TableCell>Activated, highlighted & selected</TableCell>
+        </TableRow>
+      </TableBody>
+    </Table>
+  </Story>
+</Canvas>
+
+### Loud
+
+When the `loud` prop is passed to the parent `<Table />` component, the row styles will reflect this.
+
+<Canvas>
+  <Story name="Loud">
+    <Table loud>
+      <TableBody>
+        <TableRow enableInteractions={false}>
+          <TableCell padding="checkbox" />
+          <TableCell>Default</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell padding="checkbox" />
+          <TableCell>Default, interactions enabled</TableCell>
+        </TableRow>
+        <TableRow activated enableInteractions={false}>
+          <TableCell padding="checkbox" />
+          <TableCell>Activated</TableCell>
+        </TableRow>
+        <TableRow highlighted enableInteractions={false}>
+          <TableCell padding="checkbox" />
+          <TableCell>Highlighted</TableCell>
+        </TableRow>
+        <TableRow highlighted>
+          <TableCell padding="checkbox" />
+          <TableCell>Highlighted, interactions enabled</TableCell>
+        </TableRow>
+        <TableRow selected enableInteractions={false}>
+          <TableCell padding="checkbox">
+            <FormControlLabel control={<Checkbox checked />} />
+          </TableCell>
+          <TableCell>Selected</TableCell>
+        </TableRow>
+        <TableRow selected>
+          <TableCell padding="checkbox">
+            <FormControlLabel control={<Checkbox checked />} />
+          </TableCell>
+          <TableCell>Selected, interactions enabled</TableCell>
+        </TableRow>
+      </TableBody>
+    </Table>
+  </Story>
+</Canvas>
+
+### Dark theme
+
+<DarkThemeNotice />
+
+<Canvas>
+  <Story name="Dark theme" parameters={{ theme: "dark" }}>
+    <Table>
+      <TableBody>
+        <TableRow>
+          <TableCell padding="checkbox" />
+          <TableCell>Default</TableCell>
+        </TableRow>
+        <TableRow activated enableInteractions={false}>
+          <TableCell padding="checkbox" />
+          <TableCell>Activated</TableCell>
+        </TableRow>
+        <TableRow highlighted>
+          <TableCell padding="checkbox" />
+          <TableCell>Highlighted</TableCell>
+        </TableRow>
+        <TableRow selected>
+          <TableCell padding="checkbox">
+            <FormControlLabel control={<Checkbox checked />} />
+          </TableCell>
+          <TableCell>Selected</TableCell>
+        </TableRow>
+        <TableRow activated highlighted enableInteractions={false}>
+          <TableCell padding="checkbox" />
+          <TableCell>Activated & highlighted</TableCell>
+        </TableRow>
+        <TableRow activated selected enableInteractions={false}>
+          <TableCell padding="checkbox">
+            <FormControlLabel control={<Checkbox checked />} />
+          </TableCell>
+          <TableCell>Activated & selected</TableCell>
+        </TableRow>
+        <TableRow highlighted selected>
+          <TableCell padding="checkbox">
+            <FormControlLabel control={<Checkbox checked />} />
+          </TableCell>
+          <TableCell>Highlighted & selected</TableCell>
+        </TableRow>
+        <TableRow activated highlighted selected enableInteractions={false}>
+          <TableCell padding="checkbox">
+            <FormControlLabel control={<Checkbox checked />} />
+          </TableCell>
+          <TableCell>Activated, highlighted & selected</TableCell>
+        </TableRow>
+      </TableBody>
+    </Table>
+  </Story>
+</Canvas>

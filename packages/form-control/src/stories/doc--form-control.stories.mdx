@@ -1,0 +1,175 @@
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import {
+  ComponentTitle,
+  InstallationInstructions,
+  MuiLink
+} from "../../../docs/src/partials";
+import { peerDependencies } from "../../package.json";
+import SvgComplete from "@iccc/icon/lib/build/display-icons/complete";
+import SvgError from "@iccc/icon/lib/build/display-icons/error";
+import FormControl from "@mui/material/FormControl";
+import FormHelperText from "@mui/material/FormHelperText";
+import Input from "@mui/material/Input";
+import InputLabel from "@mui/material/InputLabel";
+import SvgIcon from "@mui/material/SvgIcon";
+import Typography from "@iccc/typography";
+
+<Meta
+  component={FormControl}
+  id="components/form-control"
+  title="Digital HIG/Components/Form control"
+/>
+
+<ComponentTitle name="Form control" status="Stable" />
+
+<code>
+  <MuiLink
+    componentName="Form control"
+    link="https://mui.com/material-ui/api/form-control/"
+  />
+</code>
+
+FormControl wraps a form element with label and messaging. You can see implementation details for this component on the individual form element documentation pages. To use FormControl, pull in and pass your form element (or set of form elements) in as a child. For Digital HIG components, pull this component into your Storybook examples.
+
+## Installation
+
+<InstallationInstructions
+  componentImport="FormControl"
+  peerDependencies={peerDependencies}
+/>
+
+## API
+
+- For all supported MUI `<FormControl />` props, see [FormControl API](https://mui.com/material-ui/api/form-control/#main-content)
+- For all supported MUI `<FormHelperText />` props, see [FormHelperText API](https://mui.com/material-ui/api/form-helper-text/)
+
+In this example, the `<FormControl>` component is wrapped around an `<Input>` component to assist in illustrating the set of available props.
+
+<Canvas>
+  <Story name="API">
+    <FormControl>
+      <Input />
+    </FormControl>
+  </Story>
+</Canvas>
+
+### Full width
+
+Pass the `fullWidth` prop to `<FormControl />`.
+
+<Canvas>
+  <Story name="Full width">
+    <FormControl fullWidth>
+      <InputLabel htmlFor="exampleFullWidth">Full width</InputLabel>
+      <Input id="exampleFullWidth" />
+    </FormControl>
+  </Story>
+</Canvas>
+
+### Hint text
+
+Use `<Typography />` with the appropriate variant (`smallprint`).
+
+<Canvas>
+  <Story name="Hint text">
+    <FormControl fullWidth>
+      <InputLabel htmlFor="exampleHintText">
+        Hint text
+        <Typography variant="smallprint" component="span">
+          (Optional)
+        </Typography>
+      </InputLabel>
+      <Input id="exampleHintText" />
+    </FormControl>
+  </Story>
+</Canvas>
+
+### Helper text
+
+Use `<FormHelperText />` within `<FormControl>`.
+
+<Canvas>
+  <Story name="Helper text">
+    <FormControl fullWidth>
+      <InputLabel htmlFor="exampleHelperText">Helper text</InputLabel>
+      <Input id="exampleHelperText" />
+      <FormHelperText>
+        Helper text: Sit dolore cupidatat enim exercitation magna velit eu quis
+        laborum adipisicing voluptate incididunt adipisicing. Officia consequat
+        cupidatat eu veniam minim. Amet excepteur labore ea duis. Pariatur
+        fugiat mollit irure commodo aute.
+      </FormHelperText>
+    </FormControl>
+  </Story>
+</Canvas>
+
+### Success
+
+Wrap `<SvgComplete />` within `<FormHelperText />` & `<SvgIcon />`.
+
+<Canvas>
+  <Story name="Success">
+    <FormControl fullWidth color="success">
+      <InputLabel htmlFor="exampleSuccess">Success</InputLabel>
+      <Input id="exampleSuccess" />
+      <FormHelperText>
+        <SvgIcon>
+          <SvgComplete />
+        </SvgIcon>
+        Success helper text example
+      </FormHelperText>
+    </FormControl>
+  </Story>
+</Canvas>
+
+### Error
+
+Pass the `error` prop to `<FormControl>` & wrap `<SvgError />` within `<FormHelperText>`.
+
+<Canvas>
+  <Story name="Error">
+    <FormControl fullWidth error>
+      <InputLabel htmlFor="exampleErrorState">Error</InputLabel>
+      <Input id="exampleErrorState" />
+      <FormHelperText>
+        <SvgIcon>
+          <SvgError />
+        </SvgIcon>
+        Error text: Laborum velit est et culpa do anim excepteur cillum cupidatat
+        deserunt sint. Eiusmod ut aute labore ad dolor ipsum elit esse. Cupidatat
+        ad est voluptate qui aliquip culpa sunt enim excepteur.
+      </FormHelperText>
+    </FormControl>
+  </Story>
+</Canvas>
+
+### Disabled
+
+Pass the `disabled` prop to `<FormControl>`.
+
+<Canvas>
+  <Story name="Disabled">
+    <FormControl fullWidth disabled>
+      <InputLabel htmlFor="exampleDisabledState">Disabled</InputLabel>
+      <Input id="exampleDisabledState" />
+    </FormControl>
+  </Story>
+</Canvas>
+
+### Required
+
+Pass the `required` prop to `<FormControl>` wrapper for mandatory fields.
+
+<Canvas>
+  <Story name="Required">
+    <FormControl fullWidth id="exampleRequired" required>
+      <InputLabel htmlFor="exampleRequired">Required input</InputLabel>
+      <Input required id="exampleRequired" />
+    </FormControl>
+  </Story>
+</Canvas>
+
+## Accessibility
+
+- To make form elements accessible, please use a unique ID and utilize the helperText prop.
+- In most cases, a label should be included with a form element.

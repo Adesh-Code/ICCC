@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modal component renders a modal 1`] = `
+<div
+  aria-labelledby="mui-1"
+  class="MuiPaper-root DhigModal--styleVariant--default DhigModal--type--modal MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation24 MuiDialog-paper MuiDialog-paperScrollPaper MuiDialog-paperWidthSm emotion-0"
+  role="dialog"
+>
+  <button
+    aria-label="close"
+    class="MuiButtonBase-root MuiIconButton-root DhigModal--closeButton--default MuiIconButton-sizeMedium emotion-1"
+    tabindex="0"
+    type="button"
+  >
+    <svg
+      aria-hidden="true"
+      class="MuiSvgIcon-root MuiSvgIcon-fontSizeInherit emotion-2"
+      focusable="false"
+      viewBox="0 0 24 24"
+    >
+      <svg
+        fill="none"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g
+          id="utility/cross"
+        >
+          <path
+            d="M19 5L12 12M12 12L5 19M12 12L5 5M12 12L19 19"
+            id="stroke"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.5"
+          />
+        </g>
+      </svg>
+    </svg>
+  </button>
+  <h2
+    class="MuiTypography-root MuiTypography-h6 MuiDialogTitle-root emotion-3"
+    id="mui-1"
+  >
+    Modal title
+  </h2>
+  <div
+    class="MuiDialogContent-root emotion-4"
+  >
+    Modal body
+  </div>
+  <div
+    class="MuiDialogActions-root MuiDialogActions-spacing emotion-5"
+  >
+    <button
+      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium emotion-6"
+      tabindex="0"
+      type="button"
+    >
+      Modal action
+    </button>
+  </div>
+</div>
+`;

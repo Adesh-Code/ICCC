@@ -1,0 +1,120 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { componentArgs } from "../constants";
+import {
+  ComponentTitle,
+  DarkThemeNotice,
+  InstallationInstructions,
+  VersionNotice
+} from "../../../docs/src/partials";
+import { name, peerDependencies, version } from "../../package.json";
+import Search from "../search";
+
+export const autodeskProducts = [
+  "3DS Max",
+  "AutoCAD LT",
+  "AutoCAD",
+  "BIM 360",
+  "Factory Design Utilities",
+  "Fusion 360",
+  "Inventer CAM",
+  "Inventor Nastran",
+  "Inventor Nesting",
+  "Inventor",
+  "Maya",
+  "Revit"
+];
+
+<Meta
+  description="Search component"
+  component={Search}
+  args={{ ...Search.defaultProps, options: autodeskProducts }}
+  argTypes={componentArgs}
+  id="components/search"
+  title="Digital HIG/Components/Search"
+  parameters={{
+    docs: {
+      source: {
+        type: "code"
+      }
+    }
+  }}
+/>
+
+<ComponentTitle name="Search" status="Stable" />
+
+<code>
+  <VersionNotice packageName="search" version={version} />
+</code>
+
+The Search component is a wrapper for the [MUI Autocomplete](https://mui.com/material-ui/react-autocomplete/) component.
+
+For related design documentation, please visit the [Search page in the Digital HIG Figma UI Toolkit](https://www.figma.com/file/Eks986gkqncHjkLnwQjO7g/iccc-sticker-sheets?node-id=4203-241198&t=nHNQYy49yd48qzdE-0).
+
+## Installation
+
+<InstallationInstructions
+  componentImport="Search"
+  name={name}
+  peerDependencies={peerDependencies}
+/>
+
+## API
+
+For all supported MUI `<Autocomplete />` props, see [Autocomplete API](https://mui.com/material-ui/api/autocomplete/).
+
+The Search component accepts an `options` prop, which is an array of strings used to populate the dropdown.
+
+For all examples below, we provide the following array to the `options` prop:
+
+```js
+const autodeskProducts = [
+  "3DS Max",
+  "AutoCAD LT",
+  "AutoCAD",
+  "BIM 360",
+  "Factory Design Utilities",
+  "Fusion 360"
+  "Inventer CAM",
+  "Inventor Nastran",
+  "Inventor Nesting",
+  "Inventor",
+  "Maya",
+  "Revit"
+];
+```
+
+<Canvas>
+  <Story name="API">{(args) => <Search {...args} />}</Story>
+</Canvas>
+
+<ArgsTable story="API" />
+
+## Search variants
+
+The examples below illustrate the variant range for the search component. Press the "Show code" button on the right of each example to view the implementation code.
+
+### Disabled
+
+<Canvas>
+  <Story name="Disabled">{(args) => <Search {...args} disabled />}</Story>
+</Canvas>
+
+### Dark theme
+
+<DarkThemeNotice />
+
+<Canvas>
+  <Story name="Dark theme" parameters={{ theme: "dark" }}>
+    {(args) => <Search {...args} />}
+  </Story>
+</Canvas>
+
+## Autosuggest highlight
+
+If you want to emphasize text in the suggested options, you can opt for the [autosuggest-highlight](https://github.com/moroshko/autosuggest-highlight) package.
+
+For a better understanding of how this package works with the Autocomplete MUI component, take a look at the [Highlights](https://mui.com/material-ui/react-autocomplete/#highlights) example provided by Material UI.
+
+## Accessibility
+
+For more details about accessibility, visit the [MUI guidelines](https://mui.com/material-ui/react-autocomplete/#accessibility).
