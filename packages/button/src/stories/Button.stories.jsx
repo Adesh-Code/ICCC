@@ -1,10 +1,10 @@
 import React from 'react';
 import { Button as ButtonComponent, CircularProgress } from "@mui/material";
 import { LoadingButton as MuiLoadingButton } from '@mui/lab';
-import { Title, Description, Story, Canvas, ArgTypes } from '@storybook/addon-docs';
-import { DarkThemeNotice, VariantRangeNotice } from '../../../docs/src/partials'
+import { Title, Description, Story, Canvas, ArgTypes, Subtitle } from '@storybook/addon-docs';
+import { VariantRangeNotice } from '../../../docs/src/partials'
 import Grid2 from "@mui/material/Unstable_Grid2";
-
+import { componentArgs } from '../../../button-group/src/constants';
 
 export const Button = (ButtonProps) => (
   <div style={{ padding: "8px 0" }}>
@@ -16,7 +16,7 @@ export const LoadingButton = (ButtonProps) => (
   <Grid2 container>
     <MuiLoadingButton {...ButtonProps} loading> Loading Button </MuiLoadingButton>
     <MuiLoadingButton {...ButtonProps} loading variant='link-button'> Loading Button </MuiLoadingButton>
-  <MuiLoadingButton {...ButtonProps} loading variant='text'> Loading Button </MuiLoadingButton>
+    <MuiLoadingButton {...ButtonProps} loading variant='text'> Loading Button </MuiLoadingButton>
     <MuiLoadingButton {...ButtonProps} loading variant='outlined'> Loading Button </MuiLoadingButton></Grid2>
 );
 
@@ -30,6 +30,7 @@ const buttonStoryMeta = {
     size: "medium",
     variant: "contained",
   },
+  argTypes: componentArgs,
   title: "ICCC/Components/Button",
   tags: ['autodocs'],
   component: ButtonComponent,
@@ -38,9 +39,7 @@ const buttonStoryMeta = {
       page: () => (
         <>
           <Title />
-          <h6>
-            <Description />
-          </h6>
+          <Description />
           <Title> API </Title>
           <h6>
             - For all supported MUI Button props, see https://mui.com/api/button/.
@@ -48,39 +47,39 @@ const buttonStoryMeta = {
           <h6>
             - For all supported MUI LoadingButton props, see [`LoadingButton API`](https://mui.com/material-ui/api/loading-button/).
           </h6>
-
-          <Canvas of={api}/>
+          <Canvas of={api} />
           <ArgTypes />
           <Title>Button Variants</Title>
-          <h6>
-            {VariantRangeNotice}
-          </h6><br /><br />
+          <h6>{VariantRangeNotice}</h6><br /><br />
 
-          <Title>Layout options</Title>
+          <Subtitle>Layout options</Subtitle>
           <h6>MUI's `fullWidth` prop can be used for full-width buttons.</h6>
-          <Canvas of={layout}/>
+          <Canvas of={layout} />
 
-          <Title>Space between icon</Title>
-          <Canvas of={space}/>
-          <Title>Size options</Title>
-            <h6>Accepts `medium` (default) or `small`.</h6>
-            <Canvas of={smallSize}/>
-            <Canvas of={mediumSize}/>
-<Title>Variants</Title>
-        <h6>Accepted variants are `contained` (default), `outlined`, `text` or `link-button`.</h6>
-
-          <Canvas of={outlinedButton}/>
+          <Subtitle>Space between icon</Subtitle>
+          <Canvas of={space} />
+          <Subtitle>Size options</Subtitle>
+          <h6>Accepts `medium` (default) or `small`.</h6>
+          <Canvas of={smallSize} />
+          <Canvas of={mediumSize} />
+          <Title>Variants</Title>
+          <h6>Accepted variants are `contained` (default), `outlined`, `text` or `link-button`.</h6><br/>
+          <Subtitle>Outlined</Subtitle>
+          <Canvas of={outlinedButton} />
+          <Subtitle>Contained</Subtitle>
           <Canvas of={Button} />
+          <Subtitle>Link</Subtitle>
           <Canvas of={linkButton} />
+          <Subtitle>Text</Subtitle>
           <Canvas of={textButton} />
 
           <Title>Loading</Title>
-          <Story of={LoadingButton}/><br/><br/>
+          <Story of={LoadingButton} /><br /><br />
           <Title>Disabled state</Title>
-          <Canvas of={disabled}/>
+          <Canvas of={disabled} />
           <Title>Render link as button</Title>
           <h6>Per Material-UI: The URL to link to when the button is clicked. If defined, an a element will be used as the root node.</h6>
-          <Canvas of={buttonWithHref}/>
+          <Canvas of={buttonWithHref} />
 
           {/* <Title>Dark theme</Title>
           <h6>
@@ -97,29 +96,31 @@ const buttonStoryMeta = {
 export default buttonStoryMeta;
 
 export const api = {
-  title:'API',
+  title: 'API',
   args: {
     ...buttonStoryMeta.args,
     variant: 'link-button',
-    href:'#',
-    children:'Link button',
-  }}
+    href: '#',
+    children: 'Link button',
+  }
+}
 
-export const layout = { title: "Layout options", args: {fullWidth: true, children: "Full-width" } }
+export const layout = { title: "Layout options", args: { fullWidth: true, children: "Full-width" } }
 
-export const space ={
+export const space = {
   title: "Space between icon",
-  args: { 
+  args: {
     ...buttonStoryMeta.args,
-    sx:{
+    sx: {
       justifyContent: "space-between",
-        textAlign: "left"
+      textAlign: "left"
     },
     fullWidth: true,
-      children: "Space between layout",
-    
-    },}
-    
+    children: "Space between layout",
+
+  },
+}
+
 export const smallSize = {
   title: "Size options",
   args: {
@@ -191,7 +192,7 @@ const darkTheme = () => (
     <Button
       variant="link-button"
       href="#"
-      
+
     >
       Link button
     </Button>
@@ -206,7 +207,7 @@ const darkTheme = () => (
       disabled
       variant="link-button"
       href="#"
-      
+
     >
       Disabled link button
     </Button>
