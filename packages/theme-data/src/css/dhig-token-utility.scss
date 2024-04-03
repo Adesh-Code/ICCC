@@ -1,7 +1,0 @@
-/**
-* Generates DHIG utility classes.
-*/
-@use "../scss/mixins" as *;
-
-@include dhig-typography-classes;
-@include dhig-palette-classes;
