@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+      "declaration": true,
+      "target": "es6",
+      "module": "esnext",
+      "moduleResolution": "node",
+      "lib": [
+        "es6",
+        "dom"
+      ],
+      "jsx": "react",
+      "noImplicitAny": true,
+      "outDir": "dist",
+      "rootDir": ".",
+      "typeRoots": [
+        "node_modules/@types"
+      ]
+    },
+    "exclude": [
+      "dist",
+      "node_modules"
+    ]
+  }
