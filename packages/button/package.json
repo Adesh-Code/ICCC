@@ -5,13 +5,13 @@
   "author": "iccc",
   "homepage": "",
   "license": "ISC",
-  "main": "lib/index.jsx",
+  "main": "src/index.jsx",
   "directories": {
-    "lib": "lib",
+    "src": "src",
     "test": "__tests__"
   },
   "files": [
-    "lib"
+    "src"
   ],
   "scripts": {
     "test": "node ./__tests__/Button.test.js"

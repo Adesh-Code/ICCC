@@ -1,7 +1,0 @@
-/**
-* Generates iccc utility classes.
-*/
-@use "../scss/mixins" as *;
-
-@include iccc-typography-classes;
-@include iccc-palette-classes;
