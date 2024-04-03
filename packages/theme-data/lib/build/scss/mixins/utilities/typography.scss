@@ -1,0 +1,203 @@
+/**
+* Includes mixins related to typography.
+* Includes a mixin for each text token in Figma ensuring responsive changes are included.
+*/
+
+@use "@iccc/theme-data/lib/build/scss/light/design-tokens.scss" as light;
+
+@mixin iccc-typography-display-extra {
+  font-family: light.$tokens-typography-display-extra-fontFamily;
+  font-weight: light.$tokens-typography-display-extra-fontWeight;
+  font-size: light.$tokens-typography-display-extra-fontSize;
+  letter-spacing: light.$tokens-typography-display-extra-letterSpacing;
+  line-height: light.$tokens-typography-display-extra-lineHeight;
+}
+
+@mixin iccc-typography-display {
+  font-family: light.$tokens-typography-display-fontFamily;
+  font-weight: light.$tokens-typography-display-fontWeight;
+  font-size: light.$tokens-typography-display-fontSize;
+  letter-spacing: light.$tokens-typography-display-letterSpacing;
+  line-height: light.$tokens-typography-display-lineHeight;
+}
+
+@mixin iccc-typography-headline-largest {
+  font-family: light.$tokens-typography-headline-largest-fontFamily;
+  font-weight: light.$tokens-typography-headline-largest-fontWeight;
+  font-size: light.$tokens-typography-headline-largest-fontSize;
+  letter-spacing: light.$tokens-typography-headline-largest-letterSpacing;
+  line-height: light.$tokens-typography-headline-largest-lineHeight;
+}
+
+@mixin iccc-typography-headline-larger {
+  font-family: light.$tokens-typography-headline-larger-fontFamily;
+  font-weight: light.$tokens-typography-headline-larger-fontWeight;
+  font-size: light.$tokens-typography-headline-larger-fontSize;
+  letter-spacing: light.$tokens-typography-headline-larger-letterSpacing;
+  line-height: light.$tokens-typography-headline-larger-lineHeight;
+}
+
+@mixin iccc-typography-headline-large {
+  font-family: light.$tokens-typography-headline-large-fontFamily;
+  font-weight: light.$tokens-typography-headline-large-fontWeight;
+  font-size: light.$tokens-typography-headline-large-fontSize;
+  letter-spacing: light.$tokens-typography-headline-large-letterSpacing;
+  line-height: light.$tokens-typography-headline-large-lineHeight;
+}
+
+@mixin iccc-typography-headline-medium {
+  font-family: light.$tokens-typography-headline-medium-fontFamily;
+  font-weight: light.$tokens-typography-headline-medium-fontWeight;
+  font-size: light.$tokens-typography-headline-medium-fontSize;
+  letter-spacing: light.$tokens-typography-headline-medium-letterSpacing;
+  line-height: light.$tokens-typography-headline-medium-lineHeight;
+}
+
+@mixin iccc-typography-headline-small {
+  font-family: light.$tokens-typography-headline-small-fontFamily;
+  font-weight: light.$tokens-typography-headline-small-fontWeight;
+  font-size: light.$tokens-typography-headline-small-fontSize;
+  letter-spacing: light.$tokens-typography-headline-small-letterSpacing;
+  line-height: light.$tokens-typography-headline-small-lineHeight;
+}
+
+@mixin iccc-typography-headline-smaller {
+  font-family: light.$tokens-typography-headline-smaller-fontFamily;
+  font-weight: light.$tokens-typography-headline-smaller-fontWeight;
+  font-size: light.$tokens-typography-headline-smaller-fontSize;
+  letter-spacing: light.$tokens-typography-headline-smaller-letterSpacing;
+  line-height: light.$tokens-typography-headline-smaller-lineHeight;
+}
+
+@mixin iccc-typography-headline-smallest {
+  font-family: light.$tokens-typography-headline-smallest-fontFamily;
+  font-weight: light.$tokens-typography-headline-smallest-fontWeight;
+  font-size: light.$tokens-typography-headline-smallest-fontSize;
+  letter-spacing: light.$tokens-typography-headline-smallest-letterSpacing;
+  line-height: light.$tokens-typography-headline-smallest-lineHeight;
+}
+
+@mixin iccc-typography-body-copy-large {
+  font-family: light.$tokens-typography-body-copy-large-fontFamily;
+  font-weight: light.$tokens-typography-body-copy-large-fontWeight;
+  font-size: light.$tokens-typography-body-copy-large-fontSize;
+  letter-spacing: light.$tokens-typography-body-copy-large-letterSpacing;
+  line-height: light.$tokens-typography-body-copy-large-lineHeight;
+}
+
+@mixin iccc-typography-body-copy-medium {
+  font-family: light.$tokens-typography-body-copy-medium-fontFamily;
+  font-weight: light.$tokens-typography-body-copy-medium-fontWeight;
+  font-size: light.$tokens-typography-body-copy-medium-fontSize;
+  letter-spacing: light.$tokens-typography-body-copy-medium-letterSpacing;
+  line-height: light.$tokens-typography-body-copy-medium-lineHeight;
+}
+
+@mixin iccc-typography-body-copy-small {
+  font-family: light.$tokens-typography-body-copy-small-fontFamily;
+  font-weight: light.$tokens-typography-body-copy-small-fontWeight;
+  font-size: light.$tokens-typography-body-copy-small-fontSize;
+  letter-spacing: light.$tokens-typography-body-copy-small-letterSpacing;
+  line-height: light.$tokens-typography-body-copy-small-lineHeight;
+}
+
+@mixin iccc-typography-short-copy-large {
+  font-family: light.$tokens-typography-short-copy-large-fontFamily;
+  font-weight: light.$tokens-typography-short-copy-large-fontWeight;
+  font-size: light.$tokens-typography-short-copy-large-fontSize;
+  letter-spacing: light.$tokens-typography-short-copy-large-letterSpacing;
+  line-height: light.$tokens-typography-short-copy-large-lineHeight;
+}
+
+@mixin iccc-typography-short-copy-medium {
+  font-family: light.$tokens-typography-short-copy-medium-fontFamily;
+  font-weight: light.$tokens-typography-short-copy-medium-fontWeight;
+  font-size: light.$tokens-typography-short-copy-medium-fontSize;
+  letter-spacing: light.$tokens-typography-short-copy-medium-letterSpacing;
+  line-height: light.$tokens-typography-short-copy-medium-lineHeight;
+}
+
+@mixin iccc-typography-short-copy-small {
+  font-family: light.$tokens-typography-short-copy-small-fontFamily;
+  font-weight: light.$tokens-typography-short-copy-small-fontWeight;
+  font-size: light.$tokens-typography-short-copy-small-fontSize;
+  letter-spacing: light.$tokens-typography-short-copy-small-letterSpacing;
+  line-height: light.$tokens-typography-short-copy-small-lineHeight;
+}
+
+@mixin iccc-typography-smallprint {
+  font-family: light.$tokens-typography-smallprint-fontFamily;
+  font-weight: light.$tokens-typography-smallprint-fontWeight;
+  font-size: light.$tokens-typography-smallprint-fontSize;
+  letter-spacing: light.$tokens-typography-smallprint-letterSpacing;
+  line-height: light.$tokens-typography-smallprint-lineHeight;
+}
+
+@mixin iccc-typography-code {
+  font-family: light.$tokens-typography-code-fontFamily;
+  font-weight: light.$tokens-typography-code-fontWeight;
+  font-size: light.$tokens-typography-code-fontSize;
+  letter-spacing: light.$tokens-typography-code-letterSpacing;
+  line-height: light.$tokens-typography-code-lineHeight;
+}
+
+@mixin iccc-typography-caption {
+  font-family: light.$tokens-typography-caption-fontFamily;
+  font-weight: light.$tokens-typography-caption-fontWeight;
+  font-size: light.$tokens-typography-caption-fontSize;
+  letter-spacing: light.$tokens-typography-caption-letterSpacing;
+  line-height: light.$tokens-typography-caption-lineHeight;
+}
+
+@mixin iccc-typography-eyebrow {
+  font-family: light.$tokens-typography-eyebrow-fontFamily;
+  font-weight: light.$tokens-typography-eyebrow-fontWeight;
+  font-size: light.$tokens-typography-eyebrow-fontSize;
+  letter-spacing: light.$tokens-typography-eyebrow-letterSpacing;
+  line-height: light.$tokens-typography-eyebrow-lineHeight;
+  text-transform: light.$tokens-typography-eyebrow-textTransform;
+}
+
+@mixin iccc-typography-pull-quote-medium {
+  font-family: light.$tokens-typography-pull-quote-medium-fontFamily;
+  font-weight: light.$tokens-typography-pull-quote-medium-fontWeight;
+  font-size: light.$tokens-typography-pull-quote-medium-fontSize;
+  letter-spacing: light.$tokens-typography-pull-quote-medium-letterSpacing;
+  line-height: light.$tokens-typography-pull-quote-medium-lineHeight;
+}
+
+@mixin iccc-typography-pull-quote-large {
+  font-family: light.$tokens-typography-pull-quote-large-fontFamily;
+  font-weight: light.$tokens-typography-pull-quote-large-fontWeight;
+  font-size: light.$tokens-typography-pull-quote-large-fontSize;
+  letter-spacing: light.$tokens-typography-pull-quote-large-letterSpacing;
+  line-height: light.$tokens-typography-pull-quote-large-lineHeight;
+}
+
+@mixin iccc-typography-tabular-numeric {
+  font-variant-numeric: tabular-nums;
+}
+
+@mixin iccc-typography-input-value {
+  font-family: light.$tokens-typography-input-value-fontFamily;
+  font-weight: light.$tokens-typography-input-value-fontWeight;
+  font-size: light.$tokens-typography-input-value-fontSize;
+  letter-spacing: light.$tokens-typography-input-value-letterSpacing;
+  line-height: light.$tokens-typography-input-value-lineHeight;
+}
+
+@mixin iccc-typography-button-label {
+  font-family: light.$tokens-typography-button-label-fontFamily;
+  font-weight: light.$tokens-typography-button-label-fontWeight;
+  font-size: light.$tokens-typography-button-label-fontSize;
+  letter-spacing: light.$tokens-typography-button-label-letterSpacing;
+  line-height: light.$tokens-typography-button-label-lineHeight;
+}
+
+@mixin iccc-typography-button-label-dense {
+  font-family: light.$tokens-typography-button-label-dense-fontFamily;
+  font-weight: light.$tokens-typography-button-label-dense-fontWeight;
+  font-size: light.$tokens-typography-button-label-dense-fontSize;
+  letter-spacing: light.$tokens-typography-button-label-dense-letterSpacing;
+  line-height: light.$tokens-typography-button-label-dense-lineHeight;
+}

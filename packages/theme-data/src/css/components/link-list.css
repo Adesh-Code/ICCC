@@ -1,0 +1,54 @@
+@layer components {
+  .iccc-link-list {
+    /* spacing */
+    @apply iccc-p-0;
+
+    > li {
+      /* spacing */
+      @apply iccc-p-0;
+
+      list-style-type: none;
+      box-shadow: var(--shadow--divider-0-bottom);
+
+      > a {
+        /* spacing */
+        @apply iccc-py-3 iccc-px-0;
+        /* flexbox */
+        @apply iccc-flex;
+
+        text-decoration: none;
+        color: unset;
+
+        &:hover {
+          background: var(--gradient--hover-gradient-fill);
+          box-shadow: none;
+        }
+
+        &:active {
+          background: var(--gradient--pressed-gradient-fill);
+        }
+
+        &:focus-visible {
+          box-shadow: var(--shadow--focus-ring-thin);
+          outline: none;
+        }
+      }
+      &:last-of-type {
+        box-shadow: none;
+      }
+    }
+    ul {
+      /* spacing */
+      @apply iccc-pl-3 iccc-pb-3;
+
+      > li {
+        /* spacing */
+        @apply iccc-pb-2;
+        /* typography */
+        @apply iccc-leading-compact;
+
+        list-style-type: "- ";
+      }
+    }
+  }
+}

@@ -1,0 +1,613 @@
+@use "@iccc/theme-data/lib/build/scss/light/design-tokens.scss" as light;
+@use "@iccc/theme-data/lib/build/scss/dark/design-tokens.scss" as dark;
+@use "@iccc/theme-data/lib/build/scss/mixins/utilities/typography" as *;
+@use "@iccc/theme-data/lib/build/scss/mixins/components/text-link" as *;
+/* 
+* Implements SASS for button component.
+*
+* @theme: 'light' (default), 'dark'
+*/
+
+// helper mixins
+@mixin iccc-button--dense {
+  font-size: light.$tokens-button-contained-dense-default-fontSize;
+  padding-bottom: light.$tokens-button-contained-dense-default-paddingBottom;
+  padding-left: light.$tokens-button-contained-dense-default-paddingLeft;
+  padding-right: light.$tokens-button-contained-dense-default-paddingRight;
+  padding-top: light.$tokens-button-contained-dense-default-paddingTop;
+}
+
+@mixin iccc-button--stretch {
+  width: 100%;
+}
+
+// main mixins
+@mixin iccc-button--contained--default($theme: "light") {
+  @include iccc-typography-body-copy-medium;
+  border-style: light.$tokens-button-contained-defaultSize-default-borderStyle;
+  border-width: light.$tokens-button-contained-defaultSize-default-borderWidth;
+  opacity: light.$tokens-button-contained-defaultSize-default-opacity;
+  padding-bottom: light.$tokens-button-contained-defaultSize-default-paddingBottom;
+  padding-left: light.$tokens-button-contained-defaultSize-default-paddingLeft;
+  padding-right: light.$tokens-button-contained-defaultSize-default-paddingRight;
+  padding-top: light.$tokens-button-contained-defaultSize-default-paddingTop;
+  text-transform: light.$tokens-button-contained-defaultSize-default-textTransform;
+
+  &:disabled {
+    opacity: light.$tokens-button-contained-defaultSize-disabled-opacity;
+
+    &:hover {
+      // necessary because the Mui-disabled class isn't automatically applied
+      box-shadow: none;
+      transition: none;
+    }
+  }
+
+  @if ($theme == "dark") {
+    background-color: dark.$tokens-button-contained-defaultSize-default-backgroundColor;
+    border-color: dark.$tokens-button-contained-defaultSize-default-borderColor;
+    color: dark.$tokens-button-contained-defaultSize-default-color;
+
+    &:hover,
+    :visited:hover {
+      background-color: dark.$tokens-button-contained-defaultSize-hover-backgroundColor;
+      border-color: dark.$tokens-button-contained-defaultSize-hover-borderColor;
+      box-shadow: dark.$tokens-button-contained-defaultSize-hover-boxShadow;
+    }
+
+    &:focus,
+    :focus-visible {
+      background-color: dark.$tokens-button-contained-defaultSize-focus-backgroundColor;
+      border-color: dark.$tokens-button-contained-defaultSize-focus-borderColor;
+      box-shadow: dark.$tokens-button-contained-defaultSize-focus-boxShadow;
+    }
+
+    &:active {
+      background-color: dark.$tokens-button-contained-defaultSize-pressed-backgroundColor;
+      border-color: dark.$tokens-button-contained-defaultSize-pressed-borderColor;
+      box-shadow: dark.$tokens-button-contained-defaultSize-pressed-boxShadow;
+    }
+  } @else {
+    background-color: light.$tokens-button-contained-defaultSize-default-backgroundColor;
+    border-color: light.$tokens-button-contained-defaultSize-default-borderColor;
+    color: light.$tokens-button-contained-defaultSize-default-color;
+
+    &:hover,
+    :visited:hover {
+      background-color: light.$tokens-button-contained-defaultSize-hover-backgroundColor;
+      border-color: light.$tokens-button-contained-defaultSize-hover-borderColor;
+      box-shadow: light.$tokens-button-contained-defaultSize-hover-boxShadow;
+    }
+
+    &:focus,
+    :focus-visible {
+      background-color: light.$tokens-button-contained-defaultSize-focus-backgroundColor;
+      border-color: light.$tokens-button-contained-defaultSize-focus-borderColor;
+      box-shadow: light.$tokens-button-contained-defaultSize-focus-boxShadow;
+    }
+
+    &:active {
+      background-color: light.$tokens-button-contained-defaultSize-pressed-backgroundColor;
+      border-color: light.$tokens-button-contained-defaultSize-pressed-borderColor;
+      box-shadow: light.$tokens-button-contained-defaultSize-pressed-boxShadow;
+    }
+  }
+}
+
+@mixin iccc-button--contained--default--stretch($theme: "light") {
+  @include iccc-button--contained--default($theme);
+  @include iccc-button--stretch;
+}
+
+@mixin iccc-button--contained--dense($theme: "light") {
+  @include iccc-button--contained--default($theme);
+  @include iccc-button--dense;
+}
+
+@mixin iccc-button--contained--dense--stretch($theme: "light") {
+  @include iccc-button--contained--dense($theme);
+  @include iccc-button--stretch;
+}
+
+@mixin iccc-button--outlined--default($theme: "light") {
+  @include iccc-button--contained--default($theme);
+
+  @if ($theme == "dark") {
+    background-color: dark.$tokens-button-outlined-defaultSize-default-backgroundColor;
+    border-color: dark.$tokens-button-outlined-defaultSize-default-borderColor;
+    color: dark.$tokens-button-outlined-defaultSize-default-color;
+
+    &:hover,
+    :visited:hover {
+      background-color: dark.$tokens-button-outlined-defaultSize-hover-backgroundColor;
+      border-color: dark.$tokens-button-outlined-defaultSize-hover-borderColor;
+      color: dark.$tokens-button-outlined-defaultSize-hover-color;
+    }
+
+    &:focus,
+    :focus-visible {
+      background-color: dark.$tokens-button-outlined-defaultSize-focus-backgroundColor;
+      border-color: dark.$tokens-button-outlined-defaultSize-focus-borderColor;
+      box-shadow: dark.$tokens-button-outlined-defaultSize-focus-boxShadow;
+    }
+
+    &:active {
+      background-color: dark.$tokens-button-outlined-defaultSize-pressed-backgroundColor;
+      border-color: dark.$tokens-button-outlined-defaultSize-pressed-borderColor;
+      box-shadow: dark.$tokens-button-outlined-defaultSize-pressed-boxShadow;
+    }
+  } @else {
+    background-color: light.$tokens-button-outlined-defaultSize-default-backgroundColor;
+    border-color: light.$tokens-button-outlined-defaultSize-default-borderColor;
+    color: light.$tokens-button-outlined-defaultSize-default-color;
+
+    &:hover,
+    :visited:hover {
+      background-color: light.$tokens-button-outlined-defaultSize-hover-backgroundColor;
+      border-color: light.$tokens-button-outlined-defaultSize-hover-borderColor;
+      color: light.$tokens-button-outlined-defaultSize-hover-color;
+    }
+
+    &:focus,
+    :focus-visible {
+      background-color: light.$tokens-button-outlined-defaultSize-focus-backgroundColor;
+      border-color: light.$tokens-button-outlined-defaultSize-focus-borderColor;
+      box-shadow: light.$tokens-button-outlined-defaultSize-focus-boxShadow;
+    }
+
+    &:active {
+      background-color: light.$tokens-button-outlined-defaultSize-pressed-backgroundColor;
+      border-color: light.$tokens-button-outlined-defaultSize-pressed-borderColor;
+      box-shadow: light.$tokens-button-outlined-defaultSize-pressed-boxShadow;
+    }
+  }
+}
+
+@mixin iccc-button--outlined--default--stretch($theme: "light") {
+  @include iccc-button--outlined--default($theme);
+  @include iccc-button--stretch;
+}
+
+@mixin iccc-button--outlined--dense($theme: "light") {
+  @include iccc-button--outlined--default($theme);
+  @include iccc-button--dense;
+}
+
+@mixin iccc-button--outlined--dense--stretch($theme: "light") {
+  @include iccc-button--outlined--dense($theme);
+  @include iccc-button--stretch;
+}
+
+@mixin iccc-button--text--default($theme: "light") {
+  @include iccc-button--contained--default($theme);
+
+  @if ($theme == "dark") {
+    background-color: dark.$tokens-button-text-defaultSize-default-backgroundColor;
+    border-color: dark.$tokens-button-text-defaultSize-default-borderColor;
+    color: dark.$tokens-button-text-defaultSize-default-color;
+
+    &:hover,
+    :visited:hover {
+      background-color: dark.$tokens-button-text-defaultSize-hover-backgroundColor;
+      border-color: dark.$tokens-button-text-defaultSize-hover-borderColor;
+      color: dark.$tokens-button-text-defaultSize-hover-color;
+    }
+
+    &:focus,
+    :focus-visible {
+      background-color: dark.$tokens-button-text-defaultSize-focus-backgroundColor;
+      border-color: dark.$tokens-button-text-defaultSize-focus-borderColor;
+      box-shadow: dark.$tokens-button-text-defaultSize-focus-boxShadow;
+    }
+
+    &:active {
+      background-color: dark.$tokens-button-text-defaultSize-pressed-backgroundColor;
+      border-color: dark.$tokens-button-text-defaultSize-pressed-borderColor;
+      box-shadow: dark.$tokens-button-text-defaultSize-pressed-boxShadow;
+    }
+  } @else {
+    background-color: light.$tokens-button-text-defaultSize-default-backgroundColor;
+    border-color: light.$tokens-button-text-defaultSize-default-borderColor;
+    color: light.$tokens-button-text-defaultSize-default-color;
+
+    &:hover,
+    :visited:hover {
+      background-color: light.$tokens-button-text-defaultSize-hover-backgroundColor;
+      border-color: light.$tokens-button-text-defaultSize-hover-borderColor;
+      color: light.$tokens-button-text-defaultSize-hover-color;
+    }
+
+    &:focus,
+    :focus-visible {
+      background-color: light.$tokens-button-text-defaultSize-focus-backgroundColor;
+      border-color: light.$tokens-button-text-defaultSize-focus-borderColor;
+      box-shadow: light.$tokens-button-text-defaultSize-focus-boxShadow;
+    }
+
+    &:active {
+      background-color: light.$tokens-button-text-defaultSize-pressed-backgroundColor;
+      border-color: light.$tokens-button-text-defaultSize-pressed-borderColor;
+      box-shadow: light.$tokens-button-text-defaultSize-pressed-boxShadow;
+    }
+  }
+}
+
+@mixin iccc-button--text--default--stretch($theme: "light") {
+  @include iccc-button--text--default($theme);
+  @include iccc-button--stretch;
+}
+
+@mixin iccc-button--text--dense($theme: "light") {
+  @include iccc-button--text--default($theme);
+  @include iccc-button--dense;
+}
+
+@mixin iccc-button--text--dense--stretch($theme: "light") {
+  @include iccc-button--text--dense($theme);
+  @include iccc-button--stretch;
+}
+/* 
+* Implements SASS for text link component.
+*
+* @theme: 'light' (default), 'dark'
+*/
+@use "@iccc/theme-data/lib/build/scss/light/design-tokens.scss" as light;
+@use "@iccc/theme-data/lib/build/scss/dark/design-tokens.scss" as dark;
+
+@mixin iccc-textLink($theme: "light", $semantic: false) {
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-skip-ink: auto;
+
+  @if ($theme == "dark") {
+    color: dark.$tokens-textLink-defaultState-color;
+    outline: dark.$tokens-textLink-defaultState-outlineWidth
+      dark.$tokens-textLink-defaultState-outlineStyle
+      dark.$tokens-textLink-defaultState-outlineColor;
+    outline-offset: dark.$tokens-textLink-defaultState-outlineOffset;
+    text-decoration-color: dark.$tokens-textLink-defaultState-textDecorationColor;
+    text-decoration-thickness: dark.$tokens-textLink-defaultState-textDecorationThickness;
+
+    &:visited {
+      @if ($semantic) {
+        &:not(.MuiButtonBase-root) {
+          color: dark.$tokens-textLink-visitedState-color;
+        }
+      } @else {
+        color: dark.$tokens-textLink-visitedState-color;
+      }
+      outline: dark.$tokens-textLink-visitedState-outlineWidth
+        dark.$tokens-textLink-visitedState-outlineStyle
+        dark.$tokens-textLink-visitedState-outlineColor;
+      outline-offset: dark.$tokens-textLink-visitedState-outlineOffset;
+      text-decoration-color: dark.$tokens-textLink-visitedState-textDecorationColor;
+      text-decoration-thickness: dark.$tokens-textLink-visitedState-textDecorationThickness;
+    }
+
+    &:hover,
+    :visited:hover {
+      color: dark.$tokens-textLink-hoverState-color;
+      outline: dark.$tokens-textLink-hoverState-outlineWidth
+        dark.$tokens-textLink-hoverState-outlineStyle
+        dark.$tokens-textLink-hoverState-outlineColor;
+      outline-offset: dark.$tokens-textLink-hoverState-outlineOffset;
+      text-decoration-color: dark.$tokens-textLink-hoverState-textDecorationColor;
+      text-decoration-thickness: dark.$tokens-textLink-hoverState-textDecorationThickness;
+    }
+
+    &:focus-visible {
+      color: dark.$tokens-textLink-focusState-color;
+      outline: dark.$tokens-textLink-focusState-outlineWidth
+        dark.$tokens-textLink-focusState-outlineStyle
+        dark.$tokens-textLink-focusState-outlineColor;
+      outline-offset: dark.$tokens-textLink-focusState-outlineOffset;
+      text-decoration-color: dark.$tokens-textLink-focusState-textDecorationColor;
+      text-decoration-thickness: dark.$tokens-textLink-focusState-textDecorationThickness;
+    }
+
+    &:active {
+      color: dark.$tokens-textLink-pressedState-color;
+      outline: dark.$tokens-textLink-pressedState-outlineWidth
+        dark.$tokens-textLink-pressedState-outlineStyle
+        dark.$tokens-textLink-pressedState-outlineColor;
+      outline-offset: dark.$tokens-textLink-pressedState-outlineOffset;
+      text-decoration-color: dark.$tokens-textLink-pressedState-textDecorationColor;
+      text-decoration-thickness: dark.$tokens-textLink-pressedState-textDecorationThickness;
+    }
+  } @else {
+    color: light.$tokens-textLink-defaultState-color;
+    outline: light.$tokens-textLink-defaultState-outlineWidth
+      light.$tokens-textLink-defaultState-outlineStyle
+      light.$tokens-textLink-defaultState-outlineColor;
+    outline-offset: light.$tokens-textLink-defaultState-outlineOffset;
+    text-decoration-color: light.$tokens-textLink-defaultState-textDecorationColor;
+    text-decoration-thickness: light.$tokens-textLink-defaultState-textDecorationThickness;
+
+    &:visited {
+      @if ($semantic) {
+        &:not(.MuiButtonBase-root) {
+          color: light.$tokens-textLink-visitedState-color;
+        }
+      } @else {
+        color: light.$tokens-textLink-visitedState-color;
+      }
+      outline: light.$tokens-textLink-visitedState-outlineWidth
+        light.$tokens-textLink-visitedState-outlineStyle
+        light.$tokens-textLink-visitedState-outlineColor;
+      outline-offset: light.$tokens-textLink-visitedState-outlineOffset;
+      text-decoration-color: light.$tokens-textLink-visitedState-textDecorationColor;
+      text-decoration-thickness: light.$tokens-textLink-visitedState-textDecorationThickness;
+    }
+
+    &:hover,
+    :visited:hover {
+      color: light.$tokens-textLink-hoverState-color;
+      outline: light.$tokens-textLink-hoverState-outlineWidth
+        light.$tokens-textLink-hoverState-outlineStyle
+        light.$tokens-textLink-hoverState-outlineColor;
+      outline-offset: light.$tokens-textLink-hoverState-outlineOffset;
+      text-decoration-color: light.$tokens-textLink-hoverState-textDecorationColor;
+      text-decoration-thickness: light.$tokens-textLink-hoverState-textDecorationThickness;
+    }
+
+    &:focus-visible {
+      color: light.$tokens-textLink-focusState-color;
+      outline: light.$tokens-textLink-focusState-outlineWidth
+        light.$tokens-textLink-focusState-outlineStyle
+        light.$tokens-textLink-focusState-outlineColor;
+      outline-offset: light.$tokens-textLink-focusState-outlineOffset;
+      text-decoration-color: light.$tokens-textLink-focusState-textDecorationColor;
+      text-decoration-thickness: light.$tokens-textLink-focusState-textDecorationThickness;
+    }
+
+    &:active {
+      color: light.$tokens-textLink-pressedState-color;
+      outline: light.$tokens-textLink-pressedState-outlineWidth
+        light.$tokens-textLink-pressedState-outlineStyle
+        light.$tokens-textLink-pressedState-outlineColor;
+      outline-offset: light.$tokens-textLink-pressedState-outlineOffset;
+      text-decoration-color: light.$tokens-textLink-pressedState-textDecorationColor;
+      text-decoration-thickness: light.$tokens-textLink-pressedState-textDecorationThickness;
+    }
+  }
+}
+/**
+* Includes mixins related to light and dark themes.
+*/
+@use "@iccc/theme-data/lib/build/scss/light/design-tokens.scss" as light;
+@use "@iccc/theme-data/lib/build/scss/dark/design-tokens.scss" as dark;
+
+@mixin iccc-theme($theme: "light") {
+  @if ($theme == "dark") {
+    background: dark.$tokens-colors-background;
+    color: dark.$tokens-colors-text-on-background;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: dark.$tokens-colors-ink-on-background;
+    }
+    a {
+      @include iccc-textLink($theme: "dark", $semantic: true);
+    }
+  } @else {
+    background: light.$tokens-colors-background;
+    color: light.$tokens-colors-text-on-background;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: light.$tokens-colors-ink-on-background;
+    }
+    a {
+      @include iccc-textLink($theme: "light", $semantic: true);
+    }
+  }
+}
+/**
+* Includes mixins related to typography.
+* Includes a mixin for each text token in Figma ensuring responsive changes are included.
+*/
+
+@use "@iccc/theme-data/lib/build/scss/light/design-tokens.scss" as light;
+
+@mixin iccc-typography-display-extra {
+  font-family: light.$tokens-typography-display-extra-fontFamily;
+  font-weight: light.$tokens-typography-display-extra-fontWeight;
+  font-size: light.$tokens-typography-display-extra-fontSize;
+  letter-spacing: light.$tokens-typography-display-extra-letterSpacing;
+  line-height: light.$tokens-typography-display-extra-lineHeight;
+}
+
+@mixin iccc-typography-display {
+  font-family: light.$tokens-typography-display-fontFamily;
+  font-weight: light.$tokens-typography-display-fontWeight;
+  font-size: light.$tokens-typography-display-fontSize;
+  letter-spacing: light.$tokens-typography-display-letterSpacing;
+  line-height: light.$tokens-typography-display-lineHeight;
+}
+
+@mixin iccc-typography-headline-largest {
+  font-family: light.$tokens-typography-headline-largest-fontFamily;
+  font-weight: light.$tokens-typography-headline-largest-fontWeight;
+  font-size: light.$tokens-typography-headline-largest-fontSize;
+  letter-spacing: light.$tokens-typography-headline-largest-letterSpacing;
+  line-height: light.$tokens-typography-headline-largest-lineHeight;
+}
+
+@mixin iccc-typography-headline-larger {
+  font-family: light.$tokens-typography-headline-larger-fontFamily;
+  font-weight: light.$tokens-typography-headline-larger-fontWeight;
+  font-size: light.$tokens-typography-headline-larger-fontSize;
+  letter-spacing: light.$tokens-typography-headline-larger-letterSpacing;
+  line-height: light.$tokens-typography-headline-larger-lineHeight;
+}
+
+@mixin iccc-typography-headline-large {
+  font-family: light.$tokens-typography-headline-large-fontFamily;
+  font-weight: light.$tokens-typography-headline-large-fontWeight;
+  font-size: light.$tokens-typography-headline-large-fontSize;
+  letter-spacing: light.$tokens-typography-headline-large-letterSpacing;
+  line-height: light.$tokens-typography-headline-large-lineHeight;
+}
+
+@mixin iccc-typography-headline-medium {
+  font-family: light.$tokens-typography-headline-medium-fontFamily;
+  font-weight: light.$tokens-typography-headline-medium-fontWeight;
+  font-size: light.$tokens-typography-headline-medium-fontSize;
+  letter-spacing: light.$tokens-typography-headline-medium-letterSpacing;
+  line-height: light.$tokens-typography-headline-medium-lineHeight;
+}
+
+@mixin iccc-typography-headline-small {
+  font-family: light.$tokens-typography-headline-small-fontFamily;
+  font-weight: light.$tokens-typography-headline-small-fontWeight;
+  font-size: light.$tokens-typography-headline-small-fontSize;
+  letter-spacing: light.$tokens-typography-headline-small-letterSpacing;
+  line-height: light.$tokens-typography-headline-small-lineHeight;
+}
+
+@mixin iccc-typography-headline-smaller {
+  font-family: light.$tokens-typography-headline-smaller-fontFamily;
+  font-weight: light.$tokens-typography-headline-smaller-fontWeight;
+  font-size: light.$tokens-typography-headline-smaller-fontSize;
+  letter-spacing: light.$tokens-typography-headline-smaller-letterSpacing;
+  line-height: light.$tokens-typography-headline-smaller-lineHeight;
+}
+
+@mixin iccc-typography-headline-smallest {
+  font-family: light.$tokens-typography-headline-smallest-fontFamily;
+  font-weight: light.$tokens-typography-headline-smallest-fontWeight;
+  font-size: light.$tokens-typography-headline-smallest-fontSize;
+  letter-spacing: light.$tokens-typography-headline-smallest-letterSpacing;
+  line-height: light.$tokens-typography-headline-smallest-lineHeight;
+}
+
+@mixin iccc-typography-body-copy-large {
+  font-family: light.$tokens-typography-body-copy-large-fontFamily;
+  font-weight: light.$tokens-typography-body-copy-large-fontWeight;
+  font-size: light.$tokens-typography-body-copy-large-fontSize;
+  letter-spacing: light.$tokens-typography-body-copy-large-letterSpacing;
+  line-height: light.$tokens-typography-body-copy-large-lineHeight;
+}
+
+@mixin iccc-typography-body-copy-medium {
+  font-family: light.$tokens-typography-body-copy-medium-fontFamily;
+  font-weight: light.$tokens-typography-body-copy-medium-fontWeight;
+  font-size: light.$tokens-typography-body-copy-medium-fontSize;
+  letter-spacing: light.$tokens-typography-body-copy-medium-letterSpacing;
+  line-height: light.$tokens-typography-body-copy-medium-lineHeight;
+}
+
+@mixin iccc-typography-body-copy-small {
+  font-family: light.$tokens-typography-body-copy-small-fontFamily;
+  font-weight: light.$tokens-typography-body-copy-small-fontWeight;
+  font-size: light.$tokens-typography-body-copy-small-fontSize;
+  letter-spacing: light.$tokens-typography-body-copy-small-letterSpacing;
+  line-height: light.$tokens-typography-body-copy-small-lineHeight;
+}
+
+@mixin iccc-typography-short-copy-large {
+  font-family: light.$tokens-typography-short-copy-large-fontFamily;
+  font-weight: light.$tokens-typography-short-copy-large-fontWeight;
+  font-size: light.$tokens-typography-short-copy-large-fontSize;
+  letter-spacing: light.$tokens-typography-short-copy-large-letterSpacing;
+  line-height: light.$tokens-typography-short-copy-large-lineHeight;
+}
+
+@mixin iccc-typography-short-copy-medium {
+  font-family: light.$tokens-typography-short-copy-medium-fontFamily;
+  font-weight: light.$tokens-typography-short-copy-medium-fontWeight;
+  font-size: light.$tokens-typography-short-copy-medium-fontSize;
+  letter-spacing: light.$tokens-typography-short-copy-medium-letterSpacing;
+  line-height: light.$tokens-typography-short-copy-medium-lineHeight;
+}
+
+@mixin iccc-typography-short-copy-small {
+  font-family: light.$tokens-typography-short-copy-small-fontFamily;
+  font-weight: light.$tokens-typography-short-copy-small-fontWeight;
+  font-size: light.$tokens-typography-short-copy-small-fontSize;
+  letter-spacing: light.$tokens-typography-short-copy-small-letterSpacing;
+  line-height: light.$tokens-typography-short-copy-small-lineHeight;
+}
+
+@mixin iccc-typography-smallprint {
+  font-family: light.$tokens-typography-smallprint-fontFamily;
+  font-weight: light.$tokens-typography-smallprint-fontWeight;
+  font-size: light.$tokens-typography-smallprint-fontSize;
+  letter-spacing: light.$tokens-typography-smallprint-letterSpacing;
+  line-height: light.$tokens-typography-smallprint-lineHeight;
+}
+
+@mixin iccc-typography-code {
+  font-family: light.$tokens-typography-code-fontFamily;
+  font-weight: light.$tokens-typography-code-fontWeight;
+  font-size: light.$tokens-typography-code-fontSize;
+  letter-spacing: light.$tokens-typography-code-letterSpacing;
+  line-height: light.$tokens-typography-code-lineHeight;
+}
+
+@mixin iccc-typography-caption {
+  font-family: light.$tokens-typography-caption-fontFamily;
+  font-weight: light.$tokens-typography-caption-fontWeight;
+  font-size: light.$tokens-typography-caption-fontSize;
+  letter-spacing: light.$tokens-typography-caption-letterSpacing;
+  line-height: light.$tokens-typography-caption-lineHeight;
+}
+
+@mixin iccc-typography-eyebrow {
+  font-family: light.$tokens-typography-eyebrow-fontFamily;
+  font-weight: light.$tokens-typography-eyebrow-fontWeight;
+  font-size: light.$tokens-typography-eyebrow-fontSize;
+  letter-spacing: light.$tokens-typography-eyebrow-letterSpacing;
+  line-height: light.$tokens-typography-eyebrow-lineHeight;
+  text-transform: light.$tokens-typography-eyebrow-textTransform;
+}
+
+@mixin iccc-typography-pull-quote-medium {
+  font-family: light.$tokens-typography-pull-quote-medium-fontFamily;
+  font-weight: light.$tokens-typography-pull-quote-medium-fontWeight;
+  font-size: light.$tokens-typography-pull-quote-medium-fontSize;
+  letter-spacing: light.$tokens-typography-pull-quote-medium-letterSpacing;
+  line-height: light.$tokens-typography-pull-quote-medium-lineHeight;
+}
+
+@mixin iccc-typography-pull-quote-large {
+  font-family: light.$tokens-typography-pull-quote-large-fontFamily;
+  font-weight: light.$tokens-typography-pull-quote-large-fontWeight;
+  font-size: light.$tokens-typography-pull-quote-large-fontSize;
+  letter-spacing: light.$tokens-typography-pull-quote-large-letterSpacing;
+  line-height: light.$tokens-typography-pull-quote-large-lineHeight;
+}
+
+@mixin iccc-typography-tabular-numeric {
+  font-variant-numeric: tabular-nums;
+}
+
+@mixin iccc-typography-input-value {
+  font-family: light.$tokens-typography-input-value-fontFamily;
+  font-weight: light.$tokens-typography-input-value-fontWeight;
+  font-size: light.$tokens-typography-input-value-fontSize;
+  letter-spacing: light.$tokens-typography-input-value-letterSpacing;
+  line-height: light.$tokens-typography-input-value-lineHeight;
+}
+
+@mixin iccc-typography-button-label {
+  font-family: light.$tokens-typography-button-label-fontFamily;
+  font-weight: light.$tokens-typography-button-label-fontWeight;
+  font-size: light.$tokens-typography-button-label-fontSize;
+  letter-spacing: light.$tokens-typography-button-label-letterSpacing;
+  line-height: light.$tokens-typography-button-label-lineHeight;
+}
+
+@mixin iccc-typography-button-label-dense {
+  font-family: light.$tokens-typography-button-label-dense-fontFamily;
+  font-weight: light.$tokens-typography-button-label-dense-fontWeight;
+  font-size: light.$tokens-typography-button-label-dense-fontSize;
+  letter-spacing: light.$tokens-typography-button-label-dense-letterSpacing;
+  line-height: light.$tokens-typography-button-label-dense-lineHeight;
+}

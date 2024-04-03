@@ -1,0 +1,134 @@
+/**
+* Includes all mixins.
+*/
+@use "@iccc/theme-data/lib/build/scss/mixins/utilities/theme" as *;
+@use "@iccc/theme-data/lib/build/scss/mixins/utilities/typography" as *;
+@use "@iccc/theme-data/lib/build/scss/mixins/components/button" as *;
+@use "@iccc/theme-data/lib/build/scss/mixins/components/text-link" as *;
+@use "mui-theme-css/light" as light-mui-theme;
+@use "mui-theme-css/dark" as dark-mui-theme;
+
+/**
+* Maps iccc typography tokens to class names.
+*/
+@mixin iccc-typography-classes {
+  .iccc-typography-display-extra {
+    @include iccc-typography-display-extra;
+  }
+  .iccc-typography-display {
+    @include iccc-typography-display;
+  }
+  .iccc-typography-headline-largest {
+    @include iccc-typography-headline-largest;
+  }
+  .iccc-typography-headline-larger {
+    @include iccc-typography-headline-larger;
+  }
+  .iccc-typography-headline-large {
+    @include iccc-typography-headline-large;
+  }
+  .iccc-typography-headline-medium {
+    @include iccc-typography-headline-medium;
+  }
+  .iccc-typography-headline-small {
+    @include iccc-typography-headline-small;
+  }
+  .iccc-typography-headline-smaller {
+    @include iccc-typography-headline-smaller;
+  }
+  .iccc-typography-headline-smallest {
+    @include iccc-typography-headline-smallest;
+  }
+  .iccc-typography-body-copy-large {
+    @include iccc-typography-body-copy-large;
+  }
+  .iccc-typography-body-copy-medium {
+    @include iccc-typography-body-copy-medium;
+  }
+  .iccc-typography-body-copy-small {
+    @include iccc-typography-body-copy-small;
+  }
+  .iccc-typography-short-copy-large {
+    @include iccc-typography-short-copy-large;
+  }
+  .iccc-typography-short-copy-medium {
+    @include iccc-typography-short-copy-medium;
+  }
+  .iccc-typography-short-copy-small {
+    @include iccc-typography-short-copy-small;
+  }
+  .iccc-typography-smallprint {
+    @include iccc-typography-smallprint;
+  }
+  .iccc-typography-code {
+    @include iccc-typography-code;
+  }
+  .iccc-typography-caption {
+    @include iccc-typography-caption;
+  }
+  .iccc-typography-eyebrow {
+    @include iccc-typography-eyebrow;
+  }
+  .iccc-typography-pull-quote-medium {
+    @include iccc-typography-pull-quote-medium;
+  }
+  .iccc-typography-pull-quote-large {
+    @include iccc-typography-pull-quote-large;
+  }
+  .iccc-typography-tabular-numeric {
+    @include iccc-typography-tabular-numeric;
+  }
+  .iccc-typography-input-value {
+    @include iccc-typography-input-value;
+  }
+  .iccc-typography-button-label {
+    @include iccc-typography-button-label;
+  }
+  .iccc-typography-button-label-dense {
+    @include iccc-typography-button-label-dense;
+  }
+}
+
+/**
+* Applies light and dark palette to:
+* - Some html typography elements
+* - .iccc-text-link class
+*/
+@mixin iccc-palette-classes {
+  .iccc-theme--light {
+    @include iccc-theme($theme: "light");
+
+    .iccc-text-link {
+      @include iccc-textLink;
+    }
+  }
+
+  .iccc-theme--dark {
+    @include iccc-theme($theme: "dark");
+
+    .iccc-text-link {
+      @include iccc-textLink($theme: "dark");
+    }
+  }
+}
+
+/**
+* Includes iccc MUI component styles.
+*/
+@mixin iccc-mui-component-classes {
+  .iccc-theme--light {
+    @include light-mui-theme.mui-css;
+  }
+  .iccc-theme--dark {
+    @include dark-mui-theme.mui-css;
+  }
+}
+
+/**
+* Includes all styles
+*/
+@mixin iccc-global-classes {
+  @include iccc-typography-classes;
+  @include iccc-palette-classes;
+  @include iccc-mui-component-classes;
+}
