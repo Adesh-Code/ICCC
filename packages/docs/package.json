@@ -1,0 +1,11 @@
+{
+  "name": "@iccc/docs",
+  "version": "13.1.0",
+  "main": "lib/docs.js",
+  "module": "lib/docs.js",
+  "private": true,
+  "peerDependencies": {
+    "react": "^16.14.0 || ^17.0.0",
+    "react-dom": "^16.14.0 || ^17.0.0"
+  }
+}
