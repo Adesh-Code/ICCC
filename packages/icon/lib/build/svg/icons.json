@@ -1,0 +1,2314 @@
+[
+    {
+        "asset": "account-not-found.svg",
+        "id": "dhig--icons--account-not-found",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "add-folder.svg",
+        "id": "dhig--icons--add-folder",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "add-member.svg",
+        "id": "dhig--icons--add-member",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "add-page.svg",
+        "id": "dhig--icons--add-page",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "add.svg",
+        "id": "dhig--icons--add",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "alert-outline.svg",
+        "id": "dhig--icons--alert-outline",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "alert-solid.svg",
+        "id": "dhig--icons--alert-solid",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "android.svg",
+        "id": "dhig--icons--android",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "architecture.svg",
+        "id": "dhig--icons--architecture",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "archive.svg",
+        "id": "dhig--icons--archive",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "area-post.svg",
+        "id": "dhig--icons--area-post",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "arrow-bent-left-down.svg",
+        "id": "dhig--icons--arrow-bent-left-down",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "attach.svg",
+        "id": "dhig--icons--attach",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "attachment.svg",
+        "id": "dhig--icons--attachment",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "autodesk-assistant.svg",
+        "id": "dhig--icons--autodesk-assistant",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "back.svg",
+        "id": "dhig--icons--back",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "bar-chart.svg",
+        "id": "dhig--icons--bar-chart",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "benefits.svg",
+        "id": "dhig--icons--benefits",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "bilibili-circle.svg",
+        "id": "dhig--icons--bilibili-circle",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "bilibili.svg",
+        "id": "dhig--icons--bilibili",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "bill-stack.svg",
+        "id": "dhig--icons--bill-stack",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "billing.svg",
+        "id": "dhig--icons--billing",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "blog-circle.svg",
+        "id": "dhig--icons--blog-circle",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "blog.svg",
+        "id": "dhig--icons--blog",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "bookmark-filled.svg",
+        "id": "dhig--icons--bookmark-filled",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "bookmark.svg",
+        "id": "dhig--icons--bookmark",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "building.svg",
+        "id": "dhig--icons--building",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "business.svg",
+        "id": "dhig--icons--business",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "calendar-day.svg",
+        "id": "dhig--icons--calendar-day",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "calendar.svg",
+        "id": "dhig--icons--calendar",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "callback.svg",
+        "id": "dhig--icons--callback",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "cancel.svg",
+        "id": "dhig--icons--cancel",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "card-payment.svg",
+        "id": "dhig--icons--card-payment",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "caret-double-left.svg",
+        "id": "dhig--icons--caret-double-left",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "caret-double-right.svg",
+        "id": "dhig--icons--caret-double-right",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "caret-down.svg",
+        "id": "dhig--icons--caret-down",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "caret-left.svg",
+        "id": "dhig--icons--caret-left",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "caret-right.svg",
+        "id": "dhig--icons--caret-right",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "caret-up.svg",
+        "id": "dhig--icons--caret-up",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "cart-empty.svg",
+        "id": "dhig--icons--cart-empty",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "cart-full.svg",
+        "id": "dhig--icons--cart-full",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "chat-offline.svg",
+        "id": "dhig--icons--chat-offline",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "chat-online.svg",
+        "id": "dhig--icons--chat-online",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "chat.svg",
+        "id": "dhig--icons--chat",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "checklist.svg",
+        "id": "dhig--icons--checklist",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "checkmark.svg",
+        "id": "dhig--icons--checkmark",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "circle-full.svg",
+        "id": "dhig--icons--circle-full",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "circle-half.svg",
+        "id": "dhig--icons--circle-half",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "circle.svg",
+        "id": "dhig--icons--circle",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "clock.svg",
+        "id": "dhig--icons--clock",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "closed-captioning.svg",
+        "id": "dhig--icons--closed-captioning",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "cloud.svg",
+        "id": "dhig--icons--cloud",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "collaboration.svg",
+        "id": "dhig--icons--collaboration",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "collapse-panel.svg",
+        "id": "dhig--icons--collapse-panel",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "comment.svg",
+        "id": "dhig--icons--comment",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "compare.svg",
+        "id": "dhig--icons--compare",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "complete-solid.svg",
+        "id": "dhig--icons--complete-solid",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "complete.svg",
+        "id": "dhig--icons--complete",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "copy.svg",
+        "id": "dhig--icons--copy",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "create-case.svg",
+        "id": "dhig--icons--create-case",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "cross.svg",
+        "id": "dhig--icons--cross",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "cta-arrow-right-solid.svg",
+        "id": "dhig--icons--cta-arrow-right-solid",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "cta-arrow-right.svg",
+        "id": "dhig--icons--cta-arrow-right",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "dashboard.svg",
+        "id": "dhig--icons--dashboard",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "data.svg",
+        "id": "dhig--icons--data",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "design-engineering.svg",
+        "id": "dhig--icons--design-engineering",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "device-desktop.svg",
+        "id": "dhig--icons--device-desktop",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "device-mobile-filled.svg",
+        "id": "dhig--icons--device-mobile-filled",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "device-mobile.svg",
+        "id": "dhig--icons--device-mobile",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "device-tablet.svg",
+        "id": "dhig--icons--device-tablet",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "devices.svg",
+        "id": "dhig--icons--devices",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "discord-circle.svg",
+        "id": "dhig--icons--discord-circle",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "discord.svg",
+        "id": "dhig--icons--discord",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "document-management.svg",
+        "id": "dhig--icons--document-management",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "down.svg",
+        "id": "dhig--icons--down",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "download.svg",
+        "id": "dhig--icons--download",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "edit-marker-left.svg",
+        "id": "dhig--icons--edit-marker-left",
+        "dimensions": {
+            "height": 20,
+            "width": 25
+        }
+    },
+    {
+        "asset": "edit-marker-right.svg",
+        "id": "dhig--icons--edit-marker-right",
+        "dimensions": {
+            "height": 20,
+            "width": 25
+        }
+    },
+    {
+        "asset": "edit-profile.svg",
+        "id": "dhig--icons--edit-profile",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "edit.svg",
+        "id": "dhig--icons--edit",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "education.svg",
+        "id": "dhig--icons--education",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "eight.svg",
+        "id": "dhig--icons--eight",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "error-outline.svg",
+        "id": "dhig--icons--error-outline",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "error-solid.svg",
+        "id": "dhig--icons--error-solid",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "exit.svg",
+        "id": "dhig--icons--exit",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "expand-panel.svg",
+        "id": "dhig--icons--expand-panel",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "export-move.svg",
+        "id": "dhig--icons--export-move",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "external-link.svg",
+        "id": "dhig--icons--external-link",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "external.svg",
+        "id": "dhig--icons--external",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "facebook-circle.svg",
+        "id": "dhig--icons--facebook-circle",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "facebook.svg",
+        "id": "dhig--icons--facebook",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "favorite-full.svg",
+        "id": "dhig--icons--favorite-full",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "favorite-half.svg",
+        "id": "dhig--icons--favorite-half",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "favorite.svg",
+        "id": "dhig--icons--favorite",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "featured.svg",
+        "id": "dhig--icons--featured",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "feedback.svg",
+        "id": "dhig--icons--feedback",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "field.svg",
+        "id": "dhig--icons--field",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "file-assembly.svg",
+        "id": "dhig--icons--file-assembly",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "file-audio.svg",
+        "id": "dhig--icons--file-audio",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "file-document.svg",
+        "id": "dhig--icons--file-document",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "file-generic.svg",
+        "id": "dhig--icons--file-generic",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "file-image.svg",
+        "id": "dhig--icons--file-image",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "file-part.svg",
+        "id": "dhig--icons--file-part",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "file-pdf.svg",
+        "id": "dhig--icons--file-pdf",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "file-presentation.svg",
+        "id": "dhig--icons--file-presentation",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "file-spreadsheet.svg",
+        "id": "dhig--icons--file-spreadsheet",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "file-video.svg",
+        "id": "dhig--icons--file-video",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "file-zip.svg",
+        "id": "dhig--icons--file-zip",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "filter-tokens.svg",
+        "id": "dhig--icons--filter-tokens",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "filter.svg",
+        "id": "dhig--icons--filter",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "five.svg",
+        "id": "dhig--icons--five",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "flag.svg",
+        "id": "dhig--icons--flag",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "folder-open.svg",
+        "id": "dhig--icons--folder-open",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "folder.svg",
+        "id": "dhig--icons--folder",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "forums.svg",
+        "id": "dhig--icons--forums",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "forward.svg",
+        "id": "dhig--icons--forward",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "four.svg",
+        "id": "dhig--icons--four",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "fullscreen.svg",
+        "id": "dhig--icons--fullscreen",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "game-development.svg",
+        "id": "dhig--icons--game-development",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "general-contractor.svg",
+        "id": "dhig--icons--general-contractor",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "github-circle.svg",
+        "id": "dhig--icons--github-circle",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "github.svg",
+        "id": "dhig--icons--github",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "globe.svg",
+        "id": "dhig--icons--globe",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "google-play.svg",
+        "id": "dhig--icons--google-play",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "graph.svg",
+        "id": "dhig--icons--graph",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "grid.svg",
+        "id": "dhig--icons--grid",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "hamburger-menu.svg",
+        "id": "dhig--icons--hamburger-menu",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "help-outline.svg",
+        "id": "dhig--icons--help-outline",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "help-solid.svg",
+        "id": "dhig--icons--help-solid",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "hidden.svg",
+        "id": "dhig--icons--hidden",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "hierarchy.svg",
+        "id": "dhig--icons--hierarchy",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "home.svg",
+        "id": "dhig--icons--home",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "hub.svg",
+        "id": "dhig--icons--hub",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "imdb-circle.svg",
+        "id": "dhig--icons--imdb-circle",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "imdb.svg",
+        "id": "dhig--icons--imdb",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "import.svg",
+        "id": "dhig--icons--import",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "inbox.svg",
+        "id": "dhig--icons--inbox",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "info-outline.svg",
+        "id": "dhig--icons--info-outline",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "info-solid.svg",
+        "id": "dhig--icons--info-solid",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "infrastructure.svg",
+        "id": "dhig--icons--infrastructure",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "instagram-circle.svg",
+        "id": "dhig--icons--instagram-circle",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "instagram.svg",
+        "id": "dhig--icons--instagram",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "item.svg",
+        "id": "dhig--icons--item",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "key.svg",
+        "id": "dhig--icons--key",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "language.svg",
+        "id": "dhig--icons--language",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "link.svg",
+        "id": "dhig--icons--link",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "linkedin-circle.svg",
+        "id": "dhig--icons--linkedin-circle",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "linkedIn.svg",
+        "id": "dhig--icons--linkedIn",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "linux.svg",
+        "id": "dhig--icons--linux",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "list.svg",
+        "id": "dhig--icons--list",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "location.svg",
+        "id": "dhig--icons--location",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "lock-filled.svg",
+        "id": "dhig--icons--lock-filled",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "lock.svg",
+        "id": "dhig--icons--lock",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "mac.svg",
+        "id": "dhig--icons--mac",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "mail.svg",
+        "id": "dhig--icons--mail",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "manage-access.svg",
+        "id": "dhig--icons--manage-access",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "manufacturing.svg",
+        "id": "dhig--icons--manufacturing",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "maximize.svg",
+        "id": "dhig--icons--maximize",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "mep-contractor.svg",
+        "id": "dhig--icons--mep-contractor",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "mep-engineering.svg",
+        "id": "dhig--icons--mep-engineering",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "mic-off.svg",
+        "id": "dhig--icons--mic-off",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "mic-on.svg",
+        "id": "dhig--icons--mic-on",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "minimize.svg",
+        "id": "dhig--icons--minimize",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "more-vertical.svg",
+        "id": "dhig--icons--more-vertical",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "more.svg",
+        "id": "dhig--icons--more",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "mute.svg",
+        "id": "dhig--icons--mute",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "naver-blog-circle.svg",
+        "id": "dhig--icons--naver-blog-circle",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "naver-blog.svg",
+        "id": "dhig--icons--naver-blog",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "nine.svg",
+        "id": "dhig--icons--nine",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "not-editable.svg",
+        "id": "dhig--icons--not-editable",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "notifcation-off.svg",
+        "id": "dhig--icons--notifcation-off",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "notification.svg",
+        "id": "dhig--icons--notification",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "one.svg",
+        "id": "dhig--icons--one",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "online-viewers.svg",
+        "id": "dhig--icons--online-viewers",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "paste.svg",
+        "id": "dhig--icons--paste",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "permission-group.svg",
+        "id": "dhig--icons--permission-group",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "permission-individual.svg",
+        "id": "dhig--icons--permission-individual",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "personal-data.svg",
+        "id": "dhig--icons--personal-data",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "personal.svg",
+        "id": "dhig--icons--personal",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "photos.svg",
+        "id": "dhig--icons--photos",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "pie-chart-outline.svg",
+        "id": "dhig--icons--pie-chart-outline",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "pie-chart-solid.svg",
+        "id": "dhig--icons--pie-chart-solid",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "pin.svg",
+        "id": "dhig--icons--pin",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "pinterest-circle.svg",
+        "id": "dhig--icons--pinterest-circle",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "pinterest.svg",
+        "id": "dhig--icons--pinterest",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "play-outline.svg",
+        "id": "dhig--icons--play-outline",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "play-solid.svg",
+        "id": "dhig--icons--play-solid",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "playback-fast-forward.svg",
+        "id": "dhig--icons--playback-fast-forward",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "playback-go-to-end.svg",
+        "id": "dhig--icons--playback-go-to-end",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "playback-go-to-start.svg",
+        "id": "dhig--icons--playback-go-to-start",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "playback-loop.svg",
+        "id": "dhig--icons--playback-loop",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "playback-next.svg",
+        "id": "dhig--icons--playback-next",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "playback-pause.svg",
+        "id": "dhig--icons--playback-pause",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "playback-play.svg",
+        "id": "dhig--icons--playback-play",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "playback-previous.svg",
+        "id": "dhig--icons--playback-previous",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "playback-record.svg",
+        "id": "dhig--icons--playback-record",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "playback-rewind.svg",
+        "id": "dhig--icons--playback-rewind",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "playback-shuffle.svg",
+        "id": "dhig--icons--playback-shuffle",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "playback-stop.svg",
+        "id": "dhig--icons--playback-stop",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "print.svg",
+        "id": "dhig--icons--print",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "products-and-services.svg",
+        "id": "dhig--icons--products-and-services",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "profile.svg",
+        "id": "dhig--icons--profile",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "project-management.svg",
+        "id": "dhig--icons--project-management",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "properties.svg",
+        "id": "dhig--icons--properties",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "publish.svg",
+        "id": "dhig--icons--publish",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "quantities.svg",
+        "id": "dhig--icons--quantities",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "reddit-circle.svg",
+        "id": "dhig--icons--reddit-circle",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "reddit.svg",
+        "id": "dhig--icons--reddit",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "redo.svg",
+        "id": "dhig--icons--redo",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "redshift-circle.svg",
+        "id": "dhig--icons--redshift-circle",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "redshift.svg",
+        "id": "dhig--icons--redshift",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "report.svg",
+        "id": "dhig--icons--report",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "resize.svg",
+        "id": "dhig--icons--resize",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "restart.svg",
+        "id": "dhig--icons--restart",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "save.svg",
+        "id": "dhig--icons--save",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "search.svg",
+        "id": "dhig--icons--search",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "security.svg",
+        "id": "dhig--icons--security",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "select-all.svg",
+        "id": "dhig--icons--select-all",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "select-none.svg",
+        "id": "dhig--icons--select-none",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "send.svg",
+        "id": "dhig--icons--send",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "service.svg",
+        "id": "dhig--icons--service",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "settings.svg",
+        "id": "dhig--icons--settings",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "seven.svg",
+        "id": "dhig--icons--seven",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "share.svg",
+        "id": "dhig--icons--share",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "site-design.svg",
+        "id": "dhig--icons--site-design",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "six.svg",
+        "id": "dhig--icons--six",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "sort.svg",
+        "id": "dhig--icons--sort",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "ssl.svg",
+        "id": "dhig--icons--ssl",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "stroke.svg",
+        "id": "dhig--icons--stroke",
+        "dimensions": {
+            "height": 22,
+            "width": 22
+        }
+    },
+    {
+        "asset": "structural-engineering.svg",
+        "id": "dhig--icons--structural-engineering",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "structural-fabricator.svg",
+        "id": "dhig--icons--structural-fabricator",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "subscriptions.svg",
+        "id": "dhig--icons--subscriptions",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "subtract.svg",
+        "id": "dhig--icons--subtract",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "support-call.svg",
+        "id": "dhig--icons--support-call",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "support.svg",
+        "id": "dhig--icons--support",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "sync.svg",
+        "id": "dhig--icons--sync",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "tag-solid.svg",
+        "id": "dhig--icons--tag-solid",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "tag.svg",
+        "id": "dhig--icons--tag",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "ten.svg",
+        "id": "dhig--icons--ten",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "threads-circle.svg",
+        "id": "dhig--icons--threads-circle",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "threads.svg",
+        "id": "dhig--icons--threads",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "three.svg",
+        "id": "dhig--icons--three",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "thumbs-down-filled.svg",
+        "id": "dhig--icons--thumbs-down-filled",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "thumbs-down.svg",
+        "id": "dhig--icons--thumbs-down",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "thumbs-up-filled.svg",
+        "id": "dhig--icons--thumbs-up-filled",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "thumbs-up.svg",
+        "id": "dhig--icons--thumbs-up",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "tiktok-circle.svg",
+        "id": "dhig--icons--tiktok-circle",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "tiktok.svg",
+        "id": "dhig--icons--tiktok",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "transportation.svg",
+        "id": "dhig--icons--transportation",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "trash.svg",
+        "id": "dhig--icons--trash",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "twitch-circle.svg",
+        "id": "dhig--icons--twitch-circle",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "twitch.svg",
+        "id": "dhig--icons--twitch",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "twitter-circle.svg",
+        "id": "dhig--icons--twitter-circle",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "twitter.svg",
+        "id": "dhig--icons--twitter",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "two.svg",
+        "id": "dhig--icons--two",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "unavailable-solid.svg",
+        "id": "dhig--icons--unavailable-solid",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "undo.svg",
+        "id": "dhig--icons--undo",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "unlink.svg",
+        "id": "dhig--icons--unlink",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "unlock.svg",
+        "id": "dhig--icons--unlock",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "unpin.svg",
+        "id": "dhig--icons--unpin",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "up.svg",
+        "id": "dhig--icons--up",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "upload.svg",
+        "id": "dhig--icons--upload",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "user-inactive.svg",
+        "id": "dhig--icons--user-inactive",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "video-off.svg",
+        "id": "dhig--icons--video-off",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "video-on.svg",
+        "id": "dhig--icons--video-on",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "view-column.svg",
+        "id": "dhig--icons--view-column",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "view-file.svg",
+        "id": "dhig--icons--view-file",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "visible.svg",
+        "id": "dhig--icons--visible",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "visual-effects.svg",
+        "id": "dhig--icons--visual-effects",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "volume.svg",
+        "id": "dhig--icons--volume",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "waffle.svg",
+        "id": "dhig--icons--waffle",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "water-infrastructure.svg",
+        "id": "dhig--icons--water-infrastructure",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "wechat-circle.svg",
+        "id": "dhig--icons--wechat-circle",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "wechat.svg",
+        "id": "dhig--icons--wechat",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "weibo-circle.svg",
+        "id": "dhig--icons--weibo-circle",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "weibo.svg",
+        "id": "dhig--icons--weibo",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "windows.svg",
+        "id": "dhig--icons--windows",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "x-circle.svg",
+        "id": "dhig--icons--x-circle",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "x.svg",
+        "id": "dhig--icons--x",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "xing-circle.svg",
+        "id": "dhig--icons--xing-circle",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "xing.svg",
+        "id": "dhig--icons--xing",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "youku-circle.svg",
+        "id": "dhig--icons--youku-circle",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "youku.svg",
+        "id": "dhig--icons--youku",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "youtube-circle.svg",
+        "id": "dhig--icons--youtube-circle",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "youtube.svg",
+        "id": "dhig--icons--youtube",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "zhihu-circle.svg",
+        "id": "dhig--icons--zhihu-circle",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "zhihu.svg",
+        "id": "dhig--icons--zhihu",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "zoom-in.svg",
+        "id": "dhig--icons--zoom-in",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    },
+    {
+        "asset": "zoom-out.svg",
+        "id": "dhig--icons--zoom-out",
+        "dimensions": {
+            "height": 24,
+            "width": 24
+        }
+    }
+]

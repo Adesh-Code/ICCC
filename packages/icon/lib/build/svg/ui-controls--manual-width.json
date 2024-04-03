@@ -1,0 +1,50 @@
+[
+    {
+        "asset": "caret-right.svg",
+        "id": "dhig--ui-controls--manual-width--caret-right",
+        "dimensions": {
+            "height": 16,
+            "width": 7
+        }
+    },
+    {
+        "asset": "checkmark.svg",
+        "id": "dhig--ui-controls--manual-width--checkmark",
+        "dimensions": {
+            "height": 16,
+            "width": 16
+        }
+    },
+    {
+        "asset": "error.svg",
+        "id": "dhig--ui-controls--manual-width--error",
+        "dimensions": {
+            "height": 16,
+            "width": 14
+        }
+    },
+    {
+        "asset": "external.svg",
+        "id": "dhig--ui-controls--manual-width--external",
+        "dimensions": {
+            "height": 16,
+            "width": 9
+        }
+    },
+    {
+        "asset": "indeterminate.svg",
+        "id": "dhig--ui-controls--manual-width--indeterminate",
+        "dimensions": {
+            "height": 16,
+            "width": 16
+        }
+    },
+    {
+        "asset": "success.svg",
+        "id": "dhig--ui-controls--manual-width--success",
+        "dimensions": {
+            "height": 16,
+            "width": 14
+        }
+    }
+]

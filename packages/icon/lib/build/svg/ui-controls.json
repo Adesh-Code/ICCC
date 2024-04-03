@@ -1,0 +1,122 @@
+[
+    {
+        "asset": "caret-double-left-small.svg",
+        "id": "dhig--ui-controls--caret-double-left-small",
+        "dimensions": {
+            "height": 16,
+            "width": 9
+        }
+    },
+    {
+        "asset": "caret-double-right-small.svg",
+        "id": "dhig--ui-controls--caret-double-right-small",
+        "dimensions": {
+            "height": 16,
+            "width": 9
+        }
+    },
+    {
+        "asset": "caret-down-small.svg",
+        "id": "dhig--ui-controls--caret-down-small",
+        "dimensions": {
+            "height": 16,
+            "width": 9
+        }
+    },
+    {
+        "asset": "caret-down.svg",
+        "id": "dhig--ui-controls--caret-down",
+        "dimensions": {
+            "height": 16,
+            "width": 12
+        }
+    },
+    {
+        "asset": "caret-left-small.svg",
+        "id": "dhig--ui-controls--caret-left-small",
+        "dimensions": {
+            "height": 16,
+            "width": 6
+        }
+    },
+    {
+        "asset": "caret-left.svg",
+        "id": "dhig--ui-controls--caret-left",
+        "dimensions": {
+            "height": 16,
+            "width": 7
+        }
+    },
+    {
+        "asset": "caret-right-small.svg",
+        "id": "dhig--ui-controls--caret-right-small",
+        "dimensions": {
+            "height": 16,
+            "width": 6
+        }
+    },
+    {
+        "asset": "caret-right.svg",
+        "id": "dhig--ui-controls--caret-right",
+        "dimensions": {
+            "height": 16,
+            "width": 7
+        }
+    },
+    {
+        "asset": "caret-up-small.svg",
+        "id": "dhig--ui-controls--caret-up-small",
+        "dimensions": {
+            "height": 16,
+            "width": 9
+        }
+    },
+    {
+        "asset": "caret-up.svg",
+        "id": "dhig--ui-controls--caret-up",
+        "dimensions": {
+            "height": 16,
+            "width": 12
+        }
+    },
+    {
+        "asset": "checkmark.svg",
+        "id": "dhig--ui-controls--checkmark",
+        "dimensions": {
+            "height": 16,
+            "width": 11
+        }
+    },
+    {
+        "asset": "error.svg",
+        "id": "dhig--ui-controls--error",
+        "dimensions": {
+            "height": 16,
+            "width": 16
+        }
+    },
+    {
+        "asset": "external.svg",
+        "id": "dhig--ui-controls--external",
+        "dimensions": {
+            "height": 16,
+            "width": 9
+        }
+    },
+    {
+        "asset": "indeterminate.svg",
+        "id": "dhig--ui-controls--indeterminate",
+        "dimensions": {
+            "height": 16,
+            "width": 10
+        }
+    },
+    {
+        "asset": "success.svg",
+        "id": "dhig--ui-controls--success",
+        "dimensions": {
+            "height": 16,
+            "width": 15
+        }
+    }
+]
