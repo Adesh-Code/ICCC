@@ -98,7 +98,7 @@ const getDirectories = (source) => {
 
     const spriteName = entry.path.replace("/", "--");
     if (assets.length) {
-      const assetGroup = { assets, prefix: `dhig--${spriteName}--` };
+      const assetGroup = { assets, prefix: `iccc--${spriteName}--` };
       assetGroups.push(assetGroup);
 
       compileSprite({

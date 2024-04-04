@@ -1,7 +1,7 @@
 [
     {
         "asset": "active-incomplete.svg",
-        "id": "dhig--stepper--active-incomplete",
+        "id": "iccc--stepper--active-incomplete",
         "dimensions": {
             "height": 32,
             "width": 32
@@ -9,7 +9,7 @@
     },
     {
         "asset": "complete.svg",
-        "id": "dhig--stepper--complete",
+        "id": "iccc--stepper--complete",
         "dimensions": {
             "height": 32,
             "width": 32
@@ -17,7 +17,7 @@
     },
     {
         "asset": "error.svg",
-        "id": "dhig--stepper--error",
+        "id": "iccc--stepper--error",
         "dimensions": {
             "height": 32,
             "width": 32

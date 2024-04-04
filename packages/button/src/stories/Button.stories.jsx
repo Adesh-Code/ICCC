@@ -42,10 +42,10 @@ const buttonStoryMeta = {
           <Description />
           <Title> API </Title>
           <h6>
-            - For all supported MUI Button props, see https://mui.com/api/button/.
+            - For all supported MUI Button props, see <a href='https://mui.com/api/button/'>Button API</a>.
           </h6>
           <h6>
-            - For all supported MUI LoadingButton props, see [`LoadingButton API`](https://mui.com/material-ui/api/loading-button/).
+            - For all supported MUI LoadingButton props, see <a href='https://mui.com/material-ui/api/loading-button/'>LoadingButton API</a>.
           </h6>
           <Canvas of={api} />
           <ArgTypes />

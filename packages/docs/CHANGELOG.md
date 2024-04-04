@@ -660,7 +660,7 @@ autocomplete
 
 ### Features
 
-* 𓊁 Implementation of DHIG Grid component ([#434](https://git.autodesk.com//dpe/digital-hig/issues/434)) ([f820df0](https://git.autodesk.com//dpe/digital-hig/commits/f820df0f5b4bc6cd9da90b15dcb9aac685d7727a))
+* 𓊁 Implementation of iccc Grid component ([#434](https://git.autodesk.com//dpe/digital-hig/issues/434)) ([f820df0](https://git.autodesk.com//dpe/digital-hig/commits/f820df0f5b4bc6cd9da90b15dcb9aac685d7727a))
 
 
 

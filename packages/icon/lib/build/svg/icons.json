@@ -1,7 +1,7 @@
 [
     {
         "asset": "account-not-found.svg",
-        "id": "dhig--icons--account-not-found",
+        "id": "iccc--icons--account-not-found",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -9,7 +9,7 @@
     },
     {
         "asset": "add-folder.svg",
-        "id": "dhig--icons--add-folder",
+        "id": "iccc--icons--add-folder",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -17,7 +17,7 @@
     },
     {
         "asset": "add-member.svg",
-        "id": "dhig--icons--add-member",
+        "id": "iccc--icons--add-member",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -25,7 +25,7 @@
     },
     {
         "asset": "add-page.svg",
-        "id": "dhig--icons--add-page",
+        "id": "iccc--icons--add-page",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -33,7 +33,7 @@
     },
     {
         "asset": "add.svg",
-        "id": "dhig--icons--add",
+        "id": "iccc--icons--add",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -41,7 +41,7 @@
     },
     {
         "asset": "alert-outline.svg",
-        "id": "dhig--icons--alert-outline",
+        "id": "iccc--icons--alert-outline",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -49,7 +49,7 @@
     },
     {
         "asset": "alert-solid.svg",
-        "id": "dhig--icons--alert-solid",
+        "id": "iccc--icons--alert-solid",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -57,7 +57,7 @@
     },
     {
         "asset": "android.svg",
-        "id": "dhig--icons--android",
+        "id": "iccc--icons--android",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -65,7 +65,7 @@
     },
     {
         "asset": "architecture.svg",
-        "id": "dhig--icons--architecture",
+        "id": "iccc--icons--architecture",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -73,7 +73,7 @@
     },
     {
         "asset": "archive.svg",
-        "id": "dhig--icons--archive",
+        "id": "iccc--icons--archive",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -81,7 +81,7 @@
     },
     {
         "asset": "area-post.svg",
-        "id": "dhig--icons--area-post",
+        "id": "iccc--icons--area-post",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -89,7 +89,7 @@
     },
     {
         "asset": "arrow-bent-left-down.svg",
-        "id": "dhig--icons--arrow-bent-left-down",
+        "id": "iccc--icons--arrow-bent-left-down",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -97,7 +97,7 @@
     },
     {
         "asset": "attach.svg",
-        "id": "dhig--icons--attach",
+        "id": "iccc--icons--attach",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -105,7 +105,7 @@
     },
     {
         "asset": "attachment.svg",
-        "id": "dhig--icons--attachment",
+        "id": "iccc--icons--attachment",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -113,7 +113,7 @@
     },
     {
         "asset": "autodesk-assistant.svg",
-        "id": "dhig--icons--autodesk-assistant",
+        "id": "iccc--icons--autodesk-assistant",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -121,7 +121,7 @@
     },
     {
         "asset": "back.svg",
-        "id": "dhig--icons--back",
+        "id": "iccc--icons--back",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -129,7 +129,7 @@
     },
     {
         "asset": "bar-chart.svg",
-        "id": "dhig--icons--bar-chart",
+        "id": "iccc--icons--bar-chart",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -137,7 +137,7 @@
     },
     {
         "asset": "benefits.svg",
-        "id": "dhig--icons--benefits",
+        "id": "iccc--icons--benefits",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -145,7 +145,7 @@
     },
     {
         "asset": "bilibili-circle.svg",
-        "id": "dhig--icons--bilibili-circle",
+        "id": "iccc--icons--bilibili-circle",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -153,7 +153,7 @@
     },
     {
         "asset": "bilibili.svg",
-        "id": "dhig--icons--bilibili",
+        "id": "iccc--icons--bilibili",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -161,7 +161,7 @@
     },
     {
         "asset": "bill-stack.svg",
-        "id": "dhig--icons--bill-stack",
+        "id": "iccc--icons--bill-stack",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -169,7 +169,7 @@
     },
     {
         "asset": "billing.svg",
-        "id": "dhig--icons--billing",
+        "id": "iccc--icons--billing",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -177,7 +177,7 @@
     },
     {
         "asset": "blog-circle.svg",
-        "id": "dhig--icons--blog-circle",
+        "id": "iccc--icons--blog-circle",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -185,7 +185,7 @@
     },
     {
         "asset": "blog.svg",
-        "id": "dhig--icons--blog",
+        "id": "iccc--icons--blog",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -193,7 +193,7 @@
     },
     {
         "asset": "bookmark-filled.svg",
-        "id": "dhig--icons--bookmark-filled",
+        "id": "iccc--icons--bookmark-filled",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -201,7 +201,7 @@
     },
     {
         "asset": "bookmark.svg",
-        "id": "dhig--icons--bookmark",
+        "id": "iccc--icons--bookmark",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -209,7 +209,7 @@
     },
     {
         "asset": "building.svg",
-        "id": "dhig--icons--building",
+        "id": "iccc--icons--building",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -217,7 +217,7 @@
     },
     {
         "asset": "business.svg",
-        "id": "dhig--icons--business",
+        "id": "iccc--icons--business",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -225,7 +225,7 @@
     },
     {
         "asset": "calendar-day.svg",
-        "id": "dhig--icons--calendar-day",
+        "id": "iccc--icons--calendar-day",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -233,7 +233,7 @@
     },
     {
         "asset": "calendar.svg",
-        "id": "dhig--icons--calendar",
+        "id": "iccc--icons--calendar",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -241,7 +241,7 @@
     },
     {
         "asset": "callback.svg",
-        "id": "dhig--icons--callback",
+        "id": "iccc--icons--callback",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -249,7 +249,7 @@
     },
     {
         "asset": "cancel.svg",
-        "id": "dhig--icons--cancel",
+        "id": "iccc--icons--cancel",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -257,7 +257,7 @@
     },
     {
         "asset": "card-payment.svg",
-        "id": "dhig--icons--card-payment",
+        "id": "iccc--icons--card-payment",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -265,7 +265,7 @@
     },
     {
         "asset": "caret-double-left.svg",
-        "id": "dhig--icons--caret-double-left",
+        "id": "iccc--icons--caret-double-left",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -273,7 +273,7 @@
     },
     {
         "asset": "caret-double-right.svg",
-        "id": "dhig--icons--caret-double-right",
+        "id": "iccc--icons--caret-double-right",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -281,7 +281,7 @@
     },
     {
         "asset": "caret-down.svg",
-        "id": "dhig--icons--caret-down",
+        "id": "iccc--icons--caret-down",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -289,7 +289,7 @@
     },
     {
         "asset": "caret-left.svg",
-        "id": "dhig--icons--caret-left",
+        "id": "iccc--icons--caret-left",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -297,7 +297,7 @@
     },
     {
         "asset": "caret-right.svg",
-        "id": "dhig--icons--caret-right",
+        "id": "iccc--icons--caret-right",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -305,7 +305,7 @@
     },
     {
         "asset": "caret-up.svg",
-        "id": "dhig--icons--caret-up",
+        "id": "iccc--icons--caret-up",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -313,7 +313,7 @@
     },
     {
         "asset": "cart-empty.svg",
-        "id": "dhig--icons--cart-empty",
+        "id": "iccc--icons--cart-empty",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -321,7 +321,7 @@
     },
     {
         "asset": "cart-full.svg",
-        "id": "dhig--icons--cart-full",
+        "id": "iccc--icons--cart-full",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -329,7 +329,7 @@
     },
     {
         "asset": "chat-offline.svg",
-        "id": "dhig--icons--chat-offline",
+        "id": "iccc--icons--chat-offline",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -337,7 +337,7 @@
     },
     {
         "asset": "chat-online.svg",
-        "id": "dhig--icons--chat-online",
+        "id": "iccc--icons--chat-online",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -345,7 +345,7 @@
     },
     {
         "asset": "chat.svg",
-        "id": "dhig--icons--chat",
+        "id": "iccc--icons--chat",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -353,7 +353,7 @@
     },
     {
         "asset": "checklist.svg",
-        "id": "dhig--icons--checklist",
+        "id": "iccc--icons--checklist",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -361,7 +361,7 @@
     },
     {
         "asset": "checkmark.svg",
-        "id": "dhig--icons--checkmark",
+        "id": "iccc--icons--checkmark",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -369,7 +369,7 @@
     },
     {
         "asset": "circle-full.svg",
-        "id": "dhig--icons--circle-full",
+        "id": "iccc--icons--circle-full",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -377,7 +377,7 @@
     },
     {
         "asset": "circle-half.svg",
-        "id": "dhig--icons--circle-half",
+        "id": "iccc--icons--circle-half",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -385,7 +385,7 @@
     },
     {
         "asset": "circle.svg",
-        "id": "dhig--icons--circle",
+        "id": "iccc--icons--circle",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -393,7 +393,7 @@
     },
     {
         "asset": "clock.svg",
-        "id": "dhig--icons--clock",
+        "id": "iccc--icons--clock",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -401,7 +401,7 @@
     },
     {
         "asset": "closed-captioning.svg",
-        "id": "dhig--icons--closed-captioning",
+        "id": "iccc--icons--closed-captioning",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -409,7 +409,7 @@
     },
     {
         "asset": "cloud.svg",
-        "id": "dhig--icons--cloud",
+        "id": "iccc--icons--cloud",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -417,7 +417,7 @@
     },
     {
         "asset": "collaboration.svg",
-        "id": "dhig--icons--collaboration",
+        "id": "iccc--icons--collaboration",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -425,7 +425,7 @@
     },
     {
         "asset": "collapse-panel.svg",
-        "id": "dhig--icons--collapse-panel",
+        "id": "iccc--icons--collapse-panel",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -433,7 +433,7 @@
     },
     {
         "asset": "comment.svg",
-        "id": "dhig--icons--comment",
+        "id": "iccc--icons--comment",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -441,7 +441,7 @@
     },
     {
         "asset": "compare.svg",
-        "id": "dhig--icons--compare",
+        "id": "iccc--icons--compare",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -449,7 +449,7 @@
     },
     {
         "asset": "complete-solid.svg",
-        "id": "dhig--icons--complete-solid",
+        "id": "iccc--icons--complete-solid",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -457,7 +457,7 @@
     },
     {
         "asset": "complete.svg",
-        "id": "dhig--icons--complete",
+        "id": "iccc--icons--complete",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -465,7 +465,7 @@
     },
     {
         "asset": "copy.svg",
-        "id": "dhig--icons--copy",
+        "id": "iccc--icons--copy",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -473,7 +473,7 @@
     },
     {
         "asset": "create-case.svg",
-        "id": "dhig--icons--create-case",
+        "id": "iccc--icons--create-case",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -481,7 +481,7 @@
     },
     {
         "asset": "cross.svg",
-        "id": "dhig--icons--cross",
+        "id": "iccc--icons--cross",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -489,7 +489,7 @@
     },
     {
         "asset": "cta-arrow-right-solid.svg",
-        "id": "dhig--icons--cta-arrow-right-solid",
+        "id": "iccc--icons--cta-arrow-right-solid",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -497,7 +497,7 @@
     },
     {
         "asset": "cta-arrow-right.svg",
-        "id": "dhig--icons--cta-arrow-right",
+        "id": "iccc--icons--cta-arrow-right",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -505,7 +505,7 @@
     },
     {
         "asset": "dashboard.svg",
-        "id": "dhig--icons--dashboard",
+        "id": "iccc--icons--dashboard",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -513,7 +513,7 @@
     },
     {
         "asset": "data.svg",
-        "id": "dhig--icons--data",
+        "id": "iccc--icons--data",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -521,7 +521,7 @@
     },
     {
         "asset": "design-engineering.svg",
-        "id": "dhig--icons--design-engineering",
+        "id": "iccc--icons--design-engineering",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -529,7 +529,7 @@
     },
     {
         "asset": "device-desktop.svg",
-        "id": "dhig--icons--device-desktop",
+        "id": "iccc--icons--device-desktop",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -537,7 +537,7 @@
     },
     {
         "asset": "device-mobile-filled.svg",
-        "id": "dhig--icons--device-mobile-filled",
+        "id": "iccc--icons--device-mobile-filled",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -545,7 +545,7 @@
     },
     {
         "asset": "device-mobile.svg",
-        "id": "dhig--icons--device-mobile",
+        "id": "iccc--icons--device-mobile",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -553,7 +553,7 @@
     },
     {
         "asset": "device-tablet.svg",
-        "id": "dhig--icons--device-tablet",
+        "id": "iccc--icons--device-tablet",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -561,7 +561,7 @@
     },
     {
         "asset": "devices.svg",
-        "id": "dhig--icons--devices",
+        "id": "iccc--icons--devices",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -569,7 +569,7 @@
     },
     {
         "asset": "discord-circle.svg",
-        "id": "dhig--icons--discord-circle",
+        "id": "iccc--icons--discord-circle",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -577,7 +577,7 @@
     },
     {
         "asset": "discord.svg",
-        "id": "dhig--icons--discord",
+        "id": "iccc--icons--discord",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -585,7 +585,7 @@
     },
     {
         "asset": "document-management.svg",
-        "id": "dhig--icons--document-management",
+        "id": "iccc--icons--document-management",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -593,7 +593,7 @@
     },
     {
         "asset": "down.svg",
-        "id": "dhig--icons--down",
+        "id": "iccc--icons--down",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -601,7 +601,7 @@
     },
     {
         "asset": "download.svg",
-        "id": "dhig--icons--download",
+        "id": "iccc--icons--download",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -609,7 +609,7 @@
     },
     {
         "asset": "edit-marker-left.svg",
-        "id": "dhig--icons--edit-marker-left",
+        "id": "iccc--icons--edit-marker-left",
         "dimensions": {
             "height": 20,
             "width": 25
@@ -617,7 +617,7 @@
     },
     {
         "asset": "edit-marker-right.svg",
-        "id": "dhig--icons--edit-marker-right",
+        "id": "iccc--icons--edit-marker-right",
         "dimensions": {
             "height": 20,
             "width": 25
@@ -625,7 +625,7 @@
     },
     {
         "asset": "edit-profile.svg",
-        "id": "dhig--icons--edit-profile",
+        "id": "iccc--icons--edit-profile",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -633,7 +633,7 @@
     },
     {
         "asset": "edit.svg",
-        "id": "dhig--icons--edit",
+        "id": "iccc--icons--edit",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -641,7 +641,7 @@
     },
     {
         "asset": "education.svg",
-        "id": "dhig--icons--education",
+        "id": "iccc--icons--education",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -649,7 +649,7 @@
     },
     {
         "asset": "eight.svg",
-        "id": "dhig--icons--eight",
+        "id": "iccc--icons--eight",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -657,7 +657,7 @@
     },
     {
         "asset": "error-outline.svg",
-        "id": "dhig--icons--error-outline",
+        "id": "iccc--icons--error-outline",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -665,7 +665,7 @@
     },
     {
         "asset": "error-solid.svg",
-        "id": "dhig--icons--error-solid",
+        "id": "iccc--icons--error-solid",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -673,7 +673,7 @@
     },
     {
         "asset": "exit.svg",
-        "id": "dhig--icons--exit",
+        "id": "iccc--icons--exit",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -681,7 +681,7 @@
     },
     {
         "asset": "expand-panel.svg",
-        "id": "dhig--icons--expand-panel",
+        "id": "iccc--icons--expand-panel",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -689,7 +689,7 @@
     },
     {
         "asset": "export-move.svg",
-        "id": "dhig--icons--export-move",
+        "id": "iccc--icons--export-move",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -697,7 +697,7 @@
     },
     {
         "asset": "external-link.svg",
-        "id": "dhig--icons--external-link",
+        "id": "iccc--icons--external-link",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -705,7 +705,7 @@
     },
     {
         "asset": "external.svg",
-        "id": "dhig--icons--external",
+        "id": "iccc--icons--external",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -713,7 +713,7 @@
     },
     {
         "asset": "facebook-circle.svg",
-        "id": "dhig--icons--facebook-circle",
+        "id": "iccc--icons--facebook-circle",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -721,7 +721,7 @@
     },
     {
         "asset": "facebook.svg",
-        "id": "dhig--icons--facebook",
+        "id": "iccc--icons--facebook",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -729,7 +729,7 @@
     },
     {
         "asset": "favorite-full.svg",
-        "id": "dhig--icons--favorite-full",
+        "id": "iccc--icons--favorite-full",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -737,7 +737,7 @@
     },
     {
         "asset": "favorite-half.svg",
-        "id": "dhig--icons--favorite-half",
+        "id": "iccc--icons--favorite-half",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -745,7 +745,7 @@
     },
     {
         "asset": "favorite.svg",
-        "id": "dhig--icons--favorite",
+        "id": "iccc--icons--favorite",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -753,7 +753,7 @@
     },
     {
         "asset": "featured.svg",
-        "id": "dhig--icons--featured",
+        "id": "iccc--icons--featured",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -761,7 +761,7 @@
     },
     {
         "asset": "feedback.svg",
-        "id": "dhig--icons--feedback",
+        "id": "iccc--icons--feedback",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -769,7 +769,7 @@
     },
     {
         "asset": "field.svg",
-        "id": "dhig--icons--field",
+        "id": "iccc--icons--field",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -777,7 +777,7 @@
     },
     {
         "asset": "file-assembly.svg",
-        "id": "dhig--icons--file-assembly",
+        "id": "iccc--icons--file-assembly",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -785,7 +785,7 @@
     },
     {
         "asset": "file-audio.svg",
-        "id": "dhig--icons--file-audio",
+        "id": "iccc--icons--file-audio",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -793,7 +793,7 @@
     },
     {
         "asset": "file-document.svg",
-        "id": "dhig--icons--file-document",
+        "id": "iccc--icons--file-document",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -801,7 +801,7 @@
     },
     {
         "asset": "file-generic.svg",
-        "id": "dhig--icons--file-generic",
+        "id": "iccc--icons--file-generic",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -809,7 +809,7 @@
     },
     {
         "asset": "file-image.svg",
-        "id": "dhig--icons--file-image",
+        "id": "iccc--icons--file-image",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -817,7 +817,7 @@
     },
     {
         "asset": "file-part.svg",
-        "id": "dhig--icons--file-part",
+        "id": "iccc--icons--file-part",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -825,7 +825,7 @@
     },
     {
         "asset": "file-pdf.svg",
-        "id": "dhig--icons--file-pdf",
+        "id": "iccc--icons--file-pdf",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -833,7 +833,7 @@
     },
     {
         "asset": "file-presentation.svg",
-        "id": "dhig--icons--file-presentation",
+        "id": "iccc--icons--file-presentation",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -841,7 +841,7 @@
     },
     {
         "asset": "file-spreadsheet.svg",
-        "id": "dhig--icons--file-spreadsheet",
+        "id": "iccc--icons--file-spreadsheet",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -849,7 +849,7 @@
     },
     {
         "asset": "file-video.svg",
-        "id": "dhig--icons--file-video",
+        "id": "iccc--icons--file-video",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -857,7 +857,7 @@
     },
     {
         "asset": "file-zip.svg",
-        "id": "dhig--icons--file-zip",
+        "id": "iccc--icons--file-zip",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -865,7 +865,7 @@
     },
     {
         "asset": "filter-tokens.svg",
-        "id": "dhig--icons--filter-tokens",
+        "id": "iccc--icons--filter-tokens",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -873,7 +873,7 @@
     },
     {
         "asset": "filter.svg",
-        "id": "dhig--icons--filter",
+        "id": "iccc--icons--filter",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -881,7 +881,7 @@
     },
     {
         "asset": "five.svg",
-        "id": "dhig--icons--five",
+        "id": "iccc--icons--five",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -889,7 +889,7 @@
     },
     {
         "asset": "flag.svg",
-        "id": "dhig--icons--flag",
+        "id": "iccc--icons--flag",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -897,7 +897,7 @@
     },
     {
         "asset": "folder-open.svg",
-        "id": "dhig--icons--folder-open",
+        "id": "iccc--icons--folder-open",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -905,7 +905,7 @@
     },
     {
         "asset": "folder.svg",
-        "id": "dhig--icons--folder",
+        "id": "iccc--icons--folder",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -913,7 +913,7 @@
     },
     {
         "asset": "forums.svg",
-        "id": "dhig--icons--forums",
+        "id": "iccc--icons--forums",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -921,7 +921,7 @@
     },
     {
         "asset": "forward.svg",
-        "id": "dhig--icons--forward",
+        "id": "iccc--icons--forward",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -929,7 +929,7 @@
     },
     {
         "asset": "four.svg",
-        "id": "dhig--icons--four",
+        "id": "iccc--icons--four",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -937,7 +937,7 @@
     },
     {
         "asset": "fullscreen.svg",
-        "id": "dhig--icons--fullscreen",
+        "id": "iccc--icons--fullscreen",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -945,7 +945,7 @@
     },
     {
         "asset": "game-development.svg",
-        "id": "dhig--icons--game-development",
+        "id": "iccc--icons--game-development",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -953,7 +953,7 @@
     },
     {
         "asset": "general-contractor.svg",
-        "id": "dhig--icons--general-contractor",
+        "id": "iccc--icons--general-contractor",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -961,7 +961,7 @@
     },
     {
         "asset": "github-circle.svg",
-        "id": "dhig--icons--github-circle",
+        "id": "iccc--icons--github-circle",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -969,7 +969,7 @@
     },
     {
         "asset": "github.svg",
-        "id": "dhig--icons--github",
+        "id": "iccc--icons--github",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -977,7 +977,7 @@
     },
     {
         "asset": "globe.svg",
-        "id": "dhig--icons--globe",
+        "id": "iccc--icons--globe",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -985,7 +985,7 @@
     },
     {
         "asset": "google-play.svg",
-        "id": "dhig--icons--google-play",
+        "id": "iccc--icons--google-play",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -993,7 +993,7 @@
     },
     {
         "asset": "graph.svg",
-        "id": "dhig--icons--graph",
+        "id": "iccc--icons--graph",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1001,7 +1001,7 @@
     },
     {
         "asset": "grid.svg",
-        "id": "dhig--icons--grid",
+        "id": "iccc--icons--grid",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1009,7 +1009,7 @@
     },
     {
         "asset": "hamburger-menu.svg",
-        "id": "dhig--icons--hamburger-menu",
+        "id": "iccc--icons--hamburger-menu",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1017,7 +1017,7 @@
     },
     {
         "asset": "help-outline.svg",
-        "id": "dhig--icons--help-outline",
+        "id": "iccc--icons--help-outline",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1025,7 +1025,7 @@
     },
     {
         "asset": "help-solid.svg",
-        "id": "dhig--icons--help-solid",
+        "id": "iccc--icons--help-solid",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1033,7 +1033,7 @@
     },
     {
         "asset": "hidden.svg",
-        "id": "dhig--icons--hidden",
+        "id": "iccc--icons--hidden",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1041,7 +1041,7 @@
     },
     {
         "asset": "hierarchy.svg",
-        "id": "dhig--icons--hierarchy",
+        "id": "iccc--icons--hierarchy",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1049,7 +1049,7 @@
     },
     {
         "asset": "home.svg",
-        "id": "dhig--icons--home",
+        "id": "iccc--icons--home",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1057,7 +1057,7 @@
     },
     {
         "asset": "hub.svg",
-        "id": "dhig--icons--hub",
+        "id": "iccc--icons--hub",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1065,7 +1065,7 @@
     },
     {
         "asset": "imdb-circle.svg",
-        "id": "dhig--icons--imdb-circle",
+        "id": "iccc--icons--imdb-circle",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1073,7 +1073,7 @@
     },
     {
         "asset": "imdb.svg",
-        "id": "dhig--icons--imdb",
+        "id": "iccc--icons--imdb",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1081,7 +1081,7 @@
     },
     {
         "asset": "import.svg",
-        "id": "dhig--icons--import",
+        "id": "iccc--icons--import",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1089,7 +1089,7 @@
     },
     {
         "asset": "inbox.svg",
-        "id": "dhig--icons--inbox",
+        "id": "iccc--icons--inbox",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1097,7 +1097,7 @@
     },
     {
         "asset": "info-outline.svg",
-        "id": "dhig--icons--info-outline",
+        "id": "iccc--icons--info-outline",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1105,7 +1105,7 @@
     },
     {
         "asset": "info-solid.svg",
-        "id": "dhig--icons--info-solid",
+        "id": "iccc--icons--info-solid",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1113,7 +1113,7 @@
     },
     {
         "asset": "infrastructure.svg",
-        "id": "dhig--icons--infrastructure",
+        "id": "iccc--icons--infrastructure",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1121,7 +1121,7 @@
     },
     {
         "asset": "instagram-circle.svg",
-        "id": "dhig--icons--instagram-circle",
+        "id": "iccc--icons--instagram-circle",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1129,7 +1129,7 @@
     },
     {
         "asset": "instagram.svg",
-        "id": "dhig--icons--instagram",
+        "id": "iccc--icons--instagram",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1137,7 +1137,7 @@
     },
     {
         "asset": "item.svg",
-        "id": "dhig--icons--item",
+        "id": "iccc--icons--item",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1145,7 +1145,7 @@
     },
     {
         "asset": "key.svg",
-        "id": "dhig--icons--key",
+        "id": "iccc--icons--key",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1153,7 +1153,7 @@
     },
     {
         "asset": "language.svg",
-        "id": "dhig--icons--language",
+        "id": "iccc--icons--language",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1161,7 +1161,7 @@
     },
     {
         "asset": "link.svg",
-        "id": "dhig--icons--link",
+        "id": "iccc--icons--link",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1169,7 +1169,7 @@
     },
     {
         "asset": "linkedin-circle.svg",
-        "id": "dhig--icons--linkedin-circle",
+        "id": "iccc--icons--linkedin-circle",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1177,7 +1177,7 @@
     },
     {
         "asset": "linkedIn.svg",
-        "id": "dhig--icons--linkedIn",
+        "id": "iccc--icons--linkedIn",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1185,7 +1185,7 @@
     },
     {
         "asset": "linux.svg",
-        "id": "dhig--icons--linux",
+        "id": "iccc--icons--linux",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1193,7 +1193,7 @@
     },
     {
         "asset": "list.svg",
-        "id": "dhig--icons--list",
+        "id": "iccc--icons--list",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1201,7 +1201,7 @@
     },
     {
         "asset": "location.svg",
-        "id": "dhig--icons--location",
+        "id": "iccc--icons--location",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1209,7 +1209,7 @@
     },
     {
         "asset": "lock-filled.svg",
-        "id": "dhig--icons--lock-filled",
+        "id": "iccc--icons--lock-filled",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1217,7 +1217,7 @@
     },
     {
         "asset": "lock.svg",
-        "id": "dhig--icons--lock",
+        "id": "iccc--icons--lock",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1225,7 +1225,7 @@
     },
     {
         "asset": "mac.svg",
-        "id": "dhig--icons--mac",
+        "id": "iccc--icons--mac",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1233,7 +1233,7 @@
     },
     {
         "asset": "mail.svg",
-        "id": "dhig--icons--mail",
+        "id": "iccc--icons--mail",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1241,7 +1241,7 @@
     },
     {
         "asset": "manage-access.svg",
-        "id": "dhig--icons--manage-access",
+        "id": "iccc--icons--manage-access",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1249,7 +1249,7 @@
     },
     {
         "asset": "manufacturing.svg",
-        "id": "dhig--icons--manufacturing",
+        "id": "iccc--icons--manufacturing",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1257,7 +1257,7 @@
     },
     {
         "asset": "maximize.svg",
-        "id": "dhig--icons--maximize",
+        "id": "iccc--icons--maximize",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1265,7 +1265,7 @@
     },
     {
         "asset": "mep-contractor.svg",
-        "id": "dhig--icons--mep-contractor",
+        "id": "iccc--icons--mep-contractor",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1273,7 +1273,7 @@
     },
     {
         "asset": "mep-engineering.svg",
-        "id": "dhig--icons--mep-engineering",
+        "id": "iccc--icons--mep-engineering",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1281,7 +1281,7 @@
     },
     {
         "asset": "mic-off.svg",
-        "id": "dhig--icons--mic-off",
+        "id": "iccc--icons--mic-off",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1289,7 +1289,7 @@
     },
     {
         "asset": "mic-on.svg",
-        "id": "dhig--icons--mic-on",
+        "id": "iccc--icons--mic-on",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1297,7 +1297,7 @@
     },
     {
         "asset": "minimize.svg",
-        "id": "dhig--icons--minimize",
+        "id": "iccc--icons--minimize",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1305,7 +1305,7 @@
     },
     {
         "asset": "more-vertical.svg",
-        "id": "dhig--icons--more-vertical",
+        "id": "iccc--icons--more-vertical",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1313,7 +1313,7 @@
     },
     {
         "asset": "more.svg",
-        "id": "dhig--icons--more",
+        "id": "iccc--icons--more",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1321,7 +1321,7 @@
     },
     {
         "asset": "mute.svg",
-        "id": "dhig--icons--mute",
+        "id": "iccc--icons--mute",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1329,7 +1329,7 @@
     },
     {
         "asset": "naver-blog-circle.svg",
-        "id": "dhig--icons--naver-blog-circle",
+        "id": "iccc--icons--naver-blog-circle",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1337,7 +1337,7 @@
     },
     {
         "asset": "naver-blog.svg",
-        "id": "dhig--icons--naver-blog",
+        "id": "iccc--icons--naver-blog",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1345,7 +1345,7 @@
     },
     {
         "asset": "nine.svg",
-        "id": "dhig--icons--nine",
+        "id": "iccc--icons--nine",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1353,7 +1353,7 @@
     },
     {
         "asset": "not-editable.svg",
-        "id": "dhig--icons--not-editable",
+        "id": "iccc--icons--not-editable",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1361,7 +1361,7 @@
     },
     {
         "asset": "notifcation-off.svg",
-        "id": "dhig--icons--notifcation-off",
+        "id": "iccc--icons--notifcation-off",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1369,7 +1369,7 @@
     },
     {
         "asset": "notification.svg",
-        "id": "dhig--icons--notification",
+        "id": "iccc--icons--notification",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1377,7 +1377,7 @@
     },
     {
         "asset": "one.svg",
-        "id": "dhig--icons--one",
+        "id": "iccc--icons--one",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1385,7 +1385,7 @@
     },
     {
         "asset": "online-viewers.svg",
-        "id": "dhig--icons--online-viewers",
+        "id": "iccc--icons--online-viewers",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1393,7 +1393,7 @@
     },
     {
         "asset": "paste.svg",
-        "id": "dhig--icons--paste",
+        "id": "iccc--icons--paste",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1401,7 +1401,7 @@
     },
     {
         "asset": "permission-group.svg",
-        "id": "dhig--icons--permission-group",
+        "id": "iccc--icons--permission-group",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1409,7 +1409,7 @@
     },
     {
         "asset": "permission-individual.svg",
-        "id": "dhig--icons--permission-individual",
+        "id": "iccc--icons--permission-individual",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1417,7 +1417,7 @@
     },
     {
         "asset": "personal-data.svg",
-        "id": "dhig--icons--personal-data",
+        "id": "iccc--icons--personal-data",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1425,7 +1425,7 @@
     },
     {
         "asset": "personal.svg",
-        "id": "dhig--icons--personal",
+        "id": "iccc--icons--personal",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1433,7 +1433,7 @@
     },
     {
         "asset": "photos.svg",
-        "id": "dhig--icons--photos",
+        "id": "iccc--icons--photos",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1441,7 +1441,7 @@
     },
     {
         "asset": "pie-chart-outline.svg",
-        "id": "dhig--icons--pie-chart-outline",
+        "id": "iccc--icons--pie-chart-outline",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1449,7 +1449,7 @@
     },
     {
         "asset": "pie-chart-solid.svg",
-        "id": "dhig--icons--pie-chart-solid",
+        "id": "iccc--icons--pie-chart-solid",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1457,7 +1457,7 @@
     },
     {
         "asset": "pin.svg",
-        "id": "dhig--icons--pin",
+        "id": "iccc--icons--pin",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1465,7 +1465,7 @@
     },
     {
         "asset": "pinterest-circle.svg",
-        "id": "dhig--icons--pinterest-circle",
+        "id": "iccc--icons--pinterest-circle",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1473,7 +1473,7 @@
     },
     {
         "asset": "pinterest.svg",
-        "id": "dhig--icons--pinterest",
+        "id": "iccc--icons--pinterest",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1481,7 +1481,7 @@
     },
     {
         "asset": "play-outline.svg",
-        "id": "dhig--icons--play-outline",
+        "id": "iccc--icons--play-outline",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1489,7 +1489,7 @@
     },
     {
         "asset": "play-solid.svg",
-        "id": "dhig--icons--play-solid",
+        "id": "iccc--icons--play-solid",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1497,7 +1497,7 @@
     },
     {
         "asset": "playback-fast-forward.svg",
-        "id": "dhig--icons--playback-fast-forward",
+        "id": "iccc--icons--playback-fast-forward",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1505,7 +1505,7 @@
     },
     {
         "asset": "playback-go-to-end.svg",
-        "id": "dhig--icons--playback-go-to-end",
+        "id": "iccc--icons--playback-go-to-end",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1513,7 +1513,7 @@
     },
     {
         "asset": "playback-go-to-start.svg",
-        "id": "dhig--icons--playback-go-to-start",
+        "id": "iccc--icons--playback-go-to-start",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1521,7 +1521,7 @@
     },
     {
         "asset": "playback-loop.svg",
-        "id": "dhig--icons--playback-loop",
+        "id": "iccc--icons--playback-loop",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1529,7 +1529,7 @@
     },
     {
         "asset": "playback-next.svg",
-        "id": "dhig--icons--playback-next",
+        "id": "iccc--icons--playback-next",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1537,7 +1537,7 @@
     },
     {
         "asset": "playback-pause.svg",
-        "id": "dhig--icons--playback-pause",
+        "id": "iccc--icons--playback-pause",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1545,7 +1545,7 @@
     },
     {
         "asset": "playback-play.svg",
-        "id": "dhig--icons--playback-play",
+        "id": "iccc--icons--playback-play",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1553,7 +1553,7 @@
     },
     {
         "asset": "playback-previous.svg",
-        "id": "dhig--icons--playback-previous",
+        "id": "iccc--icons--playback-previous",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1561,7 +1561,7 @@
     },
     {
         "asset": "playback-record.svg",
-        "id": "dhig--icons--playback-record",
+        "id": "iccc--icons--playback-record",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1569,7 +1569,7 @@
     },
     {
         "asset": "playback-rewind.svg",
-        "id": "dhig--icons--playback-rewind",
+        "id": "iccc--icons--playback-rewind",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1577,7 +1577,7 @@
     },
     {
         "asset": "playback-shuffle.svg",
-        "id": "dhig--icons--playback-shuffle",
+        "id": "iccc--icons--playback-shuffle",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1585,7 +1585,7 @@
     },
     {
         "asset": "playback-stop.svg",
-        "id": "dhig--icons--playback-stop",
+        "id": "iccc--icons--playback-stop",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1593,7 +1593,7 @@
     },
     {
         "asset": "print.svg",
-        "id": "dhig--icons--print",
+        "id": "iccc--icons--print",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1601,7 +1601,7 @@
     },
     {
         "asset": "products-and-services.svg",
-        "id": "dhig--icons--products-and-services",
+        "id": "iccc--icons--products-and-services",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1609,7 +1609,7 @@
     },
     {
         "asset": "profile.svg",
-        "id": "dhig--icons--profile",
+        "id": "iccc--icons--profile",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1617,7 +1617,7 @@
     },
     {
         "asset": "project-management.svg",
-        "id": "dhig--icons--project-management",
+        "id": "iccc--icons--project-management",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1625,7 +1625,7 @@
     },
     {
         "asset": "properties.svg",
-        "id": "dhig--icons--properties",
+        "id": "iccc--icons--properties",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1633,7 +1633,7 @@
     },
     {
         "asset": "publish.svg",
-        "id": "dhig--icons--publish",
+        "id": "iccc--icons--publish",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1641,7 +1641,7 @@
     },
     {
         "asset": "quantities.svg",
-        "id": "dhig--icons--quantities",
+        "id": "iccc--icons--quantities",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1649,7 +1649,7 @@
     },
     {
         "asset": "reddit-circle.svg",
-        "id": "dhig--icons--reddit-circle",
+        "id": "iccc--icons--reddit-circle",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1657,7 +1657,7 @@
     },
     {
         "asset": "reddit.svg",
-        "id": "dhig--icons--reddit",
+        "id": "iccc--icons--reddit",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1665,7 +1665,7 @@
     },
     {
         "asset": "redo.svg",
-        "id": "dhig--icons--redo",
+        "id": "iccc--icons--redo",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1673,7 +1673,7 @@
     },
     {
         "asset": "redshift-circle.svg",
-        "id": "dhig--icons--redshift-circle",
+        "id": "iccc--icons--redshift-circle",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1681,7 +1681,7 @@
     },
     {
         "asset": "redshift.svg",
-        "id": "dhig--icons--redshift",
+        "id": "iccc--icons--redshift",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1689,7 +1689,7 @@
     },
     {
         "asset": "report.svg",
-        "id": "dhig--icons--report",
+        "id": "iccc--icons--report",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1697,7 +1697,7 @@
     },
     {
         "asset": "resize.svg",
-        "id": "dhig--icons--resize",
+        "id": "iccc--icons--resize",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1705,7 +1705,7 @@
     },
     {
         "asset": "restart.svg",
-        "id": "dhig--icons--restart",
+        "id": "iccc--icons--restart",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1713,7 +1713,7 @@
     },
     {
         "asset": "save.svg",
-        "id": "dhig--icons--save",
+        "id": "iccc--icons--save",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1721,7 +1721,7 @@
     },
     {
         "asset": "search.svg",
-        "id": "dhig--icons--search",
+        "id": "iccc--icons--search",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1729,7 +1729,7 @@
     },
     {
         "asset": "security.svg",
-        "id": "dhig--icons--security",
+        "id": "iccc--icons--security",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1737,7 +1737,7 @@
     },
     {
         "asset": "select-all.svg",
-        "id": "dhig--icons--select-all",
+        "id": "iccc--icons--select-all",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1745,7 +1745,7 @@
     },
     {
         "asset": "select-none.svg",
-        "id": "dhig--icons--select-none",
+        "id": "iccc--icons--select-none",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1753,7 +1753,7 @@
     },
     {
         "asset": "send.svg",
-        "id": "dhig--icons--send",
+        "id": "iccc--icons--send",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1761,7 +1761,7 @@
     },
     {
         "asset": "service.svg",
-        "id": "dhig--icons--service",
+        "id": "iccc--icons--service",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1769,7 +1769,7 @@
     },
     {
         "asset": "settings.svg",
-        "id": "dhig--icons--settings",
+        "id": "iccc--icons--settings",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1777,7 +1777,7 @@
     },
     {
         "asset": "seven.svg",
-        "id": "dhig--icons--seven",
+        "id": "iccc--icons--seven",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1785,7 +1785,7 @@
     },
     {
         "asset": "share.svg",
-        "id": "dhig--icons--share",
+        "id": "iccc--icons--share",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1793,7 +1793,7 @@
     },
     {
         "asset": "site-design.svg",
-        "id": "dhig--icons--site-design",
+        "id": "iccc--icons--site-design",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1801,7 +1801,7 @@
     },
     {
         "asset": "six.svg",
-        "id": "dhig--icons--six",
+        "id": "iccc--icons--six",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1809,7 +1809,7 @@
     },
     {
         "asset": "sort.svg",
-        "id": "dhig--icons--sort",
+        "id": "iccc--icons--sort",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1817,7 +1817,7 @@
     },
     {
         "asset": "ssl.svg",
-        "id": "dhig--icons--ssl",
+        "id": "iccc--icons--ssl",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1825,7 +1825,7 @@
     },
     {
         "asset": "stroke.svg",
-        "id": "dhig--icons--stroke",
+        "id": "iccc--icons--stroke",
         "dimensions": {
             "height": 22,
             "width": 22
@@ -1833,7 +1833,7 @@
     },
     {
         "asset": "structural-engineering.svg",
-        "id": "dhig--icons--structural-engineering",
+        "id": "iccc--icons--structural-engineering",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1841,7 +1841,7 @@
     },
     {
         "asset": "structural-fabricator.svg",
-        "id": "dhig--icons--structural-fabricator",
+        "id": "iccc--icons--structural-fabricator",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1849,7 +1849,7 @@
     },
     {
         "asset": "subscriptions.svg",
-        "id": "dhig--icons--subscriptions",
+        "id": "iccc--icons--subscriptions",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1857,7 +1857,7 @@
     },
     {
         "asset": "subtract.svg",
-        "id": "dhig--icons--subtract",
+        "id": "iccc--icons--subtract",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1865,7 +1865,7 @@
     },
     {
         "asset": "support-call.svg",
-        "id": "dhig--icons--support-call",
+        "id": "iccc--icons--support-call",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1873,7 +1873,7 @@
     },
     {
         "asset": "support.svg",
-        "id": "dhig--icons--support",
+        "id": "iccc--icons--support",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1881,7 +1881,7 @@
     },
     {
         "asset": "sync.svg",
-        "id": "dhig--icons--sync",
+        "id": "iccc--icons--sync",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1889,7 +1889,7 @@
     },
     {
         "asset": "tag-solid.svg",
-        "id": "dhig--icons--tag-solid",
+        "id": "iccc--icons--tag-solid",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1897,7 +1897,7 @@
     },
     {
         "asset": "tag.svg",
-        "id": "dhig--icons--tag",
+        "id": "iccc--icons--tag",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1905,7 +1905,7 @@
     },
     {
         "asset": "ten.svg",
-        "id": "dhig--icons--ten",
+        "id": "iccc--icons--ten",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1913,7 +1913,7 @@
     },
     {
         "asset": "threads-circle.svg",
-        "id": "dhig--icons--threads-circle",
+        "id": "iccc--icons--threads-circle",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1921,7 +1921,7 @@
     },
     {
         "asset": "threads.svg",
-        "id": "dhig--icons--threads",
+        "id": "iccc--icons--threads",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1929,7 +1929,7 @@
     },
     {
         "asset": "three.svg",
-        "id": "dhig--icons--three",
+        "id": "iccc--icons--three",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1937,7 +1937,7 @@
     },
     {
         "asset": "thumbs-down-filled.svg",
-        "id": "dhig--icons--thumbs-down-filled",
+        "id": "iccc--icons--thumbs-down-filled",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1945,7 +1945,7 @@
     },
     {
         "asset": "thumbs-down.svg",
-        "id": "dhig--icons--thumbs-down",
+        "id": "iccc--icons--thumbs-down",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1953,7 +1953,7 @@
     },
     {
         "asset": "thumbs-up-filled.svg",
-        "id": "dhig--icons--thumbs-up-filled",
+        "id": "iccc--icons--thumbs-up-filled",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1961,7 +1961,7 @@
     },
     {
         "asset": "thumbs-up.svg",
-        "id": "dhig--icons--thumbs-up",
+        "id": "iccc--icons--thumbs-up",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1969,7 +1969,7 @@
     },
     {
         "asset": "tiktok-circle.svg",
-        "id": "dhig--icons--tiktok-circle",
+        "id": "iccc--icons--tiktok-circle",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1977,7 +1977,7 @@
     },
     {
         "asset": "tiktok.svg",
-        "id": "dhig--icons--tiktok",
+        "id": "iccc--icons--tiktok",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1985,7 +1985,7 @@
     },
     {
         "asset": "transportation.svg",
-        "id": "dhig--icons--transportation",
+        "id": "iccc--icons--transportation",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -1993,7 +1993,7 @@
     },
     {
         "asset": "trash.svg",
-        "id": "dhig--icons--trash",
+        "id": "iccc--icons--trash",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -2001,7 +2001,7 @@
     },
     {
         "asset": "twitch-circle.svg",
-        "id": "dhig--icons--twitch-circle",
+        "id": "iccc--icons--twitch-circle",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -2009,7 +2009,7 @@
     },
     {
         "asset": "twitch.svg",
-        "id": "dhig--icons--twitch",
+        "id": "iccc--icons--twitch",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -2017,7 +2017,7 @@
     },
     {
         "asset": "twitter-circle.svg",
-        "id": "dhig--icons--twitter-circle",
+        "id": "iccc--icons--twitter-circle",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -2025,7 +2025,7 @@
     },
     {
         "asset": "twitter.svg",
-        "id": "dhig--icons--twitter",
+        "id": "iccc--icons--twitter",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -2033,7 +2033,7 @@
     },
     {
         "asset": "two.svg",
-        "id": "dhig--icons--two",
+        "id": "iccc--icons--two",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -2041,7 +2041,7 @@
     },
     {
         "asset": "unavailable-solid.svg",
-        "id": "dhig--icons--unavailable-solid",
+        "id": "iccc--icons--unavailable-solid",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -2049,7 +2049,7 @@
     },
     {
         "asset": "undo.svg",
-        "id": "dhig--icons--undo",
+        "id": "iccc--icons--undo",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -2057,7 +2057,7 @@
     },
     {
         "asset": "unlink.svg",
-        "id": "dhig--icons--unlink",
+        "id": "iccc--icons--unlink",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -2065,7 +2065,7 @@
     },
     {
         "asset": "unlock.svg",
-        "id": "dhig--icons--unlock",
+        "id": "iccc--icons--unlock",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -2073,7 +2073,7 @@
     },
     {
         "asset": "unpin.svg",
-        "id": "dhig--icons--unpin",
+        "id": "iccc--icons--unpin",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -2081,7 +2081,7 @@
     },
     {
         "asset": "up.svg",
-        "id": "dhig--icons--up",
+        "id": "iccc--icons--up",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -2089,7 +2089,7 @@
     },
     {
         "asset": "upload.svg",
-        "id": "dhig--icons--upload",
+        "id": "iccc--icons--upload",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -2097,7 +2097,7 @@
     },
     {
         "asset": "user-inactive.svg",
-        "id": "dhig--icons--user-inactive",
+        "id": "iccc--icons--user-inactive",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -2105,7 +2105,7 @@
     },
     {
         "asset": "video-off.svg",
-        "id": "dhig--icons--video-off",
+        "id": "iccc--icons--video-off",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -2113,7 +2113,7 @@
     },
     {
         "asset": "video-on.svg",
-        "id": "dhig--icons--video-on",
+        "id": "iccc--icons--video-on",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -2121,7 +2121,7 @@
     },
     {
         "asset": "view-column.svg",
-        "id": "dhig--icons--view-column",
+        "id": "iccc--icons--view-column",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -2129,7 +2129,7 @@
     },
     {
         "asset": "view-file.svg",
-        "id": "dhig--icons--view-file",
+        "id": "iccc--icons--view-file",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -2137,7 +2137,7 @@
     },
     {
         "asset": "visible.svg",
-        "id": "dhig--icons--visible",
+        "id": "iccc--icons--visible",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -2145,7 +2145,7 @@
     },
     {
         "asset": "visual-effects.svg",
-        "id": "dhig--icons--visual-effects",
+        "id": "iccc--icons--visual-effects",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -2153,7 +2153,7 @@
     },
     {
         "asset": "volume.svg",
-        "id": "dhig--icons--volume",
+        "id": "iccc--icons--volume",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -2161,7 +2161,7 @@
     },
     {
         "asset": "waffle.svg",
-        "id": "dhig--icons--waffle",
+        "id": "iccc--icons--waffle",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -2169,7 +2169,7 @@
     },
     {
         "asset": "water-infrastructure.svg",
-        "id": "dhig--icons--water-infrastructure",
+        "id": "iccc--icons--water-infrastructure",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -2177,7 +2177,7 @@
     },
     {
         "asset": "wechat-circle.svg",
-        "id": "dhig--icons--wechat-circle",
+        "id": "iccc--icons--wechat-circle",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -2185,7 +2185,7 @@
     },
     {
         "asset": "wechat.svg",
-        "id": "dhig--icons--wechat",
+        "id": "iccc--icons--wechat",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -2193,7 +2193,7 @@
     },
     {
         "asset": "weibo-circle.svg",
-        "id": "dhig--icons--weibo-circle",
+        "id": "iccc--icons--weibo-circle",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -2201,7 +2201,7 @@
     },
     {
         "asset": "weibo.svg",
-        "id": "dhig--icons--weibo",
+        "id": "iccc--icons--weibo",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -2209,7 +2209,7 @@
     },
     {
         "asset": "windows.svg",
-        "id": "dhig--icons--windows",
+        "id": "iccc--icons--windows",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -2217,7 +2217,7 @@
     },
     {
         "asset": "x-circle.svg",
-        "id": "dhig--icons--x-circle",
+        "id": "iccc--icons--x-circle",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -2225,7 +2225,7 @@
     },
     {
         "asset": "x.svg",
-        "id": "dhig--icons--x",
+        "id": "iccc--icons--x",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -2233,7 +2233,7 @@
     },
     {
         "asset": "xing-circle.svg",
-        "id": "dhig--icons--xing-circle",
+        "id": "iccc--icons--xing-circle",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -2241,7 +2241,7 @@
     },
     {
         "asset": "xing.svg",
-        "id": "dhig--icons--xing",
+        "id": "iccc--icons--xing",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -2249,7 +2249,7 @@
     },
     {
         "asset": "youku-circle.svg",
-        "id": "dhig--icons--youku-circle",
+        "id": "iccc--icons--youku-circle",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -2257,7 +2257,7 @@
     },
     {
         "asset": "youku.svg",
-        "id": "dhig--icons--youku",
+        "id": "iccc--icons--youku",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -2265,7 +2265,7 @@
     },
     {
         "asset": "youtube-circle.svg",
-        "id": "dhig--icons--youtube-circle",
+        "id": "iccc--icons--youtube-circle",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -2273,7 +2273,7 @@
     },
     {
         "asset": "youtube.svg",
-        "id": "dhig--icons--youtube",
+        "id": "iccc--icons--youtube",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -2281,7 +2281,7 @@
     },
     {
         "asset": "zhihu-circle.svg",
-        "id": "dhig--icons--zhihu-circle",
+        "id": "iccc--icons--zhihu-circle",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -2289,7 +2289,7 @@
     },
     {
         "asset": "zhihu.svg",
-        "id": "dhig--icons--zhihu",
+        "id": "iccc--icons--zhihu",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -2297,7 +2297,7 @@
     },
     {
         "asset": "zoom-in.svg",
-        "id": "dhig--icons--zoom-in",
+        "id": "iccc--icons--zoom-in",
         "dimensions": {
             "height": 24,
             "width": 24
@@ -2305,7 +2305,7 @@
     },
     {
         "asset": "zoom-out.svg",
-        "id": "dhig--icons--zoom-out",
+        "id": "iccc--icons--zoom-out",
         "dimensions": {
             "height": 24,
             "width": 24

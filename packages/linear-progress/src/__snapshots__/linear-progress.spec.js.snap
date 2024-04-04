@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Linear progress renders a linear progress 1`] = `
+<div>
+  <span
+    class="MuiLinearProgress-root icccLinearProgress--size--small MuiLinearProgress-colorPrimary MuiLinearProgress-indeterminate emotion-0"
+    role="progressbar"
+  >
+    <span
+      class="MuiLinearProgress-bar MuiLinearProgress-barColorPrimary MuiLinearProgress-bar1Indeterminate emotion-1"
+    />
+    <span
+      class="MuiLinearProgress-bar MuiLinearProgress-barColorPrimary MuiLinearProgress-bar2Indeterminate emotion-2"
+    />
+  </span>
+</div>
+`;

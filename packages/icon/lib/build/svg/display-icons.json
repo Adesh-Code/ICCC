@@ -1,7 +1,7 @@
 [
     {
         "asset": "alert.svg",
-        "id": "dhig--display-icons--alert",
+        "id": "iccc--display-icons--alert",
         "dimensions": {
             "height": 36,
             "width": 36
@@ -9,7 +9,7 @@
     },
     {
         "asset": "cancel.svg",
-        "id": "dhig--display-icons--cancel",
+        "id": "iccc--display-icons--cancel",
         "dimensions": {
             "height": 36,
             "width": 36
@@ -17,7 +17,7 @@
     },
     {
         "asset": "complete.svg",
-        "id": "dhig--display-icons--complete",
+        "id": "iccc--display-icons--complete",
         "dimensions": {
             "height": 36,
             "width": 36
@@ -25,7 +25,7 @@
     },
     {
         "asset": "error.svg",
-        "id": "dhig--display-icons--error",
+        "id": "iccc--display-icons--error",
         "dimensions": {
             "height": 36,
             "width": 36
@@ -33,7 +33,7 @@
     },
     {
         "asset": "info.svg",
-        "id": "dhig--display-icons--info",
+        "id": "iccc--display-icons--info",
         "dimensions": {
             "height": 36,
             "width": 36
@@ -41,7 +41,7 @@
     },
     {
         "asset": "lock.svg",
-        "id": "dhig--display-icons--lock",
+        "id": "iccc--display-icons--lock",
         "dimensions": {
             "height": 36,
             "width": 36
@@ -49,7 +49,7 @@
     },
     {
         "asset": "profile.svg",
-        "id": "dhig--display-icons--profile",
+        "id": "iccc--display-icons--profile",
         "dimensions": {
             "height": 36,
             "width": 36
