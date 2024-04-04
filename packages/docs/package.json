@@ -4,7 +4,7 @@
   "main": "lib/docs.js",
   "module": "lib/docs.js",
   "private": true,
-  "peerDependencies": {
+  "dependencies": {
     "react": "^16.14.0 || ^17.0.0",
     "react-dom": "^16.14.0 || ^17.0.0"
   }
