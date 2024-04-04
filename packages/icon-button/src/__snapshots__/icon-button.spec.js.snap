@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IconButton component renders a button 1`] = `
+<div>
+  <button
+    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium icccIconButton--variant--contained emotion-0"
+    tabindex="0"
+    type="button"
+  >
+    <svg
+      class="MuiSvgIcon-root MuiSvgIcon-fontSizeInherit emotion-1"
+      focusable="false"
+      role="img"
+      viewBox="0 0 24 24"
+    >
+      <svg
+        fill="none"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g
+          id="actions/sync"
+        >
+          <path
+            d="M8.3534 14.0279L3.55809 12.4698L2 17.2651M3.88056 12.928C4.9899 19.0317 13.5516 23.139 18.6759 15.5263M15.179 9.97208L19.9743 11.5302L21.5324 6.73486M19.6518 11.072C18.5425 4.96825 9.98077 0.86096 4.85646 8.4737"
+            id="stroke"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.5"
+          />
+        </g>
+      </svg>
+      <title>
+        test
+      </title>
+    </svg>
+  </button>
+</div>
+`;

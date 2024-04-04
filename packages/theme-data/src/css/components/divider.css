@@ -1,0 +1,31 @@
+@layer components {
+  .iccc-divider {
+    /* spacing */
+    @apply iccc-m-0;
+    /* borders */
+    @apply iccc-border-0 iccc-border-solid;
+    /* flexbox */
+    @apply iccc-flex-shrink-0;
+
+    &-horizontal {
+      /* borders */
+      @apply iccc-border-b-medium;
+    }
+    &-vertical {
+      /* borders */
+      @apply iccc-border-b-0 iccc-border-r-medium;
+      /* sizing */
+      @apply iccc-h-auto;
+      /* flexbox */
+      @apply iccc-self-stretch;
+    }
+    &-default {
+      border-color: var(--color--detail-1-40-transparent);
+      background: var(--color--divider-0);
+    }
+    &-strong {
+      border-color: rgb(0, 0, 0, 0.1);
+      background: var(--color--divider-1);
+    }
+  }
+}
