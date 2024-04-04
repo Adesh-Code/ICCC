@@ -3,12 +3,12 @@ import MiniCssExtractPlugin from "mini-css-extract-plugin";
 
 const config = {
   entry: {
-    "dhig-fonts": "./src/css/dhig-fonts.css",
-    "dhig-global-wrapper": "./src/css/global-wrapped.js",
-    "dhig-global": "./src/css/global.js",
-    "dhig-utility": "./src/css/dhig-utility.js",
-    "dhig-tw-components": "./src/css/tailwind-components.css",
-    "dhig-mui-components": "./src/css/dhig-mui-components.scss"
+    "iccc-fonts": "./src/css/iccc-fonts.css",
+    "iccc-global-wrapper": "./src/css/global-wrapped.js",
+    "iccc-global": "./src/css/global.js",
+    "iccc-utility": "./src/css/iccc-utility.js",
+    "iccc-tw-components": "./src/css/tailwind-components.css",
+    "iccc-mui-components": "./src/css/iccc-mui-components.scss"
   },
   mode: "production",
   module: {

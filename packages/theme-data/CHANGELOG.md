@@ -915,7 +915,7 @@ https://reactjs.org/docs/forwarding-refs.html#note-for-component-library-maintai
 
 ### Features
 
-* 🎸 Updated the MUI Grid Component to DHIG!  ([#464](https://git.autodesk.com//dpe/digital-hig/issues/464)) ([63e3096](https://git.autodesk.com//dpe/digital-hig/commits/63e309652ed9c18281de2c5434adc2336ff56a8b))
+* 🎸 Updated the MUI Grid Component to iccc!  ([#464](https://git.autodesk.com//dpe/digital-hig/issues/464)) ([63e3096](https://git.autodesk.com//dpe/digital-hig/commits/63e309652ed9c18281de2c5434adc2336ff56a8b))
 
 
 
@@ -1337,7 +1337,7 @@ https://reactjs.org/docs/forwarding-refs.html#note-for-component-library-maintai
 
 ### Features
 
-* integrate checkbox component into DHIG ref app ([#249](https://git.autodesk.com//dpe/digital-hig/issues/249)) ([6142dca](https://git.autodesk.com//dpe/digital-hig/commits/6142dcab345ad31ccd44b4f089ccda80b0a8d812))
+* integrate checkbox component into iccc ref app ([#249](https://git.autodesk.com//dpe/digital-hig/issues/249)) ([6142dca](https://git.autodesk.com//dpe/digital-hig/commits/6142dcab345ad31ccd44b4f089ccda80b0a8d812))
 
 
 
@@ -1617,7 +1617,7 @@ https://reactjs.org/docs/forwarding-refs.html#note-for-component-library-maintai
 
 ### Features
 
-* Create & publish DHIG Divider component ([#118](https://git.autodesk.com//dpe/digital-hig/issues/118)) ([f70ae75](https://git.autodesk.com//dpe/digital-hig/commits/f70ae751225d7b78c44e7a6379e3452968bb676f)), closes [#107](https://git.autodesk.com//dpe/digital-hig/issues/107) [#106](https://git.autodesk.com//dpe/digital-hig/issues/106) [#109](https://git.autodesk.com//dpe/digital-hig/issues/109) [#115](https://git.autodesk.com//dpe/digital-hig/issues/115) [#120](https://git.autodesk.com//dpe/digital-hig/issues/120) [#107](https://git.autodesk.com//dpe/digital-hig/issues/107) [#106](https://git.autodesk.com//dpe/digital-hig/issues/106) [#109](https://git.autodesk.com//dpe/digital-hig/issues/109) [#107](https://git.autodesk.com//dpe/digital-hig/issues/107) [#106](https://git.autodesk.com//dpe/digital-hig/issues/106) [#109](https://git.autodesk.com//dpe/digital-hig/issues/109) [#109](https://git.autodesk.com//dpe/digital-hig/issues/109) [#115](https://git.autodesk.com//dpe/digital-hig/issues/115) [#120](https://git.autodesk.com//dpe/digital-hig/issues/120) [#107](https://git.autodesk.com//dpe/digital-hig/issues/107) [#106](https://git.autodesk.com//dpe/digital-hig/issues/106) [#109](https://git.autodesk.com//dpe/digital-hig/issues/109) [#109](https://git.autodesk.com//dpe/digital-hig/issues/109) [#115](https://git.autodesk.com//dpe/digital-hig/issues/115)
+* Create & publish iccc Divider component ([#118](https://git.autodesk.com//dpe/digital-hig/issues/118)) ([f70ae75](https://git.autodesk.com//dpe/digital-hig/commits/f70ae751225d7b78c44e7a6379e3452968bb676f)), closes [#107](https://git.autodesk.com//dpe/digital-hig/issues/107) [#106](https://git.autodesk.com//dpe/digital-hig/issues/106) [#109](https://git.autodesk.com//dpe/digital-hig/issues/109) [#115](https://git.autodesk.com//dpe/digital-hig/issues/115) [#120](https://git.autodesk.com//dpe/digital-hig/issues/120) [#107](https://git.autodesk.com//dpe/digital-hig/issues/107) [#106](https://git.autodesk.com//dpe/digital-hig/issues/106) [#109](https://git.autodesk.com//dpe/digital-hig/issues/109) [#107](https://git.autodesk.com//dpe/digital-hig/issues/107) [#106](https://git.autodesk.com//dpe/digital-hig/issues/106) [#109](https://git.autodesk.com//dpe/digital-hig/issues/109) [#109](https://git.autodesk.com//dpe/digital-hig/issues/109) [#115](https://git.autodesk.com//dpe/digital-hig/issues/115) [#120](https://git.autodesk.com//dpe/digital-hig/issues/120) [#107](https://git.autodesk.com//dpe/digital-hig/issues/107) [#106](https://git.autodesk.com//dpe/digital-hig/issues/106) [#109](https://git.autodesk.com//dpe/digital-hig/issues/109) [#109](https://git.autodesk.com//dpe/digital-hig/issues/109) [#115](https://git.autodesk.com//dpe/digital-hig/issues/115)
 
 
 
@@ -2078,7 +2078,7 @@ https://reactjs.org/docs/forwarding-refs.html#note-for-component-library-maintai
 
 ### Bug Fixes
 
-* Unable to pull the new DHIG 2021 theme data ([#38](https://git.autodesk.com//dpe/digital-hig/issues/38)) ([0156014](https://git.autodesk.com//dpe/digital-hig/commits/015601475ec3a8fb02aa397c243bcf06ffd5a443))
+* Unable to pull the new iccc 2021 theme data ([#38](https://git.autodesk.com//dpe/digital-hig/issues/38)) ([0156014](https://git.autodesk.com//dpe/digital-hig/commits/015601475ec3a8fb02aa397c243bcf06ffd5a443))
 
 
 
